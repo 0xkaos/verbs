@@ -64883,6 +64883,3374 @@
       "meaning": ["to stroll", "to walk around"]
     }
   }
+},
+  "litzpot": {
+  "root": ["צ", "פ", "ה"],
+  "root_meaning": "Related to watching, observing, or expecting",
+  "infinitive": "לִצְפּוֹת",
+  "binyan": "פָּעַל",
+  "meaning": ["to watch", "to observe", "to expect"],
+  "translations": {
+    "en": "to watch",
+    "es": "mirar",
+    "fr": "regarder",
+    "de": "schauen",
+    "ru": "смотреть"
+  },
+  "difficulty": "Intermediate",
+  "frequency": "High",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "צָפִיתִי",
+        "transliteration": "tzafíti",
+        "phonetics": "tsa-fee-tee",
+        "translation": "I watched",
+        "audio": "audio/3100.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "צָפִיתָ",
+        "transliteration": "tzafíta",
+        "phonetics": "tsa-fee-ta",
+        "translation": "you watched (m.s.)",
+        "audio": "audio/3101.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "צָפִית",
+        "transliteration": "tzafít",
+        "phonetics": "tsa-feet",
+        "translation": "you watched (f.s.)",
+        "audio": "audio/3102.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "צָפָה",
+        "transliteration": "tzafá",
+        "phonetics": "tsa-fa",
+        "translation": "he watched",
+        "audio": "audio/3103.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "צָפְתָה",
+        "transliteration": "tzaftá",
+        "phonetics": "tsaf-ta",
+        "translation": "she watched",
+        "audio": "audio/3104.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "צָפִינוּ",
+        "transliteration": "tzafínu",
+        "phonetics": "tsa-fee-noo",
+        "translation": "we watched",
+        "audio": "audio/3105.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "צְפִיתֶם",
+        "transliteration": "tzfítem",
+        "phonetics": "tsfee-tem",
+        "translation": "you watched (m.pl.)",
+        "audio": "audio/3106.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "צְפִיתֶן",
+        "transliteration": "tzfíten",
+        "phonetics": "tsfee-ten",
+        "translation": "you watched (f.pl.)",
+        "audio": "audio/3107.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "צָפוּ",
+        "transliteration": "tzafú",
+        "phonetics": "tsa-foo",
+        "translation": "they watched (m.)",
+        "audio": "audio/3108.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "צָפוּ",
+        "transliteration": "tzafú",
+        "phonetics": "tsa-foo",
+        "translation": "they watched (f.)",
+        "audio": "audio/3109.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "צוֹפֶה",
+        "transliteration": "tzofé",
+        "phonetics": "tso-fe",
+        "translation": "I watch (m.)",
+        "audio": "audio/3110.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "צוֹפָה",
+        "transliteration": "tzofá",
+        "phonetics": "tso-fa",
+        "translation": "I watch (f.)",
+        "audio": "audio/3111.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "צוֹפֶה",
+        "transliteration": "tzofé",
+        "phonetics": "tso-fe",
+        "translation": "you watch (m.s.)",
+        "audio": "audio/3112.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "צוֹפָה",
+        "transliteration": "tzofá",
+        "phonetics": "tso-fa",
+        "translation": "you watch (f.s.)",
+        "audio": "audio/3113.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "צוֹפֶה",
+        "transliteration": "tzofé",
+        "phonetics": "tso-fe",
+        "translation": "he watches",
+        "audio": "audio/3114.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "צוֹפָה",
+        "transliteration": "tzofá",
+        "phonetics": "tso-fa",
+        "translation": "she watches",
+        "audio": "audio/3115.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "צוֹפִים",
+        "transliteration": "tzofím",
+        "phonetics": "tso-feem",
+        "translation": "we watch (m.)",
+        "audio": "audio/3116.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "צוֹפוֹת",
+        "transliteration": "tzofót",
+        "phonetics": "tso-fot",
+        "translation": "we watch (f.)",
+        "audio": "audio/3117.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "צוֹפִים",
+        "transliteration": "tzofím",
+        "phonetics": "tso-feem",
+        "translation": "you watch (m.pl.)",
+        "audio": "audio/3118.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "צוֹפוֹת",
+        "transliteration": "tzofót",
+        "phonetics": "tso-fot",
+        "translation": "you watch (f.pl.)",
+        "audio": "audio/3119.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "צוֹפִים",
+        "transliteration": "tzofím",
+        "phonetics": "tso-feem",
+        "translation": "they watch (m.)",
+        "audio": "audio/3120.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "צוֹפוֹת",
+        "transliteration": "tzofót",
+        "phonetics": "tso-fot",
+        "translation": "they watch (f.)",
+        "audio": "audio/3121.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֶצְפֶּה",
+        "transliteration": "etzpé",
+        "phonetics": "ets-pe",
+        "translation": "I will watch",
+        "audio": "audio/3122.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תִּצְפֶּה",
+        "transliteration": "titzpé",
+        "phonetics": "teets-pe",
+        "translation": "you will watch (m.s.)",
+        "audio": "audio/3123.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תִּצְפִּי",
+        "transliteration": "titzpí",
+        "phonetics": "teets-pee",
+        "translation": "you will watch (f.s.)",
+        "audio": "audio/3124.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יִצְפֶּה",
+        "transliteration": "yitzpé",
+        "phonetics": "yeets-pe",
+        "translation": "he will watch",
+        "audio": "audio/3125.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תִּצְפֶּה",
+        "transliteration": "titzpé",
+        "phonetics": "teets-pe",
+        "translation": "she will watch",
+        "audio": "audio/3126.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נִצְפֶּה",
+        "transliteration": "nitzpé",
+        "phonetics": "neets-pe",
+        "translation": "we will watch",
+        "audio": "audio/3127.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תִּצְפּוּ",
+        "transliteration": "titzpú",
+        "phonetics": "teets-poo",
+        "translation": "you will watch (m.pl.)",
+        "audio": "audio/3128.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תִּצְפּוּ",
+        "transliteration": "titzpú",
+        "phonetics": "teets-poo",
+        "translation": "you will watch (f.pl.)",
+        "audio": "audio/3129.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יִצְפּוּ",
+        "transliteration": "yitzpú",
+        "phonetics": "yeets-poo",
+        "translation": "they will watch (m.)",
+        "audio": "audio/3130.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "יִצְפּוּ",
+        "transliteration": "yitzpú",
+        "phonetics": "yeets-poo",
+        "translation": "they watch (f.)",
+        "audio": "audio/3131.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "צְפֵה",
+        "transliteration": "tzfé",
+        "phonetics": "tsfe",
+        "translation": "watch! (m.s.)",
+        "audio": "audio/3132.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "צְפִי",
+        "transliteration": "tzfí",
+        "phonetics": "tsfee",
+        "translation": "watch! (f.s.)",
+        "audio": "audio/3133.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "צְפוּ",
+        "transliteration": "tzfú",
+        "phonetics": "tsfoo",
+        "translation": "watch! (m.pl.)",
+        "audio": "audio/3134.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "צְפוּ",
+        "transliteration": "tzfú",
+        "phonetics": "tsfoo",
+        "translation": "watch! (f.pl.)",
+        "audio": "audio/3135.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לִצְפּוֹת",
+        "transliteration": "litzpót",
+        "phonetics": "leets-pot",
+        "translation": "to watch",
+        "audio": "audio/3136.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "אֲנִי צוֹפֶה בַּטֵּלֵוִיזְיָה כָּל עֶרֶב.",
+      "transliteration": "Ani tzofé ba-televízya kol érev.",
+      "translation": "I watch TV every evening."
+    },
+    {
+      "hebrew": "הִיא צָפְתָה בַּשֶּׁמֶשׁ הַזּוֹרַחַת.",
+      "transliteration": "Hi tzaftá ba-shémesh ha-zoráchat.",
+      "translation": "She watched the rising sun."
+    }
+  ],
+  "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root צ-פ-ה relates to watching or expecting. In modern Hebrew, 'litzpot' is commonly used for watching (e.g., TV) and expecting (e.g., an event).",
+  "related_words": [
+    "צוֹפֶה (tzofé) - viewer, observer",
+    "צִפִּיָּה (tzipiyá) - expectation",
+    "מִצְפֶּה (mitzpé) - lookout, observatory"
+  ],
+  "similar_verbs": [
+    "לִרְאוֹת (lir’ot) - to see",
+    "לְהַבִּיט (lehabit) - to look",
+    "לִשְׁמוֹעַ (lishmo’a) - to hear"
+  ],
+  "idioms": [
+    {
+      "expression": "צוֹפֶה מִן הַצַּד",
+      "transliteration": "tzofé min ha-tzad",
+      "translation": "watching from the sidelines",
+      "usage": "הוּא עָמַד כְּצוֹפֶה מִן הַצַּד בִּמְקוֹם לְעַזּוֹר."
+    },
+    {
+      "expression": "לִצְפּוֹת לְעָתִיד",
+      "transliteration": "litzpót le-atíd",
+      "translation": "to look to the future",
+      "usage": "אֲנַחְנוּ צְרִיכִים לִצְפּוֹת לְעָתִיד טוֹב יוֹתֵר."
+    }
+  ],
+  "binyanim": {
+    "paal": {
+      "infinitive": "לִצְפּוֹת",
+      "meaning": ["to watch", "to observe", "to expect"]
+    },
+    "nifal": {
+      "infinitive": "לְהִצָּפוֹת",
+      "meaning": ["to be watched", "to be expected"],
+      "note": "Less common in modern usage"
+    },
+    "hifil": {
+      "infinitive": "לְהַצְפּוֹת",
+      "meaning": ["to cause to watch", "to predict"],
+      "note": "Rare in this form"
+    }
+  }
+},
+  "lechayech": {
+  "root": ["ח", "י", "ך"],
+  "root_meaning": "Related to smiling or showing happiness",
+  "infinitive": "לְחַיֵּךְ",
+  "binyan": "פִּעֵל",
+  "meaning": ["to smile"],
+  "translations": {
+    "en": "to smile",
+    "es": "sonreír",
+    "fr": "sourire",
+    "de": "lächeln",
+    "ru": "улыбаться"
+  },
+  "difficulty": "Intermediate",
+  "frequency": "High",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "חִיַּכְתִּי",
+        "transliteration": "chiyákti",
+        "phonetics": "khee-yakh-tee",
+        "translation": "I smiled",
+        "audio": "audio/3300.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "חִיַּכְתָּ",
+        "transliteration": "chiyákta",
+        "phonetics": "khee-yakh-ta",
+        "translation": "you smiled (m.s.)",
+        "audio": "audio/3301.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "חִיַּכְתְּ",
+        "transliteration": "chiyákt",
+        "phonetics": "khee-yakht",
+        "translation": "you smiled (f.s.)",
+        "audio": "audio/3302.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "חִיֵּךְ",
+        "transliteration": "chiyéch",
+        "phonetics": "khee-yekh",
+        "translation": "he smiled",
+        "audio": "audio/3303.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "חִיְּכָה",
+        "transliteration": "chiyká",
+        "phonetics": "khee-ye-kha",
+        "translation": "she smiled",
+        "audio": "audio/3304.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "חִיַּכְנוּ",
+        "transliteration": "chiyáknu",
+        "phonetics": "khee-yakh-noo",
+        "translation": "we smiled",
+        "audio": "audio/3305.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "חִיַּכְתֶּם",
+        "transliteration": "chiyáktem",
+        "phonetics": "khee-yakh-tem",
+        "translation": "you smiled (m.pl.)",
+        "audio": "audio/3306.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "חִיַּכְתֶּן",
+        "transliteration": "chiyákten",
+        "phonetics": "khee-yakh-ten",
+        "translation": "you smiled (f.pl.)",
+        "audio": "audio/3307.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "חִיְּכוּ",
+        "transliteration": "chiykú",
+        "phonetics": "khee-ye-koo",
+        "translation": "they smiled (m.)",
+        "audio": "audio/3308.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "חִיְּכוּ",
+        "transliteration": "chiykú",
+        "phonetics": "khee-ye-koo",
+        "translation": "they smiled (f.)",
+        "audio": "audio/3309.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "מְחַיֵּךְ",
+        "transliteration": "mechayéch",
+        "phonetics": "me-kha-yekh",
+        "translation": "I smile (m.)",
+        "audio": "audio/3310.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "מְחַיֶּכֶת",
+        "transliteration": "mechayéchet",
+        "phonetics": "me-kha-ye-khet",
+        "translation": "I smile (f.)",
+        "audio": "audio/3311.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "מְחַיֵּךְ",
+        "transliteration": "mechayéch",
+        "phonetics": "me-kha-yekh",
+        "translation": "you smile (m.s.)",
+        "audio": "audio/3312.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "מְחַיֶּכֶת",
+        "transliteration": "mechayéchet",
+        "phonetics": "me-kha-ye-khet",
+        "translation": "you smile (f.s.)",
+        "audio": "audio/3313.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "מְחַיֵּךְ",
+        "transliteration": "mechayéch",
+        "phonetics": "me-kha-yekh",
+        "translation": "he smiles",
+        "audio": "audio/3314.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "מְחַיֶּכֶת",
+        "transliteration": "mechayéchet",
+        "phonetics": "me-kha-ye-khet",
+        "translation": "she smiles",
+        "audio": "audio/3315.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "מְחַיְּכִים",
+        "transliteration": "mechaychím",
+        "phonetics": "me-khay-kheem",
+        "translation": "we smile (m.)",
+        "audio": "audio/3316.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "מְחַיְּכוֹת",
+        "transliteration": "mechaychót",
+        "phonetics": "me-khay-khot",
+        "translation": "we smile (f.)",
+        "audio": "audio/3317.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "מְחַיְּכִים",
+        "transliteration": "mechaychím",
+        "phonetics": "me-khay-kheem",
+        "translation": "you smile (m.pl.)",
+        "audio": "audio/3318.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "מְחַיְּכוֹת",
+        "transliteration": "mechaychót",
+        "phonetics": "me-khay-khot",
+        "translation": "you smile (f.pl.)",
+        "audio": "audio/3319.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "מְחַיְּכִים",
+        "transliteration": "mechaychím",
+        "phonetics": "me-khay-kheem",
+        "translation": "they smile (m.)",
+        "audio": "audio/3320.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "מְחַיְּכוֹת",
+        "transliteration": "mechaychót",
+        "phonetics": "me-khay-khot",
+        "translation": "they smile (f.)",
+        "audio": "audio/3321.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֲחַיֵּךְ",
+        "transliteration": "achayéch",
+        "phonetics": "a-kha-yekh",
+        "translation": "I will smile",
+        "audio": "audio/3322.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תְּחַיֵּךְ",
+        "transliteration": "tchayéch",
+        "phonetics": "te-kha-yekh",
+        "translation": "you will smile (m.s.)",
+        "audio": "audio/3323.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תְּחַיְּכִי",
+        "transliteration": "tchaychí",
+        "phonetics": "te-khay-khee",
+        "translation": "you will smile (f.s.)",
+        "audio": "audio/3324.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יְחַיֵּךְ",
+        "transliteration": "yechayéch",
+        "phonetics": "ye-kha-yekh",
+        "translation": "he will smile",
+        "audio": "audio/3325.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תְּחַיֵּךְ",
+        "transliteration": "tchayéch",
+        "phonetics": "te-kha-yekh",
+        "translation": "she will smile",
+        "audio": "audio/3326.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נְחַיֵּךְ",
+        "transliteration": "nechayéch",
+        "phonetics": "ne-kha-yekh",
+        "translation": "we will smile",
+        "audio": "audio/3327.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תְּחַיְּכוּ",
+        "transliteration": "tchaychú",
+        "phonetics": "te-khay-khoo",
+        "translation": "you will smile (m.pl.)",
+        "audio": "audio/3328.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תְּחַיֵּכְנָה",
+        "transliteration": "tchayéchna",
+        "phonetics": "te-kha-yekh-na",
+        "translation": "you will smile (f.pl.)",
+        "audio": "audio/3329.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יְחַיְּכוּ",
+        "transliteration": "yechaychú",
+        "phonetics": "ye-khay-khoo",
+        "translation": "they will smile (m.)",
+        "audio": "audio/3330.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תְּחַיֵּכְנָה",
+        "transliteration": "tchayéchna",
+        "phonetics": "te-kha-yekh-na",
+        "translation": "they will smile (f.)",
+        "audio": "audio/3331.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "חַיֵּךְ",
+        "transliteration": "chayéch",
+        "phonetics": "kha-yekh",
+        "translation": "smile! (m.s.)",
+        "audio": "audio/3332.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "חַיְּכִי",
+        "transliteration": "chaychí",
+        "phonetics": "khay-khee",
+        "translation": "smile! (f.s.)",
+        "audio": "audio/3333.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "חַיְּכוּ",
+        "transliteration": "chaychú",
+        "phonetics": "khay-khoo",
+        "translation": "smile! (m.pl.)",
+        "audio": "audio/3334.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "חַיֵּכְנָה",
+        "transliteration": "chayéchna",
+        "phonetics": "kha-yekh-na",
+        "translation": "smile! (f.pl.)",
+        "audio": "audio/3335.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לְחַיֵּךְ",
+        "transliteration": "lechayéch",
+        "phonetics": "le-kha-yekh",
+        "translation": "to smile",
+        "audio": "audio/3336.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "הוּא חִיֵּךְ כְּשֶׁרָאָה אֶת הַמַּתָּנָה.",
+      "transliteration": "Hu chiyéch kshe-ra’á et ha-matána.",
+      "translation": "He smiled when he saw the gift."
+    },
+    {
+      "hebrew": "אֲנִי מְחַיֶּכֶת כָּל פַּעַם שֶׁאֲנִי חוֹשֶׁבֶת עָלָיו.",
+      "transliteration": "Ani mechayéchet kol pá’am she-ani choshévet aláv.",
+      "translation": "I smile every time I think about him."
+    }
+  ],
+  "notes": "This verb is in binyan Piel (פִּעֵל), which often intensifies or modifies the root’s meaning. The root ח-י-ך relates to smiling, derived from 'chai' (life) and expressions of joy. It’s a common modern Hebrew verb for smiling.",
+  "related_words": [
+    "חִיּוּךְ (chiyúch) - a smile",
+    "חַיְּכָן (chaychán) - a smiler, cheerful person",
+    "חַיּוּכִי (chayukí) - smiley (e.g., emoji)"
+  ],
+  "similar_verbs": [
+    "לִצְחוֹק (litzchók) - to laugh",
+    "לִשְׂמֹחַ (lismóach) - to be happy",
+    "לְהִתְרַגֵּשׁ (lehitragésh) - to be excited"
+  ],
+  "idioms": [
+    {
+      "expression": "חִיֵּךְ מֵאֹזֶן לְאֹזֶן",
+      "transliteration": "chiyéch me-ózen le-ózen",
+      "translation": "smiled from ear to ear",
+      "usage": "הִיא חִיְּכָה מֵאֹזֶן לְאֹזֶן כְּשֶׁשָּׁמְעָה אֶת הַבְּשׂוֹרָה."
+    },
+    {
+      "expression": "לְחַיֵּךְ בְּקוֹשִׁי",
+      "transliteration": "lechayéch be-kóshi",
+      "translation": "to force a smile",
+      "usage": "הוּא נִסָּה לְחַיֵּךְ בְּקוֹשִׁי לַמְרוֹת הַכְּאֵב."
+    }
+  ],
+  "binyanim": {
+    "piel": {
+      "infinitive": "לְחַיֵּךְ",
+      "meaning": ["to smile"]
+    },
+    "hitpael": {
+      "infinitive": "לְהִתְחַיֵּךְ",
+      "meaning": ["to smile to oneself", "to smirk"],
+      "note": "Often implies a subtle or inward smile"
+    }
+  }
+},
+  "livkot": {
+  "root": ["ב", "כ", "ה"],
+  "root_meaning": "Related to crying or weeping",
+  "infinitive": "לִבְכּוֹת",
+  "binyan": "פָּעַל",
+  "meaning": ["to cry", "to weep"],
+  "translations": {
+    "en": "to cry",
+    "es": "llorar",
+    "fr": "pleurer",
+    "de": "weinen",
+    "ru": "плакать"
+  },
+  "difficulty": "Beginner",
+  "frequency": "High",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "בָּכִיתִי",
+        "transliteration": "bachíti",
+        "phonetics": "ba-khee-tee",
+        "translation": "I cried",
+        "audio": "audio/3400.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "בָּכִיתָ",
+        "transliteration": "bachíta",
+        "phonetics": "ba-khee-ta",
+        "translation": "you cried (m.s.)",
+        "audio": "audio/3401.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "בָּכִית",
+        "transliteration": "bachít",
+        "phonetics": "ba-kheet",
+        "translation": "you cried (f.s.)",
+        "audio": "audio/3402.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "בָּכָה",
+        "transliteration": "bachá",
+        "phonetics": "ba-kha",
+        "translation": "he cried",
+        "audio": "audio/3403.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "בָּכְתָה",
+        "transliteration": "bachtá",
+        "phonetics": "bakh-ta",
+        "translation": "she cried",
+        "audio": "audio/3404.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "בָּכִינוּ",
+        "transliteration": "bachínu",
+        "phonetics": "ba-khee-noo",
+        "translation": "we cried",
+        "audio": "audio/3405.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "בְּכִיתֶם",
+        "transliteration": "bchítem",
+        "phonetics": "b-khee-tem",
+        "translation": "you cried (m.pl.)",
+        "audio": "audio/3406.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "בְּכִיתֶן",
+        "transliteration": "bchíten",
+        "phonetics": "b-khee-ten",
+        "translation": "you cried (f.pl.)",
+        "audio": "audio/3407.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "בָּכוּ",
+        "transliteration": "bachú",
+        "phonetics": "ba-khoo",
+        "translation": "they cried (m.)",
+        "audio": "audio/3408.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "בָּכוּ",
+        "transliteration": "bachú",
+        "phonetics": "ba-khoo",
+        "translation": "they cried (f.)",
+        "audio": "audio/3409.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "בּוֹכֶה",
+        "transliteration": "boché",
+        "phonetics": "bo-khe",
+        "translation": "I cry (m.)",
+        "audio": "audio/3410.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "בּוֹכָה",
+        "transliteration": "bochá",
+        "phonetics": "bo-kha",
+        "translation": "I cry (f.)",
+        "audio": "audio/3411.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "בּוֹכֶה",
+        "transliteration": "boché",
+        "phonetics": "bo-khe",
+        "translation": "you cry (m.s.)",
+        "audio": "audio/3412.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "בּוֹכָה",
+        "transliteration": "bochá",
+        "phonetics": "bo-kha",
+        "translation": "you cry (f.s.)",
+        "audio": "audio/3413.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "בּוֹכֶה",
+        "transliteration": "boché",
+        "phonetics": "bo-khe",
+        "translation": "he cries",
+        "audio": "audio/3414.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "בּוֹכָה",
+        "transliteration": "bochá",
+        "phonetics": "bo-kha",
+        "translation": "she cries",
+        "audio": "audio/3415.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "בּוֹכִים",
+        "transliteration": "bochím",
+        "phonetics": "bo-kheem",
+        "translation": "we cry (m.)",
+        "audio": "audio/3416.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "בּוֹכוֹת",
+        "transliteration": "bochót",
+        "phonetics": "bo-khot",
+        "translation": "we cry (f.)",
+        "audio": "audio/3417.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "בּוֹכִים",
+        "transliteration": "bochím",
+        "phonetics": "bo-kheem",
+        "translation": "you cry (m.pl.)",
+        "audio": "audio/3418.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "בּוֹכוֹת",
+        "transliteration": "bochót",
+        "phonetics": "bo-khot",
+        "translation": "you cry (f.pl.)",
+        "audio": "audio/3419.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "בּוֹכִים",
+        "transliteration": "bochím",
+        "phonetics": "bo-kheem",
+        "translation": "they cry (m.)",
+        "audio": "audio/3420.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "בּוֹכוֹת",
+        "transliteration": "bochót",
+        "phonetics": "bo-khot",
+        "translation": "they cry (f.)",
+        "audio": "audio/3421.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֶבְכֶּה",
+        "transliteration": "evké",
+        "phonetics": "ev-ke",
+        "translation": "I will cry",
+        "audio": "audio/3422.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תִּבְכֶּה",
+        "transliteration": "tivké",
+        "phonetics": "teev-ke",
+        "translation": "you will cry (m.s.)",
+        "audio": "audio/3423.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תִּבְכִּי",
+        "transliteration": "tivkí",
+        "phonetics": "teev-kee",
+        "translation": "you will cry (f.s.)",
+        "audio": "audio/3424.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יִבְכֶּה",
+        "transliteration": "yivké",
+        "phonetics": "yeev-ke",
+        "translation": "he will cry",
+        "audio": "audio/3425.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תִּבְכֶּה",
+        "transliteration": "tivké",
+        "phonetics": "teev-ke",
+        "translation": "she will cry",
+        "audio": "audio/3426.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נִבְכֶּה",
+        "transliteration": "nivké",
+        "phonetics": "neev-ke",
+        "translation": "we will cry",
+        "audio": "audio/3427.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תִּבְכּוּ",
+        "transliteration": "tivkú",
+        "phonetics": "teev-koo",
+        "translation": "you will cry (m.pl.)",
+        "audio": "audio/3428.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תִּבְכֶּינָה",
+        "transliteration": "tivkéyna",
+        "phonetics": "teev-key-na",
+        "translation": "you will cry (f.pl.)",
+        "audio": "audio/3429.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יִבְכּוּ",
+        "transliteration": "yivkú",
+        "phonetics": "yeev-koo",
+        "translation": "they will cry (m.)",
+        "audio": "audio/3430.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תִּבְכֶּינָה",
+        "transliteration": "tivkéyna",
+        "phonetics": "teev-key-na",
+        "translation": "they will cry (f.)",
+        "audio": "audio/3431.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "בְּכֵה",
+        "transliteration": "bché",
+        "phonetics": "b-khe",
+        "translation": "cry! (m.s.)",
+        "audio": "audio/3432.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "בְּכִי",
+        "transliteration": "bchí",
+        "phonetics": "b-khee",
+        "translation": "cry! (f.s.)",
+        "audio": "audio/3433.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "בְּכוּ",
+        "transliteration": "bchú",
+        "phonetics": "b-khoo",
+        "translation": "cry! (m.pl.)",
+        "audio": "audio/3434.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "בְּכֶינָה",
+        "transliteration": "bchéyna",
+        "phonetics": "b-khey-na",
+        "translation": "cry! (f.pl.)",
+        "audio": "audio/3435.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לִבְכּוֹת",
+        "transliteration": "livkót",
+        "phonetics": "leev-kot",
+        "translation": "to cry",
+        "audio": "audio/3436.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "הַיֶּלֶד בּוֹכֶה כִּי הוּא עָיֵף.",
+      "transliteration": "Ha-yéled boché ki hu ayéf.",
+      "translation": "The child is crying because he’s tired."
+    },
+    {
+      "hebrew": "הִיא בָּכְתָה כְּשֶׁשָּׁמְעָה אֶת הַבְּשׂוֹרָה.",
+      "transliteration": "Hi bachtá kshe-sham’á et ha-bsorá.",
+      "translation": "She cried when she heard the news."
+    }
+  ],
+  "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root ב-כ-ה is directly tied to crying or weeping, a common emotional expression in Hebrew. The guttural ה affects pronunciation slightly.",
+  "related_words": [
+    "בְּכִי (bechí) - crying, weeping",
+    "בּוֹכֶה (boché) - crier, one who cries",
+    "דְּמָעוֹת (dma’ót) - tears"
+  ],
+  "similar_verbs": [
+    "לְחַיֵּךְ (lechayéch) - to smile",
+    "לִצְחוֹק (litzchók) - to laugh",
+    "לְהִתְרַגֵּשׁ (lehitragésh) - to be excited"
+  ],
+  "idioms": [
+    {
+      "expression": "בָּכָה עַל הַחֲלָב הַשָּׁפוּךְ",
+      "transliteration": "bachá al ha-chaláv ha-shafúch",
+      "translation": "cried over spilled milk",
+      "usage": "לֹא כְּדַאי לִבְכּוֹת עַל הַחֲלָב הַשָּׁפוּךְ, מַה שֶּׁנַּעֲשָׂה נַעֲשָׂה."
+    },
+    {
+      "expression": "בּוֹכֶה בְּקוֹל",
+      "transliteration": "boché be-kól",
+      "translation": "crying out loud",
+      "usage": "הַתִּינוֹק בּוֹכֶה בְּקוֹל כִּי הוּא רָעֵב."
+    }
+  ],
+  "binyanim": {
+    "paal": {
+      "infinitive": "לִבְכּוֹת",
+      "meaning": ["to cry", "to weep"]
+    },
+    "hifil": {
+      "infinitive": "לְהַבְכּוֹת",
+      "meaning": ["to make someone cry"],
+      "note": "Less common but used in causative contexts"
+    }
+  }
+},
+  "litzok": {
+  "root": ["צ", "ע", "ק"],
+  "root_meaning": "Related to shouting, crying out, or calling loudly",
+  "infinitive": "לִצְעוֹק",
+  "binyan": "פָּעַל",
+  "meaning": ["to shout", "to yell"],
+  "translations": {
+    "en": "to shout",
+    "es": "gritar",
+    "fr": "crier",
+    "de": "schreien",
+    "ru": "кричать"
+  },
+  "difficulty": "Intermediate",
+  "frequency": "High",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "צָעַקְתִּי",
+        "transliteration": "tza’ákti",
+        "phonetics": "tsa-ak-tee",
+        "translation": "I shouted",
+        "audio": "audio/3500.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "צָעַקְתָּ",
+        "transliteration": "tza’ákta",
+        "phonetics": "tsa-ak-ta",
+        "translation": "you shouted (m.s.)",
+        "audio": "audio/3501.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "צָעַקְתְּ",
+        "transliteration": "tza’ákt",
+        "phonetics": "tsa-akt",
+        "translation": "you shouted (f.s.)",
+        "audio": "audio/3502.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "צָעַק",
+        "transliteration": "tza’ák",
+        "phonetics": "tsa-ak",
+        "translation": "he shouted",
+        "audio": "audio/3503.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "צָעֲקָה",
+        "transliteration": "tza’aká",
+        "phonetics": "tsa-a-ka",
+        "translation": "she shouted",
+        "audio": "audio/3504.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "צָעַקְנוּ",
+        "transliteration": "tza’áknu",
+        "phonetics": "tsa-ak-noo",
+        "translation": "we shouted",
+        "audio": "audio/3505.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "צְעַקְתֶּם",
+        "transliteration": "tza’áktem",
+        "phonetics": "tsa-ak-tem",
+        "translation": "you shouted (m.pl.)",
+        "audio": "audio/3506.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "צְעַקְתֶּן",
+        "transliteration": "tza’ákten",
+        "phonetics": "tsa-ak-ten",
+        "translation": "you shouted (f.pl.)",
+        "audio": "audio/3507.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "צָעֲקוּ",
+        "transliteration": "tza’akú",
+        "phonetics": "tsa-a-koo",
+        "translation": "they shouted (m.)",
+        "audio": "audio/3508.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "צָעֲקוּ",
+        "transliteration": "tza’akú",
+        "phonetics": "tsa-a-koo",
+        "translation": "they shouted (f.)",
+        "audio": "audio/3509.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "צוֹעֵק",
+        "transliteration": "tzo’ék",
+        "phonetics": "tso-ek",
+        "translation": "I shout (m.)",
+        "audio": "audio/3510.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "צוֹעֶקֶת",
+        "transliteration": "tzo’éket",
+        "phonetics": "tso-e-ket",
+        "translation": "I shout (f.)",
+        "audio": "audio/3511.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "צוֹעֵק",
+        "transliteration": "tzo’ék",
+        "phonetics": "tso-ek",
+        "translation": "you shout (m.s.)",
+        "audio": "audio/3512.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "צוֹעֶקֶת",
+        "transliteration": "tzo’éket",
+        "phonetics": "tso-e-ket",
+        "translation": "you shout (f.s.)",
+        "audio": "audio/3513.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "צוֹעֵק",
+        "transliteration": "tzo’ék",
+        "phonetics": "tso-ek",
+        "translation": "he shouts",
+        "audio": "audio/3514.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "צוֹעֶקֶת",
+        "transliteration": "tzo’éket",
+        "phonetics": "tso-e-ket",
+        "translation": "she shouts",
+        "audio": "audio/3515.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "צוֹעֲקִים",
+        "transliteration": "tzo’akím",
+        "phonetics": "tso-a-keem",
+        "translation": "we shout (m.)",
+        "audio": "audio/3516.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "צוֹעֲקוֹת",
+        "transliteration": "tzo’akót",
+        "phonetics": "tso-a-kot",
+        "translation": "we shout (f.)",
+        "audio": "audio/3517.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "צוֹעֲקִים",
+        "transliteration": "tzo’akím",
+        "phonetics": "tso-a-keem",
+        "translation": "you shout (m.pl.)",
+        "audio": "audio/3518.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "צוֹעֲקוֹת",
+        "transliteration": "tzo’akót",
+        "phonetics": "tso-a-kot",
+        "translation": "you shout (f.pl.)",
+        "audio": "audio/3519.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "צוֹעֲקִים",
+        "transliteration": "tzo’akím",
+        "phonetics": "tso-a-keem",
+        "translation": "they shout (m.)",
+        "audio": "audio/3520.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "צוֹעֲקוֹת",
+        "transliteration": "tzo’akót",
+        "phonetics": "tso-a-kot",
+        "translation": "they shout (f.)",
+        "audio": "audio/3521.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֶצְעַק",
+        "transliteration": "etz’ák",
+        "phonetics": "ets-ak",
+        "translation": "I will shout",
+        "audio": "audio/3522.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תִּצְעַק",
+        "transliteration": "titz’ák",
+        "phonetics": "teets-ak",
+        "translation": "you will shout (m.s.)",
+        "audio": "audio/3523.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תִּצְעֲקִי",
+        "transliteration": "titz’akí",
+        "phonetics": "teets-a-kee",
+        "translation": "you will shout (f.s.)",
+        "audio": "audio/3524.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יִצְעַק",
+        "transliteration": "yitz’ák",
+        "phonetics": "yeets-ak",
+        "translation": "he will shout",
+        "audio": "audio/3525.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תִּצְעַק",
+        "transliteration": "titz’ák",
+        "phonetics": "teets-ak",
+        "translation": "she will shout",
+        "audio": "audio/3526.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נִצְעַק",
+        "transliteration": "nitz’ák",
+        "phonetics": "neets-ak",
+        "translation": "we will shout",
+        "audio": "audio/3527.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תִּצְעֲקוּ",
+        "transliteration": "titz’akú",
+        "phonetics": "teets-a-koo",
+        "translation": "you will shout (m.pl.)",
+        "audio": "audio/3528.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תִּצְעַקְנָה",
+        "transliteration": "titz’áknah",
+        "phonetics": "teets-ak-na",
+        "translation": "you will shout (f.pl.)",
+        "audio": "audio/3529.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יִצְעֲקוּ",
+        "transliteration": "yitz’akú",
+        "phonetics": "yeets-a-koo",
+        "translation": "they will shout (m.)",
+        "audio": "audio/3530.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תִּצְעַקְנָה",
+        "transliteration": "titz’áknah",
+        "phonetics": "teets-ak-na",
+        "translation": "they will shout (f.)",
+        "audio": "audio/3531.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "צְעַק",
+        "transliteration": "tz’ák",
+        "phonetics": "ts-ak",
+        "translation": "shout! (m.s.)",
+        "audio": "audio/3532.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "צַעֲקִי",
+        "transliteration": "tza’akí",
+        "phonetics": "tsa-a-kee",
+        "translation": "shout! (f.s.)",
+        "audio": "audio/3533.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "צַעֲקוּ",
+        "transliteration": "tza’akú",
+        "phonetics": "tsa-a-koo",
+        "translation": "shout! (m.pl.)",
+        "audio": "audio/3534.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "צְעַקְנָה",
+        "transliteration": "tz’áknah",
+        "phonetics": "ts-ak-na",
+        "translation": "shout! (f.pl.)",
+        "audio": "audio/3535.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לִצְעוֹק",
+        "transliteration": "litz’ók",
+        "phonetics": "leets-ok",
+        "translation": "to shout",
+        "audio": "audio/3536.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "הוּא צָעַק כְּשֶׁרָאָה אֶת הַסַּכָּנָה.",
+      "transliteration": "Hu tza’ák kshe-ra’á et ha-sakána.",
+      "translation": "He shouted when he saw the danger."
+    },
+    {
+      "hebrew": "הַקָּהָל צוֹעֵק בְּשִׂמְחָה בַּמִּשְׂחָק.",
+      "transliteration": "Ha-kahál tzo’ék be-simchá ba-mischák.",
+      "translation": "The crowd shouts with joy at the game."
+    }
+  ],
+  "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root צ-ע-ק involves a guttural ע (ayin), affecting pronunciation. It’s used for loud vocal expressions, whether out of fear, joy, or anger.",
+  "related_words": [
+    "צְעָקָה (tza’aká) - a shout, a scream",
+    "צוֹעֵק (tzo’ék) - shouter, one who shouts",
+    "צַעֲקָן (tza’akán) - a loud or shouting person"
+  ],
+  "similar_verbs": [
+    "לִבְכּוֹת (livkót) - to cry",
+    "לְדַבֵּר (ledabér) - to speak",
+    "לִצְרֹחַ (litzróach) - to scream"
+  ],
+  "idioms": [
+    {
+      "expression": "צָעַק עַד הַשָּׁמַיִם",
+      "transliteration": "tza’ák ad ha-shamáyim",
+      "translation": "shouted to the heavens",
+      "usage": "הוּא צָעַק עַד הַשָּׁמַיִם כְּשֶׁהִפְסִיד בַּמִּשְׂחָק."
+    },
+    {
+      "expression": "צוֹעֵק מִן הַלֵּב",
+      "transliteration": "tzo’ék min ha-lev",
+      "translation": "shouting from the heart",
+      "usage": "הִיא צוֹעֶקֶת מִן הַלֵּב כְּשֶׁהִיא כּוֹעֶסֶת."
+    }
+  ],
+  "binyanim": {
+    "paal": {
+      "infinitive": "לִצְעוֹק",
+      "meaning": ["to shout", "to yell"]
+    },
+    "hifil": {
+      "infinitive": "לְהַצְעִיק",
+      "meaning": ["to cause to shout"],
+      "note": "Rare in modern Hebrew"
+    }
+  }
+},
+  "litzok": {
+  "root": ["צ", "ע", "ק"],
+  "root_meaning": "Related to shouting, crying out, or calling loudly",
+  "infinitive": "לִצְעוֹק",
+  "binyan": "פָּעַל",
+  "meaning": ["to shout", "to yell"],
+  "translations": {
+    "en": "to shout",
+    "es": "gritar",
+    "fr": "crier",
+    "de": "schreien",
+    "ru": "кричать"
+  },
+  "difficulty": "Intermediate",
+  "frequency": "High",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "צָעַקְתִּי",
+        "transliteration": "tza’ákti",
+        "phonetics": "tsa-ak-tee",
+        "translation": "I shouted",
+        "audio": "audio/3500.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "צָעַקְתָּ",
+        "transliteration": "tza’ákta",
+        "phonetics": "tsa-ak-ta",
+        "translation": "you shouted (m.s.)",
+        "audio": "audio/3501.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "צָעַקְתְּ",
+        "transliteration": "tza’ákt",
+        "phonetics": "tsa-akt",
+        "translation": "you shouted (f.s.)",
+        "audio": "audio/3502.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "צָעַק",
+        "transliteration": "tza’ák",
+        "phonetics": "tsa-ak",
+        "translation": "he shouted",
+        "audio": "audio/3503.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "צָעֲקָה",
+        "transliteration": "tza’aká",
+        "phonetics": "tsa-a-ka",
+        "translation": "she shouted",
+        "audio": "audio/3504.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "צָעַקְנוּ",
+        "transliteration": "tza’áknu",
+        "phonetics": "tsa-ak-noo",
+        "translation": "we shouted",
+        "audio": "audio/3505.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "צְעַקְתֶּם",
+        "transliteration": "tza’áktem",
+        "phonetics": "tsa-ak-tem",
+        "translation": "you shouted (m.pl.)",
+        "audio": "audio/3506.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "צְעַקְתֶּן",
+        "transliteration": "tza’ákten",
+        "phonetics": "tsa-ak-ten",
+        "translation": "you shouted (f.pl.)",
+        "audio": "audio/3507.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "צָעֲקוּ",
+        "transliteration": "tza’akú",
+        "phonetics": "tsa-a-koo",
+        "translation": "they shouted (m.)",
+        "audio": "audio/3508.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "צָעֲקוּ",
+        "transliteration": "tza’akú",
+        "phonetics": "tsa-a-koo",
+        "translation": "they shouted (f.)",
+        "audio": "audio/3509.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "צוֹעֵק",
+        "transliteration": "tzo’ék",
+        "phonetics": "tso-ek",
+        "translation": "I shout (m.)",
+        "audio": "audio/3510.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "צוֹעֶקֶת",
+        "transliteration": "tzo’éket",
+        "phonetics": "tso-e-ket",
+        "translation": "I shout (f.)",
+        "audio": "audio/3511.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "צוֹעֵק",
+        "transliteration": "tzo’ék",
+        "phonetics": "tso-ek",
+        "translation": "you shout (m.s.)",
+        "audio": "audio/3512.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "צוֹעֶקֶת",
+        "transliteration": "tzo’éket",
+        "phonetics": "tso-e-ket",
+        "translation": "you shout (f.s.)",
+        "audio": "audio/3513.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "צוֹעֵק",
+        "transliteration": "tzo’ék",
+        "phonetics": "tso-ek",
+        "translation": "he shouts",
+        "audio": "audio/3514.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "צוֹעֶקֶת",
+        "transliteration": "tzo’éket",
+        "phonetics": "tso-e-ket",
+        "translation": "she shouts",
+        "audio": "audio/3515.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "צוֹעֲקִים",
+        "transliteration": "tzo’akím",
+        "phonetics": "tso-a-keem",
+        "translation": "we shout (m.)",
+        "audio": "audio/3516.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "צוֹעֲקוֹת",
+        "transliteration": "tzo’akót",
+        "phonetics": "tso-a-kot",
+        "translation": "we shout (f.)",
+        "audio": "audio/3517.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "צוֹעֲקִים",
+        "transliteration": "tzo’akím",
+        "phonetics": "tso-a-keem",
+        "translation": "you shout (m.pl.)",
+        "audio": "audio/3518.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "צוֹעֲקוֹת",
+        "transliteration": "tzo’akót",
+        "phonetics": "tso-a-kot",
+        "translation": "you shout (f.pl.)",
+        "audio": "audio/3519.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "צוֹעֲקִים",
+        "transliteration": "tzo’akím",
+        "phonetics": "tso-a-keem",
+        "translation": "they shout (m.)",
+        "audio": "audio/3520.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "צוֹעֲקוֹת",
+        "transliteration": "tzo’akót",
+        "phonetics": "tso-a-kot",
+        "translation": "they shout (f.)",
+        "audio": "audio/3521.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֶצְעַק",
+        "transliteration": "etz’ák",
+        "phonetics": "ets-ak",
+        "translation": "I will shout",
+        "audio": "audio/3522.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תִּצְעַק",
+        "transliteration": "titz’ák",
+        "phonetics": "teets-ak",
+        "translation": "you will shout (m.s.)",
+        "audio": "audio/3523.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תִּצְעֲקִי",
+        "transliteration": "titz’akí",
+        "phonetics": "teets-a-kee",
+        "translation": "you will shout (f.s.)",
+        "audio": "audio/3524.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יִצְעַק",
+        "transliteration": "yitz’ák",
+        "phonetics": "yeets-ak",
+        "translation": "he will shout",
+        "audio": "audio/3525.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תִּצְעַק",
+        "transliteration": "titz’ák",
+        "phonetics": "teets-ak",
+        "translation": "she will shout",
+        "audio": "audio/3526.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נִצְעַק",
+        "transliteration": "nitz’ák",
+        "phonetics": "neets-ak",
+        "translation": "we will shout",
+        "audio": "audio/3527.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תִּצְעֲקוּ",
+        "transliteration": "titz’akú",
+        "phonetics": "teets-a-koo",
+        "translation": "you will shout (m.pl.)",
+        "audio": "audio/3528.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תִּצְעַקְנָה",
+        "transliteration": "titz’áknah",
+        "phonetics": "teets-ak-na",
+        "translation": "you will shout (f.pl.)",
+        "audio": "audio/3529.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יִצְעֲקוּ",
+        "transliteration": "yitz’akú",
+        "phonetics": "yeets-a-koo",
+        "translation": "they will shout (m.)",
+        "audio": "audio/3530.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תִּצְעַקְנָה",
+        "transliteration": "titz’áknah",
+        "phonetics": "teets-ak-na",
+        "translation": "they will shout (f.)",
+        "audio": "audio/3531.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "צְעַק",
+        "transliteration": "tz’ák",
+        "phonetics": "ts-ak",
+        "translation": "shout! (m.s.)",
+        "audio": "audio/3532.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "צַעֲקִי",
+        "transliteration": "tza’akí",
+        "phonetics": "tsa-a-kee",
+        "translation": "shout! (f.s.)",
+        "audio": "audio/3533.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "צַעֲקוּ",
+        "transliteration": "tza’akú",
+        "phonetics": "tsa-a-koo",
+        "translation": "shout! (m.pl.)",
+        "audio": "audio/3534.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "צְעַקְנָה",
+        "transliteration": "tz’áknah",
+        "phonetics": "ts-ak-na",
+        "translation": "shout! (f.pl.)",
+        "audio": "audio/3535.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לִצְעוֹק",
+        "transliteration": "litz’ók",
+        "phonetics": "leets-ok",
+        "translation": "to shout",
+        "audio": "audio/3536.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "הוּא צָעַק כְּשֶׁרָאָה אֶת הַסַּכָּנָה.",
+      "transliteration": "Hu tza’ák kshe-ra’á et ha-sakána.",
+      "translation": "He shouted when he saw the danger."
+    },
+    {
+      "hebrew": "הַקָּהָל צוֹעֵק בְּשִׂמְחָה בַּמִּשְׂחָק.",
+      "transliteration": "Ha-kahál tzo’ék be-simchá ba-mischák.",
+      "translation": "The crowd shouts with joy at the game."
+    }
+  ],
+  "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root צ-ע-ק involves a guttural ע (ayin), affecting pronunciation. It’s used for loud vocal expressions, whether out of fear, joy, or anger.",
+  "related_words": [
+    "צְעָקָה (tza’aká) - a shout, a scream",
+    "צוֹעֵק (tzo’ék) - shouter, one who shouts",
+    "צַעֲקָן (tza’akán) - a loud or shouting person"
+  ],
+  "similar_verbs": [
+    "לִבְכּוֹת (livkót) - to cry",
+    "לְדַבֵּר (ledabér) - to speak",
+    "לִצְרֹחַ (litzróach) - to scream"
+  ],
+  "idioms": [
+    {
+      "expression": "צָעַק עַד הַשָּׁמַיִם",
+      "transliteration": "tza’ák ad ha-shamáyim",
+      "translation": "shouted to the heavens",
+      "usage": "הוּא צָעַק עַד הַשָּׁמַיִם כְּשֶׁהִפְסִיד בַּמִּשְׂחָק."
+    },
+    {
+      "expression": "צוֹעֵק מִן הַלֵּב",
+      "transliteration": "tzo’ék min ha-lev",
+      "translation": "shouting from the heart",
+      "usage": "הִיא צוֹעֶקֶת מִן הַלֵּב כְּשֶׁהִיא כּוֹעֶסֶת."
+    }
+  ],
+  "binyanim": {
+    "paal": {
+      "infinitive": "לִצְעוֹק",
+      "meaning": ["to shout", "to yell"]
+    },
+    "hifil": {
+      "infinitive": "לְהַצְעִיק",
+      "meaning": ["to cause to shout"],
+      "note": "Rare in modern Hebrew"
+    }
+  }
+},
+  "lenakot": {
+  "root": ["נ", "ק", "ה"],
+  "root_meaning": "Related to cleaning or purifying",
+  "infinitive": "לְנַקּוֹת",
+  "binyan": "פִּעֵל",
+  "meaning": ["to clean", "to tidy"],
+  "translations": {
+    "en": "to clean",
+    "es": "limpiar",
+    "fr": "nettoyer",
+    "de": "putzen",
+    "ru": "чистить"
+  },
+  "difficulty": "Intermediate",
+  "frequency": "High",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "נִקִּיתִי",
+        "transliteration": "nikíti",
+        "phonetics": "nee-kee-tee",
+        "translation": "I cleaned",
+        "audio": "audio/3700.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "נִקִּיתָ",
+        "transliteration": "nikíta",
+        "phonetics": "nee-kee-ta",
+        "translation": "you cleaned (m.s.)",
+        "audio": "audio/3701.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "נִקִּית",
+        "transliteration": "nikít",
+        "phonetics": "nee-keet",
+        "translation": "you cleaned (f.s.)",
+        "audio": "audio/3702.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "נִקָּה",
+        "transliteration": "niká",
+        "phonetics": "nee-ka",
+        "translation": "he cleaned",
+        "audio": "audio/3703.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "נִקְּתָה",
+        "transliteration": "niktá",
+        "phonetics": "neek-ta",
+        "translation": "she cleaned",
+        "audio": "audio/3704.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נִקִּינוּ",
+        "transliteration": "nikínu",
+        "phonetics": "nee-kee-noo",
+        "translation": "we cleaned",
+        "audio": "audio/3705.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "נִקִּיתֶם",
+        "transliteration": "nikítem",
+        "phonetics": "nee-kee-tem",
+        "translation": "you cleaned (m.pl.)",
+        "audio": "audio/3706.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "נִקִּיתֶן",
+        "transliteration": "nikíten",
+        "phonetics": "nee-kee-ten",
+        "translation": "you cleaned (f.pl.)",
+        "audio": "audio/3707.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "נִקּוּ",
+        "transliteration": "nikú",
+        "phonetics": "nee-koo",
+        "translation": "they cleaned (m.)",
+        "audio": "audio/3708.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "נִקּוּ",
+        "transliteration": "nikú",
+        "phonetics": "nee-koo",
+        "translation": "they cleaned (f.)",
+        "audio": "audio/3709.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "מְנַקֶּה",
+        "transliteration": "menaké",
+        "phonetics": "me-na-ke",
+        "translation": "I clean (m.)",
+        "audio": "audio/3710.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "מְנַקָּה",
+        "transliteration": "menaká",
+        "phonetics": "me-na-ka",
+        "translation": "I clean (f.)",
+        "audio": "audio/3711.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "מְנַקֶּה",
+        "transliteration": "menaké",
+        "phonetics": "me-na-ke",
+        "translation": "you clean (m.s.)",
+        "audio": "audio/3712.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "מְנַקָּה",
+        "transliteration": "menaká",
+        "phonetics": "me-na-ka",
+        "translation": "you clean (f.s.)",
+        "audio": "audio/3713.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "מְנַקֶּה",
+        "transliteration": "menaké",
+        "phonetics": "me-na-ke",
+        "translation": "he cleans",
+        "audio": "audio/3714.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "מְנַקָּה",
+        "transliteration": "menaká",
+        "phonetics": "me-na-ka",
+        "translation": "she cleans",
+        "audio": "audio/3715.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "מְנַקִּים",
+        "transliteration": "menakím",
+        "phonetics": "me-na-keem",
+        "translation": "we clean (m.)",
+        "audio": "audio/3716.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "מְנַקּוֹת",
+        "transliteration": "menakót",
+        "phonetics": "me-na-kot",
+        "translation": "we clean (f.)",
+        "audio": "audio/3717.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "מְנַקִּים",
+        "transliteration": "menakím",
+        "phonetics": "me-na-keem",
+        "translation": "you clean (m.pl.)",
+        "audio": "audio/3718.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "מְנַקּוֹת",
+        "transliteration": "menakót",
+        "phonetics": "me-na-kot",
+        "translation": "you clean (f.pl.)",
+        "audio": "audio/3719.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "מְנַקִּים",
+        "transliteration": "menakím",
+        "phonetics": "me-na-keem",
+        "translation": "they clean (m.)",
+        "audio": "audio/3720.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "מְנַקּוֹת",
+        "transliteration": "menakót",
+        "phonetics": "me-na-kot",
+        "translation": "they clean (f.)",
+        "audio": "audio/3721.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֲנַקֶּה",
+        "transliteration": "anaké",
+        "phonetics": "a-na-ke",
+        "translation": "I will clean",
+        "audio": "audio/3722.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תְּנַקֶּה",
+        "transliteration": "tenaké",
+        "phonetics": "te-na-ke",
+        "translation": "you will clean (m.s.)",
+        "audio": "audio/3723.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תְּנַקִּי",
+        "transliteration": "tenakí",
+        "phonetics": "te-na-kee",
+        "translation": "you will clean (f.s.)",
+        "audio": "audio/3724.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יְנַקֶּה",
+        "transliteration": "yenaké",
+        "phonetics": "ye-na-ke",
+        "translation": "he will clean",
+        "audio": "audio/3725.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תְּנַקֶּה",
+        "transliteration": "tenaké",
+        "phonetics": "te-na-ke",
+        "translation": "she will clean",
+        "audio": "audio/3726.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נְנַקֶּה",
+        "transliteration": "nenaké",
+        "phonetics": "ne-na-ke",
+        "translation": "we will clean",
+        "audio": "audio/3727.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תְּנַקּוּ",
+        "transliteration": "tenakú",
+        "phonetics": "te-na-koo",
+        "translation": "you will clean (m.pl.)",
+        "audio": "audio/3728.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תְּנַקֶּינָה",
+        "transliteration": "tenakéyna",
+        "phonetics": "te-na-key-na",
+        "translation": "you will clean (f.pl.)",
+        "audio": "audio/3729.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יְנַקּוּ",
+        "transliteration": "yenakú",
+        "phonetics": "ye-na-koo",
+        "translation": "they will clean (m.)",
+        "audio": "audio/3730.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תְּנַקֶּינָה",
+        "transliteration": "tenakéyna",
+        "phonetics": "te-na-key-na",
+        "translation": "they will clean (f.)",
+        "audio": "audio/3731.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "נַקֶּה",
+        "transliteration": "naké",
+        "phonetics": "na-ke",
+        "translation": "clean! (m.s.)",
+        "audio": "audio/3732.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "נַקִּי",
+        "transliteration": "nakí",
+        "phonetics": "na-kee",
+        "translation": "clean! (f.s.)",
+        "audio": "audio/3733.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "נַקּוּ",
+        "transliteration": "nakú",
+        "phonetics": "na-koo",
+        "translation": "clean! (m.pl.)",
+        "audio": "audio/3734.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "נַקֶּינָה",
+        "transliteration": "nakéyna",
+        "phonetics": "na-key-na",
+        "translation": "clean! (f.pl.)",
+        "audio": "audio/3735.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לְנַקּוֹת",
+        "transliteration": "lenakót",
+        "phonetics": "le-na-kot",
+        "translation": "to clean",
+        "audio": "audio/3736.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "אֲנִי מְנַקֶּה אֶת הַבַּיִת כָּל יוֹם שִׁשִּׁי.",
+      "transliteration": "Ani menaké et ha-báyit kol yom shishí.",
+      "translation": "I clean the house every Friday."
+    },
+    {
+      "hebrew": "הֵם נִקּוּ אֶת הַחַלּוֹנוֹת בַּבֹּקֶר.",
+      "transliteration": "Hem nikú et ha-chalonót ba-bóker.",
+      "translation": "They cleaned the windows in the morning."
+    }
+  ],
+  "notes": "This verb is in binyan Piel (פִּעֵל), which often intensifies or specifies the root’s action. The root נ-ק-ה relates to cleanliness or purification, and in Piel, it becomes an active process of cleaning. The guttural ה affects pronunciation slightly.",
+  "related_words": [
+    "נִקָּיוֹן (nikayón) - cleanliness",
+    "מְנַקֶּה (menaké) - cleaner",
+    "נְקִיּוּת (nkiyút) - tidiness"
+  ],
+  "similar_verbs": [
+    "לִצְבּוֹעַ (litzbóa) - to paint",
+    "לְסַדֵּר (lesadér) - to organize",
+    "לְשַׁטֵּף (leshatéf) - to wash"
+  ],
+  "idioms": [
+    {
+      "expression": "נִקָּה אֶת הַשְּׁלוּחָה",
+      "transliteration": "niká et ha-shluchá",
+      "translation": "cleaned the table (cleared things up)",
+      "usage": "הוּא נִקָּה אֶת הַשְּׁלוּחָה לִפְנֵי שֶׁהִתְחִיל לָעֲבֹד."
+    },
+    {
+      "expression": "לְנַקּוֹת אֶת הָרֹאשׁ",
+      "transliteration": "lenakót et ha-rósh",
+      "translation": "to clear one’s head",
+      "usage": "אֲנִי צָרִיךְ לְנַקּוֹת אֶת הָרֹאשׁ אַחֲרֵי יוֹם קָשֶׁה."
+    }
+  ],
+  "binyanim": {
+    "piel": {
+      "infinitive": "לְנַקּוֹת",
+      "meaning": ["to clean", "to tidy"]
+    },
+    "nifal": {
+      "infinitive": "לְהִנָּקוֹת",
+      "meaning": ["to be cleaned"],
+      "note": "Common in passive contexts"
+    },
+    "hifil": {
+      "infinitive": "לְהַנִּיק",
+      "meaning": ["to nurse (a baby)"],
+      "note": "Different root meaning, unrelated to cleaning"
+    }
+  }
+},
+  "linhog": {
+  "root": ["נ", "ה", "ג"],
+  "root_meaning": "Related to driving, leading, or guiding",
+  "infinitive": "לִנְהוֹג",
+  "binyan": "פָּעַל",
+  "meaning": ["to drive", "to steer"],
+  "translations": {
+    "en": "to drive",
+    "es": "conducir",
+    "fr": "conduire",
+    "de": "fahren",
+    "ru": "водить"
+  },
+  "difficulty": "Intermediate",
+  "frequency": "High",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "נָהַגְתִּי",
+        "transliteration": "nahágti",
+        "phonetics": "na-hag-tee",
+        "translation": "I drove",
+        "audio": "audio/3800.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "נָהַגְתָּ",
+        "transliteration": "nahágta",
+        "phonetics": "na-hag-ta",
+        "translation": "you drove (m.s.)",
+        "audio": "audio/3801.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "נָהַגְתְּ",
+        "transliteration": "nahágt",
+        "phonetics": "na-hagt",
+        "translation": "you drove (f.s.)",
+        "audio": "audio/3802.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "נָהַג",
+        "transliteration": "nahág",
+        "phonetics": "na-hag",
+        "translation": "he drove",
+        "audio": "audio/3803.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "נָהֲגָה",
+        "transliteration": "nahagá",
+        "phonetics": "na-ha-ga",
+        "translation": "she drove",
+        "audio": "audio/3804.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נָהַגְנוּ",
+        "transliteration": "nahágnu",
+        "phonetics": "na-hag-noo",
+        "translation": "we drove",
+        "audio": "audio/3805.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "נְהַגְתֶּם",
+        "transliteration": "nhagtém",
+        "phonetics": "n-hag-tem",
+        "translation": "you drove (m.pl.)",
+        "audio": "audio/3806.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "נְהַגְתֶּן",
+        "transliteration": "nhagtén",
+        "phonetics": "n-hag-ten",
+        "translation": "you drove (f.pl.)",
+        "audio": "audio/3807.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "נָהֲגוּ",
+        "transliteration": "nahagú",
+        "phonetics": "na-ha-goo",
+        "translation": "they drove (m.)",
+        "audio": "audio/3808.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "נָהֲגוּ",
+        "transliteration": "nahagú",
+        "phonetics": "na-ha-goo",
+        "translation": "they drove (f.)",
+        "audio": "audio/3809.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "נוֹהֵג",
+        "transliteration": "noség",
+        "phonetics": "no-heg",
+        "translation": "I drive (m.)",
+        "audio": "audio/3810.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "נוֹהֶגֶת",
+        "transliteration": "nohéget",
+        "phonetics": "no-he-get",
+        "translation": "I drive (f.)",
+        "audio": "audio/3811.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "נוֹהֵג",
+        "transliteration": "noség",
+        "phonetics": "no-heg",
+        "translation": "you drive (m.s.)",
+        "audio": "audio/3812.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "נוֹהֶגֶת",
+        "transliteration": "nohéget",
+        "phonetics": "no-he-get",
+        "translation": "you drive (f.s.)",
+        "audio": "audio/3813.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "נוֹהֵג",
+        "transliteration": "noség",
+        "phonetics": "no-heg",
+        "translation": "he drives",
+        "audio": "audio/3814.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "נוֹהֶגֶת",
+        "transliteration": "nohéget",
+        "phonetics": "no-he-get",
+        "translation": "she drives",
+        "audio": "audio/3815.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נוֹהֲגִים",
+        "transliteration": "nohagím",
+        "phonetics": "no-ha-geem",
+        "translation": "we drive (m.)",
+        "audio": "audio/3816.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נוֹהֲגוֹת",
+        "transliteration": "nohagót",
+        "phonetics": "no-ha-got",
+        "translation": "we drive (f.)",
+        "audio": "audio/3817.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "נוֹהֲגִים",
+        "transliteration": "nohagím",
+        "phonetics": "no-ha-geem",
+        "translation": "you drive (m.pl.)",
+        "audio": "audio/3818.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "נוֹהֲגוֹת",
+        "transliteration": "nohagót",
+        "phonetics": "no-ha-got",
+        "translation": "you drive (f.pl.)",
+        "audio": "audio/3819.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "נוֹהֲגִים",
+        "transliteration": "nohagím",
+        "phonetics": "no-ha-geem",
+        "translation": "they drive (m.)",
+        "audio": "audio/3820.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "נוֹהֲגוֹת",
+        "transliteration": "nohagót",
+        "phonetics": "no-ha-got",
+        "translation": "they drive (f.)",
+        "audio": "audio/3821.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֶנְהַג",
+        "transliteration": "enhág",
+        "phonetics": "en-hag",
+        "translation": "I will drive",
+        "audio": "audio/3822.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תִּנְהַג",
+        "transliteration": "tinhág",
+        "phonetics": "teen-hag",
+        "translation": "you will drive (m.s.)",
+        "audio": "audio/3823.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תִּנְהֲגִי",
+        "transliteration": "tinhagí",
+        "phonetics": "teen-ha-gee",
+        "translation": "you will drive (f.s.)",
+        "audio": "audio/3824.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יִנְהַג",
+        "transliteration": "yinhág",
+        "phonetics": "yeen-hag",
+        "translation": "he will drive",
+        "audio": "audio/3825.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תִּנְהַג",
+        "transliteration": "tinhág",
+        "phonetics": "teen-hag",
+        "translation": "she will drive",
+        "audio": "audio/3826.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נִנְהַג",
+        "transliteration": "ninhág",
+        "phonetics": "neen-hag",
+        "translation": "we will drive",
+        "audio": "audio/3827.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תִּנְהֲגוּ",
+        "transliteration": "tinhagú",
+        "phonetics": "teen-ha-goo",
+        "translation": "you will drive (m.pl.)",
+        "audio": "audio/3828.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תִּנְהַגְנָה",
+        "transliteration": "tinhágna",
+        "phonetics": "teen-hag-na",
+        "translation": "you will drive (f.pl.)",
+        "audio": "audio/3829.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יִנְהֲגוּ",
+        "transliteration": "yinhagú",
+        "phonetics": "yeen-ha-goo",
+        "translation": "they will drive (m.)",
+        "audio": "audio/3830.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תִּנְהַגְנָה",
+        "transliteration": "tinhágna",
+        "phonetics": "teen-hag-na",
+        "translation": "they will drive (f.)",
+        "audio": "audio/3831.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "נְהַג",
+        "transliteration": "nhag",
+        "phonetics": "n-hag",
+        "translation": "drive! (m.s.)",
+        "audio": "audio/3832.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "נַהֲגִי",
+        "transliteration": "nahagí",
+        "phonetics": "na-ha-gee",
+        "translation": "drive! (f.s.)",
+        "audio": "audio/3833.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "נַהֲגוּ",
+        "transliteration": "nahagú",
+        "phonetics": "na-ha-goo",
+        "translation": "drive! (m.pl.)",
+        "audio": "audio/3834.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "נְהַגְנָה",
+        "transliteration": "nhágna",
+        "phonetics": "n-hag-na",
+        "translation": "drive! (f.pl.)",
+        "audio": "audio/3835.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לִנְהוֹג",
+        "transliteration": "linhóg",
+        "phonetics": "leen-hog",
+        "translation": "to drive",
+        "audio": "audio/3836.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "אֲנִי נוֹהֵג לָעֲבוֹדָה כָּל בֹּקֶר.",
+      "transliteration": "Ani nohég la’avodá kol bóker.",
+      "translation": "I drive to work every morning."
+    },
+    {
+      "hebrew": "הִיא נָהֲגָה בְּמֶשֶׁךְ שָׁעָה לְלֹא הַפְסָקָה.",
+      "transliteration": "Hi nahagá bémeshech sha’á leló hafsaká.",
+      "translation": "She drove for an hour without stopping."
+    }
+  ],
+  "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root נ-ה-ג relates to driving or leading, with modern usage focused on driving vehicles. It can also mean 'to behave' in different contexts, but 'to drive' is primary here. The guttural ה affects pronunciation.",
+  "related_words": [
+    "נְהִיגָה (nehigá) - driving",
+    "נוֹהֵג (nohég) - driver",
+    "מַנְהִיג (manhíg) - leader (from Hifil form)"
+  ],
+  "similar_verbs": [
+    "לִנְסֹעַ (linso’a) - to travel",
+    "לָלֶכֶת (laléchet) - to walk",
+    "לְהַסִּיעַ (lehasía) - to transport"
+  ],
+  "idioms": [
+    {
+      "expression": "נָהַג בְּזָהִירוּת",
+      "transliteration": "nahág be-zahirút",
+      "translation": "drove carefully",
+      "usage": "הוּא תָּמִיד נוֹהֵג בְּזָהִירוּת בַּדְּרָכִים."
+    },
+    {
+      "expression": "לִנְהוֹג בְּיָד רַכָּה",
+      "transliteration": "linhóg be-yád raká",
+      "translation": "to drive with a soft hand (lead gently)",
+      "usage": "הַמְּנַהֵל צָרִיךְ לִנְהוֹג בְּיָד רַכָּה עִם הָעוֹבְדִים."
+    }
+  ],
+  "binyanim": {
+    "paal": {
+      "infinitive": "לִנְהוֹג",
+      "meaning": ["to drive", "to steer", "to behave"]
+    },
+    "nifal": {
+      "infinitive": "לְהִנָּהֵג",
+      "meaning": ["to be driven", "to be led"],
+      "note": "Rare in modern Hebrew for driving"
+    },
+    "hifil": {
+      "infinitive": "לְהַנְהִיג",
+      "meaning": ["to lead", "to guide"],
+      "note": "Shifts meaning to leadership rather than driving"
+    }
+  }
+},
+  "lispor": {
+  "root": ["ס", "פ", "ר"],
+  "root_meaning": "Related to counting, numbering, or recounting",
+  "infinitive": "לִסְפּוֹר",
+  "binyan": "פָּעַל",
+  "meaning": ["to count"],
+  "translations": {
+    "en": "to count",
+    "es": "contar",
+    "fr": "compter",
+    "de": "zählen",
+    "ru": "считать"
+  },
+  "difficulty": "Beginner",
+  "frequency": "High",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "סָפַרְתִּי",
+        "transliteration": "safárti",
+        "phonetics": "sa-far-tee",
+        "translation": "I counted",
+        "audio": "audio/3900.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "סָפַרְתָּ",
+        "transliteration": "safárta",
+        "phonetics": "sa-far-ta",
+        "translation": "you counted (m.s.)",
+        "audio": "audio/3901.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "סָפַרְתְּ",
+        "transliteration": "safárt",
+        "phonetics": "sa-fart",
+        "translation": "you counted (f.s.)",
+        "audio": "audio/3902.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "סָפַר",
+        "transliteration": "safár",
+        "phonetics": "sa-far",
+        "translation": "he counted",
+        "audio": "audio/3903.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "סָפְרָה",
+        "transliteration": "safrá",
+        "phonetics": "saf-ra",
+        "translation": "she counted",
+        "audio": "audio/3904.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "סָפַרְנוּ",
+        "transliteration": "safárnu",
+        "phonetics": "sa-far-noo",
+        "translation": "we counted",
+        "audio": "audio/3905.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "סְפַרְתֶּם",
+        "transliteration": "sfartém",
+        "phonetics": "sfar-tem",
+        "translation": "you counted (m.pl.)",
+        "audio": "audio/3906.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "סְפַרְתֶּן",
+        "transliteration": "sfartén",
+        "phonetics": "sfar-ten",
+        "translation": "you counted (f.pl.)",
+        "audio": "audio/3907.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "סָפְרוּ",
+        "transliteration": "safrú",
+        "phonetics": "saf-roo",
+        "translation": "they counted (m.)",
+        "audio": "audio/3908.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "סָפְרוּ",
+        "transliteration": "safrú",
+        "phonetics": "saf-roo",
+        "translation": "they counted (f.)",
+        "audio": "audio/3909.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "סוֹפֵר",
+        "transliteration": "sofér",
+        "phonetics": "so-fer",
+        "translation": "I count (m.)",
+        "audio": "audio/3910.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "סוֹפֶרֶת",
+        "transliteration": "sóferet",
+        "phonetics": "so-fe-ret",
+        "translation": "I count (f.)",
+        "audio": "audio/3911.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "סוֹפֵר",
+        "transliteration": "sofér",
+        "phonetics": "so-fer",
+        "translation": "you count (m.s.)",
+        "audio": "audio/3912.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "סוֹפֶרֶת",
+        "transliteration": "sóferet",
+        "phonetics": "so-fe-ret",
+        "translation": "you count (f.s.)",
+        "audio": "audio/3913.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "סוֹפֵר",
+        "transliteration": "sofér",
+        "phonetics": "so-fer",
+        "translation": "he counts",
+        "audio": "audio/3914.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "סוֹפֶרֶת",
+        "transliteration": "sóferet",
+        "phonetics": "so-fe-ret",
+        "translation": "she counts",
+        "audio": "audio/3915.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "סוֹפְרִים",
+        "transliteration": "sofrím",
+        "phonetics": "sof-reem",
+        "translation": "we count (m.)",
+        "audio": "audio/3916.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "סוֹפְרוֹת",
+        "transliteration": "sofrót",
+        "phonetics": "sof-rot",
+        "translation": "we count (f.)",
+        "audio": "audio/3917.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "סוֹפְרִים",
+        "transliteration": "sofrím",
+        "phonetics": "sof-reem",
+        "translation": "you count (m.pl.)",
+        "audio": "audio/3918.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "סוֹפְרוֹת",
+        "transliteration": "sofrót",
+        "phonetics": "sof-rot",
+        "translation": "you count (f.pl.)",
+        "audio": "audio/3919.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "סוֹפְרִים",
+        "transliteration": "sofrím",
+        "phonetics": "sof-reem",
+        "translation": "they count (m.)",
+        "audio": "audio/3920.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "סוֹפְרוֹת",
+        "transliteration": "sofrót",
+        "phonetics": "sof-rot",
+        "translation": "they count (f.)",
+        "audio": "audio/3921.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֶסְפּוֹר",
+        "transliteration": "espór",
+        "phonetics": "es-por",
+        "translation": "I will count",
+        "audio": "audio/3922.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תִּסְפּוֹר",
+        "transliteration": "tispór",
+        "phonetics": "tees-por",
+        "translation": "you will count (m.s.)",
+        "audio": "audio/3923.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תִּסְפְּרִי",
+        "transliteration": "tisprí",
+        "phonetics": "tees-pree",
+        "translation": "you will count (f.s.)",
+        "audio": "audio/3924.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יִסְפּוֹר",
+        "transliteration": "yispór",
+        "phonetics": "yees-por",
+        "translation": "he will count",
+        "audio": "audio/3925.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תִּסְפּוֹר",
+        "transliteration": "tispór",
+        "phonetics": "tees-por",
+        "translation": "she will count",
+        "audio": "audio/3926.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נִסְפּוֹר",
+        "transliteration": "nispór",
+        "phonetics": "nees-por",
+        "translation": "we will count",
+        "audio": "audio/3927.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תִּסְפְּרוּ",
+        "transliteration": "tisprú",
+        "phonetics": "tees-proo",
+        "translation": "you will count (m.pl.)",
+        "audio": "audio/3928.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תִּסְפֹּרְנָה",
+        "transliteration": "tispórna",
+        "phonetics": "tees-por-na",
+        "translation": "you will count (f.pl.)",
+        "audio": "audio/3929.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יִסְפְּרוּ",
+        "transliteration": "yisprú",
+        "phonetics": "yees-proo",
+        "translation": "they will count (m.)",
+        "audio": "audio/3930.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תִּסְפֹּרְנָה",
+        "transliteration": "tispórna",
+        "phonetics": "tees-por-na",
+        "translation": "they will count (f.)",
+        "audio": "audio/3931.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "סְפוֹר",
+        "transliteration": "spór",
+        "phonetics": "spor",
+        "translation": "count! (m.s.)",
+        "audio": "audio/3932.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "סִפְרִי",
+        "transliteration": "siprí",
+        "phonetics": "seep-ree",
+        "translation": "count! (f.s.)",
+        "audio": "audio/3933.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "סִפְרוּ",
+        "transliteration": "siprú",
+        "phonetics": "seep-roo",
+        "translation": "count! (m.pl.)",
+        "audio": "audio/3934.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "סְפֹרְנָה",
+        "transliteration": "spórna",
+        "phonetics": "spor-na",
+        "translation": "count! (f.pl.)",
+        "audio": "audio/3935.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לִסְפּוֹר",
+        "transliteration": "lispór",
+        "phonetics": "lees-por",
+        "translation": "to count",
+        "audio": "audio/3936.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "אֲנִי סוֹפֵר אֶת הַכֶּסֶף שֶׁבַּאַרְנָק.",
+      "transliteration": "Ani sofér et ha-késef she-ba-arnák.",
+      "translation": "I am counting the money in the wallet."
+    },
+    {
+      "hebrew": "הִיא סָפְרָה אֶת הַיְּלָדִים בַּכִּיתָה.",
+      "transliteration": "Hi safrá et ha-yeladím ba-kitá.",
+      "translation": "She counted the children in the classroom."
+    }
+  ],
+  "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root ס-פ-ר relates to counting or numbering, and also connects to 'to tell' (as in storytelling) in Piel (לְסַפֵּר). Here, it’s focused on counting quantities.",
+  "related_words": [
+    "מִסְפָּר (mispár) - number",
+    "סוֹפֵר (sofér) - counter (also scribe in other contexts)",
+    "סְפִירָה (sfirá) - counting"
+  ],
+  "similar_verbs": [
+    "לְסַפֵּר (lesapér) - to tell (Piel form)",
+    "לִמְנוֹת (limnót) - to count (appoint)",
+    "לְחַשֵׁב (lechashev) - to calculate"
+  ],
+  "idioms": [
+    {
+      "expression": "סָפַר אֶת הַיָּמִים",
+      "transliteration": "safár et ha-yamím",
+      "translation": "counted the days",
+      "usage": "הוּא סָפַר אֶת הַיָּמִים עַד הַחֲגִיגָה."
+    },
+    {
+      "expression": "לִסְפּוֹר עַד עֶשֶׂר",
+      "transliteration": "lispór ad éser",
+      "translation": "to count to ten (calm down)",
+      "usage": "נִסִּיתִי לִסְפּוֹר עַד עֶשֶׂר כְּשֶׁכָּעַסְתִּי."
+    }
+  ],
+  "binyanim": {
+    "paal": {
+      "infinitive": "לִסְפּוֹר",
+      "meaning": ["to count"]
+    },
+    "piel": {
+      "infinitive": "לְסַפֵּר",
+      "meaning": ["to tell", "to recount"],
+      "note": "Shifts meaning to storytelling"
+    },
+    "nifal": {
+      "infinitive": "לְהִסָּפֵר",
+      "meaning": ["to be counted"],
+      "note": "Used in passive contexts"
+    }
+  }
+},
+  "lilchosh": {
+  "root": ["ל", "ח", "ש"],
+  "root_meaning": "Related to whispering or speaking softly",
+  "infinitive": "לִלְחוֹשׁ",
+  "binyan": "פָּעַל",
+  "meaning": ["to whisper"],
+  "translations": {
+    "en": "to whisper",
+    "es": "susurrar",
+    "fr": "chuchoter",
+    "de": "flüstern",
+    "ru": "шептать"
+  },
+  "difficulty": "Intermediate",
+  "frequency": "Moderate",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "לָחַשְׁתִּי",
+        "transliteration": "lacháshti",
+        "phonetics": "la-khash-tee",
+        "translation": "I whispered",
+        "audio": "audio/4100.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "לָחַשְׁתָּ",
+        "transliteration": "lacháshta",
+        "phonetics": "la-khash-ta",
+        "translation": "you whispered (m.s.)",
+        "audio": "audio/4101.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "לָחַשְׁתְּ",
+        "transliteration": "lachásht",
+        "phonetics": "la-khasht",
+        "translation": "you whispered (f.s.)",
+        "audio": "audio/4102.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "לָחַשׁ",
+        "transliteration": "lachásh",
+        "phonetics": "la-khash",
+        "translation": "he whispered",
+        "audio": "audio/4103.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "לָחֲשָׁה",
+        "transliteration": "lachashá",
+        "phonetics": "la-kha-sha",
+        "translation": "she whispered",
+        "audio": "audio/4104.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "לָחַשְׁנוּ",
+        "transliteration": "lacháshnu",
+        "phonetics": "la-khash-noo",
+        "translation": "we whispered",
+        "audio": "audio/4105.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "לְחַשְׁתֶּם",
+        "transliteration": "lchashtém",
+        "phonetics": "l-khash-tem",
+        "translation": "you whispered (m.pl.)",
+        "audio": "audio/4106.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "לְחַשְׁתֶּן",
+        "transliteration": "lchashtén",
+        "phonetics": "l-khash-ten",
+        "translation": "you whispered (f.pl.)",
+        "audio": "audio/4107.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "לָחֲשׁוּ",
+        "transliteration": "lachashú",
+        "phonetics": "la-kha-shoo",
+        "translation": "they whispered (m.)",
+        "audio": "audio/4108.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "לָחֲשׁוּ",
+        "transliteration": "lachashú",
+        "phonetics": "la-kha-shoo",
+        "translation": "they whispered (f.)",
+        "audio": "audio/4109.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "לוֹחֵשׁ",
+        "transliteration": "lochísh",
+        "phonetics": "lo-kheesh",
+        "translation": "I whisper (m.)",
+        "audio": "audio/4110.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "לוֹחֶשֶׁת",
+        "transliteration": "lochéshet",
+        "phonetics": "lo-khe-shet",
+        "translation": "I whisper (f.)",
+        "audio": "audio/4111.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "לוֹחֵשׁ",
+        "transliteration": "lochísh",
+        "phonetics": "lo-kheesh",
+        "translation": "you whisper (m.s.)",
+        "audio": "audio/4112.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "לוֹחֶשֶׁת",
+        "transliteration": "lochéshet",
+        "phonetics": "lo-khe-shet",
+        "translation": "you whisper (f.s.)",
+        "audio": "audio/4113.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "לוֹחֵשׁ",
+        "transliteration": "lochísh",
+        "phonetics": "lo-kheesh",
+        "translation": "he whispers",
+        "audio": "audio/4114.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "לוֹחֶשֶׁת",
+        "transliteration": "lochéshet",
+        "phonetics": "lo-khe-shet",
+        "translation": "she whispers",
+        "audio": "audio/4115.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "לוֹחֲשִׁים",
+        "transliteration": "lochashím",
+        "phonetics": "lo-kha-sheem",
+        "translation": "we whisper (m.)",
+        "audio": "audio/4116.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "לוֹחֲשׁוֹת",
+        "transliteration": "lochashót",
+        "phonetics": "lo-kha-shot",
+        "translation": "we whisper (f.)",
+        "audio": "audio/4117.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "לוֹחֲשִׁים",
+        "transliteration": "lochashím",
+        "phonetics": "lo-kha-sheem",
+        "translation": "you whisper (m.pl.)",
+        "audio": "audio/4118.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "לוֹחֲשׁוֹת",
+        "transliteration": "lochashót",
+        "phonetics": "lo-kha-shot",
+        "translation": "you whisper (f.pl.)",
+        "audio": "audio/4119.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "לוֹחֲשִׁים",
+        "transliteration": "lochashím",
+        "phonetics": "lo-kha-sheem",
+        "translation": "they whisper (m.)",
+        "audio": "audio/4120.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "לוֹחֲשׁוֹת",
+        "transliteration": "lochashót",
+        "phonetics": "lo-kha-shot",
+        "translation": "they whisper (f.)",
+        "audio": "audio/4121.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֶלְחַשׁ",
+        "transliteration": "elchásh",
+        "phonetics": "el-khash",
+        "translation": "I will whisper",
+        "audio": "audio/4122.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תִּלְחַשׁ",
+        "transliteration": "tilchásh",
+        "phonetics": "teel-khash",
+        "translation": "you will whisper (m.s.)",
+        "audio": "audio/4123.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תִּלְחֲשִׁי",
+        "transliteration": "tilchashí",
+        "phonetics": "teel-kha-shee",
+        "translation": "you will whisper (f.s.)",
+        "audio": "audio/4124.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יִלְחַשׁ",
+        "transliteration": "yilchásh",
+        "phonetics": "yeel-khash",
+        "translation": "he will whisper",
+        "audio": "audio/4125.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תִּלְחַשׁ",
+        "transliteration": "tilchásh",
+        "phonetics": "teel-khash",
+        "translation": "she will whisper",
+        "audio": "audio/4126.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נִלְחַשׁ",
+        "transliteration": "nilchásh",
+        "phonetics": "neel-khash",
+        "translation": "we will whisper",
+        "audio": "audio/4127.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תִּלְחֲשׁוּ",
+        "transliteration": "tilchashú",
+        "phonetics": "teel-kha-shoo",
+        "translation": "you will whisper (m.pl.)",
+        "audio": "audio/4128.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תִּלְחַשְׁנָה",
+        "transliteration": "tilcháshna",
+        "phonetics": "teel-khash-na",
+        "translation": "you will whisper (f.pl.)",
+        "audio": "audio/4129.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יִלְחֲשׁוּ",
+        "transliteration": "yilchashú",
+        "phonetics": "yeel-kha-shoo",
+        "translation": "they will whisper (m.)",
+        "audio": "audio/4130.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תִּלְחַשְׁנָה",
+        "transliteration": "tilcháshna",
+        "phonetics": "teel-khash-na",
+        "translation": "they will whisper (f.)",
+        "audio": "audio/4131.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "לְחַשׁ",
+        "transliteration": "lchásh",
+        "phonetics": "l-khash",
+        "translation": "whisper! (m.s.)",
+        "audio": "audio/4132.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "לַחֲשִׁי",
+        "transliteration": "lachashí",
+        "phonetics": "la-kha-shee",
+        "translation": "whisper! (f.s.)",
+        "audio": "audio/4133.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "לַחֲשׁוּ",
+        "transliteration": "lachashú",
+        "phonetics": "la-kha-shoo",
+        "translation": "whisper! (m.pl.)",
+        "audio": "audio/4134.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "לְחַשְׁנָה",
+        "transliteration": "lcháshna",
+        "phonetics": "l-khash-na",
+        "translation": "whisper! (f.pl.)",
+        "audio": "audio/4135.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לִלְחוֹשׁ",
+        "transliteration": "lilchósh",
+        "phonetics": "leel-khosh",
+        "translation": "to whisper",
+        "audio": "audio/4136.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "הוּא לוֹחֵשׁ לָהּ סוֹד בָּאֹזֶן.",
+      "transliteration": "Hu lochísh lah sód ba-ózen.",
+      "translation": "He whispers a secret in her ear."
+    },
+    {
+      "hebrew": "הַיְּלָדִים לָחֲשׁוּ בַּסִּפְרִיָּה.",
+      "transliteration": "Ha-yeladím lachashú ba-sifriyá.",
+      "translation": "The children whispered in the library."
+    }
+  ],
+  "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root ל-ח-ש involves a guttural ח (chet), affecting pronunciation. It’s used for quiet speech, often secretive or discreet.",
+  "related_words": [
+    "לְחִישָׁה (lechishá) - whispering",
+    "לוֹחֵשׁ (lochísh) - whisperer",
+    "סוֹד (sod) - secret (often paired with whispering)"
+  ],
+  "similar_verbs": [
+    "לְדַבֵּר (ledabér) - to speak",
+    "לִצְעוֹק (litz’ók) - to shout",
+    "לָשִׁיר (lashír) - to sing"
+  ],
+  "idioms": [
+    {
+      "expression": "לָחַשׁ בְּאֹזֶן",
+      "transliteration": "lachásh be-ózen",
+      "translation": "whispered in the ear",
+      "usage": "הִיא לָחֲשָׁה בְּאֹזְנִי עַל הַתָּכְנִית."
+    },
+    {
+      "expression": "לִלְחוֹשׁ בְּשֶׁקֶט",
+      "transliteration": "lilchósh be-shéket",
+      "translation": "to whisper quietly",
+      "usage": "הֵם לָחֲשׁוּ בְּשֶׁקֶט כְּדֵי לֹא לְהָעִיר אֶת הַתִּינוֹק."
+    }
+  ],
+  "binyanim": {
+    "paal": {
+      "infinitive": "לִלְחוֹשׁ",
+      "meaning": ["to whisper"]
+    },
+    "nifal": {
+      "infinitive": "לְהִלָּחֵשׁ",
+      "meaning": ["to be whispered"],
+      "note": "Used in passive contexts, less common"
+    }
+  }
 }
   
 }
