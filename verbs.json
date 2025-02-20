@@ -68251,6 +68251,750 @@
       "note": "Used in passive contexts, less common"
     }
   }
+},
+  "lilchosh": {
+  "root": ["ל", "ח", "ש"],
+  "root_meaning": "Related to whispering or speaking softly",
+  "infinitive": "לִלְחוֹשׁ",
+  "binyan": "פָּעַל",
+  "meaning": ["to whisper"],
+  "translations": {
+    "en": "to whisper",
+    "es": "susurrar",
+    "fr": "chuchoter",
+    "de": "flüstern",
+    "ru": "шептать"
+  },
+  "difficulty": "Intermediate",
+  "frequency": "Moderate",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "לָחַשְׁתִּי",
+        "transliteration": "lacháshti",
+        "phonetics": "la-khash-tee",
+        "translation": "I whispered",
+        "audio": "audio/4100.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "לָחַשְׁתָּ",
+        "transliteration": "lacháshta",
+        "phonetics": "la-khash-ta",
+        "translation": "you whispered (m.s.)",
+        "audio": "audio/4101.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "לָחַשְׁתְּ",
+        "transliteration": "lachásht",
+        "phonetics": "la-khasht",
+        "translation": "you whispered (f.s.)",
+        "audio": "audio/4102.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "לָחַשׁ",
+        "transliteration": "lachásh",
+        "phonetics": "la-khash",
+        "translation": "he whispered",
+        "audio": "audio/4103.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "לָחֲשָׁה",
+        "transliteration": "lachashá",
+        "phonetics": "la-kha-sha",
+        "translation": "she whispered",
+        "audio": "audio/4104.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "לָחַשְׁנוּ",
+        "transliteration": "lacháshnu",
+        "phonetics": "la-khash-noo",
+        "translation": "we whispered",
+        "audio": "audio/4105.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "לְחַשְׁתֶּם",
+        "transliteration": "lchashtém",
+        "phonetics": "l-khash-tem",
+        "translation": "you whispered (m.pl.)",
+        "audio": "audio/4106.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "לְחַשְׁתֶּן",
+        "transliteration": "lchashtén",
+        "phonetics": "l-khash-ten",
+        "translation": "you whispered (f.pl.)",
+        "audio": "audio/4107.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "לָחֲשׁוּ",
+        "transliteration": "lachashú",
+        "phonetics": "la-kha-shoo",
+        "translation": "they whispered (m.)",
+        "audio": "audio/4108.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "לָחֲשׁוּ",
+        "transliteration": "lachashú",
+        "phonetics": "la-kha-shoo",
+        "translation": "they whispered (f.)",
+        "audio": "audio/4109.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "לוֹחֵשׁ",
+        "transliteration": "lochísh",
+        "phonetics": "lo-kheesh",
+        "translation": "I whisper (m.)",
+        "audio": "audio/4110.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "לוֹחֶשֶׁת",
+        "transliteration": "lochéshet",
+        "phonetics": "lo-khe-shet",
+        "translation": "I whisper (f.)",
+        "audio": "audio/4111.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "לוֹחֵשׁ",
+        "transliteration": "lochísh",
+        "phonetics": "lo-kheesh",
+        "translation": "you whisper (m.s.)",
+        "audio": "audio/4112.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "לוֹחֶשֶׁת",
+        "transliteration": "lochéshet",
+        "phonetics": "lo-khe-shet",
+        "translation": "you whisper (f.s.)",
+        "audio": "audio/4113.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "לוֹחֵשׁ",
+        "transliteration": "lochísh",
+        "phonetics": "lo-kheesh",
+        "translation": "he whispers",
+        "audio": "audio/4114.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "לוֹחֶשֶׁת",
+        "transliteration": "lochéshet",
+        "phonetics": "lo-khe-shet",
+        "translation": "she whispers",
+        "audio": "audio/4115.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "לוֹחֲשִׁים",
+        "transliteration": "lochashím",
+        "phonetics": "lo-kha-sheem",
+        "translation": "we whisper (m.)",
+        "audio": "audio/4116.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "לוֹחֲשׁוֹת",
+        "transliteration": "lochashót",
+        "phonetics": "lo-kha-shot",
+        "translation": "we whisper (f.)",
+        "audio": "audio/4117.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "לוֹחֲשִׁים",
+        "transliteration": "lochashím",
+        "phonetics": "lo-kha-sheem",
+        "translation": "you whisper (m.pl.)",
+        "audio": "audio/4118.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "לוֹחֲשׁוֹת",
+        "transliteration": "lochashót",
+        "phonetics": "lo-kha-shot",
+        "translation": "you whisper (f.pl.)",
+        "audio": "audio/4119.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "לוֹחֲשִׁים",
+        "transliteration": "lochashím",
+        "phonetics": "lo-kha-sheem",
+        "translation": "they whisper (m.)",
+        "audio": "audio/4120.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "לוֹחֲשׁוֹת",
+        "transliteration": "lochashót",
+        "phonetics": "lo-kha-shot",
+        "translation": "they whisper (f.)",
+        "audio": "audio/4121.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֶלְחַשׁ",
+        "transliteration": "elchásh",
+        "phonetics": "el-khash",
+        "translation": "I will whisper",
+        "audio": "audio/4122.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תִּלְחַשׁ",
+        "transliteration": "tilchásh",
+        "phonetics": "teel-khash",
+        "translation": "you will whisper (m.s.)",
+        "audio": "audio/4123.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תִּלְחֲשִׁי",
+        "transliteration": "tilchashí",
+        "phonetics": "teel-kha-shee",
+        "translation": "you will whisper (f.s.)",
+        "audio": "audio/4124.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יִלְחַשׁ",
+        "transliteration": "yilchásh",
+        "phonetics": "yeel-khash",
+        "translation": "he will whisper",
+        "audio": "audio/4125.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תִּלְחַשׁ",
+        "transliteration": "tilchásh",
+        "phonetics": "teel-khash",
+        "translation": "she will whisper",
+        "audio": "audio/4126.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נִלְחַשׁ",
+        "transliteration": "nilchásh",
+        "phonetics": "neel-khash",
+        "translation": "we will whisper",
+        "audio": "audio/4127.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תִּלְחֲשׁוּ",
+        "transliteration": "tilchashú",
+        "phonetics": "teel-kha-shoo",
+        "translation": "you will whisper (m.pl.)",
+        "audio": "audio/4128.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תִּלְחַשְׁנָה",
+        "transliteration": "tilcháshna",
+        "phonetics": "teel-khash-na",
+        "translation": "you will whisper (f.pl.)",
+        "audio": "audio/4129.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יִלְחֲשׁוּ",
+        "transliteration": "yilchashú",
+        "phonetics": "yeel-kha-shoo",
+        "translation": "they will whisper (m.)",
+        "audio": "audio/4130.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תִּלְחַשְׁנָה",
+        "transliteration": "tilcháshna",
+        "phonetics": "teel-khash-na",
+        "translation": "they will whisper (f.)",
+        "audio": "audio/4131.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "לְחַשׁ",
+        "transliteration": "lchásh",
+        "phonetics": "l-khash",
+        "translation": "whisper! (m.s.)",
+        "audio": "audio/4132.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "לַחֲשִׁי",
+        "transliteration": "lachashí",
+        "phonetics": "la-kha-shee",
+        "translation": "whisper! (f.s.)",
+        "audio": "audio/4133.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "לַחֲשׁוּ",
+        "transliteration": "lachashú",
+        "phonetics": "la-kha-shoo",
+        "translation": "whisper! (m.pl.)",
+        "audio": "audio/4134.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "לְחַשְׁנָה",
+        "transliteration": "lcháshna",
+        "phonetics": "l-khash-na",
+        "translation": "whisper! (f.pl.)",
+        "audio": "audio/4135.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לִלְחוֹשׁ",
+        "transliteration": "lilchósh",
+        "phonetics": "leel-khosh",
+        "translation": "to whisper",
+        "audio": "audio/4136.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "הוּא לוֹחֵשׁ לָהּ סוֹד בָּאֹזֶן.",
+      "transliteration": "Hu lochísh lah sód ba-ózen.",
+      "translation": "He whispers a secret in her ear."
+    },
+    {
+      "hebrew": "הַיְּלָדִים לָחֲשׁוּ בַּסִּפְרִיָּה.",
+      "transliteration": "Ha-yeladím lachashú ba-sifriyá.",
+      "translation": "The children whispered in the library."
+    }
+  ],
+  "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root ל-ח-ש involves a guttural ח (chet), affecting pronunciation. It’s used for quiet speech, often secretive or discreet.",
+  "related_words": [
+    "לְחִישָׁה (lechishá) - whispering",
+    "לוֹחֵשׁ (lochísh) - whisperer",
+    "סוֹד (sod) - secret (often paired with whispering)"
+  ],
+  "similar_verbs": [
+    "לְדַבֵּר (ledabér) - to speak",
+    "לִצְעוֹק (litz’ók) - to shout",
+    "לָשִׁיר (lashír) - to sing"
+  ],
+  "idioms": [
+    {
+      "expression": "לָחַשׁ בְּאֹזֶן",
+      "transliteration": "lachásh be-ózen",
+      "translation": "whispered in the ear",
+      "usage": "הִיא לָחֲשָׁה בְּאֹזְנִי עַל הַתָּכְנִית."
+    },
+    {
+      "expression": "לִלְחוֹשׁ בְּשֶׁקֶט",
+      "transliteration": "lilchósh be-shéket",
+      "translation": "to whisper quietly",
+      "usage": "הֵם לָחֲשׁוּ בְּשֶׁקֶט כְּדֵי לֹא לְהָעִיר אֶת הַתִּינוֹק."
+    }
+  ],
+  "binyanim": {
+    "paal": {
+      "infinitive": "לִלְחוֹשׁ",
+      "meaning": ["to whisper"]
+    },
+    "nifal": {
+      "infinitive": "לְהִלָּחֵשׁ",
+      "meaning": ["to be whispered"],
+      "note": "Used in passive contexts, less common"
+    }
+  }
+},
+  "lechabek": {
+  "root": ["ח", "ב", "ק"],
+  "root_meaning": "Related to embracing or holding closely",
+  "infinitive": "לְחַבֵּק",
+  "binyan": "פִּעֵל",
+  "meaning": ["to hug", "to embrace"],
+  "translations": {
+    "en": "to hug",
+    "es": "abrazar",
+    "fr": "enlacer",
+    "de": "umarmen",
+    "ru": "обнимать"
+  },
+  "difficulty": "Intermediate",
+  "frequency": "High",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "חִבַּקְתִּי",
+        "transliteration": "chibákti",
+        "phonetics": "khee-bak-tee",
+        "translation": "I hugged",
+        "audio": "audio/4200.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "חִבַּקְתָּ",
+        "transliteration": "chibákta",
+        "phonetics": "khee-bak-ta",
+        "translation": "you hugged (m.s.)",
+        "audio": "audio/4201.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "חִבַּקְתְּ",
+        "transliteration": "chibákt",
+        "phonetics": "khee-bakt",
+        "translation": "you hugged (f.s.)",
+        "audio": "audio/4202.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "חִבֵּק",
+        "transliteration": "chibék",
+        "phonetics": "khee-bek",
+        "translation": "he hugged",
+        "audio": "audio/4203.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "חִבְּקָה",
+        "transliteration": "chibká",
+        "phonetics": "khee-bka",
+        "translation": "she hugged",
+        "audio": "audio/4204.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "חִבַּקְנוּ",
+        "transliteration": "chibáknu",
+        "phonetics": "khee-bak-noo",
+        "translation": "we hugged",
+        "audio": "audio/4205.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "חִבַּקְתֶּם",
+        "transliteration": "chibáktem",
+        "phonetics": "khee-bak-tem",
+        "translation": "you hugged (m.pl.)",
+        "audio": "audio/4206.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "חִבַּקְתֶּן",
+        "transliteration": "chibákten",
+        "phonetics": "khee-bak-ten",
+        "translation": "you hugged (f.pl.)",
+        "audio": "audio/4207.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "חִבְּקוּ",
+        "transliteration": "chibkú",
+        "phonetics": "khee-bkoo",
+        "translation": "they hugged (m.)",
+        "audio": "audio/4208.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "חִבְּקוּ",
+        "transliteration": "chibkú",
+        "phonetics": "khee-bkoo",
+        "translation": "they hugged (f.)",
+        "audio": "audio/4209.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "מְחַבֵּק",
+        "transliteration": "mechabék",
+        "phonetics": "me-kha-bek",
+        "translation": "I hug (m.)",
+        "audio": "audio/4210.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "מְחַבֶּקֶת",
+        "transliteration": "mechabéket",
+        "phonetics": "me-kha-be-ket",
+        "translation": "I hug (f.)",
+        "audio": "audio/4211.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "מְחַבֵּק",
+        "transliteration": "mechabék",
+        "phonetics": "me-kha-bek",
+        "translation": "you hug (m.s.)",
+        "audio": "audio/4212.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "מְחַבֶּקֶת",
+        "transliteration": "mechabéket",
+        "phonetics": "me-kha-be-ket",
+        "translation": "you hug (f.s.)",
+        "audio": "audio/4213.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "מְחַבֵּק",
+        "transliteration": "mechabék",
+        "phonetics": "me-kha-bek",
+        "translation": "he hugs",
+        "audio": "audio/4214.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "מְחַבֶּקֶת",
+        "transliteration": "mechabéket",
+        "phonetics": "me-kha-be-ket",
+        "translation": "she hugs",
+        "audio": "audio/4215.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "מְחַבְּקִים",
+        "transliteration": "mechabkím",
+        "phonetics": "me-khab-keem",
+        "translation": "we hug (m.)",
+        "audio": "audio/4216.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "מְחַבְּקוֹת",
+        "transliteration": "mechabkót",
+        "phonetics": "me-khab-kot",
+        "translation": "we hug (f.)",
+        "audio": "audio/4217.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "מְחַבְּקִים",
+        "transliteration": "mechabkím",
+        "phonetics": "me-khab-keem",
+        "translation": "you hug (m.pl.)",
+        "audio": "audio/4218.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "מְחַבְּקוֹת",
+        "transliteration": "mechabkót",
+        "phonetics": "me-khab-kot",
+        "translation": "you hug (f.pl.)",
+        "audio": "audio/4219.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "מְחַבְּקִים",
+        "transliteration": "mechabkím",
+        "phonetics": "me-khab-keem",
+        "translation": "they hug (m.)",
+        "audio": "audio/4220.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "מְחַבְּקוֹת",
+        "transliteration": "mechabkót",
+        "phonetics": "me-khab-kot",
+        "translation": "they hug (f.)",
+        "audio": "audio/4221.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֲחַבֵּק",
+        "transliteration": "achabék",
+        "phonetics": "a-kha-bek",
+        "translation": "I will hug",
+        "audio": "audio/4222.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תְּחַבֵּק",
+        "transliteration": "tchabék",
+        "phonetics": "t-kha-bek",
+        "translation": "you will hug (m.s.)",
+        "audio": "audio/4223.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תְּחַבְּקִי",
+        "transliteration": "tchabkí",
+        "phonetics": "t-khab-kee",
+        "translation": "you will hug (f.s.)",
+        "audio": "audio/4224.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יְחַבֵּק",
+        "transliteration": "yechabék",
+        "phonetics": "ye-kha-bek",
+        "translation": "he will hug",
+        "audio": "audio/4225.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תְּחַבֵּק",
+        "transliteration": "tchabék",
+        "phonetics": "t-kha-bek",
+        "translation": "she will hug",
+        "audio": "audio/4226.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נְחַבֵּק",
+        "transliteration": "nechabék",
+        "phonetics": "ne-kha-bek",
+        "translation": "we will hug",
+        "audio": "audio/4227.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תְּחַבְּקוּ",
+        "transliteration": "tchabkú",
+        "phonetics": "t-khab-koo",
+        "translation": "you will hug (m.pl.)",
+        "audio": "audio/4228.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תְּחַבֵּקְנָה",
+        "transliteration": "tchabékna",
+        "phonetics": "t-kha-bek-na",
+        "translation": "you will hug (f.pl.)",
+        "audio": "audio/4229.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יְחַבְּקוּ",
+        "transliteration": "yechabkú",
+        "phonetics": "ye-khab-koo",
+        "translation": "they will hug (m.)",
+        "audio": "audio/4230.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תְּחַבֵּקְנָה",
+        "transliteration": "tchabékna",
+        "phonetics": "t-kha-bek-na",
+        "translation": "they will hug (f.)",
+        "audio": "audio/4231.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "חַבֵּק",
+        "transliteration": "chabék",
+        "phonetics": "kha-bek",
+        "translation": "hug! (m.s.)",
+        "audio": "audio/4232.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "חַבְּקִי",
+        "transliteration": "chabkí",
+        "phonetics": "khab-kee",
+        "translation": "hug! (f.s.)",
+        "audio": "audio/4233.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "חַבְּקוּ",
+        "transliteration": "chabkú",
+        "phonetics": "khab-koo",
+        "translation": "hug! (m.pl.)",
+        "audio": "audio/4234.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "חַבֵּקְנָה",
+        "transliteration": "chabékna",
+        "phonetics": "kha-bek-na",
+        "translation": "hug! (f.pl.)",
+        "audio": "audio/4235.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לְחַבֵּק",
+        "transliteration": "lechabék",
+        "phonetics": "le-kha-bek",
+        "translation": "to hug",
+        "audio": "audio/4236.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "אֲנִי מְחַבֵּק אֶת הַיֶּלֶד כָּל בֹּקֶר.",
+      "transliteration": "Ani mechabék et ha-yéled kol bóker.",
+      "translation": "I hug the child every morning."
+    },
+    {
+      "hebrew": "הֵם חִבְּקוּ זֹאת אֶת זֹאת אַחֲרֵי הַפְּגִישָׁה.",
+      "transliteration": "Hem chibkú zot et zot acharéi ha-pgishá.",
+      "translation": "They hugged each other after the meeting."
+    }
+  ],
+  "notes": "This verb is in binyan Piel (פִּעֵל), which often intensifies or specifies the root’s action. The root ח-ב-ק, with a guttural ח (chet), relates to embracing or holding closely. It’s a common expression of affection in modern Hebrew.",
+  "related_words": [
+    "חִבּוּק (chibúk) - hug",
+    "מְחַבֵּק (mechabék) - hugger (m.)",
+    "מְחַבֶּקֶת (mechabéket) - hugger (f.)"
+  ],
+  "similar_verbs": [
+    "לְנַשֵּׁק (lenashék) - to kiss",
+    "לִגַּע (liga) - to touch",
+    "לְחַבּוֹת (lechabót) - to bandage (related root)"
+  ],
+  "idioms": [
+    {
+      "expression": "חִבֵּק אֶת הָעֵץ",
+      "transliteration": "chibék et ha-etz",
+      "translation": "hugged the tree (nature lover)",
+      "usage": "הוּא חִבֵּק אֶת הָעֵץ כְּשֶׁטִּיֵּל בַּיַּעַר."
+    },
+    {
+      "expression": "לְחַבֵּק בְּחֹם",
+      "transliteration": "lechabék be-chom",
+      "translation": "to hug warmly",
+      "usage": "הִיא תָּמִיד מְחַבֶּקֶת בְּחֹם אֶת הַחֲבֵרִים שֶׁלָּהּ."
+    }
+  ],
+  "binyanim": {
+    "piel": {
+      "infinitive": "לְחַבֵּק",
+      "meaning": ["to hug", "to embrace"]
+    },
+    "hitpael": {
+      "infinitive": "לְהִתְחַבֵּק",
+      "meaning": ["to hug each other"],
+      "note": "Reflexive, common for mutual hugging"
+    }
+  }
 }
   
 }
