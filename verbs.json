@@ -71955,8 +71955,8 @@
     "לִדְחוֹת (lidchót) - to postpone",
     "לִמְשׁוֹךְ (limshóch) - to pull (also 'to delay' figuratively)",
     "לְהִתְעַצֵּל (lehit’atzél) - to be lazy"
-  ],
-  "idioms": [
+  ], "i
+ dioms": [
     {
       "expression": "הִתְמַהְמֵהַּ עַל הַדֶּרֶךְ",
       "transliteration": "hitmahméa al ha-dérech",
@@ -71977,7 +71977,383 @@
     }
   }
 },
-
+  "lehalchish": {
+  "root": ["ל", "ח", "ש"],
+  "root_meaning": "Related to whispering or speaking softly",
+  "infinitive": "לְהַלְחִישׁ",
+  "binyan": "הִפְעִיל",
+  "meaning": ["to cause to whisper", "to whisper softly"],
+  "translations": {
+    "en": "to cause to whisper",
+    "es": "hacer susurrar",
+    "fr": "faire chuchoter",
+    "de": "zum Flüstern bringen",
+    "ru": "заставить шептать"
+  },
+  "difficulty": "Advanced",
+  "frequency": "Low",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "הִלְחַשְׁתִּי",
+        "transliteration": "hilcháshti",
+        "phonetics": "hil-khash-tee",
+        "translation": "I caused to whisper",
+        "audio": "audio/5100.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "הִלְחַשְׁתָּ",
+        "transliteration": "hilcháshta",
+        "phonetics": "hil-khash-ta",
+        "translation": "you caused to whisper (m.s.)",
+        "audio": "audio/5101.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "הִלְחַשְׁתְּ",
+        "transliteration": "hilchásht",
+        "phonetics": "hil-khasht",
+        "translation": "you caused to whisper (f.s.)",
+        "audio": "audio/5102.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "הִלְחִישׁ",
+        "transliteration": "hilchísh",
+        "phonetics": "hil-kheesh",
+        "translation": "he caused to whisper",
+        "audio": "audio/5103.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "הִלְחִישָׁה",
+        "transliteration": "hilchísha",
+        "phonetics": "hil-khee-sha",
+        "translation": "she caused to whisper",
+        "audio": "audio/5104.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "הִלְחַשְׁנוּ",
+        "transliteration": "hilcháshnu",
+        "phonetics": "hil-khash-noo",
+        "translation": "we caused to whisper",
+        "audio": "audio/5105.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "הִלְחַשְׁתֶּם",
+        "transliteration": "hilcháshtem",
+        "phonetics": "hil-khash-tem",
+        "translation": "you caused to whisper (m.pl.)",
+        "audio": "audio/5106.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "הִלְחַשְׁתֶּן",
+        "transliteration": "hilcháshten",
+        "phonetics": "hil-khash-ten",
+        "translation": "you caused to whisper (f.pl.)",
+        "audio": "audio/5107.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "הִלְחִישׁוּ",
+        "transliteration": "hilchíshu",
+        "phonetics": "hil-khee-shoo",
+        "translation": "they caused to whisper (m.)",
+        "audio": "audio/5108.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "הִלְחִישׁוּ",
+        "transliteration": "hilchíshu",
+        "phonetics": "hil-khee-shoo",
+        "translation": "they caused to whisper (f.)",
+        "audio": "audio/5109.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "מַלְחִישׁ",
+        "transliteration": "malchísh",
+        "phonetics": "mal-kheesh",
+        "translation": "I cause to whisper (m.)",
+        "audio": "audio/5110.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "מַלְחִישָׁה",
+        "transliteration": "malchísha",
+        "phonetics": "mal-khee-sha",
+        "translation": "I cause to whisper (f.)",
+        "audio": "audio/5111.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "מַלְחִישׁ",
+        "transliteration": "malchísh",
+        "phonetics": "mal-kheesh",
+        "translation": "you cause to whisper (m.s.)",
+        "audio": "audio/5112.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "מַלְחִישָׁה",
+        "transliteration": "malchísha",
+        "phonetics": "mal-khee-sha",
+        "translation": "you cause to whisper (f.s.)",
+        "audio": "audio/5113.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "מַלְחִישׁ",
+        "transliteration": "malchísh",
+        "phonetics": "mal-kheesh",
+        "translation": "he causes to whisper",
+        "audio": "audio/5114.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "מַלְחִישָׁה",
+        "transliteration": "malchísha",
+        "phonetics": "mal-khee-sha",
+        "translation": "she causes to whisper",
+        "audio": "audio/5115.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "מַלְחִישִׁים",
+        "transliteration": "malchishím",
+        "phonetics": "mal-khee-sheem",
+        "translation": "we cause to whisper (m.)",
+        "audio": "audio/5116.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "מַלְחִישׁוֹת",
+        "transliteration": "malchishót",
+        "phonetics": "mal-khee-shot",
+        "translation": "we cause to whisper (f.)",
+        "audio": "audio/5117.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "מַלְחִישִׁים",
+        "transliteration": "malchishím",
+        "phonetics": "mal-khee-sheem",
+        "translation": "you cause to whisper (m.pl.)",
+        "audio": "audio/5118.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "מַלְחִישׁוֹת",
+        "transliteration": "malchishót",
+        "phonetics": "mal-khee-shot",
+        "translation": "you cause to whisper (f.pl.)",
+        "audio": "audio/5119.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "מַלְחִישִׁים",
+        "transliteration": "malchishím",
+        "phonetics": "mal-khee-sheem",
+        "translation": "they cause to whisper (m.)",
+        "audio": "audio/5120.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "מַלְחִישׁוֹת",
+        "transliteration": "malchishót",
+        "phonetics": "mal-khee-shot",
+        "translation": "they cause to whisper (f.)",
+        "audio": "audio/5121.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אַלְחִישׁ",
+        "transliteration": "alchísh",
+        "phonetics": "al-kheesh",
+        "translation": "I will cause to whisper",
+        "audio": "audio/5122.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תַּלְחִישׁ",
+        "transliteration": "talchísh",
+        "phonetics": "tal-kheesh",
+        "translation": "you will cause to whisper (m.s.)",
+        "audio": "audio/5123.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תַּלְחִישִׁי",
+        "transliteration": "talchíshi",
+        "phonetics": "tal-khee-shee",
+        "translation": "you will cause to whisper (f.s.)",
+        "audio": "audio/5124.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יַלְחִישׁ",
+        "transliteration": "yalchísh",
+        "phonetics": "yal-kheesh",
+        "translation": "he will cause to whisper",
+        "audio": "audio/5125.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תַּלְחִישׁ",
+        "transliteration": "talchísh",
+        "phonetics": "tal-kheesh",
+        "translation": "she will cause to whisper",
+        "audio": "audio/5126.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נַלְחִישׁ",
+        "transliteration": "nalchísh",
+        "phonetics": "nal-kheesh",
+        "translation": "we will cause to whisper",
+        "audio": "audio/5127.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תַּלְחִישׁוּ",
+        "transliteration": "talchíshu",
+        "phonetics": "tal-khee-shoo",
+        "translation": "you will cause to whisper (m.pl.)",
+        "audio": "audio/5128.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תַּלְחֵשְׁנָה",
+        "transliteration": "talchéshna",
+        "phonetics": "tal-khesh-na",
+        "translation": "you will cause to whisper (f.pl.)",
+        "audio": "audio/5129.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יַלְחִישׁוּ",
+        "transliteration": "yalchíshu",
+        "phonetics": "yal-khee-shoo",
+        "translation": "they will cause to whisper (m.)",
+        "audio": "audio/5130.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תַּלְחֵשְׁנָה",
+        "transliteration": "talchéshna",
+        "phonetics": "tal-khesh-na",
+        "translation": "they will cause to whisper (f.)",
+        "audio": "audio/5131.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "הַלְחֵשׁ",
+        "transliteration": "halchésh",
+        "phonetics": "hal-khesh",
+        "translation": "cause to whisper! (m.s.)",
+        "audio": "audio/5132.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "הַלְחִישִׁי",
+        "transliteration": "halchíshi",
+        "phonetics": "hal-khee-shee",
+        "translation": "cause to whisper! (f.s.)",
+        "audio": "audio/5133.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "הַלְחִישׁוּ",
+        "transliteration": "halchíshu",
+        "phonetics": "hal-khee-shoo",
+        "translation": "cause to whisper! (m.pl.)",
+        "audio": "audio/5134.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "הַלְחֵשְׁנָה",
+        "transliteration": "halchéshna",
+        "phonetics": "hal-khesh-na",
+        "translation": "cause to whisper! (f.pl.)",
+        "audio": "audio/5135.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לְהַלְחִישׁ",
+        "transliteration": "lehalchísh",
+        "phonetics": "le-hal-kheesh",
+        "translation": "to cause to whisper",
+        "audio": "audio/5136.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "הַמּוֹרֶה מַלְחִישׁ אֶת הַתַּלְמִידִים כְּדֵי לֹא לְהַפְרִיעַ.",
+      "transliteration": "Ha-moré malchísh et ha-talmidím kedéi lo lehafría.",
+      "translation": "The teacher causes the students to whisper so as not to disturb."
+    },
+    {
+      "hebrew": "הִיא הִלְחִישָׁה לִי סוֹד בְּקוֹל רָךְ.",
+      "transliteration": "Hi hilchísha li sód be-kól rakh.",
+      "translation": "She whispered a secret to me softly (caused me to hear it whispered)."
+    }
+  ],
+  "notes": "This verb is in binyan Hifil (הִפְעִיל), which typically conveys causation. The root ל-ח-ש, with a guttural ח (chet), relates to whispering, and in Hifil, it means 'to cause to whisper' or sometimes 'to whisper softly' in a poetic sense. It’s less common than לִלְחוֹשׁ (lidchóf, Pa'al), making it advanced.",
+  "related_words": [
+    "לְחִישָׁה (lechishá) - whispering",
+    "מַלְחִישׁ (malchísh) - one who causes to whisper (m.)",
+    "הַלְחָשָׁה (halchashá) - act of causing to whisper"
+  ],
+  "similar_verbs": [
+    "לִלְחוֹשׁ (lilchósh) - to whisper (Pa'al)",
+    "לְהַשְׁתִּיק (lehashtík) - to silence",
+    "לְדַבֵּר (ledabér) - to speak"
+  ],
+  "idioms": [
+    {
+      "expression": "הִלְחִישׁ לְאֹזֶן",
+      "transliteration": "hilchísh le-ózen",
+      "translation": "whispered to the ear (shared discreetly)",
+      "usage": "הוּא הִלְחִישׁ לְאֹזְנֵנוּ אֶת הַתָּכְנִית הַסּוֹדִית."
+    },
+    {
+      "expression": "לְהַלְחִישׁ בְּרַכּוּת",
+      "transliteration": "lehalchísh be-rakút",
+      "translation": "to whisper softly (cause soft speech)",
+      "usage": "הִיא מַלְחִישָׁה בְּרַכּוּת כְּדֵי לֹא לְהָעִיר אֶת הַתִּינוֹק."
+    }
+  ],
+  "binyanim": {
+    "hifil": {
+      "infinitive": "לְהַלְחִישׁ",
+      "meaning": ["to cause to whisper", "to whisper softly"]
+    },
+    "paal": {
+      "infinitive": "לִלְחוֹשׁ",
+      "meaning": ["to whisper"],
+      "note": "More common, direct action"
+    },
+    "nifal": {
+      "infinitive": "לְהִלָּחֵשׁ",
+      "meaning": ["to be whispered"],
+      "note": "Passive, rare"
+    }
+  }
+},
   "leharim": {
   "root": ["ר", "ו", "ם"],
   "root_meaning": "Related to raising, lifting, or height",
