@@ -64512,6 +64512,377 @@
       ]
     }
   }
+},
+  "lalechet": {
+  "root": ["ל", "כ", "ת"],
+  "root_meaning": "Related to walking or movement",
+  "infinitive": "לָלֶכֶת",
+  "binyan": "פָּעַל",
+  "meaning": ["to walk"],
+  "translations": {
+    "en": "to walk",
+    "es": "caminar",
+    "fr": "marcher",
+    "de": "gehen",
+    "ru": "ходить"
+  },
+  "difficulty": "Beginner",
+  "frequency": "High",
+  "conjugations": {
+    "past": [
+      {
+        "pronoun": "אני",
+        "form": "לָכַתִּי",
+        "transliteration": "lacháti",
+        "phonetics": "la-kha-tee",
+        "translation": "I walked",
+        "audio": "audio/3000.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "לָכַתָּ",
+        "transliteration": "lacháta",
+        "phonetics": "la-kha-ta",
+        "translation": "you walked (m.s.)",
+        "audio": "audio/3001.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "לָכַתְּ",
+        "transliteration": "lachát",
+        "phonetics": "la-khat",
+        "translation": "you walked (f.s.)",
+        "audio": "audio/3002.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "לָךְ",
+        "transliteration": "lach",
+        "phonetics": "lakh",
+        "translation": "he walked",
+        "audio": "audio/3003.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "לָכָה",
+        "transliteration": "lachá",
+        "phonetics": "la-kha",
+        "translation": "she walked",
+        "audio": "audio/3004.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "לָכַתְּנוּ",
+        "transliteration": "lachátnu",
+        "phonetics": "la-khat-noo",
+        "translation": "we walked",
+        "audio": "audio/3005.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "לְכַתֶּם",
+        "transliteration": "lechatém",
+        "phonetics": "le-kha-tem",
+        "translation": "you walked (m.pl.)",
+        "audio": "audio/3006.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "לְכַתֶּן",
+        "transliteration": "lechatén",
+        "phonetics": "le-kha-ten",
+        "translation": "you walked (f.pl.)",
+        "audio": "audio/3007.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "לָכוּ",
+        "transliteration": "lachú",
+        "phonetics": "la-khoo",
+        "translation": "they walked (m.)",
+        "audio": "audio/3008.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "לָכוּ",
+        "transliteration": "lachú",
+        "phonetics": "la-khoo",
+        "translation": "they walked (f.)",
+        "audio": "audio/3009.mp4"
+      }
+    ],
+    "present": [
+      {
+        "pronoun": "אני",
+        "form": "הוֹלֵךְ",
+        "transliteration": "holéch",
+        "phonetics": "ho-lekh",
+        "translation": "I walk (m.)",
+        "audio": "audio/3010.mp4"
+      },
+      {
+        "pronoun": "אני",
+        "form": "הוֹלֶכֶת",
+        "transliteration": "holéchet",
+        "phonetics": "ho-le-khet",
+        "translation": "I walk (f.)",
+        "audio": "audio/3011.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "הוֹלֵךְ",
+        "transliteration": "holéch",
+        "phonetics": "ho-lekh",
+        "translation": "you walk (m.s.)",
+        "audio": "audio/3012.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "הוֹלֶכֶת",
+        "transliteration": "holéchet",
+        "phonetics": "ho-le-khet",
+        "translation": "you walk (f.s.)",
+        "audio": "audio/3013.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "הוֹלֵךְ",
+        "transliteration": "holéch",
+        "phonetics": "ho-lekh",
+        "translation": "he walks",
+        "audio": "audio/3014.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "הוֹלֶכֶת",
+        "transliteration": "holéchet",
+        "phonetics": "ho-le-khet",
+        "translation": "she walks",
+        "audio": "audio/3015.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "הוֹלְכִים",
+        "transliteration": "holchím",
+        "phonetics": "hol-kheem",
+        "translation": "we walk (m.)",
+        "audio": "audio/3016.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "הוֹלְכוֹת",
+        "transliteration": "holchót",
+        "phonetics": "hol-khot",
+        "translation": "we walk (f.)",
+        "audio": "audio/3017.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "הוֹלְכִים",
+        "transliteration": "holchím",
+        "phonetics": "hol-kheem",
+        "translation": "you walk (m.pl.)",
+        "audio": "audio/3018.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "הוֹלְכוֹת",
+        "transliteration": "holchót",
+        "phonetics": "hol-khot",
+        "translation": "you walk (f.pl.)",
+        "audio": "audio/3019.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "הוֹלְכִים",
+        "transliteration": "holchím",
+        "phonetics": "hol-kheem",
+        "translation": "they walk (m.)",
+        "audio": "audio/3020.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "הוֹלְכוֹת",
+        "transliteration": "holchót",
+        "phonetics": "hol-khot",
+        "translation": "they walk (f.)",
+        "audio": "audio/3021.mp4"
+      }
+    ],
+    "future": [
+      {
+        "pronoun": "אני",
+        "form": "אֵלֵךְ",
+        "transliteration": "eléch",
+        "phonetics": "e-lekh",
+        "translation": "I will walk",
+        "audio": "audio/3022.mp4"
+      },
+      {
+        "pronoun": "אתה",
+        "form": "תֵּלֵךְ",
+        "transliteration": "teléch",
+        "phonetics": "te-lekh",
+        "translation": "you will walk (m.s.)",
+        "audio": "audio/3023.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "תֵּלְכִי",
+        "transliteration": "telchí",
+        "phonetics": "tel-khee",
+        "translation": "you will walk (f.s.)",
+        "audio": "audio/3024.mp4"
+      },
+      {
+        "pronoun": "הוא",
+        "form": "יֵלֵךְ",
+        "transliteration": "yeléch",
+        "phonetics": "ye-lekh",
+        "translation": "he will walk",
+        "audio": "audio/3025.mp4"
+      },
+      {
+        "pronoun": "היא",
+        "form": "תֵּלֵךְ",
+        "transliteration": "teléch",
+        "phonetics": "te-lekh",
+        "translation": "she will walk",
+        "audio": "audio/3026.mp4"
+      },
+      {
+        "pronoun": "אנחנו",
+        "form": "נֵלֵךְ",
+        "transliteration": "neléch",
+        "phonetics": "ne-lekh",
+        "translation": "we will walk",
+        "audio": "audio/3027.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "תֵּלְכוּ",
+        "transliteration": "telchú",
+        "phonetics": "tel-khoo",
+        "translation": "you will walk (m.pl.)",
+        "audio": "audio/3028.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "תֵּלַכְנָה",
+        "transliteration": "teláchna",
+        "phonetics": "te-lakh-na",
+        "translation": "you will walk (f.pl.)",
+        "audio": "audio/3029.mp4"
+      },
+      {
+        "pronoun": "הם",
+        "form": "יֵלְכוּ",
+        "transliteration": "yelchú",
+        "phonetics": "yel-khoo",
+        "translation": "they will walk (m.)",
+        "audio": "audio/3030.mp4"
+      },
+      {
+        "pronoun": "הן",
+        "form": "תֵּלַכְנָה",
+        "transliteration": "teláchna",
+        "phonetics": "te-lakh-na",
+        "translation": "they will walk (f.)",
+        "audio": "audio/3031.mp4"
+      }
+    ],
+    "imperative": [
+      {
+        "pronoun": "אתה",
+        "form": "לֵךְ",
+        "transliteration": "lech",
+        "phonetics": "lekh",
+        "translation": "walk! (m.s.)",
+        "audio": "audio/3032.mp4"
+      },
+      {
+        "pronoun": "את",
+        "form": "לְכִי",
+        "transliteration": "lechí",
+        "phonetics": "le-khee",
+        "translation": "walk! (f.s.)",
+        "audio": "audio/3033.mp4"
+      },
+      {
+        "pronoun": "אתם",
+        "form": "לְכוּ",
+        "transliteration": "lechú",
+        "phonetics": "le-khoo",
+        "translation": "walk! (m.pl.)",
+        "audio": "audio/3034.mp4"
+      },
+      {
+        "pronoun": "אתן",
+        "form": "לֵכְנָה",
+        "transliteration": "léchna",
+        "phonetics": "lekh-na",
+        "translation": "walk! (f.pl.)",
+        "audio": "audio/3035.mp4"
+      }
+    ],
+    "infinitive": [
+      {
+        "pronoun": "",
+        "form": "לָלֶכֶת",
+        "transliteration": "laléchet",
+        "phonetics": "la-le-khet",
+        "translation": "to walk",
+        "audio": "audio/3036.mp4"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "hebrew": "אֲנִי הוֹלֵךְ לַפַּרְק.",
+      "transliteration": "Ani holéch la-park.",
+      "translation": "I am walking to the park."
+    },
+    {
+      "hebrew": "הֵם לָכוּ לְבֵית הַסֵּפֶר בַּבֹּקֶר.",
+      "transliteration": "Hem lachú le-beit ha-sefer ba-bóker.",
+      "translation": "They walked to school in the morning."
+    }
+  ],
+  "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root ל-כ-ת overlaps with 'halach' (הָלַךְ), but 'laléchet' emphasizes the act of walking. The present tense uses forms of 'holech' (הוֹלֵךְ), which is more common in modern Hebrew.",
+  "related_words": [
+    "הֲלִיכָה (halichá) - walking",
+    "מְהַלֵּךְ (mehaléch) - walker, process",
+    "לֵךְ (lech) - go!, walk!"
+  ],
+  "similar_verbs": [
+    "לָרוּץ (larutz) - to run",
+    "לָעוּף (la’uf) - to fly",
+    "לִנְסֹעַ (linso’a) - to travel"
+  ],
+  "idioms": [
+    {
+      "expression": "לָלֶכֶת בְּדַרְכּוֹ",
+      "transliteration": "laléchet be-darkó",
+      "translation": "to walk in his path",
+      "usage": "הוּא בָּחַר לָלֶכֶת בְּדַרְכּוֹ שֶׁל אָבִיו."
+    },
+    {
+      "expression": "לֵךְ לְךָ",
+      "transliteration": "lech lechá",
+      "translation": "go away",
+      "usage": "אָמַרְתִּי לוֹ 'לֵךְ לְךָ' כְּשֶׁהִתְרַגַּזְתִּי."
+    }
+  ],
+  "binyanim": {
+    "paal": {
+      "infinitive": "לָלֶכֶת",
+      "meaning": ["to walk"]
+    },
+    "hitpael": {
+      "infinitive": "לְהִתְהַלֵּךְ",
+      "meaning": ["to stroll", "to walk around"]
+    }
+  }
 }
   
 }
