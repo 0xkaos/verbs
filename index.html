@@ -1061,54 +1061,55 @@ document.addEventListener('DOMContentLoaded', function() {
     darkModeToggle.textContent = 'Light Mode';
   }
 
-// Mapping updated with exact spellings from your output
 const binyanToEnglish = {
-    "פָּעַל": "Paal",      // Matches your output
-    "נִפְעַל": "Nifal",    // Matches your output
-    "פִּעֵל": "Piel",      // Adjusted to match your output spelling
+    "פָּעַל": "Paal",
+    "נִפְעַל": "Nifal",
+    "פִּעֵל": "Piel",
     "פֻּעַל": "Pual",
-    "הִפְעִיל": "Hifil",   // Matches your output
+    "הִפְעִיל": "Hifil",
     "הֻפְעַל": "Hufal",
-    "הִתְפַּעֵל": "Hitpael" // Adjusted to match your output spelling
+    "הִתְפַּעֵל": "Hitpael"
 };
 
-// Helper function to normalize Hebrew binyan for lookup
-function normalizeForLookup(binyan) {
-    return binyan.replace(/[\u0591-\u05C7]/g, ''); // Remove all nikkud for fallback
-}
+const customOrder = {
+    "פעל": 1,    // Paal
+    "נפעל": 2,   // Nifal
+    "פעֵל": 3,   // Piel
+    "פֻּעַל": 4, // Pual
+    "הפעיל": 5,  // Hifil
+    "הֻפעַל": 6, // Hufal
+    "התפעֵל": 7   // Hitpael
+};
 
 function populateBinyanSelect() {
-    const binyanMap = new Map(); // Map for normalized (value) -> raw (display) pairs
+    const binyanMap = new Map();
     for (let verbKey in verbs) {
         const verb = verbs[verbKey];
         if (verb.binyan) {
-            const rawBinyan = verb.binyan.trim(); // Original with nikkud for display
+            const rawBinyan = verb.binyan.trim();
             let normalizedBinyan = rawBinyan;
             if (/[\u0591-\u05EA]/.test(rawBinyan)) {
-                // Normalize Hebrew for uniqueness, removing specific nikkud
                 normalizedBinyan = rawBinyan
-                    .replace(/[\u05BC\u05BF]/g, '') // Remove dagesh and rafe
-                    .replace(/[\u05B0-\u05B4\u05B6-\u05BB]/g, ''); // Remove most nikkud
+                    .replace(/[\u05BC\u05BF]/g, '')
+                    .replace(/[\u05B0-\u05B4\u05B6-\u05BB]/g, '');
             } else {
-                // Normalize English (if any) to lowercase
                 normalizedBinyan = rawBinyan.toLowerCase();
             }
             binyanMap.set(normalizedBinyan, rawBinyan);
             console.log(`Found binyan for ${verbKey}: ${rawBinyan} -> normalized: ${normalizedBinyan}`);
         }
     }
-    const sortedBinyanim = Array.from(binyanMap.keys()).sort();
+
+    const sortedBinyanim = Array.from(binyanMap.keys()).sort((a, b) => {
+        return (customOrder[a] || 99) - (customOrder[b] || 99);
+    });
+
     binyanSelect.innerHTML = '<option value="all">כל הבניינים | All Binyanim</option>';
     sortedBinyanim.forEach(normalizedBinyan => {
-        const rawBinyan = binyanMap.get(normalizedBinyan); // Original with nikkud
+        const rawBinyan = binyanMap.get(normalizedBinyan);
         const option = document.createElement('option');
-        option.value = normalizedBinyan; // Normalized for functionality
-        // Try exact match first, then fallback to normalized lookup
-        let englishBinyan = binyanToEnglish[rawBinyan];
-        if (!englishBinyan) {
-            const normalizedKey = normalizeForLookup(rawBinyan);
-            englishBinyan = binyanToEnglish[normalizedKey] || "Unknown";
-        }
+        option.value = normalizedBinyan;
+        const englishBinyan = binyanToEnglish[rawBinyan] || "Unknown";
         option.textContent = `${rawBinyan} | ${englishBinyan}`;
         binyanSelect.appendChild(option);
     });
