@@ -14,753 +14,626 @@
 
   
   <style>
-    /* Root Variables for Colors and Fonts */
-    :root {
-      --font-family: 'Varela Round', Arial, sans-serif;
-      --background-color: #F0F1F4;
-      --background-image: linear-gradient(to bottom, #F0F1F4, #e0e0e0);
-      --text-color: #333;
-      --secondary-text-color: #555;
-      --primary-color: #364991;
-      --accent-color: #ff6600;
-      --container-bg: rgba(255, 255, 255, 0.8);
-      --container-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      --border-color: #ddd;
-      --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      --input-bg: #fff;
-      --input-border-color: #364991;
-      --button-bg: #e7e7e7;
-      --button-border: #ccc;
-      --button-text-color: #333;
-      --root-letter-color: #d9534f;
-      --root-letter-hover: #ff6600;
-    }
 
-    /* Dark Mode Overrides */
-    body.dark-mode {
-      --background-color: #121212;
-      --background-image: none;
-      --text-color: #e0e0e0;
-      --secondary-text-color: #aaa;
-      --container-bg: rgba(30, 30, 30, 0.8);
-      --container-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      --border-color: #333;
-      --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-      --input-bg: #2a2a2a;
-      --input-border-color: #444;
-      --button-bg: #444;
-      --button-border: #555;
-      --button-text-color: #e0e0e0;
-      --root-letter-color: #4479b6;
-      --root-letter-hover: #6d97c8;
-      --accent-color: #8fb0d6; /* Set accent color to blue in dark mode */
-    }
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+:root {
+  --font-family: 'Varela Round', Arial, sans-serif;
+  --background-color: #F0F1F4;
+  --background-image: linear-gradient(to bottom, #F0F1F4, #e0e0e0);
+  --text-color: #333;
+  --secondary-text-color: #555;
+  --primary-color: #364991;
+  --accent-color: #ff6600;
+  --container-bg: #fff;
+  --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  --border-color: #ccc;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --input-bg: #fff;
+  --input-border-color: #364991;
+  --button-bg: #e7e7e7;
+  --button-border: #bbb;
+  --button-text-color: #333;
+  --root-letter-color: #d9534f;
+  --root-letter-hover: #ff6600;
+}
 
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+body.dark-mode {
+  --background-color: #121212;
+  --background-image: none;
+  --text-color: #e0e0e0;
+  --secondary-text-color: #aaa;
+  --container-bg: rgba(30, 30, 30, 0.9);
+  --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  --border-color: #333;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --input-bg: #2a2a2a;
+  --input-border-color: #444;
+  --button-bg: #444;
+  --button-border: #555;
+  --button-text-color: #e0e0e0;
+  --root-letter-color: #4479b6;
+  --root-letter-hover: #6d97c8;
+  --accent-color: #8fb0d6;
+}
 
-    /* Body Styles */
-    body {
-      font-family: var(--font-family);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      min-height: 100vh;
-      background-color: var(--background-color);
-      background-image: var(--background-image);
-      color: var(--text-color);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /* Container */
-    .container {
-      width: 100%;
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-      background-color: var(--container-bg);
-      border-radius: 8px;
-      box-shadow: var(--container-shadow);
-    }
-
-    /* Header Styles */
-    h1 {
-      font-family: var(--font-family);
-      margin-bottom: 20px;
-      text-align: center;
-      font-size: 1.6em;
-      color: var(--primary-color);
-    }
-
-    /* Header Menus */
-    .header-menus {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto 20px;
-      padding: 0 10px;
-      width: 100%;
-      max-width: 1000px;
-    }
-
-    .header-menus label {
-      font-size: 1em;
-      margin-right: 10px;
-      margin-bottom: 5px;
-      color: var(--secondary-text-color);
-      text-align: right;
-    }
-
-    #translations-list-container {
-      flex: 1;
-      margin-right: 20px;
-      max-width: calc(100% - 300px);
-    }
-
-    #verb-select-container {
-      flex: 0 0 280px;
-      max-width: 100%;
-    }
-
-    #translations-list {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: flex-start;
-    }
-
-    #translations-list li {
-      flex: 0 1 auto;
-      padding: 5px;
-      font-size: 1em;
-      color: var(--text-color);
-      text-align: center;
-    }
-
-    body.dark-mode #translations-list li {
-      color: var(--text-color);
-    }
-
-    .header-menus select {
-      width: 100%;
-      max-width: 250px;
-      padding: 10px;
-      font-size: 1em;
-      border: 1px solid var(--input-border-color);
-      border-radius: 8px;
-      background-color: var(--input-bg);
-      color: var(--text-color);
-      cursor: pointer;
-      appearance: none;
-      box-shadow: var(--box-shadow);
-      transition: all 0.3s ease;
-      text-align: center;
-    }
-
-    .header-menus select:focus {
-      outline: none;
-      border-color: var(--primary-color);
-    }
-
-    /* Tense Tabs */
-    .tense-tabs {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
-      gap: 10px;
-      padding: 10px;
-      width: 100%;
-      max-width: 1000px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      box-shadow: var(--box-shadow);
-    }
-
-    /* Buttons */
-    .tense-button,
-    #dark-mode-toggle {
-      font-size: 0.7em;
-      padding: 3px 5px;
-      margin: 5px;
-      border-radius: 4px;
-      background-color: var(--button-bg);
-      border: 1px solid var(--button-border);
-      color: var(--button-text-color);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .tense-button {
-      flex: 0 0 auto;
-      min-width: 100px;
-      text-align: center;
-      box-shadow: var(--box-shadow);
-      font-size: 1em;
-    }
-
-    .tense-button:hover {
-      background-color: #ddd;
-      transform: scale(1.05);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    body.dark-mode .tense-button:hover {
-      background-color: #555;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    }
-
-    .tense-button.active {
-      background-color: var(--primary-color);
-      color: #fff;
-      border: none;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Root Letter Highlighting */
-    .root-letter {
-      font-size: 1.1em;
-      font-weight: bold;
-      color: var(--root-letter-color);
-    }
-
-    .root-letter:hover {
-      color: var(--root-letter-hover);
-    }
-
-    /* Table Container */
-    .table-container {
-      width: 100%;
-      max-width: 1000px;
-      margin-top: 20px;
-      overflow-x: auto;
-    }
-
-    /* Conjugation Table */
-    #conjugation-table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: var(--input-bg);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: var(--container-shadow);
-      direction: rtl;
-    }
-
-    #conjugation-table th,
-    #conjugation-table td {
-      padding: 15px;
-      text-align: center;
-      border-bottom: 1px solid var(--border-color);
-      font-size: 1.3em;
-    }
-
-    #conjugation-table th {
-      background-color: var(--primary-color);
-      color: #fff;
-      font-weight: bold;
-      border-bottom: 2px solid #0056b3;
-      font-size: 1em;
-    }
-
-    #conjugation-table tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    body.dark-mode #conjugation-table tr:nth-child(even) {
-      background-color: #2a2a2a;
-    }
-
-    #conjugation-table tr:hover {
-      background-color: #f1f1f1;
-    }
-
-    body.dark-mode #conjugation-table tr:hover {
-      background-color: #404040;
-    }
-
-    #conjugation-table td:nth-child(2) {
-      font-size: 1.3em;
-    }
-
-    #conjugation-table td:nth-child(2) a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    #conjugation-table td:nth-child(2) a:hover {
-      color: var(--accent-color);
-    }
-
-    /* Text Elements */
-    .header-menus label,
-    .info-section ul li strong,
-    .info-section ul li em,
-    .info-section ul li p,
-    .info-section ul li span {
-      font-size: 1.1em;
-    }
-
-    /* Information Sections */
-    .info-section {
-      margin-top: 30px;
-      width: 100%;
-      max-width: 1000px;
-    }
-
-    .info-section h2 {
-      font-size: 1.5em;
-      margin-bottom: 15px;
-      padding-bottom: 5px;
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--primary-color);
-    }
-
-    /* Cards Layout */
-    .info-section ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-    }
-
-    .info-section ul li {
-      flex: 1 1 calc(33.333% - 20px);
-      background-color: var(--input-bg);
-      padding: 20px;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      box-shadow: var(--box-shadow);
-      transition: transform 0.3s;
-    }
-
-    .info-section ul li:hover {
-      transform: translateY(-5px);
-      background-color: #f9f9f9;
-    }
-
-    body.dark-mode .info-section ul li:hover {
-      background-color: #333;
-    }
-
-    .info-section ul li strong {
-      font-size: 1.1em;
-      color: var(--text-color);
-      margin-bottom: 10px;
-    }
-
-    .info-section ul li em {
-      font-size: 1.1em;
-      color: var(--secondary-text-color);
-      margin-bottom: 10px;
-    }
-
-    .info-section ul li p {
-      font-size: 1.1em;
-      color: var(--text-color);
-      margin-bottom: 10px;
-    }
-
-    /* Directionality */
-    [dir="rtl"] {
-      text-align: right;
-    }
-
-    [dir="ltr"] {
-      text-align: left;
-    }
-
-    /* Binyanim Table */
-    #binyanim-table {
-      width: 100%;
-      max-width: 1000px;
-      margin-top: 20px;
-      border-collapse: collapse;
-      background-color: var(--input-bg);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: var(--container-shadow);
-    }
-
-    #binyanim-table th,
-    #binyanim-table td {
-      padding: 15px;
-      text-align: center;
-      border: 1px solid var(--border-color);
-    }
-
-    #binyanim-table th {
-      background-color: var(--primary-color);
-      color: #fff;
-    }
-
-    #binyanim-table tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    body.dark-mode #binyanim-table tr:nth-child(even) {
-      background-color: #2a2a2a;
-    }
-
-    /* Note Class */
-    .note {
-      display: block;
-      padding: 5px;
-      background-color: #f9f9f9;
-      color: var(--secondary-text-color);
-      font-style: italic;
-      text-align: left;
-    }
-    /* Dark mode adjustments for notes in binyanim table */
-    body.dark-mode #binyanim-table .note {
-      background-color: #333; /* Slightly lighter than #2a2a2a for contrast */
-      color: #aaa; /* Matches --secondary-text-color in dark mode */
-    }
-
-    /* Scrollbars for Dark Mode */
-    body.dark-mode ::-webkit-scrollbar {
-      width: 12px;
-    }
-
-    body.dark-mode ::-webkit-scrollbar-track {
-      background: #1e1e1e;
-    }
-
-    body.dark-mode ::-webkit-scrollbar-thumb {
-      background: #333;
-      border-radius: 6px;
-    }
-
-    body.dark-mode ::-webkit-scrollbar-thumb:hover {
-      background: #444;
-    }
-
-    /* Font Selector */
-    #font-selector {
-      font-size: 0.7em;
-      padding: 3px 5px;
-      margin: 5px;
-      border-radius: 4px;
-      background-color: var(--button-bg);
-      border: 1px solid var(--button-border);
-      color: var(--button-text-color);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: var(--box-shadow);
-      appearance: none;
-    }
-
-    /* Hover effects to match the button */
-    #font-selector:hover {
-      background-color: #ddd;
-      transform: scale(1.05);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Dark mode styles */
-    body.dark-mode #font-selector {
-      background-color: var(--button-bg);
-      color: var(--button-text-color);
-      border: 1px solid var(--button-border);
-    }
-
-    body.dark-mode #font-selector:hover {
-      background-color: #555;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    }
-    li.multiline-item strong,
-    li.multiline-item em,
-    li.multiline-item p {
-      display: block;
-      margin-bottom: 5px; /* Optional: Adds spacing between lines */
-    }
-    #binyan-select-container {
-      flex: 0 0 280px;
-      max-width: 100%;
-      margin-right: 20px; /* Add spacing between binyan and verb menus */
-    }
-
-    #binyan-select-container select {
-      width: 100%;
-      max-width: 250px;
-      padding: 10px;
-      font-size: 1em;
-      border: 1px solid var(--input-border-color);
-      border-radius: 8px;
-      background-color: var(--input-bg);
-      color: var(--text-color);
-      cursor: pointer;
-      appearance: none;
-      box-shadow: var(--box-shadow);
-      transition: all 0.3s ease;
-      text-align: center;
-    }
-
-    #binyan-select-container select:focus {
-      outline: none;
-      border-color: var(--primary-color);
-    }
-    .search-container {
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto 20px auto;
-      padding: 0 20px;
-      display: flex;
-      justify-content: center;
-    }
-
-    #verb-search {
-  font-size: 0.7em; /* Matches tense-button and dark-mode-toggle */
-  padding: 3px 5px; /* Matches tense-button and dark-mode-toggle */
-  margin: 5px; /* Matches tense-button and dark-mode-toggle */
-  border-radius: 4px; /* Matches tense-button and dark-mode-toggle */
-  background-color: var(--button-bg); /* Matches tense-button and dark-mode-toggle */
-  border: 1px solid var(--button-border); /* Matches tense-button and dark-mode-toggle */
-  color: var(--button-text-color); /* Matches tense-button and dark-mode-toggle */
-  cursor: pointer; /* Matches tense-button and dark-mode-toggle */
-  transition: all 0.3s ease; /* Matches tense-button and dark-mode-toggle */
-  box-shadow: var(--box-shadow); /* Matches tense-button and dark-mode-toggle */
+body {
   font-family: var(--font-family);
-  text-align: center;
-  width: auto; /* Allows it to fit content, similar to font-selector */
-  min-width: 120px; /* Ensures it doesn’t collapse too small */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effects to match font-selector and dark-mode-toggle */
-#verb-search:hover {
-  background-color: #ddd; /* Matches tense-button and font-selector */
-  transform: scale(1.05); /* Matches tense-button and font-selector */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Matches tense-button and font-selector */
+/* ==========================================================================
+   Layout Components
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--container-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--container-shadow);
 }
 
-/* Focus state to match select:focus */
-#verb-search:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  background-color: var(--input-bg);
+.table-container {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+  overflow-x: auto;
 }
 
-/* Placeholder styling */
-#verb-search::placeholder {
-  color: var(--secondary-text-color);
-  opacity: 0.7;
-}
-
-/* Dark mode styles */
-body.dark-mode #verb-search {
-  background-color: var(--button-bg);
-  color: var(--button-text-color);
-  border: 1px solid var(--button-border);
-}
-
-body.dark-mode #verb-search:hover {
-  background-color: #555; /* Matches tense-button and font-selector */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Matches tense-button and font-selector */
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .conjugation-link {
-    padding: 0 10px;
-    margin-bottom: 10px;
-    justify-content: center; /* Center items on mobile */
-    gap: 10px; /* Add spacing between items */
-  }
-
-  #verb-search {
-    font-size: 0.7em; /* Matches existing mobile adjustments */
-    padding: 3px 5px; /* Consistent with desktop */
-    margin: 5px 0;
-    min-width: 100px; /* Slightly smaller for mobile */
-  }
-}
-
-    /* Mobile adjustments */
-    @media (max-width: 768px) {
-      #binyan-select-container {
-        flex: 0 0 auto;
-        margin-right: 0;
-        margin-left: 0;
-      }
-
-      #binyan-select-container select {
-        width: auto;
-        max-width: 150px;
-        padding: 5px;
-        font-size: 0.8em;
-        box-shadow: none;
-      }
-
-      #binyan-select-container label {
-        display: none;
-      }
-    }
-
-    /* Media Query for Mobile */
-    @media (max-width: 768px) {
-      body {
-        padding: 10px;
-      }
-
-      h1 {
-        font-size: 1.2em;
-      }
-
-      /* Hide the Phonetics column (4th column) */
-      #conjugation-table th:nth-child(4),
-      #conjugation-table td:nth-child(4) {
-        display: none;
-      }
-
-      /* Adjust Header Menus */
-      .header-menus {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0;
-      }
-
-      /* Adjust Translations List Container */
-      #translations-list-container {
-        flex: 1 1 auto;
-        margin-right: 0;
-        max-width: 100%;
-        overflow-x: auto;
-      }
-
-      /* Adjust Translations List */
-      #translations-list {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 5px;
-        justify-content: flex-start;
-      }
-
-      /* Adjust Translations List Items */
-      #translations-list li {
-        flex: 0 0 auto;
-        padding: 2px 5px;
-        font-size: 0.9em;
-        white-space: nowrap;
-      }
-
-      /* Adjust Verb Select Container */
-      #verb-select-container {
-        flex: 0 0 auto;
-        margin-left: auto;
-      }
-
-      /* Adjust the select element */
-      #verb-select-container select {
-        width: auto;
-        max-width: 150px;
-        padding: 5px;
-        font-size: 0.8em;
-        box-shadow: none;
-      }
-
-      /* Optionally hide the label to save space */
-      #verb-select-container label {
-        display: none;
-      }
-
-      /* Adjust Labels */
-      .header-menus label {
-        font-size: 0.8em;
-        margin-right: 5px;
-        margin-bottom: 2px;
-        color: var(--secondary-text-color);
-        text-align: right;
-      }
-
-      .header-menus select {
-        width: 100%;
-        max-width: 200px;
-        padding: 5px;
-        font-size: 0.8em;
-        box-shadow: none;
-      }
-
-      #conjugation-table {
-        font-size: 0.9em;
-      }
-
-      #conjugation-table th,
-      #conjugation-table td {
-        padding: 5px;
-      }
-
-      #conjugation-table th {
-        font-size: 0.7em;
-      }
-
-      .info-section ul {
-        flex-direction: column;
-      }
-
-      .info-section ul li {
-        flex: 1 1 100%;
-        margin-bottom: 10px;
-      }
-
-      #dark-mode-toggle {
-        font-size: 0.7em;
-        padding: 3px 5px;
-        margin: 5px 0;
-        border-radius: 4px;
-        width: auto;
-        min-width: 80px;
-        max-width: 100px;
-      }
-
-      .conjugation-link {
+.conjugation-link {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 20px;
   padding: 0 20px;
 }
-      /* Adjust Font Selector */
-      #font-selector {
-        font-size: 0.9em;
-        padding: 5px;
-        margin: 5px 0;
-        width: 100%;
-        max-width: 200px;
-      }
 
-      #selected-verb-translation {
-        padding: 0 5px;
-        font-size: 0.8em;
-        color: var(--secondary-text-color);
-      }
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+h1 {
+  font-family: var(--font-family);
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.6em;
+  color: var(--primary-color);
+}
 
-      .tense-tabs {
-        flex-wrap: wrap;
-      }
+.info-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
 
-      .tense-button {
-        flex: 1 1 calc(33.333% - 15px);
-        min-width: auto;
-        font-size: 0.7em;
-      }
-    }
+.root-letter {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--root-letter-color);
+}
+
+.root-letter:hover {
+  color: var(--root-letter-hover);
+}
+
+/* ==========================================================================
+   Header Menus
+   ========================================================================== */
+.header-menus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.header-menus label {
+  font-size: 1em;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  color: var(--secondary-text-color);
+  text-align: right;
+}
+
+#translations-list-container {
+  flex: 1;
+  margin-right: 20px;
+  max-width: calc(100% - 300px);
+}
+
+#verb-select-container,
+#binyan-select-container {
+  flex: 0 0 280px;
+  max-width: 100%;
+}
+
+#binyan-select-container {
+  margin-right: 20px;
+}
+
+#translations-list {
+  list-style-type: none;
+  font-size: 0.7em;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+#translations-list li {
+  flex: 0 1 auto;
+  padding: 5px;
+  font-size: 1em;
+  color: var(--text-color);
+  text-align: center;
+  background-color: var(--input-bg);
+  border-radius: 4px;
+  /* No border as per request */
+}
+
+body.dark-mode #translations-list li {
+  color: var(--text-color);
+}
+
+.header-menus select,
+#binyan-select-container select {
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  appearance: none;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.header-menus select:focus,
+#binyan-select-container select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
+}
+
+/* ==========================================================================
+   Buttons and Inputs
+   ========================================================================== */
+.tense-tabs {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+body.dark-mode .tense-tabs {
+  background-color: rgba(30, 30, 30, 0.4);
+}
+
+.tense-button {
+  flex: 0 0 auto;
+  min-width: 100px;
+  text-align: center;
+  font-size: 1em;
+  padding: 3px 8px;
+  margin: 5px;
+  border-radius: 4px;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+}
+
+#dark-mode-toggle,
+#font-selector,
+#verb-search {
+  font-size: 0.7em;
+  padding: 3px 8px;
+  margin: 5px;
+  border-radius: 4px;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+  font-family: var(--font-family);
+  text-align: center;
+  width: auto;
+  min-width: 120px;
+}
+
+#font-selector {
+  appearance: none; /* Consistent with button-like styling */
+}
+
+.tense-button:hover,
+#dark-mode-toggle:hover,
+#font-selector:hover,
+#verb-search:hover {
+  background-color: #d5d5d5;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .tense-button:hover,
+body.dark-mode #dark-mode-toggle:hover,
+body.dark-mode #font-selector:hover,
+body.dark-mode #verb-search:hover {
+  background-color: #555;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tense-button.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#dark-mode-toggle:focus,
+#font-selector:focus,
+#verb-search:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
+}
+
+#verb-search::placeholder {
+  color: var(--secondary-text-color);
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+#conjugation-table,
+#binyanim-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--container-shadow);
+}
+
+#conjugation-table {
+  direction: rtl;
+}
+
+#conjugation-table th,
+#conjugation-table td,
+#binyanim-table th,
+#binyanim-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#binyanim-table th,
+#binyanim-table td {
+  border: 1px solid var(--border-color);
+}
+
+#conjugation-table th,
+#binyanim-table th {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+}
+
+#conjugation-table th {
+  border-bottom: 2px solid #0056b3;
+  font-size: 1em;
+}
+
+#conjugation-table td:nth-child(2) {
+  font-size: 1.3em;
+}
+
+#conjugation-table td:nth-child(2) a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#conjugation-table td:nth-child(2) a:hover {
+  color: var(--accent-color);
+}
+
+#conjugation-table tr:nth-child(even),
+#binyanim-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+body.dark-mode #conjugation-table tr:nth-child(even),
+body.dark-mode #binyanim-table tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+#conjugation-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+body.dark-mode #conjugation-table tr:hover {
+  background-color: #404040;
+}
+
+.note {
+  display: block;
+  padding: 5px;
+  background-color: #f9f9f9;
+  color: var(--secondary-text-color);
+  font-style: italic;
+  text-align: left;
+}
+
+body.dark-mode #binyanim-table .note {
+  background-color: #333;
+  color: #aaa;
+}
+
+/* ==========================================================================
+   Info Sections
+   ========================================================================== */
+.info-section {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.info-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.info-section ul li {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: var(--input-bg);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.info-section ul li:hover {
+  transform: translateY(-5px);
+  background-color: #f5f5f5;
+}
+
+body.dark-mode .info-section ul li:hover {
+  background-color: #333;
+}
+
+.info-section ul li strong,
+.info-section ul li em,
+.info-section ul li p,
+.info-section ul li span {
+  font-size: 1.1em;
+}
+
+.info-section ul li strong {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.info-section ul li em {
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+}
+
+.info-section ul li p {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+li.multiline-item strong,
+li.multiline-item em,
+li.multiline-item p {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="ltr"] {
+  text-align: left;
+}
+
+body.dark-mode ::-webkit-scrollbar {
+  width: 12px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 6px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* ==========================================================================
+   Media Queries (Mobile)
+   ========================================================================== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  .conjugation-link {
+    padding: 0 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #dark-mode-toggle,
+  #font-selector,
+  #verb-search {
+    font-size: 0.7em;
+    padding: 3px 8px;
+    margin: 5px 0;
+    min-width: 80px;
+    max-width: 120px;
+  }
+
+  #verb-search {
+    min-width: 100px;
+  }
+
+  #dark-mode-toggle {
+    min-width: 80px;
+    max-width: 100px;
+  }
+
+  .header-menus {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  #translations-list-container {
+    flex: 1 1 auto;
+    margin-right: 0;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  #translations-list {
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+
+  #translations-list li {
+    padding: 2px 5px;
+    font-size: 0.7em;
+    white-space: nowrap;
+  }
+
+  #verb-select-container,
+  #binyan-select-container {
+    flex: 0 0 auto;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  #verb-select-container select,
+  #binyan-select-container select {
+    width: auto;
+    max-width: 150px;
+    padding: 5px;
+    font-size: 0.8em;
+    box-shadow: none;
+  }
+
+  .header-menus label,
+  #verb-select-container label,
+  #binyan-select-container label {
+    display: none;
+  }
+
+  .tense-tabs {
+    flex-wrap: wrap;
+  }
+
+  .tense-button {
+    flex: 1 1 calc(33.333% - 15px);
+    min-width: auto;
+    font-size: 0.7em;
+  }
+
+  #conjugation-table {
+    font-size: 0.9em;
+  }
+
+  #conjugation-table th,
+  #conjugation-table td {
+    padding: 5px;
+  }
+
+  #conjugation-table th {
+    font-size: 0.7em;
+  }
+
+  #conjugation-table th:nth-child(4),
+  #conjugation-table td:nth-child(4) {
+    display: none;
+  }
+
+  .info-section ul {
+    flex-direction: column;
+  }
+
+  .info-section ul li {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+
+  #selected-verb-translation {
+    padding: 0 5px;
+    font-size: 0.8em;
+    color: var(--secondary-text-color);
+  }
+}
     
     /* Custom Fonts for Hebrew */
     @font-face {
@@ -911,6 +784,7 @@ body.dark-mode #verb-search:hover {
 
   <!-- JavaScript -->
   <script>
+
 // Function to play audio pronunciation (defined only once)
 function playAudio(src) {
   const audio = new Audio(src);
@@ -918,22 +792,21 @@ function playAudio(src) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  let verbs = {}; // Global variable to hold verbs data
+  let verbs = {};
   let verbSelect = document.getElementById('verb-select');
   let binyanSelect = document.getElementById('binyan-select');
   let conjugationTable = document.getElementById('conjugation-table');
   let tenseButtons = document.querySelectorAll('.tense-button');
   const fontSelector = document.getElementById('font-selector');
   const body = document.body;
-  
-  const urlParams = new URLSearchParams(window.location.search);
-  const returnTo = urlParams.get('returnTo');
   const darkModeToggle = document.getElementById('dark-mode-toggle');
   const verbSearch = document.getElementById('verb-search');
+  const translationsList = document.getElementById('translations-list');
+  const urlParams = new URLSearchParams(window.location.search);
+  const returnTo = urlParams.get('returnTo');
 
   // New elements for translations list
   const translationsListContainer = document.getElementById('translations-list-container');
-  const translationsList = document.getElementById('translations-list');
 
   // New elements for additional information
   let examplesSection = document.getElementById('examples-section');
@@ -953,7 +826,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function normalizeSearchText(text) {
     return text
       .toLowerCase()
-      .replace(/[\u0591-\u05C7]/g, ''); // Remove Hebrew vowel points (nikkud)
+      .replace(/[\u0591-\u05C7]/g, '');
   }
 
   // Font Selector Change Event
@@ -964,7 +837,7 @@ document.addEventListener('DOMContentLoaded', function() {
     body.style.fontStyle = fontStyle;
   });
 
-  
+
 
   // Normalize Hebrew letters by removing dagesh and vowel marks for comparison
   function normalizeLetter(char) {
@@ -972,7 +845,7 @@ document.addEventListener('DOMContentLoaded', function() {
       'בּ': 'ב', 'גּ': 'ג', 'דּ': 'ד', 'כּ': 'כ', 'פּ': 'פ', 'תּ': 'ת',
       'שׁ': 'ש', 'שׂ': 'ש' // Handle shin/sin variation
     };
-    return dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, ""); // Remove nikkud and dagesh
+    return dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, "");
   }
 
   // Highlight root letters in a Hebrew verb form, handling weak roots (e.g., ending in ה)
@@ -1191,9 +1064,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const normalizedRoot = normalizeSearchText(rootText);
       const normalizedTranslation = normalizeSearchText(englishTranslation);
 
+      // Filter by search term across all binyanim if searchTerm exists, otherwise respect binyanFilter
       if (
-        (binyanFilter === 'all' || normalizedVerbBinyan === binyanFilter) &&
-        (!normalizedSearch || normalizedRoot.includes(normalizedSearch) || normalizedTranslation.includes(normalizedSearch))
+        (!normalizedSearch || 
+         normalizedRoot.includes(normalizedSearch) || 
+         normalizedTranslation.includes(normalizedSearch)) &&
+        (searchTerm === '' ? (binyanFilter === 'all' || normalizedVerbBinyan === binyanFilter) : true)
       ) {
         const option = document.createElement('option');
         option.value = verbKey;
@@ -1209,6 +1085,18 @@ document.addEventListener('DOMContentLoaded', function() {
       renderTable(verbSelect.value, 'past');
       renderAdditionalInfo(verbSelect.value);
       renderTranslationsList(verbSelect.value);
+      // Update binyanSelect if a search term is present or after manual selection
+      const selectedVerb = verbs[verbSelect.value];
+      const verbBinyan = selectedVerb.binyan ? selectedVerb.binyan.trim() : 'paal';
+      let normalizedVerbBinyan = verbBinyan;
+      if (/[\u0591-\u05EA]/.test(verbBinyan)) {
+        normalizedVerbBinyan = verbBinyan
+          .replace(/[\u05BC\u05BF]/g, '')
+          .replace(/[\u05B0-\u05B4\u05B6-\u05BB]/g, '');
+      } else {
+        normalizedVerbBinyan = verbBinyan.toLowerCase();
+      }
+      binyanSelect.value = normalizedVerbBinyan;
     } else {
       renderTable('', 'past');
       renderAdditionalInfo('');
@@ -1359,7 +1247,8 @@ document.addEventListener('DOMContentLoaded', function() {
     binyanSelect.addEventListener('change', () => {
       const selectedBinyan = binyanSelect.value;
       const searchTerm = verbSearch.value.trim();
-      populateVerbSelect(selectedBinyan, searchTerm);
+      // Only apply binyan filter if no search term is present
+      populateVerbSelect(searchTerm ? 'all' : selectedBinyan, searchTerm);
     });
 
     verbSelect.addEventListener('change', () => {
@@ -1369,12 +1258,24 @@ document.addEventListener('DOMContentLoaded', function() {
       renderTable(verbKey, 'past');
       renderAdditionalInfo(verbKey);
       renderTranslationsList(verbKey);
+      // Update binyanSelect based on selected verb
+      const selectedVerb = verbs[verbKey];
+      const verbBinyan = selectedVerb.binyan ? selectedVerb.binyan.trim() : 'paal';
+      let normalizedVerbBinyan = verbBinyan;
+      if (/[\u0591-\u05EA]/.test(verbBinyan)) {
+        normalizedVerbBinyan = verbBinyan
+          .replace(/[\u05BC\u05BF]/g, '')
+          .replace(/[\u05B0-\u05B4\u05B6-\u05BB]/g, '');
+      } else {
+        normalizedVerbBinyan = verbBinyan.toLowerCase();
+      }
+      binyanSelect.value = normalizedVerbBinyan;
     });
 
     verbSearch.addEventListener('input', () => {
       const searchTerm = verbSearch.value.trim();
-      const selectedBinyan = binyanSelect.value;
-      populateVerbSelect(selectedBinyan, searchTerm);
+      // Search across all binyanim
+      populateVerbSelect('all', searchTerm);
     });
   }
 
