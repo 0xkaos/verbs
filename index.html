@@ -98,6 +98,7 @@ body {
 .conjugation-link {
   display: flex;            /* Enables Flexbox layout */
   justify-content: space-between; /* Ensures maximum space between left and right elements */
+  flex-wrap: nowrap;
   align-items: center;      /* Vertically centers all items */
 }
 .left-controls {
@@ -667,6 +668,7 @@ body.dark-mode .related-binyan-menu li:hover {
     padding: 0 10px;
     margin-bottom: 10px;
     justify-content: center;
+    flex-wrap: nowrap;
     gap: 10px;
   }
 
@@ -1147,11 +1149,11 @@ body.dark-mode .related-binyan-menu li:hover {
         const allOption = document.createElement('option');
         allOption.value = 'all';
         if (languageMode === 'both') {
-          allOption.textContent = 'כל הבניינים | All Binyanim';
+          allOption.textContent = 'כל | All';
         } else if (languageMode === 'hebrew') {
-          allOption.textContent = 'כל הבניינים';
+          allOption.textContent = 'כל';
         } else if (languageMode === 'english') {
-          allOption.textContent = 'All Binyanim';
+          allOption.textContent = 'All';
         }
         binyanSelect.appendChild(allOption);
 
