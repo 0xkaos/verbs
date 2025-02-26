@@ -2134,7 +2134,7 @@
           "transliteration": "shamárti",
           "phonetics": "shah-mahr-tee",
           "translation": "I guarded",
-          "audio": "audio/5001.mp4"
+          "audio": "audio/0186.mp4"
         },
         {
           "pronoun": "אתה",
@@ -2142,7 +2142,7 @@
           "transliteration": "shamárta",
           "phonetics": "shah-mahr-tah",
           "translation": "you guarded (m.s.)",
-          "audio": "audio/5002.mp4"
+          "audio": "audio/0187.mp4"
         },
         {
           "pronoun": "את",
@@ -2150,7 +2150,7 @@
           "transliteration": "shamárt",
           "phonetics": "shah-mahrt",
           "translation": "you guarded (f.s.)",
-          "audio": "audio/5003.mp4"
+          "audio": "audio/0188.mp4"
         },
         {
           "pronoun": "הוא",
@@ -2158,7 +2158,7 @@
           "transliteration": "shamár",
           "phonetics": "shah-mahr",
           "translation": "he guarded",
-          "audio": "audio/5004.mp4"
+          "audio": "audio/0189.mp4"
         },
         {
           "pronoun": "היא",
@@ -2166,7 +2166,7 @@
           "transliteration": "shamrá",
           "phonetics": "shahm-rah",
           "translation": "she guarded",
-          "audio": "audio/5005.mp4"
+          "audio": "audio/0190.mp4"
         },
         {
           "pronoun": "אנחנו",
@@ -2174,7 +2174,7 @@
           "transliteration": "shamárnu",
           "phonetics": "shah-mahr-noo",
           "translation": "we guarded",
-          "audio": "audio/5006.mp4"
+          "audio": "audio/0191.mp4"
         },
         {
           "pronoun": "אתם",
@@ -2182,7 +2182,7 @@
           "transliteration": "shamártem",
           "phonetics": "shah-mahr-tem",
           "translation": "you guarded (m.pl.)",
-          "audio": "audio/5007.mp4"
+          "audio": "audio/0192.mp4"
         },
         {
           "pronoun": "אתן",
@@ -2190,7 +2190,7 @@
           "transliteration": "shamárten",
           "phonetics": "shah-mahr-ten",
           "translation": "you guarded (f.pl.)",
-          "audio": "audio/5008.mp4"
+          "audio": "audio/0193.mp4"
         },
         {
           "pronoun": "הם",
@@ -2198,7 +2198,7 @@
           "transliteration": "shamrú",
           "phonetics": "shahm-roo",
           "translation": "they guarded (m.)",
-          "audio": "audio/5009.mp4"
+          "audio": "audio/0194.mp4"
         },
         {
           "pronoun": "הן",
@@ -2206,7 +2206,7 @@
           "transliteration": "shamrú",
           "phonetics": "shahm-roo",
           "translation": "they guarded (f.)",
-          "audio": "audio/5010.mp4"
+          "audio": "audio/0195.mp4"
         }
       ],
       "present": [
@@ -2216,7 +2216,7 @@
           "transliteration": "shomér",
           "phonetics": "shoh-mehr",
           "translation": "I guard (m.)",
-          "audio": "audio/5011.mp4"
+          "audio": "audio/0196.mp4"
         },
         {
           "pronoun": "אני",
@@ -2224,7 +2224,7 @@
           "transliteration": "shoméret",
           "phonetics": "shoh-meh-ret",
           "translation": "I guard (f.)",
-          "audio": "audio/5012.mp4"
+          "audio": "audio/0197.mp4"
         },
         {
           "pronoun": "אתה",
@@ -2232,7 +2232,7 @@
           "transliteration": "shomér",
           "phonetics": "shoh-mehr",
           "translation": "you guard (m.s.)",
-          "audio": "audio/5013.mp4"
+          "audio": "audio/0198.mp4"
         },
         {
           "pronoun": "את",
@@ -2240,7 +2240,7 @@
           "transliteration": "shoméret",
           "phonetics": "shoh-meh-ret",
           "translation": "you guard (f.s.)",
-          "audio": "audio/5014.mp4"
+          "audio": "audio/0199.mp4"
         },
         {
           "pronoun": "הוא",
@@ -2248,7 +2248,7 @@
           "transliteration": "shomér",
           "phonetics": "shoh-mehr",
           "translation": "he guards",
-          "audio": "audio/5015.mp4"
+          "audio": "audio/0200.mp4"
         },
         {
           "pronoun": "היא",
@@ -2256,7 +2256,7 @@
           "transliteration": "shoméret",
           "phonetics": "shoh-meh-ret",
           "translation": "she guards",
-          "audio": "audio/5016.mp4"
+          "audio": "audio/0201.mp4"
         },
         {
           "pronoun": "אנחנו",
@@ -2264,7 +2264,7 @@
           "transliteration": "shomrím",
           "phonetics": "shohm-reem",
           "translation": "we guard (m.)",
-          "audio": "audio/5017.mp4"
+          "audio": "audio/0202.mp4"
         },
         {
           "pronoun": "אנחנו",
@@ -2272,7 +2272,7 @@
           "transliteration": "shomrót",
           "phonetics": "shohm-roht",
           "translation": "we guard (f.)",
-          "audio": "audio/5018.mp4"
+          "audio": "audio/0203.mp4"
         },
         {
           "pronoun": "אתם",
@@ -2280,7 +2280,7 @@
           "transliteration": "shomrím",
           "phonetics": "shohm-reem",
           "translation": "you guard (m.pl.)",
-          "audio": "audio/5019.mp4"
+          "audio": "audio/0204.mp4"
         },
         {
           "pronoun": "אתן",
@@ -2288,7 +2288,7 @@
           "transliteration": "shomrót",
           "phonetics": "shohm-roht",
           "translation": "you guard (f.pl.)",
-          "audio": "audio/5020.mp4"
+          "audio": "audio/0205.mp4"
         },
         {
           "pronoun": "הם",
@@ -2296,7 +2296,7 @@
           "transliteration": "shomrím",
           "phonetics": "shohm-reem",
           "translation": "they guard (m.)",
-          "audio": "audio/5021.mp4"
+          "audio": "audio/0206.mp4"
         },
         {
           "pronoun": "הן",
@@ -2304,7 +2304,7 @@
           "transliteration": "shomrót",
           "phonetics": "shohm-roht",
           "translation": "they guard (f.)",
-          "audio": "audio/5022.mp4"
+          "audio": "audio/0207.mp4"
         }
       ],
       "future": [
@@ -2314,7 +2314,7 @@
           "transliteration": "eshmór",
           "phonetics": "esh-mohr",
           "translation": "I will guard",
-          "audio": "audio/5023.mp4"
+          "audio": "audio/0208.mp4"
         },
         {
           "pronoun": "אתה",
@@ -2322,7 +2322,7 @@
           "transliteration": "tishmór",
           "phonetics": "teesh-mohr",
           "translation": "you will guard (m.s.)",
-          "audio": "audio/5024.mp4"
+          "audio": "audio/0209.mp4"
         },
         {
           "pronoun": "את",
@@ -2330,7 +2330,7 @@
           "transliteration": "tishmerí",
           "phonetics": "teesh-meh-ree",
           "translation": "you will guard (f.s.)",
-          "audio": "audio/5025.mp4"
+          "audio": "audio/0210.mp4"
         },
         {
           "pronoun": "הוא",
@@ -2338,7 +2338,7 @@
           "transliteration": "yishmór",
           "phonetics": "yeesh-mohr",
           "translation": "he will guard",
-          "audio": "audio/5026.mp4"
+          "audio": "audio/0211.mp4"
         },
         {
           "pronoun": "היא",
@@ -2346,7 +2346,7 @@
           "transliteration": "tishmór",
           "phonetics": "teesh-mohr",
           "translation": "she will guard",
-          "audio": "audio/5027.mp4"
+          "audio": "audio/0212.mp4"
         },
         {
           "pronoun": "אנחנו",
@@ -2354,7 +2354,7 @@
           "transliteration": "nishmór",
           "phonetics": "neesh-mohr",
           "translation": "we will guard",
-          "audio": "audio/5028.mp4"
+          "audio": "audio/0213.mp4"
         },
         {
           "pronoun": "אתם",
@@ -2362,7 +2362,7 @@
           "transliteration": "tishmerú",
           "phonetics": "teesh-meh-roo",
           "translation": "you will guard (m.pl.)",
-          "audio": "audio/5029.mp4"
+          "audio": "audio/0214.mp4"
         },
         {
           "pronoun": "אתן",
@@ -2370,7 +2370,7 @@
           "transliteration": "tishmórna",
           "phonetics": "teesh-mohr-nah",
           "translation": "you will guard (f.pl.)",
-          "audio": "audio/5030.mp4"
+          "audio": "audio/0215.mp4"
         },
         {
           "pronoun": "הם",
@@ -2378,7 +2378,7 @@
           "transliteration": "yishmerú",
           "phonetics": "yeesh-meh-roo",
           "translation": "they will guard (m.)",
-          "audio": "audio/5031.mp4"
+          "audio": "audio/0216.mp4"
         },
         {
           "pronoun": "הן",
@@ -2386,7 +2386,7 @@
           "transliteration": "tishmórna",
           "phonetics": "teesh-mohr-nah",
           "translation": "they will guard (f.)",
-          "audio": "audio/5032.mp4"
+          "audio": "audio/0217.mp4"
         }
       ],
       "imperative": [
@@ -2396,7 +2396,7 @@
           "transliteration": "shmór",
           "phonetics": "shmohr",
           "translation": "guard! (m.s.)",
-          "audio": "audio/5033.mp4"
+          "audio": "audio/0218.mp4"
         },
         {
           "pronoun": "את",
@@ -2404,7 +2404,7 @@
           "transliteration": "shimrí",
           "phonetics": "sheem-ree",
           "translation": "guard! (f.s.)",
-          "audio": "audio/5034.mp4"
+          "audio": "audio/0219.mp4"
         },
         {
           "pronoun": "אתם",
@@ -2412,7 +2412,7 @@
           "transliteration": "shimrú",
           "phonetics": "sheem-roo",
           "translation": "guard! (m.pl.)",
-          "audio": "audio/5035.mp4"
+          "audio": "audio/0220.mp4"
         },
         {
           "pronoun": "אתן",
@@ -2420,7 +2420,7 @@
           "transliteration": "shmórna",
           "phonetics": "shmohr-nah",
           "translation": "guard! (f.pl.)",
-          "audio": "audio/5036.mp4"
+          "audio": "audio/0221.mp4"
         }
       ],
       "infinitive": [
@@ -2430,7 +2430,7 @@
           "transliteration": "lishmór",
           "phonetics": "leesh-mohr",
           "translation": "to guard",
-          "audio": "audio/5037.mp4"
+          "audio": "audio/0222.mp4"
         }
       ]
     },
@@ -62168,10 +62168,10 @@
     }
   },
   "lalechet": {
-    "root": [
+    "root":  [
+      "ה",
       "ל",
-      "כ",
-      "ת"
+      "ך"
     ],
     "root_meaning": "Related to walking or movement",
     "infinitive": "לָלֶכֶת",

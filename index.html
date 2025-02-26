@@ -583,6 +583,72 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   max-width: 250px; /* Consistent with existing max-width */
 }
 
+.related-binyan-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#related-binyan-button {
+  width: 40px;
+  padding: 5px;
+  text-align: center;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  border-radius: 4px;
+  color: var(--button-text-color);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+#related-binyan-button:hover {
+  background-color: #d5d5d5;
+}
+
+body.dark-mode #related-binyan-button:hover {
+  background-color: #555;
+}
+
+.related-binyan-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0; /* Changed from left: 0 to align with button’s right edge */
+  left: auto; /* Ensure left isn’t overriding */
+  min-width: 200px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  list-style: none;
+  padding: 5px 0;
+  z-index: 10;
+}
+
+.related-binyan-menu li {
+  padding: 5px 10px;
+  cursor: pointer;
+  text-align: right; /* RTL for Hebrew */
+}
+
+.related-binyan-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+body.dark-mode .related-binyan-menu li:hover {
+  background-color: #404040;
+}
+
+@media (max-width: 768px) {
+  #related-binyan-button {
+    width: 30px;
+    padding: 3px;
+  }
+  .related-binyan-menu {
+    min-width: 150px;
+  }
+}
+
 /* ==========================================================================
    Media Queries (Mobile)
    ========================================================================== */
@@ -802,7 +868,10 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
       <!-- Verb Selection Menu -->
       <div id="verb-select-container">
         <select id="verb-select"></select>
-        <select id="related-binyan-select"></select>
+        <div id="related-binyan-container" class="related-binyan-wrapper">
+          <button id="related-binyan-button">•</button>
+          <ul id="related-binyan-menu" class="related-binyan-menu"></ul>
+        </div>
         
       </div>
     </div>
@@ -871,555 +940,539 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   </div>
 
   <!-- JavaScript -->
-  <script>
-    // Function to play audio pronunciation
-    function playAudio(src) {
-      const audio = new Audio(src);
-      audio.play();
+ <script>
+  // Function to play audio pronunciation
+  function playAudio(src) {
+    const audio = new Audio(src);
+    audio.play();
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    let verbs = {};
+    let verbSelect = document.getElementById('verb-select');
+    let conjugationTable = document.getElementById('conjugation-table');
+    let tenseButtons = document.querySelectorAll('.tense-button');
+    let binyanSelect = document.getElementById('binyan-select');
+    let currentTense = 'past'; // Default tense
+    const fontSelector = document.getElementById('font-selector');
+    const body = document.body;
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const verbSearch = document.getElementById('verb-search');
+    const translationsList = document.getElementById('translations-list');
+
+    // Elements for additional information
+    let examplesSection = document.getElementById('examples-section');
+    let examplesList = document.getElementById('examples-list');
+    let notesSection = document.getElementById('notes-section');
+    let notesText = document.getElementById('notes-text');
+    let relatedWordsSection = document.getElementById('related-words-section');
+    let relatedWordsList = document.getElementById('related-words-list');
+    let similarVerbsSection = document.getElementById('similar-verbs-section');
+    let similarVerbsList = document.getElementById('similar-verbs-list');
+    let idiomsSection = document.getElementById('idioms-section');
+    let idiomsList = document.getElementById('idioms-list');
+    let binyanimSection = document.getElementById('binyanim-section');
+    let binyanimTable = document.getElementById('binyanim-table');
+
+    // Normalize text for search
+    function normalizeSearchText(text) {
+      return text.toLowerCase();
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-      let verbs = {};
-      let verbSelect = document.getElementById('verb-select');
-      let relatedBinyanSelect = document.getElementById('related-binyan-select');
-      let conjugationTable = document.getElementById('conjugation-table');
-      let tenseButtons = document.querySelectorAll('.tense-button');
-      let binyanSelect = document.getElementById('binyan-select');
-      let currentTense = 'past'; // Default tense
-      const fontSelector = document.getElementById('font-selector');
-      const body = document.body;
-      const darkModeToggle = document.getElementById('dark-mode-toggle');
-      const verbSearch = document.getElementById('verb-search');
-      const translationsList = document.getElementById('translations-list');
+    // Font selector change event
+    fontSelector.addEventListener('change', function(e) {
+      const selectedFont = e.target.value;
+      const fontStyle = selectedFont === 'Dorian CLM' || selectedFont === 'Ktav Yad CLM' ? 'italic' : 'normal';
+      body.style.fontFamily = `'${selectedFont}', Arial, sans-serif`;
+      body.style.fontStyle = fontStyle;
+    });
 
-      // Elements for additional information
-      let examplesSection = document.getElementById('examples-section');
-      let examplesList = document.getElementById('examples-list');
-      let notesSection = document.getElementById('notes-section');
-      let notesText = document.getElementById('notes-text');
-      let relatedWordsSection = document.getElementById('related-words-section');
-      let relatedWordsList = document.getElementById('related-words-list');
-      let similarVerbsSection = document.getElementById('similar-verbs-section');
-      let similarVerbsList = document.getElementById('similar-verbs-list');
-      let idiomsSection = document.getElementById('idioms-section');
-      let idiomsList = document.getElementById('idioms-list');
-      let binyanimSection = document.getElementById('binyanim-section');
-      let binyanimTable = document.getElementById('binyanim-table');
+    // Normalize Hebrew letters for highlighting
+    function normalizeLetter(char) {
+      const dageshMap = {
+        'בּ': 'ב', 'גּ': 'ג', 'דּ': 'ד', 'כּ': 'כ', 'פּ': 'פ', 'תּ': 'ת',
+        'שׁ': 'ש', 'שׂ': 'ש'
+      };
+      return dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, "");
+    }
 
-      // Normalize text for search
-      function normalizeSearchText(text) {
-        return text.toLowerCase();
+    // Highlight root letters
+    function highlightRoots(form, rootLetters) {
+      if (!form || !rootLetters || rootLetters.length < 2) return form;
+      const normalizedRoot = rootLetters.map(normalizeLetter);
+      const formChars = form.split("");
+      let consonantPositions = [];
+      let consonants = [];
+      formChars.forEach((char, idx) => {
+        if (/[\u05D0-\u05EA]/.test(char)) {
+          consonantPositions.push(idx);
+          consonants.push(normalizeLetter(char));
+        }
+      });
+      if (consonants.length === 0) return form;
+      let matchedPositions = [];
+      let rootIndex = 0;
+      for (let i = 0; i < consonants.length && rootIndex < normalizedRoot.length; i++) {
+        if (consonants[i] === normalizedRoot[rootIndex]) {
+          matchedPositions.push(consonantPositions[i]);
+          rootIndex++;
+        } else if (rootIndex === normalizedRoot.length - 1 && normalizedRoot[rootIndex] === 'ה') {
+          break;
+        }
+      }
+      if (rootIndex < normalizedRoot.length - 1 || (rootIndex < normalizedRoot.length && normalizedRoot[rootIndex] !== 'ה')) {
+        matchedPositions = [];
+        let lastPos = -1;
+        for (let r of normalizedRoot) {
+          let found = false;
+          for (let i = 0; i < consonants.length; i++) {
+            if (consonants[i] === r && consonantPositions[i] > lastPos) {
+              matchedPositions.push(consonantPositions[i]);
+              lastPos = consonantPositions[i];
+              found = true;
+              break;
+            }
+          }
+          if (!found && r !== 'ה') return form;
+        }
+      }
+      let highlightedForm = "";
+      for (let i = 0; i < formChars.length; i++) {
+        highlightedForm += matchedPositions.includes(i) ? `<span class="root-letter">${formChars[i]}</span>` : formChars[i];
+      }
+      return highlightedForm;
+    }
+
+    // Render conjugation table
+    function renderTable(verbKey, tense) {
+      const verb = verbs[verbKey];
+      if (!verb || !verb.conjugations[tense]) {
+        conjugationTable.innerHTML = '<tr><td colspan="5">אין נתונים זמינים בזמן זה | No data available for this tense.</td></tr>';
+        return;
+      }
+      let conjugations = verb.conjugations[tense];
+      const desiredPronounOrder = ["הוא", "היא", "את", "אתה", "אני", "אנחנו", "אתם", "אתן", "הם", "הן"];
+      conjugations.sort((a, b) => {
+        let indexA = desiredPronounOrder.indexOf(a.pronoun);
+        let indexB = desiredPronounOrder.indexOf(b.pronoun);
+        if (indexA === -1) indexA = desiredPronounOrder.length;
+        if (indexB === -1) indexB = desiredPronounOrder.length;
+        return indexA - indexB;
+      });
+      let rows = [
+        '<tr>',
+        '<th>גוף | Pronoun</th>',
+        '<th>צורה | Form</th>',
+        '<th class="ltr">הגייה | Transliteration</th>',
+        '<th>פונטיקה | Phonetics</th>',
+        '<th>תרגום | Translation</th>',
+        '</tr>'
+      ];
+      for (let item of conjugations) {
+        const highlightedForm = highlightRoots(item.form, verb.root);
+        if (item.audio) {
+          const clickableForm = `<a href="#" onclick="playAudio('${item.audio}'); event.preventDefault();">${highlightedForm}</a>`;
+          rows.push(`
+            <tr>
+              <td>${item.pronoun}</td>
+              <td>${clickableForm}</td>
+              <td class="ltr">${item.transliteration}</td>
+              <td class="ltr">${item.phonetics}</td>
+              <td>${item.translation}</td>
+            </tr>
+          `);
+        } else {
+          rows.push(`
+            <tr>
+              <td>${item.pronoun}</td>
+              <td>${highlightedForm}</td>
+              <td class="ltr">${item.transliteration}</td>
+              <td class="ltr">${item.phonetics}</td>
+              <td>${item.translation}</td>
+            </tr>
+          `);
+        }
+      }
+      conjugationTable.innerHTML = rows.join('');
+    }
+
+    // Toggle dark mode
+    function toggleDarkMode() {
+      body.classList.toggle('dark-mode');
+      const isDarkMode = body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDarkMode);
+      darkModeToggle.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+      const verbKey = verbSelect.value;
+      const tense = document.querySelector('.tense-button.active')?.dataset.tense || 'past';
+      renderTable(verbKey, tense);
+    }
+
+    darkModeToggle.addEventListener('click', toggleDarkMode);
+    if (localStorage.getItem('darkMode') === 'true') {
+      body.classList.add('dark-mode');
+      darkModeToggle.textContent = 'Light Mode';
+    }
+
+    // Populate binyan dropdown
+    function populateBinyanSelect() {
+      const binyanMap = new Map();
+      for (let verbKey in verbs) {
+        const verb = verbs[verbKey];
+        if (verb.binyan && verb.binyan_en) {
+          binyanMap.set(verb.binyan_en, verb.binyan);
+        }
       }
 
-      // Font selector change event
-      fontSelector.addEventListener('change', function(e) {
-        const selectedFont = e.target.value;
-        const fontStyle = selectedFont === 'Dorian CLM' || selectedFont === 'Ktav Yad CLM' ? 'italic' : 'normal';
-        body.style.fontFamily = `'${selectedFont}', Arial, sans-serif`;
-        body.style.fontStyle = fontStyle;
+      const classicalOrder = ["Paal", "Nifal", "Piel", "Pual", "Hitpael", "Hifil", "Hufal"];
+      const sortedBinyanim = [];
+      classicalOrder.forEach(binyanEn => {
+        if (binyanMap.has(binyanEn)) {
+          sortedBinyanim.push(binyanEn);
+        }
       });
 
-      // Normalize Hebrew letters for highlighting
-      function normalizeLetter(char) {
-        const dageshMap = {
-          'בּ': 'ב', 'גּ': 'ג', 'דּ': 'ד', 'כּ': 'כ', 'פּ': 'פ', 'תּ': 'ת',
-          'שׁ': 'ש', 'שׂ': 'ש'
-        };
-        return dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, "");
-      }
+      binyanSelect.innerHTML = '';
+      sortedBinyanim.forEach(binyanEn => {
+        const binyan = binyanMap.get(binyanEn);
+        const option = document.createElement('option');
+        option.value = binyanEn;
+        option.textContent = `${binyan} | ${binyanEn}`;
+        binyanSelect.appendChild(option);
+      });
 
-      // Highlight root letters
-      function highlightRoots(form, rootLetters) {
-        if (!form || !rootLetters || rootLetters.length < 2) return form;
-        const normalizedRoot = rootLetters.map(normalizeLetter);
-        const formChars = form.split("");
-        let consonantPositions = [];
-        let consonants = [];
-        formChars.forEach((char, idx) => {
-          if (/[\u05D0-\u05EA]/.test(char)) {
-            consonantPositions.push(idx);
-            consonants.push(normalizeLetter(char));
-          }
-        });
-        if (consonants.length === 0) return form;
-        let matchedPositions = [];
-        let rootIndex = 0;
-        for (let i = 0; i < consonants.length && rootIndex < normalizedRoot.length; i++) {
-          if (consonants[i] === normalizedRoot[rootIndex]) {
-            matchedPositions.push(consonantPositions[i]);
-            rootIndex++;
-          } else if (rootIndex === normalizedRoot.length - 1 && normalizedRoot[rootIndex] === 'ה') {
-            break;
-          }
-        }
-        if (rootIndex < normalizedRoot.length - 1 || (rootIndex < normalizedRoot.length && normalizedRoot[rootIndex] !== 'ה')) {
-          matchedPositions = [];
-          let lastPos = -1;
-          for (let r of normalizedRoot) {
-            let found = false;
-            for (let i = 0; i < consonants.length; i++) {
-              if (consonants[i] === r && consonantPositions[i] > lastPos) {
-                matchedPositions.push(consonantPositions[i]);
-                lastPos = consonantPositions[i];
-                found = true;
-                break;
-              }
-            }
-            if (!found && r !== 'ה') return form;
-          }
-        }
-        let highlightedForm = "";
-        for (let i = 0; i < formChars.length; i++) {
-          highlightedForm += matchedPositions.includes(i) ? `<span class="root-letter">${formChars[i]}</span>` : formChars[i];
-        }
-        return highlightedForm;
-      }
+      const allOption = document.createElement('option');
+      allOption.value = 'all';
+      allOption.textContent = 'All Entries';
+      binyanSelect.appendChild(allOption);
 
-      // Render conjugation table
-      function renderTable(verbKey, tense) {
+      if (sortedBinyanim.includes('Paal')) {
+        binyanSelect.value = 'Paal';
+      } else {
+        binyanSelect.value = 'all';
+      }
+    }
+
+    // Populate verb dropdown with search functionality
+    function populateVerbSelect(binyanFilter = 'all', searchTerm = '') {
+      verbSelect.innerHTML = '';
+      const normalizedSearch = normalizeSearchText(searchTerm);
+      const previousVerbKey = verbSelect.value || '';
+      let hasSelectedOption = false;
+
+      for (let verbKey in verbs) {
         const verb = verbs[verbKey];
-        if (!verb || !verb.conjugations[tense]) {
-          conjugationTable.innerHTML = '<tr><td colspan="5">אין נתונים זמינים בזמן זה | No data available for this tense.</td></tr>';
-          return;
-        }
-        let conjugations = verb.conjugations[tense];
-        const desiredPronounOrder = ["הוא", "היא", "את", "אתה", "אני", "אנחנו", "אתם", "אתן", "הם", "הן"];
-        conjugations.sort((a, b) => {
-          let indexA = desiredPronounOrder.indexOf(a.pronoun);
-          let indexB = desiredPronounOrder.indexOf(b.pronoun);
-          if (indexA === -1) indexA = desiredPronounOrder.length;
-          if (indexB === -1) indexB = desiredPronounOrder.length;
-          return indexA - indexB;
-        });
-        let rows = [
-          '<tr>',
-          '<th>גוף | Pronoun</th>',
-          '<th>צורה | Form</th>',
-          '<th class="ltr">הגייה | Transliteration</th>',
-          '<th>פונטיקה | Phonetics</th>',
-          '<th>תרגום | Translation</th>',
-          '</tr>'
-        ];
-        for (let item of conjugations) {
-          const highlightedForm = highlightRoots(item.form, verb.root);
-          if (item.audio) {
-            const clickableForm = `<a href="#" onclick="playAudio('${item.audio}'); event.preventDefault();">${highlightedForm}</a>`;
-            rows.push(`
-              <tr>
-                <td>${item.pronoun}</td>
-                <td>${clickableForm}</td>
-                <td class="ltr">${item.transliteration}</td>
-                <td class="ltr">${item.phonetics}</td>
-                <td>${item.translation}</td>
-              </tr>
-            `);
-          } else {
-            rows.push(`
-              <tr>
-                <td>${item.pronoun}</td>
-                <td>${highlightedForm}</td>
-                <td class="ltr">${item.transliteration}</td>
-                <td class="ltr">${item.phonetics}</td>
-                <td>${item.translation}</td>
-              </tr>
-            `);
+        const verbBinyanEn = verb.binyan_en || 'Unknown';
+        if (normalizedSearch) {
+          const rootText = verb.root && verb.root.length >= 3 ? verb.root.join('') : '';
+          const englishTranslation = verb.translations && verb.translations['en'] ? verb.translations['en'] : '';
+          const normalizedRoot = normalizeSearchText(rootText);
+          const normalizedTranslation = normalizeSearchText(englishTranslation);
+          if (normalizedRoot.includes(normalizedSearch) || normalizedTranslation.includes(normalizedSearch)) {
+            const option = document.createElement('option');
+            option.value = verbKey;
+            let displayRoot = verb.root && verb.root.length >= 3 ? verb.root.slice(0, 3).join('·') : '???';
+            let displayTranslation = englishTranslation || 'No translation';
+            option.textContent = `${displayRoot} - ${displayTranslation}`;
+            verbSelect.appendChild(option);
+            if (verbKey === previousVerbKey) {
+              option.selected = true;
+              hasSelectedOption = true;
+            }
+          }
+        } else {
+          if (binyanFilter === 'all' || verbBinyanEn === binyanFilter) {
+            const rootText = verb.root && verb.root.length >= 3 ? verb.root.join('') : '';
+            const englishTranslation = verb.translations && verb.translations['en'] ? verb.translations['en'] : '';
+            const option = document.createElement('option');
+            option.value = verbKey;
+            let displayRoot = verb.root && verb.root.length >= 3 ? verb.root.slice(0, 3).join('·') : '???';
+            let displayTranslation = englishTranslation || 'No translation';
+            option.textContent = `${displayRoot} - ${displayTranslation}`;
+            verbSelect.appendChild(option);
+            if (verbKey === previousVerbKey) {
+              option.selected = true;
+              hasSelectedOption = true;
+            }
           }
         }
-        conjugationTable.innerHTML = rows.join('');
       }
 
-      // Toggle dark mode
-      function toggleDarkMode() {
-        body.classList.toggle('dark-mode');
-        const isDarkMode = body.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', isDarkMode);
-        darkModeToggle.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+      if (verbSelect.options.length > 0) {
+        if (!hasSelectedOption) {
+          verbSelect.selectedIndex = 0;
+        }
+      } else {
+        verbSelect.innerHTML = '<option value="">אין תוצאות | No results</option>';
+      }
+
+      const currentVerbKey = verbSelect.value;
+      renderTable(currentVerbKey, currentTense);
+      updateRelatedBinyanSelect(currentVerbKey);
+      renderAdditionalInfo(currentVerbKey);
+      renderTranslationsList(currentVerbKey);
+      updateBinyanSelect(currentVerbKey);
+    }
+
+    function updateBinyanSelect(verbKey) {
+      const verb = verbs[verbKey];
+      if (verb && verb.binyan_en) {
+        binyanSelect.value = verb.binyan_en;
+      } else {
+        binyanSelect.value = 'all';
+      }
+    }
+
+    function updateRelatedBinyanSelect(verbKey) {
+      const menu = document.getElementById('related-binyan-menu');
+      const button = document.getElementById('related-binyan-button');
+      if (!verbKey || !verbs[verbKey]) {
+        button.style.display = 'none';
+        menu.innerHTML = '';
+        return;
+      }
+      const verb = verbs[verbKey];
+      const rootStr = verb.root.join('');
+      const relatedVerbs = Object.entries(verbs)
+        .filter(([key, v]) => v.root.join('') === rootStr && key !== verbKey)
+        .map(([key, v]) => ({
+          key,
+          pastForm: v.conjugations?.past?.find(c => c.pronoun === 'הוא')?.form || 'N/A',
+          binyan_en: v.binyan_en
+        }));
+
+      if (relatedVerbs.length > 0) {
+        button.style.display = 'inline-block';
+        menu.innerHTML = '';
+        relatedVerbs.forEach(({ key, pastForm, binyan_en }) => {
+          const li = document.createElement('li');
+          li.textContent = `${pastForm} (${binyan_en})`;
+          li.dataset.key = key;
+          menu.appendChild(li);
+        });
+      } else {
+        button.style.display = 'none';
+        menu.innerHTML = '';
+      }
+    }
+
+    // Render additional info
+    function renderAdditionalInfo(verbKey) {
+      const verb = verbs[verbKey];
+      examplesList.innerHTML = '';
+      if (verb && verb.examples && verb.examples.length > 0) {
+        examplesSection.style.display = 'block';
+        verb.examples.forEach(example => {
+          const listItem = document.createElement('li');
+          listItem.className = 'multiline-item';
+          listItem.innerHTML = `
+            <strong dir="rtl">${example.hebrew}</strong>
+            <em dir="ltr">${example.transliteration}</em>
+            <p dir="ltr">${example.translation}</p>
+          `;
+          examplesList.appendChild(listItem);
+        });
+      } else {
+        examplesSection.style.display = 'none';
+      }
+
+      idiomsList.innerHTML = '';
+      if (verb && verb.idioms && verb.idioms.length > 0) {
+        idiomsSection.style.display = 'block';
+        verb.idioms.forEach(idiom => {
+          const listItem = document.createElement('li');
+          listItem.className = 'multiline-item';
+          listItem.innerHTML = `
+            <strong dir="rtl">${idiom.expression}</strong>
+            <em dir="ltr">(${idiom.transliteration})</em>
+            <p dir="ltr">${idiom.translation}</p>
+          `;
+          idiomsList.appendChild(listItem);
+        });
+      } else {
+        idiomsSection.style.display = 'none';
+      }
+
+      relatedWordsList.innerHTML = '';
+      if (verb && verb.related_words && verb.related_words.length > 0) {
+        relatedWordsSection.style.display = 'block';
+        verb.related_words.forEach(word => {
+          const listItem = document.createElement('li');
+          listItem.setAttribute('dir', 'rtl');
+          listItem.textContent = word;
+          relatedWordsList.appendChild(listItem);
+        });
+      } else {
+        relatedWordsSection.style.display = 'none';
+      }
+
+      similarVerbsList.innerHTML = '';
+      if (verb && verb.similar_verbs && verb.similar_verbs.length > 0) {
+        similarVerbsSection.style.display = 'block';
+        verb.similar_verbs.forEach(similarVerb => {
+          const listItem = document.createElement('li');
+          listItem.setAttribute('dir', 'rtl');
+          listItem.textContent = similarVerb;
+          similarVerbsList.appendChild(listItem);
+        });
+      } else {
+        similarVerbsSection.style.display = 'none';
+      }
+
+      if (verb && verb.notes) {
+        notesSection.style.display = 'block';
+        notesText.setAttribute('dir', 'ltr');
+        notesText.textContent = verb.notes;
+      } else {
+        notesSection.style.display = 'none';
+      }
+
+      renderBinyanim(verb ? verb.binyanim : null);
+    }
+
+    // Render binyanim table
+    function renderBinyanim(binyanim) {
+      if (binyanim && typeof binyanim === 'object' && Object.keys(binyanim).length > 0) {
+        binyanimSection.style.display = 'block';
+        binyanimTable.innerHTML = `
+          <tr>
+            <th>בִּנְיָן | Binyan</th>
+            <th>שם הפועל | Infinitive</th>
+            <th>משמעות | Meaning</th>
+          </tr>
+        `;
+        for (let binyan in binyanim) {
+          const binyanData = binyanim[binyan];
+          if (!binyanData || typeof binyanData !== 'object') {
+            console.warn(`Invalid binyan data for ${binyan}:`, binyanData);
+            continue;
+          }
+          const binyanName = getBinyanNameInHebrew(binyan);
+          let meaningContent = Array.isArray(binyanData.meaning) ? binyanData.meaning.join(', ') : 'N/A';
+          if (binyanData.note) {
+            meaningContent += `<span class="note">(${binyanData.note})</span>`;
+          }
+          binyanimTable.innerHTML += `
+            <tr>
+              <td>${binyanName} (${binyan})</td>
+              <td>${binyanData.infinitive || '-'}</td>
+              <td>${meaningContent}</td>
+            </tr>
+          `;
+        }
+      } else {
+        binyanimSection.style.display = 'none';
+      }
+    }
+
+    function getBinyanNameInHebrew(binyan) {
+      const binyanNames = {
+        "paal": "פָּעַל",
+        "nifal": "נִפְעַל",
+        "piel": "פִּעֵל",
+        "pual": "פֻּעַל",
+        "hitpael": "הִתְפַּעֵל",
+        "hifil": "הִפְעִיל",
+        "hufal": "הֻפְעַל"
+      };
+      return binyanNames[binyan] || binyan;
+    }
+
+    // Render translations list
+    function renderTranslationsList(verbKey) {
+      translationsList.innerHTML = '';
+      const verb = verbs[verbKey];
+      if (verb && verb.translations) {
+        for (let [lang, translation] of Object.entries(verb.translations)) {
+          const listItem = document.createElement('li');
+          listItem.textContent = `${lang}: ${translation}`;
+          translationsList.appendChild(listItem);
+        }
+      }
+    }
+
+    // Add event listeners
+    function addEventListeners() {
+      tenseButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          tenseButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          currentTense = button.dataset.tense;
+          const verbKey = verbSelect.value;
+          renderTable(verbKey, currentTense);
+        });
+      });
+
+      verbSelect.addEventListener('change', () => {
         const verbKey = verbSelect.value;
-        const tense = document.querySelector('.tense-button.active')?.dataset.tense || 'past';
-        renderTable(verbKey, tense);
-      }
+        renderTable(verbKey, currentTense);
+        renderAdditionalInfo(verbKey);
+        renderTranslationsList(verbKey);
+        updateRelatedBinyanSelect(verbKey);
+      });
 
-      darkModeToggle.addEventListener('click', toggleDarkMode);
-      if (localStorage.getItem('darkMode') === 'true') {
-        body.classList.add('dark-mode');
-        darkModeToggle.textContent = 'Light Mode';
-      }
-      
-      // Populate binyan dropdown
-function populateBinyanSelect() {
-  const binyanMap = new Map();
-  for (let verbKey in verbs) {
-    const verb = verbs[verbKey];
-    if (verb.binyan && verb.binyan_en) {
-      binyanMap.set(verb.binyan_en, verb.binyan);
+      binyanSelect.addEventListener('change', () => {
+        const selectedBinyan = binyanSelect.value;
+        const searchTerm = verbSearch.value.trim();
+        populateVerbSelect(selectedBinyan === 'all' ? 'all' : selectedBinyan, searchTerm);
+      });
+
+      verbSearch.addEventListener('input', () => {
+        const searchTerm = verbSearch.value.trim();
+        populateVerbSelect('all', searchTerm);
+      });
+
+      document.getElementById('related-binyan-button').addEventListener('click', (e) => {
+        const menu = document.getElementById('related-binyan-menu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        e.stopPropagation();
+      });
+
+      document.addEventListener('click', (e) => {
+        const container = document.getElementById('related-binyan-container');
+        if (!container.contains(e.target)) {
+          document.getElementById('related-binyan-menu').style.display = 'none';
+        }
+      });
+
+      document.getElementById('related-binyan-menu').addEventListener('click', (e) => {
+        const li = e.target.closest('li');
+        if (li && li.dataset.key) {
+          const verbKey = li.dataset.key;
+          const selectedVerb = verbs[verbKey];
+          const newBinyanFilter = selectedVerb.binyan_en || 'Unknown';
+
+          binyanSelect.value = newBinyanFilter;
+          verbSearch.value = '';
+          populateVerbSelect(newBinyanFilter, '');
+          verbSelect.value = verbKey;
+          verbSelect.dispatchEvent(new Event('change'));
+          updateRelatedBinyanSelect(verbKey);
+          document.getElementById('related-binyan-menu').style.display = 'none';
+        }
+      });
     }
-  }
 
-  // Define the classical binyan order
-  const classicalOrder = [
-    "Paal",    // פָּעַל
-    "Nifal",   // נִפְעַל
-    "Piel",    // פִּעֵל
-    "Pual",    // פֻּעַל
-    "Hitpael", // הִתְפַּעֵל
-    "Hifil",   // הִפְעִיל
-    "Hufal"    // הֻפְעַל
-  ];
-
-  // Sort binyanim according to classical order
-  const sortedBinyanim = [];
-  classicalOrder.forEach(binyanEn => {
-    if (binyanMap.has(binyanEn)) {
-      sortedBinyanim.push(binyanEn);
-    }
-  });
-
-  // Clear and populate binyan select
-  binyanSelect.innerHTML = '';
-
-  // Add binyanim in classical order
-  sortedBinyanim.forEach(binyanEn => {
-    const binyan = binyanMap.get(binyanEn);
-    const option = document.createElement('option');
-    option.value = binyanEn;
-    option.textContent = `${binyan} | ${binyanEn}`;
-    binyanSelect.appendChild(option);
-  });
-
-  // Add "All Binyanim" at the bottom
-  const allOption = document.createElement('option');
-  allOption.value = 'all';
-  allOption.textContent = 'כל הבניינים | All Binyanim';
-  binyanSelect.appendChild(allOption);
-
-  // Set Pa'al as default if it exists, otherwise 'all'
-  if (sortedBinyanim.includes('Paal')) {
-    binyanSelect.value = 'Paal';
-  } else {
-    binyanSelect.value = 'all'; // Default to "All Binyanim" if Pa'al isn’t found
-  }
-}
-      // Populate verb dropdown with search functionality
-      function populateVerbSelect(binyanFilter = 'all', searchTerm = '') {
-          verbSelect.innerHTML = '';
-          const normalizedSearch = normalizeSearchText(searchTerm);
-          const previousVerbKey = verbSelect.value || ''; // Store the current or default selection
-          let hasSelectedOption = false;
-
-          for (let verbKey in verbs) {
-            const verb = verbs[verbKey];
-            const verbBinyanEn = verb.binyan_en || 'Unknown';
-            // If there's a search term, ignore the binyan filter and search all verbs
-            if (normalizedSearch) {
-              const rootText = verb.root && verb.root.length >= 3 ? verb.root.join('') : '';
-              const englishTranslation = verb.translations && verb.translations['en'] ? verb.translations['en'] : '';
-              const normalizedRoot = normalizeSearchText(rootText);
-              const normalizedTranslation = normalizeSearchText(englishTranslation);
-              if (normalizedRoot.includes(normalizedSearch) || normalizedTranslation.includes(normalizedSearch)) {
-                const option = document.createElement('option');
-                option.value = verbKey;
-                let displayRoot = verb.root && verb.root.length >= 3 ? verb.root.slice(0, 3).join('·') : '???';
-                let displayTranslation = englishTranslation || 'No translation';
-                option.textContent = `${displayRoot} - ${displayTranslation}`;
-                verbSelect.appendChild(option);
-                if (verbKey === previousVerbKey) {
-                  option.selected = true;
-                  hasSelectedOption = true;
-                }
-              }
-            } else {
-              // If no search term, apply the binyan filter
-              if (binyanFilter === 'all' || verbBinyanEn === binyanFilter) {
-                const rootText = verb.root && verb.root.length >= 3 ? verb.root.join('') : '';
-                const englishTranslation = verb.translations && verb.translations['en'] ? verb.translations['en'] : '';
-                const normalizedRoot = normalizeSearchText(rootText);
-                const normalizedTranslation = normalizeSearchText(englishTranslation);
-                const option = document.createElement('option');
-                option.value = verbKey;
-                let displayRoot = verb.root && verb.root.length >= 3 ? verb.root.slice(0, 3).join('·') : '???';
-                let displayTranslation = englishTranslation || 'No translation';
-                option.textContent = `${displayRoot} - ${displayTranslation}`;
-                verbSelect.appendChild(option);
-                if (verbKey === previousVerbKey) {
-                  option.selected = true;
-                  hasSelectedOption = true;
-                }
-              }
-            }
-          }
-
-          if (verbSelect.options.length > 0) {
-            if (!hasSelectedOption) {
-              console.warn('Previous verb not found, selecting first option:', verbSelect.options[0]?.value || 'No options');
-              verbSelect.selectedIndex = 0;
-            }
-          } else {
-            verbSelect.innerHTML = '<option value="">אין תוצאות | No results</option>';
-          }
-
-          const currentVerbKey = verbSelect.value;
-          console.log('After populateVerbSelect, verbSelect.value:', currentVerbKey);
-          renderTable(currentVerbKey, currentTense);
-          updateRelatedBinyanSelect(currentVerbKey);
-          renderAdditionalInfo(currentVerbKey);
-          renderTranslationsList(currentVerbKey);
-          updateBinyanSelect(currentVerbKey); // Update binyan menu to reflect selected verb
-        }
-        
-        function updateBinyanSelect(verbKey) {
-          const verb = verbs[verbKey];
-          if (verb && verb.binyan_en) {
-            binyanSelect.value = verb.binyan_en;
-          } else {
-            binyanSelect.value = 'all'; // Default to "All Binyanim" if no binyan_en
-          }
-        }
-
-      function updateRelatedBinyanSelect(verbKey) {
-          relatedBinyanSelect.innerHTML = '';
-          const verb = verbs[verbKey];
-          const rootStr = verb.root.join('');
-          const relatedVerbs = Object.entries(verbs)
-            .filter(([key, v]) => v.root.join('') === rootStr && key !== verbKey)
-            .map(([key, v]) => ({
-              key,
-              pastForm: v.conjugations?.past?.find(c => c.pronoun === 'הוא')?.form || 'N/A',
-              binyan_en: v.binyan_en
-            }));
-
-          if (relatedVerbs.length > 0) {
-            // Show the dropdown
-            relatedBinyanSelect.style.display = 'block';
-
-            // Add a default option with dot
-            const defaultOption = document.createElement('option');
-            defaultOption.value = 'dot';
-            defaultOption.textContent = '•';
-            relatedBinyanSelect.appendChild(defaultOption);
-
-            // Add related verbs with their past tense masculine singular form
-            relatedVerbs.forEach(({ key, pastForm, binyan_en }) => {
-              const option = document.createElement('option');
-              option.value = key;
-              option.textContent = `${pastForm} (${binyan_en})`; // e.g., "למד (Paal)"
-              relatedBinyanSelect.appendChild(option);
-            });
-
-            // Set the selected value to the default dot
-            relatedBinyanSelect.value = 'dot';
-          } else {
-            // Hide the dropdown if no related verbs
-            relatedBinyanSelect.style.display = 'none';
-          }
-        }
-
-      // Render additional info
-      function renderAdditionalInfo(verbKey) {
-        const verb = verbs[verbKey];
-        examplesList.innerHTML = '';
-        if (verb && verb.examples && verb.examples.length > 0) {
-          examplesSection.style.display = 'block';
-          verb.examples.forEach(example => {
-            const listItem = document.createElement('li');
-            listItem.className = 'multiline-item';
-            listItem.innerHTML = `
-              <strong dir="rtl">${example.hebrew}</strong>
-              <em dir="ltr">${example.transliteration}</em>
-              <p dir="ltr">${example.translation}</p>
-            `;
-            examplesList.appendChild(listItem);
-          });
-        } else {
-          examplesSection.style.display = 'none';
-        }
-
-        idiomsList.innerHTML = '';
-        if (verb && verb.idioms && verb.idioms.length > 0) {
-          idiomsSection.style.display = 'block';
-          verb.idioms.forEach(idiom => {
-            const listItem = document.createElement('li');
-            listItem.className = 'multiline-item';
-            listItem.innerHTML = `
-              <strong dir="rtl">${idiom.expression}</strong>
-              <em dir="ltr">(${idiom.transliteration})</em>
-              <p dir="ltr">${idiom.translation}</p>
-            `;
-            idiomsList.appendChild(listItem);
-          });
-        } else {
-          idiomsSection.style.display = 'none';
-        }
-
-        relatedWordsList.innerHTML = '';
-        if (verb && verb.related_words && verb.related_words.length > 0) {
-          relatedWordsSection.style.display = 'block';
-          verb.related_words.forEach(word => {
-            const listItem = document.createElement('li');
-            listItem.setAttribute('dir', 'rtl');
-            listItem.textContent = word;
-            relatedWordsList.appendChild(listItem);
-          });
-        } else {
-          relatedWordsSection.style.display = 'none';
-        }
-
-        similarVerbsList.innerHTML = '';
-        if (verb && verb.similar_verbs && verb.similar_verbs.length > 0) {
-          similarVerbsSection.style.display = 'block';
-          verb.similar_verbs.forEach(similarVerb => {
-            const listItem = document.createElement('li');
-            listItem.setAttribute('dir', 'rtl');
-            listItem.textContent = similarVerb;
-            similarVerbsList.appendChild(listItem);
-          });
-        } else {
-          similarVerbsSection.style.display = 'none';
-        }
-
-        if (verb && verb.notes) {
-          notesSection.style.display = 'block';
-          notesText.setAttribute('dir', 'ltr');
-          notesText.textContent = verb.notes;
-        } else {
-          notesSection.style.display = 'none';
-        }
-
-        renderBinyanim(verb ? verb.binyanim : null);
-      }
-
-      // Render binyanim table
-      function renderBinyanim(binyanim) {
-          if (binyanim && typeof binyanim === 'object' && Object.keys(binyanim).length > 0) {
-            binyanimSection.style.display = 'block';
-            binyanimTable.innerHTML = `
-              <tr>
-                <th>בִּנְיָן | Binyan</th>
-                <th>שם הפועל | Infinitive</th>
-                <th>משמעות | Meaning</th>
-              </tr>
-            `;
-            for (let binyan in binyanim) {
-              const binyanData = binyanim[binyan];
-              if (!binyanData || typeof binyanData !== 'object') {
-                console.warn(`Invalid binyan data for ${binyan}:`, binyanData);
-                continue; // Skip this entry
-              }
-              const binyanName = getBinyanNameInHebrew(binyan);
-              let meaningContent = Array.isArray(binyanData.meaning) ? binyanData.meaning.join(', ') : 'N/A';
-              if (binyanData.note) {
-                meaningContent += `<span class="note">(${binyanData.note})</span>`;
-              }
-              binyanimTable.innerHTML += `
-                <tr>
-                  <td>${binyanName} (${binyan})</td>
-                  <td>${binyanData.infinitive || '-'}</td>
-                  <td>${meaningContent}</td>
-                </tr>
-              `;
-            }
-          } else {
-            binyanimSection.style.display = 'none';
-          }
-        }
-
-      function getBinyanNameInHebrew(binyan) {
-        const binyanNames = {
-          "paal": "פָּעַל",
-          "nifal": "נִפְעַל",
-          "piel": "פִּעֵל",
-          "pual": "פֻּעַל",
-          "hitpael": "הִתְפַּעֵל",
-          "hifil": "הִפְעִיל",
-          "hufal": "הֻפְעַל"
-        };
-        return binyanNames[binyan] || binyan;
-      }
-
-      // Render translations list
-      function renderTranslationsList(verbKey) {
-        translationsList.innerHTML = '';
-        const verb = verbs[verbKey];
-        if (verb && verb.translations) {
-          for (let [lang, translation] of Object.entries(verb.translations)) {
-            const listItem = document.createElement('li');
-            listItem.textContent = `${lang}: ${translation}`;
-            translationsList.appendChild(listItem);
-          }
-        }
-      }
-
-      // Add event listeners
-      function addEventListeners() {
-  tenseButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      tenseButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      currentTense = button.dataset.tense;
-      const verbKey = verbSelect.value;
-      renderTable(verbKey, currentTense);
-    });
-  });
-
-  verbSelect.addEventListener('change', () => {
-    const verbKey = verbSelect.value;
-    console.log('verbSelect Changed to:', verbKey);
-    renderTable(verbKey, currentTense);
-    renderAdditionalInfo(verbKey);
-    renderTranslationsList(verbKey);
-    updateRelatedBinyanSelect(verbKey);
-    updateBinyanSelect(verbKey); // Update binyan menu
-  });
-
-binyanSelect.addEventListener('change', () => {
-  const selectedBinyan = binyanSelect.value;
-  const searchTerm = verbSearch.value.trim();
-  populateVerbSelect(selectedBinyan === 'all' ? 'all' : selectedBinyan, searchTerm); // Explicitly handle 'all'
-});
-
-  verbSearch.addEventListener('input', () => {
-    const searchTerm = verbSearch.value.trim();
-    populateVerbSelect('all', searchTerm); // Search across all binyanim
-  });
-
-  relatedBinyanSelect.addEventListener('change', () => {
-    const selectedValue = relatedBinyanSelect.value;
-    if (selectedValue !== 'dot') {
-      const verbKey = selectedValue;
-      console.log('Selected Related Verb Key:', verbKey);
-      const selectedVerb = verbs[verbKey];
-      const newBinyanFilter = selectedVerb.binyan_en || 'Unknown';
-      console.log('New Binyan Filter:', newBinyanFilter);
-
-      binyanSelect.value = newBinyanFilter; // Update binyan menu
-      verbSearch.value = ''; // Clear the search term
-      populateVerbSelect(newBinyanFilter, ''); // Repopulate with binyan filter, no search
-
-      verbSelect.value = verbKey;
-      console.log('verbSelect.value after set:', verbSelect.value);
-      verbSelect.dispatchEvent(new Event('change')); // Trigger full update
-      updateRelatedBinyanSelect(verbKey); // Update related verbs
-    }
-  });
-}
-
-      // Fetch verbs data
-      fetch('verbs.json')
-        .then(response => response.json())
-        .then(data => {
-          verbs = data;
-          populateBinyanSelect();
-          populateVerbSelect();
-          addEventListeners();
-          const initialVerbKey = verbSelect.value;
+    // Fetch verbs data and initialize
+    fetch('verbs.json')
+      .then(response => response.json())
+      .then(data => {
+        verbs = data;
+        populateBinyanSelect();
+        populateVerbSelect(); // This sets initial verb and calls updateRelatedBinyanSelect
+        addEventListeners();
+        const initialVerbKey = verbSelect.value;
+        if (initialVerbKey) {
           renderTable(initialVerbKey, 'past');
           renderAdditionalInfo(initialVerbKey);
           renderTranslationsList(initialVerbKey);
-        })
-        .catch(error => {
-          console.error('Error fetching verbs data:', error);
-          conjugationTable.innerHTML = '<tr><td colspan="5">שגיאה בטעינת הנתונים | Error loading data.</td></tr>';
-        });
-    });
-  </script>
+          updateRelatedBinyanSelect(initialVerbKey); // Ensure called after verbs is set
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching verbs data:', error);
+        conjugationTable.innerHTML = '<tr><td colspan="5">שגיאה בטעינת הנתונים | Error loading data.</td></tr>';
+      });
+  });
+</script>
 </body>
 </html>
