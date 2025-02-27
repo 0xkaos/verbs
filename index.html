@@ -118,7 +118,6 @@ body {
   border-radius: 8px;
   box-shadow: var(--container-shadow);
 }
-
 .translations-bar {
   width: 100%;
   max-width: 900px;
@@ -127,14 +126,17 @@ body {
   background-color: var(--input-bg);
   border-radius: 6px;
   box-shadow: var(--box-shadow);
+  overflow-x: auto; /* Allow horizontal scrolling for translations on narrow screens */
+  white-space: nowrap; /* Keep translations in a single line */
 }
 
 .selection-row {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   width: 100%;
   max-width: 900px;
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .binyan-select-container,
@@ -142,8 +144,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 200px;
-  max-width: 250px;
+  min-width: 160px; 
+  max-width: 200px; 
 }
 
 .verb-select-wrapper {
@@ -203,7 +205,7 @@ h1 {
    #binyan-select,
 #verb-select {
   width: 100%;
-  max-width: 250px;
+  max-width: 200px; /* Fixed max-width to constrain size */
   padding: 8px;
   font-size: 1em;
   border: 1px solid var(--input-border-color);
@@ -216,6 +218,9 @@ h1 {
   transition: all 0.3s ease;
   text-align: center;
   direction: rtl;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide excess text */
+  text-overflow: ellipsis; /* Abbreviate with ellipsis */
 }
 
 #binyan-select:focus,
@@ -264,6 +269,12 @@ h1 {
 #verb-search::placeholder {
   color: var(--secondary-text-color);
   opacity: 0.7;
+}
+#binyan-select option,
+#verb-select option {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ==========================================================================
@@ -365,13 +376,14 @@ body.dark-mode #related-binyan-button:hover {
   border-color: var(--primary-color);
   box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
 }
+
 .related-binyan-menu {
   display: none;
   position: absolute;
   top: 100%;
-  right: 100%; /* Extend to the left from the button's right edge */
-  left: auto; /* Override any previous left setting */
+  right: 100%; /* Extend to the left */
   min-width: 200px;
+  max-width: 200px; /* Constrain width */
   background-color: var(--input-bg);
   border: 1px solid var(--border-color);
   border-radius: 4px;
@@ -380,6 +392,9 @@ body.dark-mode #related-binyan-button:hover {
   padding: 5px 0;
   z-index: 10;
   direction: rtl;
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden; /* Hide excess */
+  text-overflow: ellipsis; /* Abbreviate */
 }
 
 .related-binyan-menu li {
@@ -676,13 +691,19 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   .translations-card {
     padding: 5px;
   }
+  .translations-bar {
+    padding: 5px 0;
+    white-space: normal; /* Switch to vertical on mobile */
+    overflow-x: hidden; /* Remove horizontal scrolling */
+  }
+
   .selection-row {
-    flex-direction: row; /* Ensure horizontal layout */
-    gap: 10px; /* Maintain spacing */
-    justify-content: center; /* Keep centered */
+    flex-direction: row;
+    gap: 5px; /* Reduced gap for mobile */
+    justify-content: center;
     width: 100%;
-    max-width: 400px; /* Reduced to fit two 180px items + gap on mobile */
-    flex-wrap: nowrap; /* Prevent wrapping to a new line */
+    max-width: 350px; /* Adjusted to fit two 160px items + gap */
+    flex-wrap: nowrap;
   }
   #translations-list {
     flex-wrap: nowrap;
@@ -698,14 +719,14 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
 
   .binyan-select-container,
   .verb-select-container {
-    flex: 0 0 180px; /* Fixed width to prevent stacking */
-    max-width: 180px; /* Match fixed width */
+    flex: 0 0 160px; 
+    max-width: 160px;
   }
 
   #binyan-select,
   #verb-select {
     width: 180px; /* Fixed width */
-    max-width: 180px;
+    max-width: 160px;
     padding: 5px;
     font-size: 0.8em;
     white-space: nowrap; /* Prevent wrapping */
