@@ -1,1453 +1,1134 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Verb Conjugation</title>
-  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Alef&family=Varela+Round&display=swap" rel="stylesheet">
-  <style>
-    /* ==========================================================================
-       Root Variables
-       ========================================================================== */
-    :root {
-      --font-family: 'Varela Round', Arial, sans-serif;
-      --background-color: #F0F1F4;
-      --background-image: linear-gradient(to bottom, #F0F1F4, #e0e0e0);
-      --text-color: #333;
-      --secondary-text-color: #555;
-      --primary-color: #364991;
-      --accent-color: #ff6600;
-      --container-bg: #fff;
-      --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-      --border-color: #ccc;
-      --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      --input-bg: #fff;
-      --input-border-color: #364991;
-      --button-bg: #e7e7e7;
-      --button-border: #bbb;
-      --button-text-color: #333;
-      --root-letter-color: #d9534f;
-      --root-letter-hover: #ff6600;
-    }
-
-    body.dark-mode {
-      --background-color: #121212;
-      --background-image: none;
-      --text-color: #e0e0e0;
-      --secondary-text-color: #aaa;
-      --container-bg: rgba(30, 30, 30, 0.9);
-      --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-      --border-color: #333;
-      --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-      --input-bg: #2a2a2a;
-      --input-border-color: #444;
-      --button-bg: #444;
-      --button-border: #555;
-      --button-text-color: #e0e0e0;
-      --root-letter-color: #4479b6;
-      --root-letter-hover: #6d97c8;
-      --accent-color: #8fb0d6;
-    }
-
-    /* ==========================================================================
-       Base Styles
-       ========================================================================== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--font-family);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      min-height: 100vh;
-      background-color: var(--background-color);
-      background-image: var(--background-image);
-      color: var(--text-color);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    /* ==========================================================================
-       Layout Components
-       ========================================================================== */
-    .container {
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 10px;
-      background-color: var(--container-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      box-shadow: var(--container-shadow);
-    }
-
-    .table-container {
-      width: 100%;
-      max-width: 1000px;
-      margin-top: 20px;
-      overflow-x: auto;
-    }
-
-    .conjugation-link {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      align-items: center;
-    }
-
-    .left-controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .header-menus {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 auto 20px;
-      padding: 10px;
-      width: 100%;
-      max-width: 1000px;
-      background-color: var(--container-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      box-shadow: var(--container-shadow);
-    }
-
-    .translations-bar {
-      width: 100%;
-      max-width: 900px;
-      padding: 10px 0;
-      margin-bottom: 10px;
-      background-color: var(--input-bg);
-      border-radius: 6px;
-      box-shadow: var(--box-shadow);
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-
-    .selection-row {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      max-width: 900px;
-      flex-wrap: nowrap;
-    }
-
-    .binyan-select-container,
-    .verb-select-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-width: 160px;
-      max-width: 50%;
-    }
-
-    .verb-select-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    /* ==========================================================================
-       Typography
-       ========================================================================== */
-    h1 {
-      font-family: var(--font-family);
-      margin-bottom: 10px;
-      text-align: center;
-      font-size: 1.6em;
-      color: var(--primary-color);
-    }
-
-    .info-section h2 {
-      font-size: 1.5em;
-      margin-bottom: 15px;
-      padding-bottom: 5px;
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--primary-color);
-    }
-
-    .translations-card h3 {
-      font-size: 1.2em;
-      color: var(--primary-color);
-      margin-bottom: 5px;
-      text-align: center;
-    }
-
-    .root-letter {
-      font-size: 1em;
-      font-weight: normal;
-      color: var(--root-letter-color);
-    }
-
-    .root-letter:hover {
-      color: var(--root-letter-hover);
-    }
-    .no-highlight .root-letter {
-      color: var(--text-color); /* Matches surrounding text: #333 in light mode, #e0e0e0 in dark mode */
-      font-size: inherit;       /* Resets to parent’s font size */
-      font-weight: normal;      /* Removes bold styling */
-    }
-
-    .no-highlight .root-letter:hover {
-      color: var(--text-color); /* Disables hover effect when highlighting is off */
-    }
-
-    .binyan-select-container label,
-    .verb-select-container label,
-    .header-menus label {
-      font-size: 0.9em;
-      color: var(--secondary-text-color);
-      margin-bottom: 5px;
-      text-align: center;
-    }
-
-    /* ==========================================================================
-       Form Elements
-       ========================================================================== */
-    #binyan-select,
-    #verb-select {
-      width: 100%;
-      max-width: 250px;
-      padding: 8px;
-      font-size: 1em;
-      border: 1px solid var(--input-border-color);
-      border-radius: 6px;
-      background-color: var(--input-bg);
-      color: var(--text-color);
-      cursor: pointer;
-      appearance: none;
-      box-shadow: var(--box-shadow);
-      transition: all 0.3s ease;
-      text-align: center;
-      direction: rtl;
-    }
-
-    #binyan-select:focus,
-    #verb-select:focus {
-      outline: none;
-      border-color: var(--primary-color);
-      box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
-    }
-
-    #dark-mode-toggle,
-    #font-selector,
-    #verb-search {
-      font-size: 0.7em;
-      padding: 3px 8px;
-      margin: 5px;
-      border-radius: 4px;
-      background-color: var(--button-bg);
-      border: 1px solid var(--button-border);
-      color: var(--button-text-color);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: var(--box-shadow);
-      font-family: var(--font-family);
-      text-align: center;
-      width: auto;
-      min-width: 100px;
-    }
-
-    #font-selector {
-      appearance: none;
-    }
-
-    #verb-select-container select,
-    #verb-select-container input {
-      width: auto;
-      max-width: 200px;
-    }
-
-    #binyan-select-container select {
-      width: auto;
-      max-width: 250px;
-    }
-
-    #verb-search::placeholder {
-      color: var(--secondary-text-color);
-      opacity: 0.7;
-    }
-
-    /* ==========================================================================
-       Buttons
-       ========================================================================== */
-    .tense-tabs {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: nowrap !important;
-      justify-content: center;
-      gap: 5px;
-      padding: 5px;
-      width: 100%;
-      max-width: 1000px;
-      background-color: rgba(255, 255, 255, 0.2);
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .tense-button {
-      flex: 0 0 auto !important;
-      width: 18%;
-      min-width: 80px;
-      max-width: 120px;
-      text-align: center;
-      font-size: 1em;
-      padding: 3px 8px;
-      margin: 0;
-      border-radius: 4px;
-      background-color: var(--button-bg);
-      border: 1px solid var(--button-border);
-      color: var(--button-text-color);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: var(--box-shadow);
-      white-space: nowrap !important;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    #related-binyan-button {
-      width: 40px;
-      padding: 5px;
-      text-align: center;
-      background-color: var(--button-bg);
-      border: 1px solid var(--button-border);
-      border-radius: 4px;
-      color: var(--button-text-color);
-      cursor: pointer;
-      box-shadow: var(--box-shadow);
-      transition: all 0.3s ease;
-    }
-
-    .related-binyan-wrapper {
-      position: relative;
-      display: inline-block;
-      margin-top: 5px;
-    }
-
-    /* ==========================================================================
-       Interactive States
-       ========================================================================== */
-    .tense-button:hover,
-    #dark-mode-toggle:hover,
-    #font-selector:hover,
-    #verb-search:hover,
-    #related-binyan-button:hover {
-      background-color: #d5d5d5;
-      transform: scale(1.05);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    body.dark-mode .tense-button:hover,
-    body.dark-mode #dark-mode-toggle:hover,
-    body.dark-mode #font-selector:hover,
-    body.dark-mode #verb-search:hover,
-    body.dark-mode #related-binyan-button:hover {
-      background-color: #555;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .tense-button.active {
-      background-color: var(--primary-color);
-      color: #fff;
-      border: none;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    #dark-mode-toggle:focus,
-    #font-selector:focus,
-    #verb-search:focus,
-    #binyan-select:focus,
-    #verb-select:focus {
-      outline: none;
-      border-color: var(--primary-color);
-      box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
-    }
-
-    .related-binyan-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 100%;
-      left: auto;
-      min-width: 200px;
-      background-color: var(--input-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 4px;
-      box-shadow: var(--box-shadow);
-      list-style: none;
-      padding: 5px 0;
-      z-index: 10;
-      direction: rtl;
-    }
-
-    .related-binyan-menu li {
-      padding: 5px 10px;
-      cursor: pointer;
-      text-align: right;
-    }
-
-    .related-binyan-menu li:hover {
-      background-color: #f1f1f1;
-    }
-
-    body.dark-mode .related-binyan-menu li:hover {
-      background-color: #404040;
-    }
-
-    /* ==========================================================================
-       Tables
-       ========================================================================== */
-    #conjugation-table,
-    #binyanim-table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: var(--input-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: var(--container-shadow);
-    }
-
-    #conjugation-table {
-      direction: rtl;
-    }
-
-    #conjugation-table th,
-    #conjugation-table td,
-    #binyanim-table th,
-    #binyanim-table td {
-      padding: 15px;
-      text-align: center;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    #binyanim-table th,
-    #binyanim-table td {
-      border: 1px solid var(--border-color);
-    }
-
-    #conjugation-table th,
-    #binyanim-table th {
-      background-color: var(--primary-color);
-      color: #fff;
-      font-weight: bold;
-    }
-
-    #conjugation-table th {
-      border-bottom: 2px solid #0056b3;
-      font-size: 1em;
-    }
-
-    #conjugation-table td:nth-child(2) {
-      font-size: 1.3em;
-    }
-
-    #conjugation-table td:nth-child(2) a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    #conjugation-table td:nth-child(2) a:hover {
-      color: var(--accent-color);
-    }
-
-    #conjugation-table tr:nth-child(even),
-    #binyanim-table tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    body.dark-mode #conjugation-table tr:nth-child(even),
-    body.dark-mode #binyanim-table tr:nth-child(even) {
-      background-color: #2a2a2a;
-    }
-
-    #conjugation-table tr:hover {
-      background-color: #f1f1f1;
-    }
-
-    body.dark-mode #conjugation-table tr:hover {
-      background-color: #404040;
-    }
-
-    .note {
-      display: block;
-      padding: 5px;
-      background-color: #f9f9f9;
-      color: var(--secondary-text-color);
-      font-style: italic;
-      text-align: left;
-    }
-
-    body.dark-mode #binyanim-table .note {
-      background-color: #333;
-      color: #aaa;
-    }
-
-    /* ==========================================================================
-       Info Sections
-       ========================================================================== */
-    .info-section {
-      margin-top: 30px;
-      width: 100%;
-      max-width: 1000px;
-    }
-
-    .info-section ul {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 5px;
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      justify-items: center;
-    }
-
-    .info-section ul li {
-      width: 100%;
-      background-color: var(--input-bg);
-      padding: 10px;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      box-shadow: var(--box-shadow);
-      transition: transform 0.3s, background-color 0.3s;
-      margin-bottom: 5px;
-      direction: rtl;
-      text-align: right;
-    }
-
-    #examples-list,
-    #related-words-list,
-    #similar-verbs-list,
-    #idioms-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 5px;
-      justify-items: center;
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-    }
-
-    #examples-list li,
-    #related-words-list li,
-    #similar-verbs-list li,
-    #idioms-list li {
-      display: block;
-      background-color: var(--input-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      box-shadow: var(--box-shadow);
-      padding: 8px;
-      margin-bottom: 8px;
-      margin-left: auto;
-      margin-right: auto;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    #examples-list li,
-    #related-words-list li,
-    #similar-verbs-list li,
-    #idioms-list li {
-      direction: rtl;
-      text-align: right;
-      font-size: 0.9em;
-    }
-
-    .info-section ul li strong,
-    .info-section ul li em,
-    .info-section ul li p {
-      display: block;
-      font-size: 1.1em;
-      margin-bottom: 5px;
-    }
-
-    .info-section ul li strong {
-      color: var(--text-color);
-    }
-
-    .info-section ul li em {
-      color: var(--secondary-text-color);
-    }
-
-    .info-section ul li p {
-      color: var(--text-color);
-    }
-
-    li.multiline-item strong,
-    li.multiline-item em,
-    li.multiline-item p {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    /* ==========================================================================
-       Utilities
-       ========================================================================== */
-    [dir="rtl"] {
-      text-align: right;
-    }
-
-    [dir="ltr"] {
-      text-align: left;
-    }
-
-    body.dark-mode ::-webkit-scrollbar {
-      width: 12px;
-    }
-
-    body.dark-mode ::-webkit-scrollbar-track {
-      background: #1e1e1e;
-    }
-
-    body.dark-mode ::-webkit-scrollbar-thumb {
-      background: #333;
-      border-radius: 6px;
-    }
-
-    body.dark-mode ::-webkit-scrollbar-thumb:hover {
-      background: #444;
-    }
-
-    /* ==========================================================================
-       Lists
-       ========================================================================== */
-    #translations-list {
-      list-style-type: none;
-      font-size: 0.9em;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-  
-    /* ==========================================================================
-       Media Queries
-       ========================================================================== */
-    @media (max-width: 768px) {
-      body {
-        padding: 10px;
-      }
-
-      h1 {
-        font-size: 1.2em;
-      }
-
-      .container {
-        padding: 0px;
-      }
-
-      .conjugation-link {
-        padding: 0 10px;
-        margin-bottom: 10px;
-        justify-content: center;
-        flex-wrap: nowrap;
-        gap: 10px;
-      }
-
-      #dark-mode-toggle,
-      #font-selector,
-      #verb-search {
-        font-size: 0.7em;
-        padding: 3px 8px;
-        margin: 5px 0;
-        min-width: 60px;
-        max-width: 100px;
-        white-space: nowrap;
-      }
-
-      #verb-search {
-        min-width: 100px;
-      }
-
-      .header-menus {
-        padding: 5px;
-      }
-
-      .translations-card {
-        padding: 5px;
-      }
-
-      .translations-bar {
-        padding: 5px 0;
-        white-space: normal;
-        overflow-x: hidden;
-      }
-
-      .selection-row {
-        flex-direction: row;
-        gap: 5px;
-        justify-content: center;
-        width: 100%;
-        max-width: 350px;
-        flex-wrap: nowrap;
-      }
-
-      #translations-list {
-        flex-wrap: nowrap;
-        gap: 5px;
-        justify-content: center;
-      }
-
-      #translations-list li {
-        padding: 2px 5px;
-        font-size: 0.7em;
-        white-space: nowrap;
-      }
-
-      .binyan-select-container,
-      .verb-select-container {
-        flex: 0 0 160px;
-        max-width: 160px;
-      }
-
-      #binyan-select,
-      #verb-select {
-        width: 140px;
-        max-width: 180px;
-        padding: 5px;
-        font-size: 0.8em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      #related-binyan-button {
-        width: 30px;
-        padding: 3px;
-      }
-
-      .related-binyan-menu {
-        min-width: 150px;
-      }
-
-      .tense-tabs {
-        flex-wrap: nowrap !important;
-      }
-
-      .tense-button {
-        flex: 0 1 calc(18% - 5px);
-        min-width: 60px;
-        max-width: 100px;
-        font-size: 0.7em;
-        padding: 2px 6px;
-        margin: 0;
-      }
-
-      #conjugation-table {
-        font-size: 0.9em;
-      }
-
-      #conjugation-table th,
-      #conjugation-table td {
-        padding: 5px;
-      }
-
-      #conjugation-table th {
-        font-size: 0.7em;
-      }
-
-      #conjugation-table th:nth-child(4),
-      #conjugation-table td:nth-child(4) {
-        display: none;
-      }
-
-      .info-section ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-      }
-
-      .info-section ul li {
-        width: 100%;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #selected-verb-translation {
-        padding: 0 5px;
-        font-size: 0.8em;
-        color: var(--secondary-text-color);
-      }
-    }
-
-    /* ==========================================================================
-       Custom Fonts
-       ========================================================================== */
-    @font-face {
-      font-family: 'Noto Rashi Hebrew';
-      src: url('fonts/NotoRashiHebrew-VariableFont_wght.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Hadasim CLM';
-      src: url('fonts/Hadasim CLM Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Gveret Levin AlefAlefAlef';
-      src: url('fonts/Gveret Levin AlefAlefAlef Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Frank Ruehl CLM';
-      src: url('fonts/FrankRuehlCLM-Medium.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Dorian CLM';
-      src: url('fonts/DorianCLM-BookItalic.ttf') format('truetype');
-      font-weight: normal;
-      font-style: italic;
-    }
-
-    @font-face {
-      font-family: 'Ktav Yad CLM';
-      src: url('fonts/KtavYadCLM-MediumItalic.ttf') format('truetype');
-      font-weight: normal;
-      font-style: italic;
-    }
-
-    @font-face {
-      font-family: 'Noto Serif';
-      src: url('../fonts/NotoSerifHebrew-VariableFont_wdthwght.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-  </style>
-</head>
-<body>
-  <div class="conjugation-link">
-    <input type="checkbox" id="highlight-toggle" checked>
-    
-      
-      <label for="font-selector"></label>
-      <select id="font-selector">
-        <option value="Varela Round">Varela Round</option>
-        <option value="Noto Serif">Noto Serif</option>
-        <option value="Hadasim CLM">Hadasim CLM</option>
-        <option value="Gveret Levin AlefAlefAlef">Gveret Levin AlefAlefAlef</option>
-        <option value="Frank Ruehl CLM">Frank Ruehl CLM</option>
-        <option value="Dorian CLM">Dorian CLM</option>
-        <option value="Ktav Yad CLM">Ktav Yad CLM</option>
-      </select>
-      <button id="dark-mode-toggle">Dark Mode</button>
-    
-    <input type="text" id="verb-search" placeholder="Search verbs...">
-  </div>
-
-  <div class="container">
-    <h1>Verb Conjugation</h1>
-    <div class="translations-bar">
-      <ul id="translations-list"></ul>
-    </div>
-    <div class="header-menus">
-      <div class="selection-row">
-        <div class="binyan-select-container">
-          <select id="binyan-select"></select>
-        </div>
-        <div class="verb-select-container">
-          <div class="verb-select-wrapper">
-            <select id="verb-select"></select>
-            <div id="related-binyan-container" class="related-binyan-wrapper">
-              <button id="related-binyan-button">•</button>
-              <ul id="related-binyan-menu" class="related-binyan-menu"></ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="tense-tabs">
-      <button class="tense-button active" data-tense="past">Past</button>
-      <button class="tense-button" data-tense="present">Present</button>
-      <button class="tense-button" data-tense="future">Future</button>
-      <button class="tense-button" data-tense="imperative">Imperative</button>
-      <button class="tense-button" data-tense="infinitive">Infinitive</button>
-    </div>
-  </div>
-
-  <div class="table-container">
-    <table id="conjugation-table"></table>
-  </div>
-
-  <div class="info-section" id="notes-section">
-    <h2>Notes</h2>
-    <p id="notes-text"></p>
-  </div>
-
-  <div class="info-section" id="examples-section">
-    <h2>Examples</h2>
-    <ul id="examples-list"></ul>
-  </div>
-
-  <div class="info-section" id="binyanim-section">
-    <h2>Binyanim</h2>
-    <table id="binyanim-table"></table>
-  </div>
-
-  <div class="info-section" id="related-words-section">
-    <h2>Related Words</h2>
-    <ul id="related-words-list"></ul>
-  </div>
-
-  <div class="info-section" id="similar-verbs-section">
-    <h2>Similar Verbs</h2>
-    <ul id="similar-verbs-list"></ul>
-  </div>
-
-  <div class="info-section" id="idioms-section">
-    <h2>Idioms</h2>
-    <ul id="idioms-list"></ul>
-  </div>
-
-  <script>
-    function playAudio(src) {
-      const audio = new Audio(src);
-      audio.play();
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      let verbs = {};
-      let verbSelect = document.getElementById('verb-select');
-      let conjugationTable = document.getElementById('conjugation-table');
-      let tenseButtons = document.querySelectorAll('.tense-button');
-      let binyanSelect = document.getElementById('binyan-select');
-      let currentTense = 'past';
-      const fontSelector = document.getElementById('font-selector');
-      const body = document.body;
-      const darkModeToggle = document.getElementById('dark-mode-toggle');
-      const verbSearch = document.getElementById('verb-search');
-      const translationsList = document.getElementById('translations-list');
-
-      let examplesSection = document.getElementById('examples-section');
-      let examplesList = document.getElementById('examples-list');
-      let notesSection = document.getElementById('notes-section');
-      let notesText = document.getElementById('notes-text');
-      let relatedWordsSection = document.getElementById('related-words-section');
-      let relatedWordsList = document.getElementById('related-words-list');
-      let similarVerbsSection = document.getElementById('similar-verbs-section');
-      let similarVerbsList = document.getElementById('similar-verbs-list');
-      let idiomsSection = document.getElementById('idioms-section');
-      let idiomsList = document.getElementById('idioms-list');
-      let binyanimSection = document.getElementById('binyanim-section');
-      let binyanimTable = document.getElementById('binyanim-table');
-
-      function normalizeLetter(char) {
-            const sofitMap = {
-                'ך': 'כ',
-                'ם': 'מ',
-                'ן': 'נ',
-                'ף': 'פ',
-                'ץ': 'צ'
-            };
-            // Map sofit to regular form if present
-            if (sofitMap[char]) {
-                char = sofitMap[char];
-            }
-            // Remove diacritics (Unicode range U+0591 to U+05C7 covers Hebrew points)
-            return char.replace(/[\u0591-\u05C7]/g, "");
-        }
-
-      fontSelector.addEventListener('change', function (e) {
-        const selectedFont = e.target.value;
-        const fontStyle = selectedFont === 'Dorian CLM' || selectedFont === 'Ktav Yad CLM' ? 'italic' : 'normal';
-        body.style.fontFamily = `'${selectedFont}', Arial, sans-serif`;
-        body.style.fontStyle = fontStyle;
-      });
-
-      function toggleDarkMode() {
-        body.classList.toggle('dark-mode');
-        const isDarkMode = body.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', isDarkMode);
-        darkModeToggle.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
-        const verbKey = verbSelect.value;
-        const tense = document.querySelector('.tense-button.active')?.dataset.tense || 'past';
-        renderTable(verbKey, tense);
-      }
-
-      darkModeToggle.addEventListener('click', toggleDarkMode);
-      if (localStorage.getItem('darkMode') === 'true') {
-        body.classList.add('dark-mode');
-        darkModeToggle.textContent = 'Light Mode';
-      }
-
-      function normalizeSearchText(text) {
-        return text.toLowerCase();
-      }
-
-      function normalizeLetter(char) {
-        const dageshMap = {
-          'בּ': 'ב', 'גּ': 'ג', 'דּ': 'ד', 'כּ': 'כ', 'פּ': 'פ', 'תּ': 'ת',
-          'שׁ': 'ש', 'שׂ': 'ש'
-        };
-        return dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, "");
-      }
-
-      function highlightRoots(form, rootLetters) {
-            // Input validation
-            if (!form || !rootLetters || rootLetters.length < 2) return form;
-
-            // Normalize root letters (typically no diacritics or sofit forms, but normalize for consistency)
-            const normalizedRoot = rootLetters.map(normalizeLetter);
-
-            // Split the form into characters
-            const formChars = form.split("");
-            let consonantPositions = [];
-            let consonants = [];
-
-            // Collect consonants and their positions
-            formChars.forEach((char, idx) => {
-                if (/[\u05D0-\u05EA]/.test(char)) { // Hebrew letter range
-                    consonantPositions.push(idx);
-                    consonants.push(normalizeLetter(char));
-                }
-            });
-
-            if (consonants.length === 0) return form;
-
-            // Match root letters in sequence
-            let matchedPositions = [];
-            let rootIndex = 0;
-            for (let i = 0; i < consonants.length && rootIndex < normalizedRoot.length; i++) {
-                if (consonants[i] === normalizedRoot[rootIndex]) {
-                    matchedPositions.push(consonantPositions[i]);
-                    rootIndex++;
-                }
-            }
-
-            // Build the highlighted string
-            let highlightedForm = "";
-            for (let i = 0; i < formChars.length; i++) {
-                if (matchedPositions.includes(i)) {
-                    highlightedForm += `<span class="root-letter">${formChars[i]}</span>`;
-                } else {
-                    highlightedForm += formChars[i];
-                }
-            }
-
-            return highlightedForm;
-        }
-
-      function renderTable(verbKey, tense) {
-        const verb = verbs[verbKey];
-        if (!verb || !verb.conjugations[tense]) {
-          conjugationTable.innerHTML = '<tr><td colspan="5">No data available for this tense.</td></tr>';
-          return;
-        }
-        let conjugations = verb.conjugations[tense];
-        const desiredPronounOrder = ["הוא", "היא", "את", "אתה", "אני", "אנחנו", "אתם", "אתן", "הם", "הן"];
-        conjugations.sort((a, b) => {
-          let indexA = desiredPronounOrder.indexOf(a.pronoun);
-          let indexB = desiredPronounOrder.indexOf(b.pronoun);
-          if (indexA === -1) indexA = desiredPronounOrder.length;
-          if (indexB === -1) indexB = desiredPronounOrder.length;
-          return indexA - indexB;
-        });
-        const headerData = [
-          { text: 'Pronoun', class: '' },
-          { text: 'Form', class: '' },
-          { text: 'Transliteration', class: 'ltr' },
-          { text: 'Phonetics', class: '' },
-          { text: 'Translation', class: '' }
-        ];
-        let rows = [
-          '<tr>',
-          headerData.map(data => `<th class="${data.class}">${data.text}</th>`).join(''),
-          '</tr>'
-        ];
-        for (let item of conjugations) {
-          const highlightedForm = highlightRoots(item.form, verb.root);
-          if (item.audio) {
-            const clickableForm = `<a href="#" onclick="playAudio('${item.audio}'); event.preventDefault();">${highlightedForm}</a>`;
-            rows.push(`
-              <tr>
-                <td>${item.pronoun}</td>
-                <td>${clickableForm}</td>
-                <td class="ltr">${item.transliteration}</td>
-                <td class="ltr">${item.phonetics}</td>
-                <td>${item.translation}</td>
-              </tr>
-            `);
-          } else {
-            rows.push(`
-              <tr>
-                <td>${item.pronoun}</td>
-                <td>${highlightedForm}</td>
-                <td class="ltr">${item.transliteration}</td>
-                <td class="ltr">${item.phonetics}</td>
-                <td>${item.translation}</td>
-              </tr>
-            `);
-          }
-        }
-        conjugationTable.innerHTML = rows.join('');
-      }
-
-      function populateBinyanSelect() {
-        const binyanMap = new Map();
-        for (let verbKey in verbs) {
-          const verb = verbs[verbKey];
-          if (verb.binyan_en) {
-            binyanMap.set(verb.binyan_en, verb.binyan);
-          }
-        }
-
-        const classicalOrder = ["Paal", "Nifal", "Piel", "Pual", "Hitpael", "Hifil", "Hufal"];
-        const sortedBinyanim = [];
-        classicalOrder.forEach(binyanEn => {
-          if (binyanMap.has(binyanEn)) {
-            sortedBinyanim.push(binyanEn);
-          }
-        });
-
-        binyanSelect.innerHTML = '';
-        sortedBinyanim.forEach(binyanEn => {
-          const option = document.createElement('option');
-          option.value = binyanEn;
-          option.textContent = binyanEn;
-          binyanSelect.appendChild(option);
-        });
-
-        const allOption = document.createElement('option');
-        allOption.value = 'all';
-        allOption.textContent = 'All';
-        binyanSelect.appendChild(allOption);
-
-        if (sortedBinyanim.includes('Paal')) {
-          binyanSelect.value = 'Paal';
-        } else {
-          binyanSelect.value = 'all';
-        }
-      }
-
-      function populateVerbSelect(binyanFilter = 'all', searchTerm = '') {
-        verbSelect.innerHTML = '';
-        const normalizedSearch = normalizeSearchText(searchTerm);
-        const previousVerbKey = verbSelect.value || '';
-        let hasSelectedOption = false;
-
-        for (let verbKey in verbs) {
-          const verb = verbs[verbKey];
-          const verbBinyanEn = verb.binyan_en || 'Unknown';
-          if (normalizedSearch) {
-            const rootText = verb.root && verb.root.length >= 3 ? verb.root.join('') : '';
-            const englishTranslation = verb.translations && verb.translations['en'] ? verb.translations['en'] : '';
-            const normalizedRoot = normalizeSearchText(rootText);
-            const normalizedTranslation = normalizeSearchText(englishTranslation);
-            if (normalizedRoot.includes(normalizedSearch) || normalizedTranslation.includes(normalizedSearch)) {
-              const option = document.createElement('option');
-              option.value = verbKey;
-              let displayPastForm = verb.conjugations?.past?.find(c => c.pronoun === 'הוא')?.form || 'N/A';
-              let displayTranslation = englishTranslation || 'No translation';
-              option.textContent = `${displayPastForm} - ${displayTranslation}`;
-              verbSelect.appendChild(option);
-              if (verbKey === previousVerbKey) {
-                option.selected = true;
-                hasSelectedOption = true;
-              }
-            }
-          } else {
-            if (binyanFilter === 'all' || verbBinyanEn === binyanFilter) {
-              const rootText = verb.root && verb.root.length >= 3 ? verb.root.join('') : '';
-              const englishTranslation = verb.translations && verb.translations['en'] ? verb.translations['en'] : '';
-              const option = document.createElement('option');
-              option.value = verbKey;
-              let displayPastForm = verb.conjugations?.past?.find(c => c.pronoun === 'הוא')?.form || 'N/A';
-              let displayTranslation = englishTranslation || 'No translation';
-              option.textContent = `${displayPastForm} - ${displayTranslation}`;
-              verbSelect.appendChild(option);
-              if (verbKey === previousVerbKey) {
-                option.selected = true;
-                hasSelectedOption = true;
-              }
-            }
-          }
-        }
-
-        if (verbSelect.options.length > 0 && !hasSelectedOption) {
-          verbSelect.selectedIndex = 0;
-        } else if (verbSelect.options.length === 0) {
-          verbSelect.innerHTML = '<option value="">No results</option>';
-        }
-
-        const currentVerbKey = verbSelect.value;
-        renderTable(currentVerbKey, currentTense);
-        updateRelatedBinyanSelect(currentVerbKey);
-        renderAdditionalInfo(currentVerbKey);
-        renderTranslationsList(currentVerbKey);
-        updateBinyanSelect(currentVerbKey);
-      }
-
-      function updateBinyanSelect(verbKey) {
-        const verb = verbs[verbKey];
-        if (verb && verb.binyan_en) {
-          binyanSelect.value = verb.binyan_en;
-        } else {
-          binyanSelect.value = 'all';
-        }
-      }
-
-      function updateRelatedBinyanSelect(verbKey) {
-        const menu = document.getElementById('related-binyan-menu');
-        const button = document.getElementById('related-binyan-button');
-        if (!verbKey || !verbs[verbKey]) {
-          button.style.display = 'none';
-          menu.innerHTML = '';
-          return;
-        }
-        const verb = verbs[verbKey];
-        const rootStr = verb.root.join('');
-        const relatedVerbs = Object.entries(verbs)
-          .filter(([key, v]) => v.root.join('') === rootStr && key !== verbKey)
-          .map(([key, v]) => ({
-            key,
-            pastForm: v.conjugations?.past?.find(c => c.pronoun === 'הוא')?.form || 'N/A',
-            binyan_en: v.binyan_en
-          }));
-
-        if (relatedVerbs.length > 0) {
-          button.style.display = 'inline-block';
-          menu.innerHTML = '';
-          relatedVerbs.forEach(({ key, pastForm, binyan_en }) => {
-            const li = document.createElement('li');
-            li.textContent = `${pastForm} (${binyan_en})`;
-            li.dataset.key = key;
-            menu.appendChild(li);
-          });
-        } else {
-          button.style.display = 'none';
-          menu.innerHTML = '';
-        }
-      }
-
-      function renderAdditionalInfo(verbKey) {
-        const verb = verbs[verbKey];
-        examplesList.innerHTML = '';
-        if (verb && verb.examples && verb.examples.length > 0) {
-          examplesSection.style.display = 'block';
-          verb.examples.forEach(example => {
-            const listItem = document.createElement('li');
-            listItem.className = 'multiline-item';
-            listItem.innerHTML = `
-              <strong dir="rtl">${example.hebrew}</strong>
-              <em dir="ltr">${example.transliteration}</em>
-              <p dir="ltr">${example.translation}</p>
-            `;
-            examplesList.appendChild(listItem);
-          });
-        } else {
-          examplesSection.style.display = 'none';
-        }
-
-        idiomsList.innerHTML = '';
-        if (verb && verb.idioms && verb.idioms.length > 0) {
-          idiomsSection.style.display = 'block';
-          verb.idioms.forEach(idiom => {
-            const listItem = document.createElement('li');
-            listItem.className = 'multiline-item';
-            listItem.innerHTML = `
-              <strong dir="rtl">${idiom.expression}</strong>
-              <em dir="ltr">(${idiom.transliteration})</em>
-              <p dir="ltr">${idiom.translation}</p>
-            `;
-            idiomsList.appendChild(listItem);
-          });
-        } else {
-          idiomsSection.style.display = 'none';
-        }
-
-        relatedWordsList.innerHTML = '';
-        if (verb && verb.related_words && verb.related_words.length > 0) {
-          relatedWordsSection.style.display = 'block';
-          verb.related_words.forEach(word => {
-            const listItem = document.createElement('li');
-            listItem.setAttribute('dir', 'rtl');
-            listItem.textContent = word;
-            relatedWordsList.appendChild(listItem);
-          });
-        } else {
-          relatedWordsSection.style.display = 'none';
-        }
-
-        similarVerbsList.innerHTML = '';
-        if (verb && verb.similar_verbs && verb.similar_verbs.length > 0) {
-          similarVerbsSection.style.display = 'block';
-          verb.similar_verbs.forEach(similarVerb => {
-            const listItem = document.createElement('li');
-            listItem.setAttribute('dir', 'rtl');
-            listItem.textContent = similarVerb;
-            similarVerbsList.appendChild(listItem);
-          });
-        } else {
-          similarVerbsSection.style.display = 'none';
-        }
-
-        if (verb && verb.notes) {
-          notesSection.style.display = 'block';
-          notesText.setAttribute('dir', 'ltr');
-          notesText.textContent = verb.notes;
-        } else {
-          notesSection.style.display = 'none';
-        }
-
-        renderBinyanim(verb ? verb.binyanim : null);
-      }
-
-      function renderBinyanim(binyanim) {
-        if (binyanim && typeof binyanim === 'object' && Object.keys(binyanim).length > 0) {
-          binyanimSection.style.display = 'block';
-          const binyanHeaderData = [
-            { text: 'Binyan' },
-            { text: 'Infinitive' },
-            { text: 'Meaning' }
-          ];
-          let headerRow = '<tr>' + binyanHeaderData.map(data => `<th>${data.text}</th>`).join('') + '</tr>';
-          binyanimTable.innerHTML = headerRow;
-          for (let binyan in binyanim) {
-            const binyanData = binyanim[binyan];
-            if (!binyanData || typeof binyanData !== 'object') {
-              console.warn(`Invalid binyan data for ${binyan}:`, binyanData);
-              continue;
-            }
-            let meaningContent = Array.isArray(binyanData.meaning) ? binyanData.meaning.join(', ') : 'N/A';
-            if (binyanData.note) {
-              meaningContent += `<span class="note">(${binyanData.note})</span>`;
-            }
-            binyanimTable.innerHTML += `
-              <tr>
-                <td>${binyan}</td>
-                <td>${binyanData.infinitive || '-'}</td>
-                <td>${meaningContent}</td>
-              </tr>
-            `;
-          }
-        } else {
-          binyanimSection.style.display = 'none';
-        }
-      }
-
-      function renderTranslationsList(verbKey) {
-        translationsList.innerHTML = '';
-        const verb = verbs[verbKey];
-        if (verb && verb.translations) {
-          for (let [lang, translation] of Object.entries(verb.translations)) {
-            const listItem = document.createElement('li');
-            listItem.textContent = `${lang}: ${translation}`;
-            translationsList.appendChild(listItem);
-          }
-        }
-      }
-
-      function addEventListeners() {
-        tenseButtons.forEach(button => {
-          button.addEventListener('click', () => {
-            tenseButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            currentTense = button.dataset.tense;
-            const verbKey = verbSelect.value;
-            renderTable(verbKey, currentTense);
-          });
-        });
-
-        verbSelect.addEventListener('change', () => {
-          const verbKey = verbSelect.value;
-          renderTable(verbKey, currentTense);
-          renderAdditionalInfo(verbKey);
-          renderTranslationsList(verbKey);
-          updateRelatedBinyanSelect(verbKey);
-        });
-
-        binyanSelect.addEventListener('change', () => {
-          const selectedBinyan = binyanSelect.value;
-          const searchTerm = verbSearch.value.trim();
-          populateVerbSelect(selectedBinyan === 'all' ? 'all' : selectedBinyan, searchTerm);
-        });
-
-        verbSearch.addEventListener('input', () => {
-          const searchTerm = verbSearch.value.trim();
-          populateVerbSelect('all', searchTerm);
-        });
-
-        document.getElementById('related-binyan-button').addEventListener('click', (e) => {
-          const menu = document.getElementById('related-binyan-menu');
-          menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-          e.stopPropagation();
-        });
-
-        document.addEventListener('click', (e) => {
-          const container = document.getElementById('related-binyan-container');
-          if (!container.contains(e.target)) {
-            document.getElementById('related-binyan-menu').style.display = 'none';
-          }
-        });
-
-        document.getElementById('related-binyan-menu').addEventListener('click', (e) => {
-          const li = e.target.closest('li');
-          if (li && li.dataset.key) {
-            const verbKey = li.dataset.key;
-            const selectedVerb = verbs[verbKey];
-            const newBinyanFilter = selectedVerb.binyan_en || 'Unknown';
-            binyanSelect.value = newBinyanFilter;
-            verbSearch.value = '';
-            populateVerbSelect(newBinyanFilter, '');
-            verbSelect.value = verbKey;
-            verbSelect.dispatchEvent(new Event('change'));
-            updateRelatedBinyanSelect(verbKey);
-            document.getElementById('related-binyan-menu').style.display = 'none';
-          }
-        });
-      }
-
-      fetch('verbs.json')
-        .then(response => response.json())
-        .then(data => {
-          verbs = data;
-          populateBinyanSelect();
-          populateVerbSelect();
-          addEventListeners();
-          const initialVerbKey = verbSelect.value;
-          if (initialVerbKey) {
-            renderTable(initialVerbKey, 'past');
-            renderAdditionalInfo(initialVerbKey);
-            renderTranslationsList(initialVerbKey);
-            updateRelatedBinyanSelect(initialVerbKey);
-          }
-        })
-        .catch(error => {
-          console.error('Error fetching verbs data:', error);
-          conjugationTable.innerHTML = '<tr><td colspan="5">Error loading data.</td></tr>';
-        });
-    });
-    document.getElementById('highlight-toggle').addEventListener('change', function() {
-  const table = document.getElementById('conjugation-table');
-  if (this.checked) {
-    table.classList.remove('no-highlight');
-  } else {
-    table.classList.add('no-highlight');
+<meta charset="UTF-8" />
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+/>
+<title>Verb Conjugation</title>
+<link
+href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+rel="stylesheet"
+/>
+<link
+href="https://fonts.googleapis.com/css2?family=Alef&family=Varela+Round&display=swap"
+rel="stylesheet"
+/>
+<style>
+  /* ==========================================================================
+  Root Variables & Dark Mode
+  ========================================================================== */
+  :root {
+  --font-family: 'Varela Round', Arial, sans-serif;
+  --background-color: #F0F1F4;
+  --background-image: linear-gradient(to bottom, #F0F1F4, #e0e0e0);
+  --text-color: #333;
+  --secondary-text-color: #555;
+  --primary-color: #364991;
+  --accent-color: #ff6600;
+  --container-bg: #fff;
+  --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  --border-color: #ccc;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --input-bg: #fff;
+  --input-border-color: #364991;
+  --button-bg: #e7e7e7;
+  --button-border: #bbb;
+  --button-text-color: #333;
+  --root-letter-color: #d9534f;
+  --root-letter-hover: #ff6600;
   }
-}); 
-  </script>
-</body>
+  body.dark-mode {
+  --background-color: #121212;
+  --background-image: none;
+  --text-color: #e0e0e0;
+  --secondary-text-color: #aaa;
+  --container-bg: rgba(30, 30, 30, 0.9);
+  --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  --border-color: #333;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --input-bg: #2a2a2a;
+  --input-border-color: #444;
+  --button-bg: #444;
+  --button-border: #555;
+  --button-text-color: #e0e0e0;
+  --root-letter-color: #4479b6;
+  --root-letter-hover: #6d97c8;
+  --accent-color: #8fb0d6;
+  }
+  /* ==========================================================================
+  Base Resets and Body
+  ========================================================================== */
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  /* ==========================================================================
+  Containers and Layout
+  ========================================================================== */
+  .container {
+  width: 100%;
+  max-width: 1000px;
+  background-color: var(--container-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--container-shadow);
+  margin: 10px 0;
+  padding: 10px 0;
+  }
+  .table-container {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 10px;
+  overflow-x: auto;
+  }
+  /* ==========================================================================
+  Top Controls & Header Menus – ALWAYS horizontal and constrained
+  ========================================================================== */
+  .conjugation-link {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row; /* force row direction */
+  flex-wrap: nowrap; /* no wrapping */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  }
+  /* Ensure the direct children do not suddenly break to a new line */
+  .conjugation-link select,
+  .conjugation-link button,
+  .conjugation-link input {
+  flex-shrink: 0;
+  }
+  .header-menus {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row; /* horizontal row */
+  flex-wrap: nowrap; /* never wrap */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto 10px;
+  padding: 5px 0;
+  background-color: var(--container-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--container-shadow);
+  }
+  .selection-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  }
+  .binyan-select-container,
+  .verb-select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 160px;
+  }
+  .verb-select-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  }
+  /* ==========================================================================
+  Typography
+  ========================================================================== */
+  h1 {
+  font-family: var(--font-family);
+  font-size: 1.6em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  }
+  .info-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  }
+  .root-letter {
+  font-size: 1em;
+  font-weight: normal;
+  color: var(--root-letter-color);
+  }
+  .root-letter:hover {
+  color: var(--root-letter-hover);
+  }
+  .no-highlight .root-letter {
+  color: var(--text-color);
+  font-size: inherit;
+  font-weight: normal;
+  }
+  .no-highlight .root-letter:hover {
+  color: var(--text-color);
+  }
+  label {
+  font-size: 0.9em;
+  color: var(--secondary-text-color);
+  text-align: center;
+  }
+  /* ==========================================================================
+  Form Elements and Buttons
+  ========================================================================== */
+  #font-selector {
+  font-size: 0.9em;
+  padding: 5px 8px;
+  min-width: 90px;
+  }
+  select,
+  input[type="text"] {
+  padding: 8px;
+  font-size: 1em;
+  border: 1px solid var(--input-border-color);
+  border-radius: 6px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  text-align: center;
+  appearance: none;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+  }
+  select:focus,
+  input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
+  }
+  button {
+  font-size: 0.8em;
+  padding: 5px 10px;
+  border: 1px solid var(--button-border);
+  border-radius: 4px;
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+  min-width: 80px;
+  }
+  button:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
+  }
+  button:hover {
+  background-color: #d5d5d5;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  body.dark-mode button:hover {
+  background-color: #555;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* --- Custom styling for the highlight checkbox --- */
+  /* Base styling for all modes */
+  input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--input-bg);
+  position: relative;
+  }
+  /* Display a check mark when the checkbox is checked */
+  input[type="checkbox"]:checked::after {
+  content: "✓";
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  }
+  /* Light mode: use accent (orange) when checked */
+  body:not(.dark-mode) input[type="checkbox"]:checked {
+  background-color: var(--root-letter-color);
+  border-color: var(--root-letter-color);
+  }
+  /* Dark mode: unchecked is gray, checked is blue */
+  body.dark-mode input[type="checkbox"]:not(:checked) {
+  background-color: gray;
+  border-color: gray;
+  }
+  body.dark-mode input[type="checkbox"]:checked {
+  background-color: #4479b6;
+  border-color: #4479b6;
+  }
+  
+  /* ==========================================================================
+  Tense Tabs and Related Buttons
+  ========================================================================== */
+  .tense-tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+  width: 100%;
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  }
+  .tense-button {
+  flex: 0 0 auto;
+  width: 18%;
+  min-width: 80px;
+  max-width: 120px;
+  text-align: center;
+  font-size: 1em;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  .tense-button.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  #related-binyan-button {
+  width: 40px;
+  padding: 5px;
+  text-align: center;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  border-radius: 4px;
+  color: var(--button-text-color);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+  }
+  .related-binyan-wrapper {
+  position: relative;
+  display: inline-block;
+  }
+  .related-binyan-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 200px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  list-style: none;
+  padding: 5px 0;
+  z-index: 10;
+  text-align: right;
+  }
+  .related-binyan-menu li {
+  padding: 5px 10px;
+  cursor: pointer;
+  }
+  .related-binyan-menu li:hover {
+  background-color: #f1f1f1;
+  }
+  body.dark-mode .related-binyan-menu li:hover {
+  background-color: #404040;
+  }
+  /* ==========================================================================
+  Table Styles
+  ========================================================================== */
+  table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--container-shadow);
+  margin-bottom: 10px;
+  }
+  #conjugation-table {
+  direction: rtl;
+  }
+  th,
+  td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  }
+  th {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  }
+  #conjugation-table th {
+  border-bottom: 2px solid #0056b3;
+  font-size: 1em;
+  }
+  #conjugation-table td:nth-child(2) {
+  font-size: 1.3em;
+  }
+  #conjugation-table td:nth-child(2) a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  }
+  #conjugation-table td:nth-child(2) a:hover {
+  color: var(--accent-color);
+  }
+  tr:nth-child(even) {
+  background-color: #f9f9f9;
+  }
+  body.dark-mode tr:nth-child(even) {
+  background-color: #2a2a2a;
+  }
+  tr:hover {
+  background-color: #f1f1f1;
+  }
+  body.dark-mode tr:hover {
+  background-color: #404040;
+  }
+  .note {
+  display: block;
+  padding: 5px;
+  background-color: #f9f9f9;
+  color: var(--secondary-text-color);
+  font-style: italic;
+  text-align: left;
+  }
+  body.dark-mode .note {
+  background-color: #333;
+  color: #aaa;
+  }
+  /* ==========================================================================
+  Info Sections & Lists
+  ========================================================================== */
+  .info-section {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 30px;
+  }
+  .info-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+  }
+  .info-section ul li {
+  width: 100%;
+  max-width: 300px;
+  background-color: var(--input-bg);
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-align: right;
+  }
+  #translations-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  }
+  #translations-list li {
+  font-size: 0.9em;
+  }
+  /* ==========================================================================
+  Mobile View Media Query 
+  ========================================================================== */
+  @media (max-width: 768px) {
+  body {
+  padding: 5px;
+  }
+  h1 {
+  font-size: 1.2em;
+  }
+  .container, .header-menus, .tense-tabs {
+  padding: 5px 0;
+  }
+  
+  .conjugation-link {
+  flex-direction: row;
+  gap: 5px;
+  }
+  select,
+  input[type="text"],
+  button {
+  font-size: 0.8em;
+  padding: 5px;
+  min-width: 60px;
+  }
+  .binyan-select-container,
+  .verb-select-container {
+  min-width: 140px;
+  }
+  .tense-button {
+  flex: 0 1 calc(18% - 5px);
+  min-width: 60px;
+  max-width: 100px;
+  font-size: 0.7em;
+  padding: 3px;
+  }
+  /* Hide phonetics column in conjugation table */
+  #conjugation-table th:nth-child(4),
+  #conjugation-table td:nth-child(4) {
+  display: none;
+  }
+  #related-binyan-button {
+  width: 30px;
+  padding: 3px;
+  }
+  .related-binyan-menu {
+  min-width: 150px;
+  }
+  }
+  @media (min-width: 1024px) {
+  .info-section ul {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; 
+  }
+  }
+  
+  /* ==========================================================================
+  Custom Fonts (as provided)
+  ========================================================================== */
+  @font-face {
+  font-family: 'Noto Rashi Hebrew';
+  src: url('fonts/NotoRashiHebrew-VariableFont_wght.ttf') format('truetype');
+  }
+  @font-face {
+  font-family: 'Hadasim CLM';
+  src: url('fonts/Hadasim CLM Regular.ttf') format('truetype');
+  }
+  @font-face {
+  font-family: 'Gveret Levin AlefAlefAlef';
+  src: url('fonts/Gveret Levin AlefAlefAlef Regular.ttf') format('truetype');
+  }
+  @font-face {
+  font-family: 'Frank Ruehl CLM';
+  src: url('fonts/FrankRuehlCLM-Medium.ttf') format('truetype');
+  }
+  @font-face {
+  font-family: 'Dorian CLM';
+  src: url('fonts/DorianCLM-BookItalic.ttf') format('truetype');
+  }
+  @font-face {
+  font-family: 'Ktav Yad CLM';
+  src: url('fonts/KtavYadCLM-MediumItalic.ttf') format('truetype');
+  }
+  @font-face {
+  font-family: 'Noto Serif';
+  src: url('../fonts/NotoSerifHebrew-VariableFont_wdthwght.ttf') format('truetype');
+  font-display: swap;
+  }
+  </style></head>
+<body>
+<!-- Top controls remain horizontal -->
+<div class="conjugation-link">
+<input type="checkbox" id="highlight-toggle" checked />
+<button id="dark-mode-toggle">Dark Mode</button>
+<select id="font-selector">
+<option value="Varela Round">Varela Round</option>
+<option value="Noto Serif">Noto Serif</option>
+<option value="Hadasim CLM">Hadasim CLM</option>
+<option value="Gveret Levin AlefAlefAlef">Gveret Levin AlefAlefAlef</option>
+<option value="Frank Ruehl CLM">Frank Ruehl CLM</option>
+<option value="Dorian CLM">Dorian CLM</option>
+<option value="Ktav Yad CLM">Ktav Yad CLM</option>
+</select>
+
+<input type="text" id="verb-search" placeholder="Search verbs..." />
+</div>
+
+<div class="container">
+<h1>Verb Conjugation</h1>
+<div class="translations-bar">
+<ul id="translations-list"></ul>
+</div>
+<!-- Header menus now include the related verbs button -->
+<div class="header-menus">
+<div class="selection-row">
+<div class="binyan-select-container">
+<select id="binyan-select"></select>
+</div>
+<div class="verb-select-container">
+<div class="verb-select-wrapper">
+<select id="verb-select"></select>
+<div id="related-binyan-container" class="related-binyan-wrapper">
+<button id="related-binyan-button">•</button>
+<ul id="related-binyan-menu" class="related-binyan-menu"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tense-tabs">
+<button class="tense-button active" data-tense="past">Past</button>
+<button class="tense-button" data-tense="present">Present</button>
+<button class="tense-button" data-tense="future">Future</button>
+<button class="tense-button" data-tense="imperative">Imperative</button>
+<button class="tense-button" data-tense="infinitive">Infinitive</button>
+</div>
+</div>
+
+<div class="table-container">
+<table id="conjugation-table"></table>
+</div>
+
+<div class="info-section" id="notes-section">
+<h2>Notes</h2>
+<p id="notes-text"></p>
+</div>
+<div class="info-section" id="examples-section">
+<h2>Examples</h2>
+<ul id="examples-list"></ul>
+</div>
+<div class="info-section" id="binyanim-section">
+<h2>Binyanim</h2>
+<table id="binyanim-table"></table>
+</div>
+<div class="info-section" id="related-words-section">
+<h2>Related Words</h2>
+<ul id="related-words-list"></ul>
+</div>
+<div class="info-section" id="similar-verbs-section">
+<h2>Similar Verbs</h2>
+<ul id="similar-verbs-list"></ul>
+</div>
+<div class="info-section" id="idioms-section">
+<h2>Idioms</h2>
+<ul id="idioms-list"></ul>
+</div>
+
+<script>
+function playAudio(src) {
+const audio = new Audio(src);
+audio.play();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+let verbs = {};
+let verbSelect = document.getElementById("verb-select");
+let conjugationTable = document.getElementById("conjugation-table");
+let tenseButtons = document.querySelectorAll(".tense-button");
+let binyanSelect = document.getElementById("binyan-select");
+let currentTense = "past";
+const fontSelector = document.getElementById("font-selector");
+const body = document.body;
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+const verbSearch = document.getElementById("verb-search");
+const translationsList = document.getElementById("translations-list");
+let examplesSection = document.getElementById("examples-section");
+let examplesList = document.getElementById("examples-list");
+let notesSection = document.getElementById("notes-section");
+let notesText = document.getElementById("notes-text");
+let relatedWordsSection = document.getElementById("related-words-section");
+let relatedWordsList = document.getElementById("related-words-list");
+let similarVerbsSection = document.getElementById("similar-verbs-section");
+let similarVerbsList = document.getElementById("similar-verbs-list");
+let idiomsSection = document.getElementById("idioms-section");
+let idiomsList = document.getElementById("idioms-list");
+let binyanimSection = document.getElementById("binyanim-section");
+let binyanimTable = document.getElementById("binyanim-table");
+
+function normalizeLetter(char) {
+const sofitMap = {
+"ך": "כ",
+"ם": "מ",
+"ן": "נ",
+"ף": "פ",
+"ץ": "צ"
+};
+if (sofitMap[char]) {
+char = sofitMap[char];
+}
+return char.replace(/[\u0591-\u05C7]/g, "");
+}
+
+fontSelector.addEventListener("change", function (e) {
+const selectedFont = e.target.value;
+const fontStyle =
+selectedFont === "Dorian CLM" || selectedFont === "Ktav Yad CLM"
+? "italic"
+: "normal";
+body.style.fontFamily = "'" + selectedFont + "', Arial, sans-serif";
+body.style.fontStyle = fontStyle;
+});
+
+function toggleDarkMode() {
+body.classList.toggle("dark-mode");
+const isDarkMode = body.classList.contains("dark-mode");
+localStorage.setItem("darkMode", isDarkMode);
+darkModeToggle.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
+const verbKey = verbSelect.value;
+const tense =
+document.querySelector(".tense-button.active")?.dataset.tense || "past";
+renderTable(verbKey, tense);
+}
+darkModeToggle.addEventListener("click", toggleDarkMode);
+if (localStorage.getItem("darkMode") === "true") {
+body.classList.add("dark-mode");
+darkModeToggle.textContent = "Light Mode";
+}
+
+function normalizeSearchText(text) {
+return text.toLowerCase();
+}
+function normalizeLetterForHighlight(char) {
+const dageshMap = {
+"בּ": "ב",
+"גּ": "ג",
+"דּ": "ד",
+"כּ": "כ",
+"פּ": "פ",
+"תּ": "ת",
+"שׁ": "ש",
+"שׂ": "ש"
+};
+return dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, "");
+}
+function highlightRoots(form, rootLetters) {
+if (!form || !rootLetters || rootLetters.length < 2) return form;
+const normalizedRoot = rootLetters.map(normalizeLetterForHighlight);
+const formChars = form.split("");
+let consonantPositions = [];
+let consonants = [];
+formChars.forEach((char, idx) => {
+if (/[\u05D0-\u05EA]/.test(char)) {
+consonantPositions.push(idx);
+consonants.push(normalizeLetterForHighlight(char));
+}
+});
+if (consonants.length === 0) return form;
+let matchedPositions = [];
+let rootIndex = 0;
+for (let i = 0; i < consonants.length && rootIndex < normalizedRoot.length; i++) {
+if (consonants[i] === normalizedRoot[rootIndex]) {
+matchedPositions.push(consonantPositions[i]);
+rootIndex++;
+}
+}
+let highlightedForm = "";
+for (let i = 0; i < formChars.length; i++) {
+if (matchedPositions.includes(i)) {
+highlightedForm += `<span class="root-letter">${formChars[i]}</span>`;
+} else {
+highlightedForm += formChars[i];
+}
+}
+return highlightedForm;
+}
+
+function renderTable(verbKey, tense) {
+const verb = verbs[verbKey];
+if (!verb || !verb.conjugations[tense]) {
+conjugationTable.innerHTML =
+'<tr><td colspan="5">No data available for this tense.</td></tr>';
+return;
+}
+let conjugations = verb.conjugations[tense];
+const desiredPronounOrder = ["הוא","היא","את","אתה","אני","אנחנו","אתם","אתן","הם","הן"];
+conjugations.sort((a, b) => {
+let indexA = desiredPronounOrder.indexOf(a.pronoun);
+let indexB = desiredPronounOrder.indexOf(b.pronoun);
+if (indexA === -1) indexA = desiredPronounOrder.length;
+if (indexB === -1) indexB = desiredPronounOrder.length;
+return indexA - indexB;
+});
+const headerData = [
+{ text: "Pronoun", class: "" },
+{ text: "Form", class: "" },
+{ text: "Transliteration", class: "ltr" },
+{ text: "Phonetics", class: "" },
+{ text: "Translation", class: "" }
+];
+let rows = [
+"<tr>" +
+headerData.map((data) => `<th class="${data.class}">${data.text}</th>`).join("") +
+"</tr>"
+];
+for (let item of conjugations) {
+const highlightedForm = highlightRoots(item.form, verb.root);
+if (item.audio) {
+const clickableForm = `<a href="#" onclick="playAudio('${item.audio}'); event.preventDefault();">${highlightedForm}</a>`;
+rows.push(
+`<tr>
+<td>${item.pronoun}</td>
+<td>${clickableForm}</td>
+<td class="ltr">${item.transliteration}</td>
+<td class="ltr">${item.phonetics}</td>
+<td>${item.translation}</td>
+</tr>`
+);
+} else {
+rows.push(
+`<tr>
+<td>${item.pronoun}</td>
+<td>${highlightedForm}</td>
+<td class="ltr">${item.transliteration}</td>
+<td class="ltr">${item.phonetics}</td>
+<td>${item.translation}</td>
+</tr>`
+);
+}
+}
+conjugationTable.innerHTML = rows.join("");
+}
+
+function populateBinyanSelect() {
+const binyanMap = new Map();
+for (let verbKey in verbs) {
+const verb = verbs[verbKey];
+if (verb.binyan_en) {
+binyanMap.set(verb.binyan_en, verb.binyan);
+}
+}
+const classicalOrder = ["Paal","Nifal","Piel","Pual","Hitpael","Hifil","Hufal"];
+const sortedBinyanim = [];
+classicalOrder.forEach((binyanEn) => {
+if (binyanMap.has(binyanEn)) {
+sortedBinyanim.push(binyanEn);
+}
+});
+binyanSelect.innerHTML = "";
+sortedBinyanim.forEach((binyanEn) => {
+const option = document.createElement("option");
+option.value = binyanEn;
+option.textContent = binyanEn;
+binyanSelect.appendChild(option);
+});
+const allOption = document.createElement("option");
+allOption.value = "all";
+allOption.textContent = "All";
+binyanSelect.appendChild(allOption);
+binyanSelect.value = sortedBinyanim.includes("Paal") ? "Paal" : "all";
+}
+
+function populateVerbSelect(binyanFilter = "all", searchTerm = "") {
+verbSelect.innerHTML = "";
+const normalizedSearch = normalizeSearchText(searchTerm);
+const previousVerbKey = verbSelect.value || "";
+let hasSelectedOption = false;
+for (let verbKey in verbs) {
+const verb = verbs[verbKey];
+const verbBinyanEn = verb.binyan_en || "Unknown";
+if (normalizedSearch) {
+const rootText = verb.root && verb.root.length >= 3 ? verb.root.join("") : "";
+const englishTranslation = verb.translations && verb.translations["en"] ? verb.translations["en"] : "";
+const normalizedRoot = normalizeSearchText(rootText);
+const normalizedTranslation = normalizeSearchText(englishTranslation);
+if (normalizedRoot.includes(normalizedSearch) || normalizedTranslation.includes(normalizedSearch)) {
+const option = document.createElement("option");
+option.value = verbKey;
+const displayPastForm = verb.conjugations?.past?.find(c => c.pronoun === "הוא")?.form || "N/A";
+const displayTranslation = englishTranslation || "No translation";
+option.textContent = `${displayPastForm} - ${displayTranslation}`;
+verbSelect.appendChild(option);
+if (verbKey === previousVerbKey) {
+option.selected = true;
+hasSelectedOption = true;
+}
+}
+} else {
+if (binyanFilter === "all" || verbBinyanEn === binyanFilter) {
+const rootText = verb.root && verb.root.length >= 3 ? verb.root.join("") : "";
+const englishTranslation = verb.translations && verb.translations["en"] ? verb.translations["en"] : "";
+const option = document.createElement("option");
+option.value = verbKey;
+const displayPastForm = verb.conjugations?.past?.find(c => c.pronoun === "הוא")?.form || "N/A";
+const displayTranslation = englishTranslation || "No translation";
+option.textContent = `${displayPastForm} - ${displayTranslation}`;
+verbSelect.appendChild(option);
+if (verbKey === previousVerbKey) {
+option.selected = true;
+hasSelectedOption = true;
+}
+}
+}
+}
+if (verbSelect.options.length > 0 && !hasSelectedOption) {
+verbSelect.selectedIndex = 0;
+} else if (verbSelect.options.length === 0) {
+verbSelect.innerHTML = '<option value="">No results</option>';
+}
+const currentVerbKey = verbSelect.value;
+renderTable(currentVerbKey, currentTense);
+updateRelatedBinyanSelect(currentVerbKey);
+renderAdditionalInfo(currentVerbKey);
+renderTranslationsList(currentVerbKey);
+updateBinyanSelect(currentVerbKey);
+}
+
+function updateBinyanSelect(verbKey) {
+const verb = verbs[verbKey];
+binyanSelect.value = verb && verb.binyan_en ? verb.binyan_en : "all";
+}
+
+function updateRelatedBinyanSelect(verbKey) {
+const menu = document.getElementById("related-binyan-menu");
+const button = document.getElementById("related-binyan-button");
+if (!verbKey || !verbs[verbKey]) {
+button.style.display = "none";
+menu.innerHTML = "";
+return;
+}
+const verb = verbs[verbKey];
+const rootStr = verb.root.join("");
+const relatedVerbs = Object.entries(verbs)
+.filter(([key, v]) => v.root.join("") === rootStr && key !== verbKey)
+.map(([key, v]) => ({
+key,
+pastForm: v.conjugations?.past?.find(c => c.pronoun === "הוא")?.form || "N/A",
+binyan_en: v.binyan_en
+}));
+if (relatedVerbs.length > 0) {
+button.style.display = "inline-block";
+menu.innerHTML = "";
+relatedVerbs.forEach(({ key, pastForm, binyan_en }) => {
+const li = document.createElement("li");
+li.textContent = `${pastForm} (${binyan_en})`;
+li.dataset.key = key;
+menu.appendChild(li);
+});
+} else {
+button.style.display = "none";
+menu.innerHTML = "";
+}
+}
+
+function renderAdditionalInfo(verbKey) {
+const verb = verbs[verbKey];
+examplesList.innerHTML = "";
+if (verb && verb.examples && verb.examples.length > 0) {
+examplesSection.style.display = "block";
+verb.examples.forEach(example => {
+const listItem = document.createElement("li");
+listItem.className = "multiline-item";
+listItem.innerHTML = `
+<strong dir="rtl">${example.hebrew}</strong>
+<em dir="ltr">${example.transliteration}</em>
+<p dir="ltr">${example.translation}</p>
+`;
+examplesList.appendChild(listItem);
+});
+} else {
+examplesSection.style.display = "none";
+}
+idiomsList.innerHTML = "";
+if (verb && verb.idioms && verb.idioms.length > 0) {
+idiomsSection.style.display = "block";
+verb.idioms.forEach(idiom => {
+const listItem = document.createElement("li");
+listItem.className = "multiline-item";
+listItem.innerHTML = `
+<strong dir="rtl">${idiom.expression}</strong>
+<em dir="ltr">(${idiom.transliteration})</em>
+<p dir="ltr">${idiom.translation}</p>
+`;
+idiomsList.appendChild(listItem);
+});
+} else {
+idiomsSection.style.display = "none";
+}
+relatedWordsList.innerHTML = "";
+if (verb && verb.related_words && verb.related_words.length > 0) {
+relatedWordsSection.style.display = "block";
+verb.related_words.forEach(word => {
+const listItem = document.createElement("li");
+listItem.setAttribute("dir", "rtl");
+listItem.textContent = word;
+relatedWordsList.appendChild(listItem);
+});
+} else {
+relatedWordsSection.style.display = "none";
+}
+similarVerbsList.innerHTML = "";
+if (verb && verb.similar_verbs && verb.similar_verbs.length > 0) {
+similarVerbsSection.style.display = "block";
+verb.similar_verbs.forEach(similarVerb => {
+const listItem = document.createElement("li");
+listItem.setAttribute("dir", "rtl");
+listItem.textContent = similarVerb;
+similarVerbsList.appendChild(listItem);
+});
+} else {
+similarVerbsSection.style.display = "none";
+}
+if (verb && verb.notes) {
+notesSection.style.display = "block";
+notesText.setAttribute("dir", "ltr");
+notesText.textContent = verb.notes;
+} else {
+notesSection.style.display = "none";
+}
+renderBinyanim(verb ? verb.binyanim : null);
+}
+
+function renderBinyanim(binyanim) {
+if (binyanim && typeof binyanim === "object" && Object.keys(binyanim).length > 0) {
+binyanimSection.style.display = "block";
+const binyanHeaderData = [
+{ text: "Binyan" },
+{ text: "Infinitive" },
+{ text: "Meaning" }
+];
+let headerRow = "<tr>" + binyanHeaderData.map(data => `<th>${data.text}</th>`).join("") + "</tr>";
+binyanimTable.innerHTML = headerRow;
+for (let binyan in binyanim) {
+const binyanData = binyanim[binyan];
+if (!binyanData || typeof binyanData !== "object") {
+console.warn(`Invalid binyan data for ${binyan}:`, binyanData);
+continue;
+}
+let meaningContent = Array.isArray(binyanData.meaning) ? binyanData.meaning.join(", ") : "N/A";
+if (binyanData.note) {
+meaningContent += `<span class="note">(${binyanData.note})</span>`;
+}
+binyanimTable.innerHTML += `
+<tr>
+<td>${binyan}</td>
+<td>${binyanData.infinitive || "-"}</td>
+<td>${meaningContent}</td>
+</tr>
+`;
+}
+} else {
+binyanimSection.style.display = "none";
+}
+}
+
+function renderTranslationsList(verbKey) {
+translationsList.innerHTML = "";
+const verb = verbs[verbKey];
+if (verb && verb.translations) {
+for (let [lang, translation] of Object.entries(verb.translations)) {
+const listItem = document.createElement("li");
+listItem.textContent = `${lang}: ${translation}`;
+translationsList.appendChild(listItem);
+}
+}
+}
+
+function addEventListeners() {
+tenseButtons.forEach(button => {
+button.addEventListener("click", () => {
+tenseButtons.forEach(btn => btn.classList.remove("active"));
+button.classList.add("active");
+currentTense = button.dataset.tense;
+const verbKey = verbSelect.value;
+renderTable(verbKey, currentTense);
+});
+});
+verbSelect.addEventListener("change", () => {
+const verbKey = verbSelect.value;
+renderTable(verbKey, currentTense);
+renderAdditionalInfo(verbKey);
+renderTranslationsList(verbKey);
+updateRelatedBinyanSelect(verbKey);
+});
+binyanSelect.addEventListener("change", () => {
+const selectedBinyan = binyanSelect.value;
+const searchTerm = verbSearch.value.trim();
+populateVerbSelect(selectedBinyan === "all" ? "all" : selectedBinyan, searchTerm);
+});
+verbSearch.addEventListener("input", () => {
+const searchTerm = verbSearch.value.trim();
+populateVerbSelect("all", searchTerm);
+});
+document.getElementById("related-binyan-button").addEventListener("click", (e) => {
+const menu = document.getElementById("related-binyan-menu");
+menu.style.display = menu.style.display === "block" ? "none" : "block";
+e.stopPropagation();
+});
+document.addEventListener("click", (e) => {
+const container = document.getElementById("related-binyan-container");
+if (!container.contains(e.target)) {
+document.getElementById("related-binyan-menu").style.display = "none";
+}
+});
+document.getElementById("related-binyan-menu").addEventListener("click", (e) => {
+const li = e.target.closest("li");
+if (li && li.dataset.key) {
+const verbKey = li.dataset.key;
+const selectedVerb = verbs[verbKey];
+const newBinyanFilter = selectedVerb.binyan_en || "Unknown";
+binyanSelect.value = newBinyanFilter;
+verbSearch.value = "";
+populateVerbSelect(newBinyanFilter, "");
+verbSelect.value = verbKey;
+verbSelect.dispatchEvent(new Event("change"));
+updateRelatedBinyanSelect(verbKey);
+document.getElementById("related-binyan-menu").style.display = "none";
+}
+});
+}
+
+fetch("verbs.json")
+.then(response => response.json())
+.then(data => {
+verbs = data;
+populateBinyanSelect();
+populateVerbSelect();
+addEventListeners();
+const initialVerbKey = verbSelect.value;
+if (initialVerbKey) {
+renderTable(initialVerbKey, "past");
+renderAdditionalInfo(initialVerbKey);
+renderTranslationsList(initialVerbKey);
+updateRelatedBinyanSelect(initialVerbKey);
+}
+})
+.catch(error => {
+console.error("Error fetching verbs data:", error);
+conjugationTable.innerHTML = '<tr><td colspan="5">Error loading data.</td></tr>';
+});
+});
+
+document.getElementById("highlight-toggle").addEventListener("change", function () {
+const table = document.getElementById("conjugation-table");
+if (this.checked) {
+table.classList.remove("no-highlight");
+} else {
+table.classList.add("no-highlight");
+}
+});
+</script> </body>
 </html>
