@@ -90,37 +90,36 @@ rel="stylesheet"
   overflow-x: auto;
   }
   .conjugation-link {
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-  }
+width: 100%;
+max-width: 1000px;
+display: flex;
+flex-wrap: wrap; /* allow wrapping if needed */
+justify-content: center;
+align-items: center;
+gap: 10px;
+margin-bottom: 10px;
+}
   .conjugation-link select,
   .conjugation-link button,
   .conjugation-link input {
   flex-shrink: 0;
   }
   .header-menus {
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  margin: 0 auto 10px;
-  padding: 5px 0;
-  background-color: var(--container-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: var(--container-shadow);
-  }
+width: 100%;
+max-width: 1000px;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+gap: 5px;
+margin: 0;
+padding: 5px 0; /* If needed, you can experiment with reducing vertical padding */
+background-color: var(--container-bg);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+box-shadow: var(--container-shadow);
+}
   .selection-row {
   display: flex;
   flex-direction: row;
@@ -129,13 +128,13 @@ rel="stylesheet"
   flex-wrap: nowrap;
   }
   .binyan-select-container,
-  .verb-select-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1 1 auto;
-  min-width: 80px;
-  }
+.verb-select-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+flex: 1 1 auto; 
+min-width: 50px; 
+}
   .verb-select-wrapper {
   display: flex;
   flex-direction: row;
@@ -172,9 +171,13 @@ rel="stylesheet"
   font-size: inherit;
   font-weight: normal;
   }
-  .no-highlight .root-letter:hover {
-  color: var(--text-color);
-  }
+  .no-highlight #conjugation-table td:nth-child(2) a:hover {
+    color: var(--text-color);
+}
+
+.no-highlight #conjugation-table td:nth-child(2) a:hover .root-letter {
+    color: inherit;
+}
   label {
   font-size: 0.9em;
   color: var(--secondary-text-color);
@@ -307,17 +310,18 @@ rel="stylesheet"
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
   #related-binyan-button {
-  width: 15px;
-  padding: 5px;
-  text-align: center;
-  background-color: var(--button-bg);
-  border: 1px solid var(--button-border);
-  border-radius: 4px;
-  color: var(--button-text-color);
-  cursor: pointer;
-  box-shadow: var(--box-shadow);
-  transition: all 0.3s ease;
-  }
+width: auto; /* Allow the width to be determined by its content */
+min-width: 0; /* Remove any enforced minimum width */
+padding: 2px 4px; /* Reduced vertical and horizontal padding for a narrow appearance */
+text-align: center;
+background-color: var(--button-bg);
+border: 1px solid var(--button-border);
+border-radius: 4px;
+color: var(--button-text-color);
+cursor: pointer;
+box-shadow: var(--box-shadow);
+transition: all 0.3s ease;
+}
   .related-binyan-wrapper {
   position: relative;
   display: inline-block;
@@ -494,7 +498,13 @@ rel="stylesheet"
   gap: 10px;
   }
   }
-  @media (max-width: 460px) {
+  @media (max-width: 500px) {
+    #conjugation-table th:nth-child(4),
+  #conjugation-table td:nth-child(4) {
+  display: none;
+  }
+  }
+  @media (max-width: 400px) {
   #conjugation-table th:nth-child(4),
   #conjugation-table td:nth-child(4) {
   display: none;
@@ -507,9 +517,11 @@ rel="stylesheet"
   max-width: none;
   }
   .selection-row {
-  flex-direction: column;
-  align-items: stretch;
-  gap: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
   }
   .binyan-select-container,
   .verb-select-container {
