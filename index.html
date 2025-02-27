@@ -4,18 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title data-label="dual">לימוד בניינים | Verb Conjugation</title>
-  
-  <!-- Ionicons CSS -->
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-  
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Alef&family=Varela+Round&display=swap" rel="stylesheet">
-  
   <style>
 /* ==========================================================================
-   Base Styles
+   Root Variables
    ========================================================================== */
-:root {
+   :root {
   --font-family: 'Varela Round', Arial, sans-serif;
   --background-color: #F0F1F4;
   --background-image: linear-gradient(to bottom, #F0F1F4, #e0e0e0);
@@ -55,6 +50,9 @@ body.dark-mode {
   --accent-color: #8fb0d6;
 }
 
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -96,15 +94,62 @@ body {
 }
 
 .conjugation-link {
-  display: flex;            /* Enables Flexbox layout */
-  justify-content: space-between; /* Ensures maximum space between left and right elements */
+  display: flex;
+  justify-content: space-between;
   flex-wrap: nowrap;
-  align-items: center;      /* Vertically centers all items */
+  align-items: center;
 }
+
 .left-controls {
-  display: flex;            /* Makes the left elements align in a row */
-  align-items: center;      /* Vertically centers the elements within this group */
-  gap: 10px;                /* Adds spacing between the font selector, buttons, etc. */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-menus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 20px;
+  padding: 10px;
+  width: 100%;
+  max-width: 1000px;
+  background-color: var(--container-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--container-shadow);
+}
+
+.translations-bar {
+  width: 100%;
+  max-width: 900px;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  background-color: var(--input-bg);
+  border-radius: 6px;
+  box-shadow: var(--box-shadow);
+}
+
+.selection-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.binyan-select-container,
+.verb-select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.verb-select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 /* ==========================================================================
@@ -126,6 +171,13 @@ h1 {
   border-bottom: 2px solid var(--primary-color);
 }
 
+.translations-card h3 {
+  font-size: 1.2em;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
 .root-letter {
   font-size: 1.1em;
   font-weight: bold;
@@ -136,79 +188,26 @@ h1 {
   color: var(--root-letter-hover);
 }
 
-/* ==========================================================================
-   Header Menus
-   ========================================================================== */
-.header-menus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 20px;
-  padding: 0 10px;
-  width: 100%;
-  max-width: 1000px;
-}
-
+.binyan-select-container label,
+.verb-select-container label,
 .header-menus label {
-  font-size: 1em;
-  margin-right: 10px;
-  margin-bottom: 5px;
+  font-size: 0.9em;
   color: var(--secondary-text-color);
-  text-align: right;
-}
-
-#translations-list-container {
-  flex: 1;
-  margin-right: 20px;
-  max-width: calc(100% - 300px);
-}
-
-#verb-select-container,
-#binyan-select-container {
-  flex: 0 0 auto;
-  flex-direction: row;
-  max-width: 100%;
-}
-
-#binyan-select-container {
-  margin-right: 20px;
-}
-
-#translations-list {
-  list-style-type: none;
-  font-size: 0.7em;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
-}
-
-#translations-list li {
-  flex: 0 1 auto;
-  padding: 5px;
-  font-size: 1em;
-  color: var(--text-color);
+  margin-bottom: 5px;
   text-align: center;
-  background-color: var(--input-bg);
-  border-radius: 4px;
-  /* No border as per request */
 }
 
-body.dark-mode #translations-list li {
-  color: var(--text-color);
-}
-
-.header-menus select,
-#binyan-select-container select {
-  flex-direction: row;
+/* ==========================================================================
+   Form Elements
+   ========================================================================== */
+   #binyan-select,
+#verb-select {
   width: 100%;
   max-width: 250px;
-  padding: 10px;
+  padding: 8px;
   font-size: 1em;
   border: 1px solid var(--input-border-color);
-  border-radius: 8px;
+  border-radius: 6px;
   background-color: var(--input-bg);
   color: var(--text-color);
   cursor: pointer;
@@ -216,61 +215,16 @@ body.dark-mode #translations-list li {
   box-shadow: var(--box-shadow);
   transition: all 0.3s ease;
   text-align: center;
+  direction: rtl;
 }
 
-.header-menus select:focus,
-#binyan-select-container select:focus {
+#binyan-select:focus,
+#verb-select:focus {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
 }
 
-/* ==========================================================================
-   Buttons and Inputs
-   ========================================================================== */
-.tense-tabs {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: nowrap !important; /* Force horizontal layout with highest priority */
-  justify-content: center;
-  gap: 5px; /* Tighter gap for five buttons in a row */
-  padding: 10px;
-  width: 100%;
-  max-width: 1000px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  box-shadow: var(--box-shadow);
-  overflow-x: auto; /* Horizontal scrolling for overflow on small screens */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
-}
-
-/* Style for each tense button to fit five in a row */
-.tense-button {
-  flex: 0 0 auto !important; /* Prevent buttons from growing, shrinking, or wrapping */
-  width: 18%; /* Each button takes ~18% of the container width (5 buttons = 90%, leaving 10% for gaps) */
-  min-width: 80px; /* Minimum width to ensure readability */
-  max-width: 120px; /* Maximum width to avoid stretching too much */
-  text-align: center;
-  font-size: 1em;
-  padding: 3px 8px;
-  margin: 0; /* Remove margins to control spacing with gap */
-  border-radius: 4px;
-  background-color: var(--button-bg);
-  border: 1px solid var(--button-border);
-  color: var(--button-text-color);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: var(--box-shadow);
-  white-space: nowrap !important; /* Prevent text wrapping within buttons */
-  overflow: hidden; /* Handle any overflow within buttons */
-  text-overflow: ellipsis; /* Add ellipsis if text overflows */
-}
-
-/* For dark mode, ensure consistency */
-body.dark-mode .tense-tabs {
-  background-color: rgba(30, 30, 30, 0.4);
-}
 
 #dark-mode-toggle,
 #language-toggle,
@@ -293,14 +247,93 @@ body.dark-mode .tense-tabs {
 }
 
 #font-selector {
-  appearance: none; /* Consistent with button-like styling */
+  appearance: none;
 }
 
+#verb-select-container select,
+#verb-select-container input {
+  width: auto;
+  max-width: 200px;
+}
+
+#binyan-select-container select {
+  width: auto;
+  max-width: 250px;
+}
+
+#verb-search::placeholder {
+  color: var(--secondary-text-color);
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.tense-tabs {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap !important;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+  width: 100%;
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tense-button {
+  flex: 0 0 auto !important;
+  width: 18%;
+  min-width: 80px;
+  max-width: 120px;
+  text-align: center;
+  font-size: 1em;
+  padding: 3px 8px;
+  margin: 0;
+  border-radius: 4px;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#related-binyan-button {
+  width: 40px;
+  padding: 5px;
+  text-align: center;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  border-radius: 4px;
+  color: var(--button-text-color);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+.related-binyan-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+
+
+/* ==========================================================================
+   Interactive States
+   ========================================================================== */
 .tense-button:hover,
 #dark-mode-toggle:hover,
 #language-toggle:hover,
 #font-selector:hover,
-#verb-search:hover {
+#verb-search:hover,
+#related-binyan-button:hover {
   background-color: #d5d5d5;
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -309,9 +342,9 @@ body.dark-mode .tense-tabs {
 body.dark-mode .tense-button:hover,
 body.dark-mode #dark-mode-toggle:hover,
 body.dark-mode #language-toggle:hover,
-
 body.dark-mode #font-selector:hover,
-body.dark-mode #verb-search:hover {
+body.dark-mode #verb-search:hover,
+body.dark-mode #related-binyan-button:hover {
   background-color: #555;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -325,15 +358,42 @@ body.dark-mode #verb-search:hover {
 
 #dark-mode-toggle:focus,
 #font-selector:focus,
-#verb-search:focus {
+#verb-search:focus,
+#binyan-select:focus,
+#verb-select:focus {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
 }
 
-#verb-search::placeholder {
-  color: var(--secondary-text-color);
-  opacity: 0.7;
+.related-binyan-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  list-style: none;
+  padding: 5px 0;
+  z-index: 10;
+  direction: rtl;
+}
+
+.related-binyan-menu li {
+  padding: 5px 10px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.related-binyan-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+body.dark-mode .related-binyan-menu li:hover {
+  background-color: #404040;
 }
 
 /* ==========================================================================
@@ -436,40 +496,36 @@ body.dark-mode #binyanim-table .note {
 }
 
 .info-section ul {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping into multiple rows if needed, but maintain horizontal orientation */
-  gap: 10px; /* Reduced space between cards to minimize empty space */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
   padding: 0;
   margin: 0;
   list-style-type: none;
-  justify-content: center; /* Center cards horizontally in the container */
-  align-items: flex-start; /* Align cards at the top to prevent vertical stretching */
+  justify-items: center;
 }
 
 .info-section ul li {
-  background-color: var(--input-bg); /* White background or dark mode equivalent */
-  padding: 10px; /* Reduced padding for compactness */
-  border: 1px solid var(--border-color); /* Light border */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: var(--box-shadow); /* Subtle shadow */
-  transition: transform 0.3s, background-color 0.3s; /* Smooth hover effect */
-  margin-bottom: 10px; /* Reduced space between cards */
-  margin-left: auto; /* Center cards horizontally */
-  margin-right: auto; /* Center cards horizontally */
+  width: 100%;
+  background-color: var(--input-bg);
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s, background-color 0.3s;
+  margin-bottom: 5px;
+  direction: rtl;
+  text-align: right;
 }
 
-
-
-/* Specific targeting for Examples, Related Words, Similar Verbs, and Idioms */
 #examples-list,
 #related-words-list,
 #similar-verbs-list,
 #idioms-list {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping into multiple rows if needed */
-  gap: 10px; /* Reduced space between cards */
-  justify-content: center; /* Center cards horizontally */
-  align-items: flex-start; /* Align cards at the top */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5px;
+  justify-items: center;
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -479,57 +535,52 @@ body.dark-mode #binyanim-table .note {
 #related-words-list li,
 #similar-verbs-list li,
 #idioms-list li {
-  display: block; /* Ensure each item is a block for card styling */
-  background-color: var(--input-bg); /* Match background */
-  border: 1px solid var(--border-color); /* Match border */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: var(--box-shadow); /* Match shadow */
-  padding: 8px; /* Reduced padding for compactness */
-  margin-bottom: 8px; /* Reduced space between cards */
-  margin-left: auto; /* Center cards horizontally */
-  margin-right: auto; /* Center cards horizontally */
-  transition: transform 0.3s, background-color 0.3s; /* Smooth hover effect */
+  display: block;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  padding: 8px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
-
-
-/* Ensure text alignment and direction for RTL content */
 #examples-list li,
 #related-words-list li,
 #similar-verbs-list li,
 #idioms-list li {
-  direction: rtl; /* Right-to-left for Hebrew text */
-  text-align: right; /* Align text to the right */
-  font-size: 0.9em; /* Slightly smaller font for compactness */
+  direction: rtl;
+  text-align: right;
+  font-size: 0.9em;
 }
 
 .info-section ul li strong,
 .info-section ul li em,
-.info-section ul li p,
-.info-section ul li span {
+.info-section ul li p {
+  display: block;
   font-size: 1.1em;
+  margin-bottom: 5px;
 }
 
 .info-section ul li strong {
   color: var(--text-color);
-  margin-bottom: 5px; /* Reduced margin for compactness */
 }
 
 .info-section ul li em {
   color: var(--secondary-text-color);
-  margin-bottom: 5px; /* Reduced margin for compactness */
 }
 
 .info-section ul li p {
   color: var(--text-color);
-  margin-bottom: 5px; /* Reduced margin for compactness */
 }
 
 li.multiline-item strong,
 li.multiline-item em,
 li.multiline-item p {
   display: block;
-  margin-bottom: 5px; /* Reduced margin for compactness */
+  margin-bottom: 5px;
 }
 
 /* ==========================================================================
@@ -560,100 +611,25 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   background: #444;
 }
 
-#verb-select-container {
-  display: flex; /* Make it a flex container */
-  flex-direction: row; /* Arrange children horizontally */
-  align-items: center; /* Vertically center the elements */
-  gap: 10px; /* Add space between elements */
-  flex: 0 0 auto; /* Keep it from growing or shrinking */
-  max-width: 100%; /* Respect container bounds */
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+   #translations-list {
+  list-style-type: none;
+  font-size: 0.9em;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
 }
 
-#verb-select-container select,
-#verb-select-container input {
-  width: auto; /* Take natural width */
-  max-width: 200px; /* Limit width to prevent overflow */
-}
 
-/* Remove flex-direction from #binyan-select-container since it’s not a flex container */
-#binyan-select-container {
-  flex: 0 0 auto;
-  max-width: 100%;
-}
 
-#binyan-select-container select {
-  width: auto;
-  max-width: 250px; /* Consistent with existing max-width */
-}
-
-.related-binyan-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-#related-binyan-button {
-  width: 40px;
-  padding: 5px;
-  text-align: center;
-  background-color: var(--button-bg);
-  border: 1px solid var(--button-border);
-  border-radius: 4px;
-  color: var(--button-text-color);
-  cursor: pointer;
-  box-shadow: var(--box-shadow);
-  transition: all 0.3s ease;
-}
-
-#related-binyan-button:hover {
-  background-color: #d5d5d5;
-}
-
-body.dark-mode #related-binyan-button:hover {
-  background-color: #555;
-}
-
-.related-binyan-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0; /* Changed from left: 0 to align with button’s right edge */
-  left: auto; /* Ensure left isn’t overriding */
-  min-width: 200px;
-  background-color: var(--input-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  box-shadow: var(--box-shadow);
-  list-style: none;
-  padding: 5px 0;
-  z-index: 10;
-}
-
-.related-binyan-menu li {
-  padding: 5px 10px;
-  cursor: pointer;
-  text-align: right; /* RTL for Hebrew */
-}
-
-.related-binyan-menu li:hover {
-  background-color: #f1f1f1;
-}
-
-body.dark-mode .related-binyan-menu li:hover {
-  background-color: #404040;
-}
-
-@media (max-width: 768px) {
-  #related-binyan-button {
-    width: 30px;
-    padding: 3px;
-  }
-  .related-binyan-menu {
-    min-width: 150px;
-  }
-}
 
 /* ==========================================================================
-   Media Queries (Mobile)
+   Media Queries
    ========================================================================== */
 @media (max-width: 768px) {
   body {
@@ -694,21 +670,23 @@ body.dark-mode .related-binyan-menu li:hover {
   }
 
   .header-menus {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 0;
+    padding: 5px;
   }
 
-  #translations-list-container {
-    flex: 1 1 auto;
-    margin-right: 0;
-    max-width: 100%;
-    overflow-x: auto;
+  .translations-card {
+    padding: 5px;
+  }
+
+  .selection-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
 
   #translations-list {
     flex-wrap: nowrap;
     gap: 5px;
+    justify-content: center;
   }
 
   #translations-list li {
@@ -717,45 +695,40 @@ body.dark-mode .related-binyan-menu li:hover {
     white-space: nowrap;
   }
 
-  #verb-select-container {
-    display: flex; /* Ensure it remains a flex container */
-    flex-direction: row;
-    gap: 5px; /* Smaller gap for mobile */
+  .binyan-select-container,
+  .verb-select-container {
+    width: 100%;
+    max-width: 200px;
   }
 
-  #verb-select-container select,
-  #verb-select-container input {
-    width: auto;
-    max-width: 120px; /* Smaller max-width for mobile */
+  #binyan-select,
+  #verb-select {
+    width: 100%;
+    max-width: 200px;
     padding: 5px;
     font-size: 0.8em;
-    box-shadow: none;
   }
 
-  #binyan-select-container select {
-    width: auto;
-    max-width: 120px; /* Adjust for mobile */
-    font-size: 0.8em;
-    padding: 5px;
+  #related-binyan-button {
+    width: 30px;
+    padding: 3px;
   }
 
-  .header-menus label,
-  #verb-select-container label,
-  #binyan-select-container label {
-    display: none;
+  .related-binyan-menu {
+    min-width: 150px;
   }
 
   .tense-tabs {
-    flex-wrap: nowrap !important; /* Keep buttons horizontal on mobile */
+    flex-wrap: nowrap !important;
   }
 
   .tense-button {
-    flex: 0 1 calc(18% - 5px); /* Adjust for five buttons in a row on mobile */
-    min-width: 60px; /* Smaller minimum width for mobile */
-    max-width: 100px; /* Smaller maximum width for mobile */
-    font-size: 0.7em; /* Smaller font for mobile */
-    padding: 2px 6px; /* Reduce padding for mobile */
-    margin: 0; /* Remove margins */
+    flex: 0 1 calc(18% - 5px);
+    min-width: 60px;
+    max-width: 100px;
+    font-size: 0.7em;
+    padding: 2px 6px;
+    margin: 0;
   }
 
   #conjugation-table {
@@ -777,14 +750,16 @@ body.dark-mode .related-binyan-menu li:hover {
   }
 
   .info-section ul {
-    flex-direction: column; /* Stack vertically on mobile */
-    align-items: center; /* Center cards vertically */
-    gap: 5px; /* Further reduced space between cards on mobile */
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
   }
 
   .info-section ul li {
-    padding: 8px; /* Further reduced padding on mobile */
-    margin-bottom: 5px; /* Further reduced space on mobile */
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #selected-verb-translation {
@@ -793,48 +768,52 @@ body.dark-mode .related-binyan-menu li:hover {
     color: var(--secondary-text-color);
   }
 }
-#dark-mode-toggle {
-  white-space: nowrap; /* Keeps the text on a single line */
-  min-width: 80px; /* Ensures the button is wide enough for "Dark Mode" */
-}
 
-/* Custom Fonts for Hebrew */
+/* ==========================================================================
+   Custom Fonts
+   ========================================================================== */
 @font-face {
   font-family: 'Noto Rashi Hebrew';
   src: url('fonts/NotoRashiHebrew-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Hadasim CLM';
   src: url('fonts/Hadasim CLM Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Gveret Levin AlefAlefAlef';
   src: url('fonts/Gveret Levin AlefAlefAlef Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Frank Ruehl CLM';
   src: url('fonts/FrankRuehlCLM-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Dorian CLM';
   src: url('fonts/DorianCLM-BookItalic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Ktav Yad CLM';
   src: url('fonts/KtavYadCLM-MediumItalic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Noto Serif';
   src: url('../fonts/NotoSerifHebrew-VariableFont_wdthwght.ttf') format('truetype');
@@ -863,32 +842,38 @@ body.dark-mode .related-binyan-menu li:hover {
   <input type="text" id="verb-search" placeholder="Search verbs...">
 </div>
 
-  <div class="container">
-    <h1 data-label="dual">לימוד בניינים | Verb Conjugation</h1>
-    <div class="header-menus">
-      <div id="translations-list-container">
-        <ul id="translations-list"></ul>
-      </div>
-      <div id="binyan-select-container">
+<div class="container">
+  <h1 data-label="dual">לימוד בניינים | Verb Conjugation</h1>
+  <div class="header-menus">
+    <div class="translations-bar">
+      <ul id="translations-list"></ul>
+    </div>
+    <div class="selection-row">
+      <div class="binyan-select-container">
+        
         <select id="binyan-select"></select>
       </div>
-      <div id="verb-select-container">
-        <select id="verb-select"></select>
-        <div id="related-binyan-container" class="related-binyan-wrapper">
-          <button id="related-binyan-button">•</button>
-          <ul id="related-binyan-menu" class="related-binyan-menu"></ul>
+      <div class="verb-select-container">
+        
+        <div class="verb-select-wrapper">
+          <select id="verb-select"></select>
+          <div id="related-binyan-container" class="related-binyan-wrapper">
+            <button id="related-binyan-button">•</button>
+            <ul id="related-binyan-menu" class="related-binyan-menu"></ul>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="tense-tabs">
-      <button class="tense-button active" data-tense="past" data-label="dual">עבר | Past</button>
-      <button class="tense-button" data-tense="present" data-label="dual">הווה | Present</button>
-      <button class="tense-button" data-tense="future" data-label="dual">עתיד | Future</button>
-      <button class="tense-button" data-tense="imperative" data-label="dual">ציווי | Imperative</button>
-      <button class="tense-button" data-tense="infinitive" data-label="dual">מקור | Infinitive</button>
-    </div>
   </div>
+
+  <div class="tense-tabs">
+    <button class="tense-button active" data-tense="past" data-label="dual">עבר | Past</button>
+    <button class="tense-button" data-tense="present" data-label="dual">הווה | Present</button>
+    <button class="tense-button" data-tense="future" data-label="dual">עתיד | Future</button>
+    <button class="tense-button" data-tense="imperative" data-label="dual">ציווי | Imperative</button>
+    <button class="tense-button" data-tense="infinitive" data-label="dual">מקור | Infinitive</button>
+  </div>
+</div>
 
   <div class="table-container">
     <table id="conjugation-table"></table>
@@ -1169,64 +1154,66 @@ body.dark-mode .related-binyan-menu li:hover {
       }
 
       function populateVerbSelect(binyanFilter = 'all', searchTerm = '') {
-        verbSelect.innerHTML = '';
-        const normalizedSearch = normalizeSearchText(searchTerm);
-        const previousVerbKey = verbSelect.value || '';
-        let hasSelectedOption = false;
+  verbSelect.innerHTML = '';
+  const normalizedSearch = normalizeSearchText(searchTerm);
+  const previousVerbKey = verbSelect.value || '';
+  let hasSelectedOption = false;
 
-        for (let verbKey in verbs) {
-          const verb = verbs[verbKey];
-          const verbBinyanEn = verb.binyan_en || 'Unknown';
-          if (normalizedSearch) {
-            const rootText = verb.root && verb.root.length >= 3 ? verb.root.join('') : '';
-            const englishTranslation = verb.translations && verb.translations['en'] ? verb.translations['en'] : '';
-            const normalizedRoot = normalizeSearchText(rootText);
-            const normalizedTranslation = normalizeSearchText(englishTranslation);
-            if (normalizedRoot.includes(normalizedSearch) || normalizedTranslation.includes(normalizedSearch)) {
-              const option = document.createElement('option');
-              option.value = verbKey;
-              let displayRoot = verb.root && verb.root.length >= 3 ? verb.root.slice(0, 3).join('·') : '???';
-              let displayTranslation = englishTranslation || 'No translation';
-              option.textContent = `${displayRoot} - ${displayTranslation}`;
-              verbSelect.appendChild(option);
-              if (verbKey === previousVerbKey) {
-                option.selected = true;
-                hasSelectedOption = true;
-              }
-            }
-          } else {
-            if (binyanFilter === 'all' || verbBinyanEn === binyanFilter) {
-              const rootText = verb.root && verb.root.length >= 3 ? verb.root.join('') : '';
-              const englishTranslation = verb.translations && verb.translations['en'] ? verb.translations['en'] : '';
-              const option = document.createElement('option');
-              option.value = verbKey;
-              let displayRoot = verb.root && verb.root.length >= 3 ? verb.root.slice(0, 3).join('·') : '???';
-              let displayTranslation = englishTranslation || 'No translation';
-              option.textContent = `${displayRoot} - ${displayTranslation}`;
-              verbSelect.appendChild(option);
-              if (verbKey === previousVerbKey) {
-                option.selected = true;
-                hasSelectedOption = true;
-              }
-            }
-          }
+  for (let verbKey in verbs) {
+    const verb = verbs[verbKey];
+    const verbBinyanEn = verb.binyan_en || 'Unknown';
+    if (normalizedSearch) {
+      const rootText = verb.root && verb.root.length >= 3 ? verb.root.join('') : '';
+      const englishTranslation = verb.translations && verb.translations['en'] ? verb.translations['en'] : '';
+      const normalizedRoot = normalizeSearchText(rootText);
+      const normalizedTranslation = normalizeSearchText(englishTranslation);
+      if (normalizedRoot.includes(normalizedSearch) || normalizedTranslation.includes(normalizedSearch)) {
+        const option = document.createElement('option');
+        option.value = verbKey;
+        // Changed from root to past tense "הוא" form
+        let displayPastForm = verb.conjugations?.past?.find(c => c.pronoun === 'הוא')?.form || 'N/A';
+        let displayTranslation = englishTranslation || 'No translation';
+        option.textContent = `${displayPastForm} - ${displayTranslation}`;
+        verbSelect.appendChild(option);
+        if (verbKey === previousVerbKey) {
+          option.selected = true;
+          hasSelectedOption = true;
         }
-
-        if (verbSelect.options.length > 0) {
-          if (!hasSelectedOption) {
-            verbSelect.selectedIndex = 0;
-          }
-        } else {
-          verbSelect.innerHTML = '<option value="">אין תוצאות | No results</option>';
-        }
-
-        const currentVerbKey = verbSelect.value;
-        renderTable(currentVerbKey, currentTense);
-        updateRelatedBinyanSelect(currentVerbKey);
-        renderAdditionalInfo(currentVerbKey);
-        renderTranslationsList(currentVerbKey);
-        updateBinyanSelect(currentVerbKey);
       }
+    } else {
+      if (binyanFilter === 'all' || verbBinyanEn === binyanFilter) {
+        const rootText = verb.root && verb.root.length >= 3 ? verb.root.join('') : '';
+        const englishTranslation = verb.translations && verb.translations['en'] ? verb.translations['en'] : '';
+        const option = document.createElement('option');
+        option.value = verbKey;
+        // Changed from root to past tense "הוא" form
+        let displayPastForm = verb.conjugations?.past?.find(c => c.pronoun === 'הוא')?.form || 'N/A';
+        let displayTranslation = englishTranslation || 'No translation';
+        option.textContent = `${displayPastForm} - ${displayTranslation}`;
+        verbSelect.appendChild(option);
+        if (verbKey === previousVerbKey) {
+          option.selected = true;
+          hasSelectedOption = true;
+        }
+      }
+    }
+  }
+
+  if (verbSelect.options.length > 0) {
+    if (!hasSelectedOption) {
+      verbSelect.selectedIndex = 0;
+    }
+  } else {
+    verbSelect.innerHTML = '<option value="">אין תוצאות | No results</option>';
+  }
+
+  const currentVerbKey = verbSelect.value;
+  renderTable(currentVerbKey, currentTense);
+  updateRelatedBinyanSelect(currentVerbKey);
+  renderAdditionalInfo(currentVerbKey);
+  renderTranslationsList(currentVerbKey);
+  updateBinyanSelect(currentVerbKey);
+}
 
       function updateBinyanSelect(verbKey) {
         const verb = verbs[verbKey];
