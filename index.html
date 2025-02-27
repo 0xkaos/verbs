@@ -514,6 +514,11 @@ rel="stylesheet"
   #translations-list li {
     font-size: 0.9em;
   }
+  #verb-search {
+    display: block;
+    margin: 0 auto;
+    width: 25%; /* Adjust this value based on your design preference */
+}
   
   @media (max-width: 768px) {
     body {
@@ -674,11 +679,12 @@ rel="stylesheet"
 <option value="Ktav Yad CLM">Ktav Yad CLM</option>
 </select>
 
-<input type="text" id="verb-search" placeholder="Search verbs..." />
+
 </div>
 
 <div class="container">
 <h1>Verb Conjugation</h1>
+<input type="text" id="verb-search" placeholder="Search verbs..." />
 <div class="translations-bar">
 <ul id="translations-list"></ul>
 </div>
