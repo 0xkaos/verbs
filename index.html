@@ -125,7 +125,7 @@ rel="stylesheet"
   flex-wrap: nowrap; /* never wrap */
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   margin: 0 auto 10px;
   padding: 5px 0;
   background-color: var(--container-bg);
@@ -153,6 +153,9 @@ rel="stylesheet"
   align-items: center;
   gap: 5px;
   }
+  .verb-select-wrapper > #related-binyan-container {
+margin-left: 0;
+}
   /* ==========================================================================
   Typography
   ========================================================================== */
@@ -282,6 +285,12 @@ rel="stylesheet"
   background-color: #4479b6;
   border-color: #4479b6;
   }
+  #dark-mode-toggle {
+    white-space: nowrap; / Do not allow text wrapping /
+    overflow: hidden; / Hide overflow text /
+    text-overflow: ellipsis;/ Show abbreviated text with ellipsis /
+    max-width: 80px; / Adjust this value as needed */
+    }
   
   /* ==========================================================================
   Tense Tabs and Related Buttons
@@ -526,7 +535,26 @@ rel="stylesheet"
   gap: 10px; 
   }
   }
-  
+  @media (max-width: 460px) {
+
+    .conjugation-link select,
+    .conjugation-link button,
+    .conjugation-link input,
+    #font-selector,
+    #dark-mode-toggle,
+    #verb-search {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 0.65em;
+    padding: 3px;
+    }
+    / Squeeze the conjugation table cells */
+    #conjugation-table th,
+    #conjugation-table td {
+    padding: 6px;
+    font-size: 0.75em;
+    }
+    }
   /* ==========================================================================
   Custom Fonts (as provided)
   ========================================================================== */
