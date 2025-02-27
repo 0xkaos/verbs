@@ -17,9 +17,6 @@ href="https://fonts.googleapis.com/css2?family=Alef&family=Varela+Round&display=
 rel="stylesheet"
 />
 <style>
-  /* ==========================================================================
-  Root Variables & Dark Mode
-  ========================================================================== */
   :root {
   --font-family: 'Varela Round', Arial, sans-serif;
   --background-color: #F0F1F4;
@@ -58,9 +55,7 @@ rel="stylesheet"
   --root-letter-hover: #6d97c8;
   --accent-color: #8fb0d6;
   }
-  /* ==========================================================================
-  Base Resets and Body
-  ========================================================================== */
+  
   * {
   margin: 0;
   padding: 0;
@@ -78,9 +73,6 @@ rel="stylesheet"
   padding: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
   }
-  /* ==========================================================================
-  Containers and Layout
-  ========================================================================== */
   .container {
   width: 100%;
   max-width: 1000px;
@@ -97,21 +89,17 @@ rel="stylesheet"
   margin-top: 10px;
   overflow-x: auto;
   }
-  /* ==========================================================================
-  Top Controls & Header Menus – ALWAYS horizontal and constrained
-  ========================================================================== */
   .conjugation-link {
   width: 100%;
   max-width: 1000px;
   display: flex;
-  flex-direction: row; /* force row direction */
-  flex-wrap: nowrap; /* no wrapping */
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
   }
-  /* Ensure the direct children do not suddenly break to a new line */
   .conjugation-link select,
   .conjugation-link button,
   .conjugation-link input {
@@ -121,8 +109,8 @@ rel="stylesheet"
   width: 100%;
   max-width: 1000px;
   display: flex;
-  flex-direction: row; /* horizontal row */
-  flex-wrap: nowrap; /* never wrap */
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   gap: 5px;
@@ -145,7 +133,8 @@ rel="stylesheet"
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 160px;
+  flex: 1 1 auto;
+  min-width: 80px;
   }
   .verb-select-wrapper {
   display: flex;
@@ -154,11 +143,8 @@ rel="stylesheet"
   gap: 5px;
   }
   .verb-select-wrapper > #related-binyan-container {
-margin-left: 0;
-}
-  /* ==========================================================================
-  Typography
-  ========================================================================== */
+  margin-left: 0;
+  }
   h1 {
   font-family: var(--font-family);
   font-size: 1.6em;
@@ -194,9 +180,6 @@ margin-left: 0;
   color: var(--secondary-text-color);
   text-align: center;
   }
-  /* ==========================================================================
-  Form Elements and Buttons
-  ========================================================================== */
   #font-selector {
   font-size: 0.9em;
   padding: 5px 8px;
@@ -247,9 +230,6 @@ margin-left: 0;
   background-color: #555;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
-  
-  /* --- Custom styling for the highlight checkbox --- */
-  /* Base styling for all modes */
   input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -262,7 +242,6 @@ margin-left: 0;
   background-color: var(--input-bg);
   position: relative;
   }
-  /* Display a check mark when the checkbox is checked */
   input[type="checkbox"]:checked::after {
   content: "✓";
   font-size: 14px;
@@ -271,12 +250,10 @@ margin-left: 0;
   top: 0;
   left: 3px;
   }
-  /* Light mode: use accent (orange) when checked */
   body:not(.dark-mode) input[type="checkbox"]:checked {
   background-color: var(--root-letter-color);
   border-color: var(--root-letter-color);
   }
-  /* Dark mode: unchecked is gray, checked is blue */
   body.dark-mode input[type="checkbox"]:not(:checked) {
   background-color: gray;
   border-color: gray;
@@ -286,15 +263,11 @@ margin-left: 0;
   border-color: #4479b6;
   }
   #dark-mode-toggle {
-    white-space: nowrap; / Do not allow text wrapping /
-    overflow: hidden; / Hide overflow text /
-    text-overflow: ellipsis;/ Show abbreviated text with ellipsis /
-    max-width: 80px; / Adjust this value as needed */
-    }
-  
-  /* ==========================================================================
-  Tense Tabs and Related Buttons
-  ========================================================================== */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80px;
+  }
   .tense-tabs {
   display: flex;
   flex-direction: row;
@@ -334,7 +307,7 @@ margin-left: 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
   #related-binyan-button {
-  width: 40px;
+  width: 15px;
   padding: 5px;
   text-align: center;
   background-color: var(--button-bg);
@@ -374,9 +347,6 @@ margin-left: 0;
   body.dark-mode .related-binyan-menu li:hover {
   background-color: #404040;
   }
-  /* ==========================================================================
-  Table Styles
-  ========================================================================== */
   table {
   width: 100%;
   border-collapse: collapse;
@@ -389,6 +359,8 @@ margin-left: 0;
   }
   #conjugation-table {
   direction: rtl;
+  table-layout: fixed;
+  width: 100%;
   }
   th,
   td {
@@ -440,9 +412,6 @@ margin-left: 0;
   background-color: #333;
   color: #aaa;
   }
-  /* ==========================================================================
-  Info Sections & Lists
-  ========================================================================== */
   .info-section {
   width: 100%;
   max-width: 1000px;
@@ -478,9 +447,7 @@ margin-left: 0;
   #translations-list li {
   font-size: 0.9em;
   }
-  /* ==========================================================================
-  Mobile View Media Query 
-  ========================================================================== */
+  
   @media (max-width: 768px) {
   body {
   padding: 5px;
@@ -488,10 +455,11 @@ margin-left: 0;
   h1 {
   font-size: 1.2em;
   }
-  .container, .header-menus, .tense-tabs {
+  .container,
+  .header-menus,
+  .tense-tabs {
   padding: 5px 0;
   }
-  
   .conjugation-link {
   flex-direction: row;
   gap: 5px;
@@ -503,10 +471,6 @@ margin-left: 0;
   padding: 5px;
   min-width: 60px;
   }
-  .binyan-select-container,
-  .verb-select-container {
-  min-width: 140px;
-  }
   .tense-button {
   flex: 0 1 calc(18% - 5px);
   min-width: 60px;
@@ -514,14 +478,9 @@ margin-left: 0;
   font-size: 0.7em;
   padding: 3px;
   }
-  /* Hide phonetics column in conjugation table */
-  #conjugation-table th:nth-child(4),
-  #conjugation-table td:nth-child(4) {
-  display: none;
-  }
   #related-binyan-button {
-  width: 30px;
-  padding: 3px;
+  width: 15px;
+  padding: 5px;
   }
   .related-binyan-menu {
   min-width: 150px;
@@ -532,32 +491,64 @@ margin-left: 0;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px; 
+  gap: 10px;
   }
   }
   @media (max-width: 460px) {
-
-    .conjugation-link select,
-    .conjugation-link button,
-    .conjugation-link input,
-    #font-selector,
-    #dark-mode-toggle,
-    #verb-search {
-    flex: 1 1 auto;
-    min-width: 0;
-    font-size: 0.65em;
-    padding: 3px;
-    }
-    / Squeeze the conjugation table cells */
-    #conjugation-table th,
-    #conjugation-table td {
-    padding: 6px;
-    font-size: 0.75em;
-    }
-    }
-  /* ==========================================================================
-  Custom Fonts (as provided)
-  ========================================================================== */
+  #conjugation-table th:nth-child(4),
+  #conjugation-table td:nth-child(4) {
+  display: none;
+  }
+  .conjugation-link select,
+  .conjugation-link button,
+  .conjugation-link input {
+  flex: none;
+  min-width: 0;
+  max-width: none;
+  }
+  .selection-row {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  }
+  .binyan-select-container,
+  .verb-select-container {
+  width: 100%;
+  min-width: 0;
+  }
+  .verb-select-wrapper {
+  width: 100%;
+  flex-wrap: wrap;
+  }
+  .tense-tabs {
+  gap: 3px;
+  }
+  .tense-button {
+  min-width: 50px;
+  font-size: 0.65em;
+  padding: 2px;
+  }
+  #conjugation-table th,
+  #conjugation-table td {
+  padding: 4px;
+  font-size: 0.7em;
+  }
+  }
+  @media (min-width: 1440px) {
+  h1 {
+  font-size: 1.8em;
+  }
+  .container,
+  .header-menus,
+  .info-section {
+  max-width: 1200px;
+  }
+  .conjugation-link,
+  .table-container,
+  .tense-tabs {
+  max-width: 1200px;
+  }
+  }
   @font-face {
   font-family: 'Noto Rashi Hebrew';
   src: url('fonts/NotoRashiHebrew-VariableFont_wght.ttf') format('truetype');
