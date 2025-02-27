@@ -197,12 +197,82 @@ rel="stylesheet"
     color: var(--secondary-text-color);
     text-align: center;
   }
+  .font-menu-container {
+    position: relative;
+    display: inline-block; /* Keeps it inline with other elements */
+}
 
-  #font-selector {
+/* Style the font button to match other buttons in conjugation-link */
+#font-button {
+    font-size: 0.8em; /* Match other buttons */
+    padding: 5px 10px;
+    border: 1px solid var(--button-border);
+    border-radius: 4px;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    min-width: 80px;
+    text-align: center;
+}
+
+/* Add a dropdown arrow */
+#font-button::after {
+    content: '▼';
+    margin-left: 5px;
     font-size: 0.8em;
-    padding: 5px 8px;
-    min-width: 90px;
-  }
+}
+
+/* Flip the arrow when the menu is open */
+#font-button[aria-expanded="true"]::after {
+    content: '▲';
+}
+
+/* Style the font menu as a dropdown */
+#font-menu {
+    display: none; /* Ensure it’s hidden by default */
+    position: absolute;
+    top: 100%; /* Position directly below the button */
+    left: 0; /* Align with the left edge of the button */
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    min-width: 150px; /* Ensure enough width for options */
+}
+
+/* Remove default list styling */
+#font-menu ul {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+}
+
+/* Style each menu item */
+#font-menu li {
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Add hover effect for usability */
+#font-menu li:hover {
+    background-color: #f1f1f1;
+}
+
+body.dark-mode #font-menu li:hover {
+    background-color: #404040;
+}
+
+/* Dark mode adjustments for the button */
+body.dark-mode #font-button {
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border-color: var(--button-border);
+}
+  
 
   select,
   input[type="text"] {
@@ -295,8 +365,6 @@ rel="stylesheet"
   #dark-mode-toggle {
     font-size: .8em;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     max-width: 80px;
   }
 
@@ -342,7 +410,7 @@ rel="stylesheet"
   }
 
   #related-binyan-button {
-    width: auto;
+    width: 20px;
     min-width: 0;
     padding: 2px 4px;
     text-align: center;
@@ -665,18 +733,25 @@ rel="stylesheet"
   }
 </style></head>
 <body>
-<!-- Top controls remain horizontal -->
+
 <div class="conjugation-link">
 <input type="checkbox" id="highlight-toggle" checked />
 <button id="dark-mode-toggle">Dark Mode</button>
-<select id="font-selector">
-<option value="Varela Round">Varela Round</option>
-<option value="Noto Serif">Noto Serif</option>
-<option value="Hadasim CLM">Hadasim CLM</option>
-<option value="Gveret Levin AlefAlefAlef">G.Levin AlefAlefAlef</option>
-<option value="Frank Ruehl CLM">Frank Ruehl CLM</option>
-<option value="Dorian CLM">Dorian CLM</option>
-<option value="Ktav Yad CLM">Ktav Yad CLM</option>
+<div class="font-menu-container">
+  <button id="font-button" aria-haspopup="true" aria-expanded="false">font</button>
+  <div id="font-menu" style="display: none;">
+      <ul>
+          <li data-font="Varela Round">Varela Round</li>
+          <li data-font="Noto Serif">Noto Serif</li>
+          <li data-font="Hadasim CLM">Hadasim CLM</li>
+          <li data-font="Gveret Levin AlefAlefAlef">Gveret Levin AlefAlefAlef</li>
+          <li data-font="Frank Ruehl CLM">Frank Ruehl CLM</li>
+          <li data-font="Dorian CLM">Dorian CLM</li>
+          <li data-font="Ktav Yad CLM">Ktav Yad CLM</li>
+      </ul>
+  </div>
+</div>  
+
 </select>
 
 
@@ -756,7 +831,7 @@ let conjugationTable = document.getElementById("conjugation-table");
 let tenseButtons = document.querySelectorAll(".tense-button");
 let binyanSelect = document.getElementById("binyan-select");
 let currentTense = "past";
-const fontSelector = document.getElementById("font-selector");
+
 const body = document.body;
 const darkModeToggle = document.getElementById("dark-mode-toggle");
 const verbSearch = document.getElementById("verb-search");
@@ -788,15 +863,7 @@ char = sofitMap[char];
 return char.replace(/[\u0591-\u05C7]/g, "");
 }
 
-fontSelector.addEventListener("change", function (e) {
-const selectedFont = e.target.value;
-const fontStyle =
-selectedFont === "Dorian CLM" || selectedFont === "Ktav Yad CLM"
-? "italic"
-: "normal";
-body.style.fontFamily = "'" + selectedFont + "', Arial, sans-serif";
-body.style.fontStyle = fontStyle;
-});
+
 
 function toggleDarkMode() {
 body.classList.toggle("dark-mode");
@@ -1234,6 +1301,33 @@ table.classList.remove("no-highlight");
 } else {
 table.classList.add("no-highlight");
 }
+});
+const fontButton = document.getElementById('font-button');
+const fontMenu = document.getElementById('font-menu');
+
+// Toggle menu visibility when the button is clicked
+fontButton.addEventListener('click', function() {
+    const isExpanded = fontButton.getAttribute('aria-expanded') === 'true';
+    fontButton.setAttribute('aria-expanded', !isExpanded);
+    fontMenu.style.display = isExpanded ? 'none' : 'block';
+});
+
+// Apply the selected font and close the menu
+fontMenu.addEventListener('click', function(e) {
+    if (e.target.tagName === 'LI') {
+        const selectedFont = e.target.getAttribute('data-font');
+        document.body.style.fontFamily = selectedFont; // Apply font to the page
+        fontMenu.style.display = 'none'; // Close the menu
+        fontButton.setAttribute('aria-expanded', 'false'); // Update accessibility state
+    }
+});
+
+// Close the menu when clicking outside
+document.addEventListener('click', function(e) {
+    if (!fontButton.contains(e.target) && !fontMenu.contains(e.target)) {
+        fontMenu.style.display = 'none';
+        fontButton.setAttribute('aria-expanded', 'false');
+    }
 });
 </script> </body>
 </html>
