@@ -678,11 +678,12 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
   }
 
   .selection-row {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    flex-direction: row; /* Changed from column to keep horizontal */
+    gap: 10px; /* Reduced gap for tighter layout on mobile */
+    justify-content: center; /* Ensure centering */
+    width: 100%;
+    max-width: 600px; /* Reduced max-width for mobile to fit screen */
   }
-
   #translations-list {
     flex-wrap: nowrap;
     gap: 5px;
@@ -697,7 +698,7 @@ body.dark-mode ::-webkit-scrollbar-thumb:hover {
 
   .binyan-select-container,
   .verb-select-container {
-    width: 100%;
+    width: 45%; /* Adjusted to fit two items side by side */
     max-width: 200px;
   }
 
