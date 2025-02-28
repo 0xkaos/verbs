@@ -199,12 +199,12 @@ rel="stylesheet"
   }
   .font-menu-container {
     position: relative;
-    display: inline-block; /* Keeps it inline with other elements */
+    display: inline-block; 
 }
 
-/* Style the font button to match other buttons in conjugation-link */
+
 #font-button {
-    font-size: 0.8em; /* Match other buttons */
+    font-size: 0.8em; 
     padding: 5px 10px;
     border: 1px solid var(--button-border);
     border-radius: 4px;
@@ -217,24 +217,24 @@ rel="stylesheet"
     text-align: center;
 }
 
-/* Add a dropdown arrow */
+
 #font-button::after {
     content: '▼';
     margin-left: 5px;
     font-size: 0.8em;
 }
 
-/* Flip the arrow when the menu is open */
+
 #font-button[aria-expanded="true"]::after {
     content: '▲';
 }
 
-/* Style the font menu as a dropdown */
+
 #font-menu {
-    display: none; /* Ensure it’s hidden by default */
+    display: none; 
     position: absolute;
-    top: 100%; /* Position directly below the button */
-    left: 0; /* Align with the left edge of the button */
+    top: 100%; 
+    left: 0;  
     background-color: var(--input-bg);
     border: 1px solid var(--border-color);
     border-radius: 4px;
@@ -472,11 +472,12 @@ body.dark-mode #font-button {
     direction: rtl;
     table-layout: fixed;
     width: 100%;
+    font-size: 1.1em;
   }
 
   th,
   td {
-    padding: 15px;
+    padding: 4px;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
   }
@@ -489,7 +490,7 @@ body.dark-mode #font-button {
 
   #conjugation-table th {
     border-bottom: 2px solid #0056b3;
-    font-size: 1em;
+    font-size: .8em;
   }
 
   #conjugation-table td:nth-child(2) {
@@ -664,13 +665,13 @@ body.dark-mode #font-button {
     }
     .binyan-select-container,
     .verb-select-container {
-        width: auto; /* Override width: 100% to prevent forcing full width */
+        width: auto; 
         min-width: 0;
-        flex: 0 1 auto; /* Allow shrinking */
+        flex: 0 1 auto; 
     }
     .verb-select-wrapper {
-        width: auto; /* Override width: 100% */
-        flex-wrap: nowrap; /* Prevent wrapping of verb-select and related-binyan-button */
+        width: auto; 
+        flex-wrap: nowrap; 
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -687,10 +688,10 @@ body.dark-mode #font-button {
     #conjugation-table th,
     #conjugation-table td {
         padding: 4px;
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
     select {
-        min-width: 60px; /* Reduce min-width to fit better */
+        min-width: 60px; 
         font-size: 0.8em;
         padding: 5px;
     }
@@ -743,11 +744,12 @@ body.dark-mode #font-button {
       <ul>
           <li data-font="Varela Round">Varela Round</li>
           <li data-font="Noto Serif">Noto Serif</li>
-          <li data-font="Hadasim CLM">Hadasim CLM</li>
-          <li data-font="Gveret Levin AlefAlefAlef">Gveret Levin AlefAlefAlef</li>
-          <li data-font="Frank Ruehl CLM">Frank Ruehl CLM</li>
-          <li data-font="Dorian CLM">Dorian CLM</li>
-          <li data-font="Ktav Yad CLM">Ktav Yad CLM</li>
+          <li data-font="Hadasim CLM">Hadasim</li>
+          <li data-font="Gveret Levin AlefAlefAlef">AlefAlefAlef</li>
+          <li data-font="Frank Ruehl CLM">Frank Ruehl</li>
+          <li data-font="Dorian CLM">Dorian</li>
+          <li data-font="Ktav Yad CLM">Ktav Yad</li>
+          <li data-font="Noto Rashi Hebrew">Noto Rashi</li>
       </ul>
   </div>
 </div>  
