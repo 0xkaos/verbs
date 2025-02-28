@@ -355,7 +355,7 @@ width: 18%;
 min-width: 80px;
 max-width: 120px;
 text-align: center;
-font-size: .8em;
+font-size: 1em;
 padding: 5px;
 border-radius: 4px;
 background-color: var(--button-bg);
@@ -375,14 +375,17 @@ border: none;
 box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 #related-binyan-button {
-font-size: 1em;
-padding: 3px 5px;
+width: auto; /* Allow width to fit content */
+min-width: 30px; /* Slightly larger minimum width */
+padding: 5px 8px; /* More padding for better appearance */
+text-align: center;
+background-color: var(--button-bg);
 border: 1px solid var(--button-border);
 border-radius: 4px;
-background-color: var(--button-bg);
 color: var(--button-text-color);
 cursor: pointer;
-box-shadow: var(--box-shadow)
+box-shadow: var(--box-shadow);
+transition: all 0.3s ease;
 }
 /* Add a dropdown arrow */
 #related-binyan-button::after {
@@ -597,9 +600,7 @@ padding: 3px;
 #related-binyan-button {
 width: 15px;
 padding: 5px;
-font-size: .7em;
 }
-
 .related-binyan-menu {
 min-width: 150px;
 }
