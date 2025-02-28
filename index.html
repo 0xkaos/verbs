@@ -17,746 +17,704 @@ href="https://fonts.googleapis.com/css2?family=Alef&family=Varela+Round&display=
 rel="stylesheet"
 />
 <style>
-  :root {
-    --font-family: 'Varela Round', Arial, sans-serif;
-    --background-color: #F0F1F4;
-    --background-image: linear-gradient(to bottom, #F0F1F4, #e0e0e0);
-    --text-color: #333;
-    --secondary-text-color: #555;
-    --primary-color: #364991;
-    --accent-color: #ff6600;
-    --container-bg: #fff;
-    --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    --border-color: #ccc;
-    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --input-bg: #fff;
-    --input-border-color: #364991;
-    --button-bg: #e7e7e7;
-    --button-border: #bbb;
-    --button-text-color: #333;
-    --root-letter-color: #d9534f;
-    --root-letter-hover: #ff6600;
-  }
-
-  body.dark-mode {
-    --background-color: #121212;
-    --background-image: none;
-    --text-color: #e0e0e0;
-    --secondary-text-color: #aaa;
-    --container-bg: rgba(30, 30, 30, 0.9);
-    --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    --border-color: #333;
-    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    --input-bg: #2a2a2a;
-    --input-border-color: #444;
-    --button-bg: #444;
-    --button-border: #555;
-    --button-text-color: #e0e0e0;
-    --root-letter-color: #4479b6;
-    --root-letter-hover: #6d97c8;
-    --accent-color: #8fb0d6;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: var(--font-family);
-    background-color: var(--background-color);
-    background-image: var(--background-image);
-    color: var(--text-color);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .container {
-    width: 100%;
-    max-width: 1000px;
-    background-color: var(--container-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: var(--container-shadow);
-    margin: 10px 0;
-    padding: 10px 0;
-  }
-
-  .table-container {
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 10px;
-    overflow-x: auto;
-  }
-
-  .conjugation-link {
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    flex-wrap: wrap; /* allow wrapping if needed */
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .conjugation-link select,
-  .conjugation-link button,
-  .conjugation-link input {
-    flex-shrink: 0;
-  }
-
-  .header-menus {
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    margin: 0;
-    padding: 5px 0;
-    background-color: var(--container-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: var(--container-shadow);
-  }
-
-  .selection-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: nowrap;
-  }
-
-  .binyan-select-container,
-  .verb-select-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1 1 auto; 
-    min-width: 50px; 
-  }
-
-  .verb-select-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .verb-select-wrapper > #related-binyan-container {
-    margin-left: 0;
-  }
-
-  h1 {
-    font-family: var(--font-family);
-    font-size: 1.6em;
-    text-align: center;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-  }
-
-  .info-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-  }
-
-  .root-letter {
-    font-size: 1em;
-    font-weight: normal;
-    color: var(--root-letter-color);
-  }
-
-  .root-letter:hover {
-    color: var(--root-letter-hover);
-  }
-
-  .no-highlight .root-letter {
-    color: var(--text-color);
-    font-size: inherit;
-    font-weight: normal;
-  }
-
-  .no-highlight .root-letter:hover {
-    color: var(--text-color);
-  }
-
-  label {
-    font-size: 0.9em;
-    color: var(--secondary-text-color);
-    text-align: center;
-  }
-  .font-menu-container {
-    position: relative;
-    display: inline-block; 
+:root {
+--font-family: "Varela Round", Arial, sans-serif;
+--background-color: #f0f1f4;
+--background-image: linear-gradient(to bottom, #f0f1f4, #e0e0e0);
+--text-color: #333;
+--secondary-text-color: #555;
+--primary-color: #364991;
+--accent-color: #ff6600;
+--container-bg: #fff;
+--container-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+--border-color: #ccc;
+--box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+--input-bg: #fff;
+--input-border-color: #364991;
+--button-bg: #e7e7e7;
+--button-border: #bbb;
+--button-text-color: #333;
+--root-letter-color: #d9534f;
+--root-letter-hover: #ff6600;
+}
+body.dark-mode {
+--background-color: #121212;
+--background-image: none;
+--text-color: #e0e0e0;
+--secondary-text-color: #aaa;
+--container-bg: rgba(30, 30, 30, 0.9);
+--container-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+--border-color: #333;
+--box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+--input-bg: #2a2a2a;
+--input-border-color: #444;
+--button-bg: #444;
+--button-border: #555;
+--button-text-color: #e0e0e0;
+--root-letter-color: #4479b6;
+--root-letter-hover: #6d97c8;
+--accent-color: #8fb0d6;
 }
 
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: var(--font-family);
+background-color: var(--background-color);
+background-image: var(--background-image);
+color: var(--text-color);
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 5px;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+.container {
+width: 100%;
+max-width: 1000px;
+background-color: var(--container-bg);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+box-shadow: var(--container-shadow);
+margin: 10px 0;
+padding: 10px 0;
+}
+.utilities-container {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+width: 100%;
+max-width: 1000px;
+gap: 5px;
+margin-bottom: 10px;
+}
 
+#toggle-utilities {
+font-size: 0.8em;
+padding: 5px 10px;
+border: 1px solid var(--button-border);
+border-radius: 4px;
+background-color: var(--button-bg);
+color: var(--button-text-color);
+cursor: pointer;
+box-shadow: var(--box-shadow);
+}
+
+.conjugation-link {
+flex: 1;
+display: flex;
+flex-wrap: wrap; 
+justify-content: flex-start;
+align-items: center;
+gap: 10px;
+}
+.conjugation-link select,
+.conjugation-link button,
+.conjugation-link input {
+flex-shrink: 0;
+}
+.header-menus {
+width: 100%;
+max-width: 1000px;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+gap: 5px;
+margin: 0;
+padding: 5px 0;
+background-color: var(--container-bg);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+box-shadow: var(--container-shadow);
+}
+.selection-row {
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 10px;
+flex-wrap: nowrap;
+}
+.binyan-select-container,
+.verb-select-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+flex: 1 1 auto;
+min-width: 50px;
+}
+.verb-select-wrapper {
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 5px;
+}
+.verb-select-wrapper > #related-binyan-container {
+margin-left: 0;
+}
+h1 {
+font-family: var(--font-family);
+font-size: 1.6em;
+text-align: center;
+margin-bottom: 10px;
+color: var(--primary-color);
+}
+.info-section h2 {
+font-size: 1.5em;
+margin-bottom: 15px;
+padding-bottom: 5px;
+color: var(--primary-color);
+border-bottom: 2px solid var(--primary-color);
+}
+.root-letter {
+font-size: 1em;
+font-weight: normal;
+color: var(--root-letter-color);
+}
+.root-letter:hover {
+color: var(--root-letter-hover);
+}
+.no-highlight .root-letter {
+color: var(--text-color);
+font-size: inherit;
+font-weight: normal;
+}
+.no-highlight .root-letter:hover {
+color: var(--text-color);
+}
+label {
+font-size: 0.9em;
+color: var(--secondary-text-color);
+text-align: center;
+}
+.font-menu-container {
+position: relative;
+display: inline-block;
+}
 #font-button {
-    font-size: 0.8em; 
-    padding: 5px 10px;
-    border: 1px solid var(--button-border);
-    border-radius: 4px;
-    background-color: var(--button-bg);
-    color: var(--button-text-color);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: var(--box-shadow);
-    min-width: 80px;
-    text-align: center;
+font-size: 0.8em;
+padding: 5px 10px;
+border: 1px solid var(--button-border);
+border-radius: 4px;
+background-color: var(--button-bg);
+color: var(--button-text-color);
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: var(--box-shadow);
+min-width: 80px;
+text-align: center;
 }
-
-
 #font-button::after {
-    content: '▼';
-    margin-left: 5px;
-    font-size: 0.8em;
+content: '▼';
+margin-left: 5px;
+font-size: 0.8em;
 }
-
-
 #font-button[aria-expanded="true"]::after {
-    content: '▲';
+content: '▲';
 }
-
-
 #font-menu {
-    display: none; 
-    position: absolute;
-    top: 100%; 
-    left: 0;  
-    background-color: var(--input-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    box-shadow: var(--box-shadow);
-    z-index: 1000;
-    min-width: 150px; /* Ensure enough width for options */
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: var(--input-bg);
+border: 1px solid var(--border-color);
+border-radius: 4px;
+box-shadow: var(--box-shadow);
+z-index: 1000;
+min-width: 150px;
 }
-
 /* Remove default list styling */
 #font-menu ul {
-    list-style: none;
-    padding: 5px 0;
-    margin: 0;
+list-style: none;
+padding: 5px 0;
+margin: 0;
 }
-
 /* Style each menu item */
 #font-menu li {
-    padding: 5px 10px;
-    cursor: pointer;
-    text-align: left;
+padding: 5px 10px;
+cursor: pointer;
+text-align: left;
 }
-
 /* Add hover effect for usability */
 #font-menu li:hover {
-    background-color: #f1f1f1;
+background-color: #f1f1f1;
 }
-
 body.dark-mode #font-menu li:hover {
-    background-color: #404040;
+background-color: #404040;
 }
-
-/* Dark mode adjustments for the button */
 body.dark-mode #font-button {
-    background-color: var(--button-bg);
-    color: var(--button-text-color);
-    border-color: var(--button-border);
+background-color: var(--button-bg);
+color: var(--button-text-color);
+border-color: var(--button-border);
 }
-  
 
-  select,
-  input[type="text"] {
-    padding: 8px;
-    font-size: 1em;
-    border: 1px solid var(--input-border-color);
-    border-radius: 6px;
-    background-color: var(--input-bg);
-    color: var(--text-color);
-    text-align: center;
-    appearance: none;
-    box-shadow: var(--box-shadow);
-    transition: all 0.3s ease;
-  }
-
-  select:focus,
-  input[type="text"]:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
-  }
-
-  button {
-    font-size: 0.8em;
-    padding: 5px 10px;
-    border: 1px solid var(--button-border);
-    border-radius: 4px;
-    background-color: var(--button-bg);
-    color: var(--button-text-color);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: var(--box-shadow);
-    min-width: 80px;
-  }
-
-  button:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
-  }
-
-  button:hover {
-    background-color: #d5d5d5;
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-
-  body.dark-mode button:hover {
-    background-color: #555;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 1px solid var(--input-border-color);
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: var(--input-bg);
-    position: relative;
-  }
-
-  input[type="checkbox"]:checked::after {
-    content: "✓";
-    font-size: 14px;
-    color: #fff;
-    position: absolute;
-    top: 0;
-    left: 3px;
-  }
-
-  body:not(.dark-mode) input[type="checkbox"]:checked {
-    background-color: var(--root-letter-color);
-    border-color: var(--root-letter-color);
-  }
-
-  body.dark-mode input[type="checkbox"]:not(:checked) {
-    background-color: gray;
-    border-color: gray;
-  }
-
-  body.dark-mode input[type="checkbox"]:checked {
-    background-color: #4479b6;
-    border-color: #4479b6;
-  }
-
-  #dark-mode-toggle {
-    font-size: .8em;
-    white-space: nowrap;
-    max-width: 80px;
-  }
-
-  .tense-tabs {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 5px;
-    padding: 5px;
-    width: 100%;
-    max-width: 1000px;
-    background-color: rgba(255, 255, 255, 0.2);
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .tense-button {
-    flex: 0 0 auto;
-    width: 18%;
-    min-width: 80px;
-    max-width: 120px;
-    text-align: center;
-    font-size: 1em;
-    padding: 5px;
-    border-radius: 4px;
-    background-color: var(--button-bg);
-    border: 1px solid var(--button-border);
-    color: var(--button-text-color);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: var(--box-shadow);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .tense-button.active {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  }
-
-  #related-binyan-button {
-    width: 20px;
-    min-width: 0;
-    padding: 2px 4px;
-    text-align: center;
-    background-color: var(--button-bg);
-    border: 1px solid var(--button-border);
-    border-radius: 4px;
-    color: var(--button-text-color);
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-    transition: all 0.3s ease;
-  }
-
-  .related-binyan-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-
-  .related-binyan-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    min-width: 200px;
-    background-color: var(--input-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    box-shadow: var(--box-shadow);
-    list-style: none;
-    padding: 5px 0;
-    z-index: 10;
-    text-align: right;
-  }
-
-  .related-binyan-menu li {
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-
-  .related-binyan-menu li:hover {
-    background-color: #f1f1f1;
-  }
-
-  body.dark-mode .related-binyan-menu li:hover {
-    background-color: #404040;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: var(--input-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--container-shadow);
-    margin-bottom: 10px;
-  }
-
-  #conjugation-table {
-    direction: rtl;
-    table-layout: fixed;
-    width: 100%;
-    font-size: 1.1em;
-  }
-
-  th,
-  td {
-    padding: 4px;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  th {
-    background-color: var(--primary-color);
-    color: #fff;
-    font-weight: bold;
-  }
-
-  #conjugation-table th {
-    border-bottom: 2px solid #0056b3;
-    font-size: .8em;
-  }
-
-  #conjugation-table td:nth-child(2) {
-    font-size: 1.3em;
-  }
-
-  #conjugation-table td:nth-child(2) a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  #conjugation-table td:nth-child(2) a:hover {
-    color: var(--accent-color);
-  }
-
-  #conjugation-table.no-highlight td:nth-child(2) a:hover {
-    color: var(--text-color);
+select,
+input[type="text"] {
+padding: 8px;
+font-size: 1em;
+border: 1px solid var(--input-border-color);
+border-radius: 6px;
+background-color: var(--input-bg);
+color: var(--text-color);
+text-align: center;
+appearance: none;
+box-shadow: var(--box-shadow);
+transition: all 0.3s ease;
+}
+select:focus,
+input[type="text"]:focus {
+outline: none;
+border-color: var(--primary-color);
+box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
+}
+button {
+font-size: 0.8em;
+padding: 5px 10px;
+border: 1px solid var(--button-border);
+border-radius: 4px;
+background-color: var(--button-bg);
+color: var(--button-text-color);
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: var(--box-shadow);
+min-width: 80px;
+}
+button:focus {
+outline: none;
+border-color: var(--primary-color);
+box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
+}
+button:hover {
+background-color: #d5d5d5;
+transform: scale(1.05);
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+body.dark-mode button:hover {
+background-color: #555;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+input[type="checkbox"] {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+width: 18px;
+height: 18px;
+border: 1px solid var(--input-border-color);
+border-radius: 4px;
+cursor: pointer;
+background-color: var(--input-bg);
+position: relative;
+}
+input[type="checkbox"]:checked::after {
+content: "✓";
+font-size: 14px;
+color: #fff;
+position: absolute;
+top: 0;
+left: 3px;
+}
+body:not(.dark-mode) input[type="checkbox"]:checked {
+background-color: var(--root-letter-color);
+border-color: var(--root-letter-color);
+}
+body.dark-mode input[type="checkbox"]:not(:checked) {
+background-color: gray;
+border-color: gray;
+}
+body.dark-mode input[type="checkbox"]:checked {
+background-color: #4479b6;
+border-color: #4479b6;
+}
+#dark-mode-toggle {
+font-size: 0.8em;
+white-space: nowrap;
+max-width: 80px;
+}
+.tense-tabs {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+gap: 5px;
+padding: 5px;
+width: 100%;
+max-width: 1000px;
+background-color: rgba(255, 255, 255, 0.2);
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+.tense-button {
+flex: 0 0 auto;
+width: 18%;
+min-width: 80px;
+max-width: 120px;
+text-align: center;
+font-size: 1em;
+padding: 5px;
+border-radius: 4px;
+background-color: var(--button-bg);
+border: 1px solid var(--button-border);
+color: var(--button-text-color);
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: var(--box-shadow);
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.tense-button.active {
+background-color: var(--primary-color);
+color: #fff;
+border: none;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+#related-binyan-button {
+width: auto; /* Allow width to fit content */
+min-width: 30px; /* Slightly larger minimum width */
+padding: 5px 8px; /* More padding for better appearance */
+text-align: center;
+background-color: var(--button-bg);
+border: 1px solid var(--button-border);
+border-radius: 4px;
+color: var(--button-text-color);
+cursor: pointer;
+box-shadow: var(--box-shadow);
+transition: all 0.3s ease;
+}
+/* Add a dropdown arrow */
+#related-binyan-button::after {
+content: '▼';
+margin-left: 5px;
+font-size: 0.8em;
+}
+/* Flip the arrow when the menu is open */
+#related-binyan-button[aria-expanded="true"]::after {
+content: '▲';
+}
+/* Dark mode adjustments */
+body.dark-mode #related-binyan-button {
+background-color: var(--button-bg);
+color: var(--button-text-color);
+border-color: var(--button-border);
+}
+.related-binyan-wrapper {
+position: relative;
+display: inline-block;
+}
+.related-binyan-menu {
+display: none;
+position: absolute;
+top: 100%;
+right: 0;
+min-width: 250px;
+background-color: var(--input-bg);
+border: 1px solid var(--border-color);
+border-radius: 4px;
+box-shadow: var(--box-shadow);
+list-style: none;
+padding: 8px 0;
+z-index: 10;
+text-align: right;
+font-size: 0.9em;
+}
+.related-binyan-menu li {
+padding: 5px 10px;
+cursor: pointer;
+}
+.related-binyan-menu li:hover {
+background-color: #f1f1f1;
+}
+body.dark-mode .related-binyan-menu li:hover {
+background-color: #404040;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+background-color: var(--input-bg);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+overflow: hidden;
+box-shadow: var(--container-shadow);
+margin-bottom: 10px;
+}
+#conjugation-table {
+direction: rtl;
+table-layout: fixed;
+width: 100%;
+font-size: 1.1em;
+}
+th,
+td {
+padding: 4px;
+text-align: center;
+border-bottom: 1px solid var(--border-color);
+}
+th {
+background-color: var(--primary-color);
+color: #fff;
+font-weight: bold;
+}
+#conjugation-table th {
+border-bottom: 2px solid #0056b3;
+font-size: 0.8em;
+}
+#conjugation-table td:nth-child(2) {
+font-size: 1.3em;
+}
+#conjugation-table td:nth-child(2) a {
+color: inherit;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+#conjugation-table td:nth-child(2) a:hover {
+color: var(--accent-color);
+}
+#conjugation-table.no-highlight td:nth-child(2) a:hover {
+color: var(--text-color);
 }
 #conjugation-table.no-highlight td:nth-child(2) a:hover .root-letter {
-    color: inherit;
+color: inherit;
+}
+tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+body.dark-mode tr:nth-child(even) {
+background-color: #2a2a2a;
+}
+tr:hover {
+background-color: #f1f1f1;
+}
+body.dark-mode tr:hover {
+background-color: #404040;
+}
+.note {
+display: block;
+padding: 5px;
+background-color: #f9f9f9;
+color: var(--secondary-text-color);
+font-style: italic;
+text-align: left;
+}
+body.dark-mode .note {
+background-color: #333;
+color: #aaa;
+}
+.info-section {
+width: 100%;
+max-width: 1000px;
+margin-top: 30px;
+}
+.info-section ul {
+display: flex;
+flex-direction: column;
+gap: 5px;
+padding: 0;
+list-style: none;
+align-items: center;
+}
+.info-section ul li {
+width: 100%;
+max-width: 300px;
+background-color: var(--input-bg);
+padding: 10px;
+border: 1px solid var(--border-color);
+border-radius: 8px;
+box-shadow: var(--box-shadow);
+transition: transform 0.3s ease, background-color 0.3s ease;
+text-align: right;
+}
+#translations-list {
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+justify-content: center;
+list-style: none;
+padding: 0;
+}
+#translations-list li {
+font-size: 0.9em;
+}
+#verb-search {
+display: block;
+margin: 0 auto;
+width: 25%;
+}
+#utility-panel.collapsed {
+max-height: 0;
+opacity: 0;
+overflow: hidden;
+transition: all 0.3s ease-out;
+}
+#utility-panel {
+max-height: 300px; /* adjust based on content */
+opacity: 1;
+transition: all 0.3s ease-in;
 }
 
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-
-  body.dark-mode tr:nth-child(even) {
-    background-color: #2a2a2a;
-  }
-
-  tr:hover {
-    background-color: #f1f1f1;
-  }
-
-  body.dark-mode tr:hover {
-    background-color: #404040;
-  }
-
-  .note {
-    display: block;
-    padding: 5px;
-    background-color: #f9f9f9;
-    color: var(--secondary-text-color);
-    font-style: italic;
-    text-align: left;
-  }
-
-  body.dark-mode .note {
-    background-color: #333;
-    color: #aaa;
-  }
-
-  .info-section {
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 30px;
-  }
-
-  .info-section ul {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 0;
-    list-style: none;
-    align-items: center;
-  }
-
-  .info-section ul li {
-    width: 100%;
-    max-width: 300px;
-    background-color: var(--input-bg);
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    text-align: right;
-  }
-
-  #translations-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-  }
-
-  #translations-list li {
-    font-size: 0.9em;
-  }
-  #verb-search {
-    display: block;
-    margin: 0 auto;
-    width: 25%; /* Adjust this value based on your design preference */
+@media (max-width: 768px) {
+body {
+padding: 5px;
 }
-  
-  @media (max-width: 768px) {
-    body {
-      padding: 5px;
-    }
-    h1 {
-      font-size: 1.2em;
-    }
-    .container,
-    .header-menus,
-    .tense-tabs {
-      padding: 5px 0;
-    }
-    .conjugation-link {
-      flex-direction: row;
-      gap: 5px;
-    }
-    select,
-    input[type="text"],
-    button {
-      font-size: 0.8em;
-      padding: 5px;
-      min-width: 60px;
-    }
-    .tense-button {
-      flex: 0 1 calc(18% - 5px);
-      min-width: 60px;
-      max-width: 100px;
-      font-size: 0.7em;
-      padding: 3px;
-    }
-    #related-binyan-button {
-      width: 15px;
-      padding: 5px;
-    }
-    .related-binyan-menu {
-      min-width: 150px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .info-section ul {
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-  }
-
-  @media (max-width: 500px) {
-    #conjugation-table th:nth-child(4),
-    #conjugation-table td:nth-child(4) {
-      display: none;
-    }
-  }
-
-  @media (max-width: 400px) {
-    #conjugation-table th:nth-child(4),
-    #conjugation-table td:nth-child(4) {
-        display: none;
-    }
-    .conjugation-link select,
-    .conjugation-link button,
-    .conjugation-link input {
-        flex: none;
-        min-width: 0;
-        max-width: none;
-    }
-    .selection-row {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: nowrap;
-    }
-    .binyan-select-container,
-    .verb-select-container {
-        width: auto; 
-        min-width: 0;
-        flex: 0 1 auto; 
-    }
-    .verb-select-wrapper {
-        width: auto; 
-        flex-wrap: nowrap; 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 5px;
-    }
-    .tense-tabs {
-        gap: 3px;
-    }
-    .tense-button {
-        min-width: 50px;
-        font-size: 0.65em;
-        padding: 2px;
-    }
-    #conjugation-table th,
-    #conjugation-table td {
-        padding: 4px;
-        font-size: 0.8em;
-    }
-    select {
-        min-width: 60px; 
-        font-size: 0.8em;
-        padding: 5px;
-    }
+h1 {
+font-size: 1.2em;
 }
-
-  @font-face {
-    font-family: 'Noto Rashi Hebrew';
-    src: url('fonts/NotoRashiHebrew-VariableFont_wght.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Hadasim CLM';
-    src: url('fonts/Hadasim CLM Regular.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Gveret Levin AlefAlefAlef';
-    src: url('fonts/Gveret Levin AlefAlefAlef Regular.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Frank Ruehl CLM';
-    src: url('fonts/FrankRuehlCLM-Medium.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Dorian CLM';
-    src: url('fonts/DorianCLM-BookItalic.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Ktav Yad CLM';
-    src: url('fonts/KtavYadCLM-MediumItalic.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Noto Serif';
-    src: url('../fonts/NotoSerifHebrew-VariableFont_wdthwght.ttf') format('truetype');
-    font-display: swap;
-  }
-</style></head>
+.container,
+.header-menus,
+.tense-tabs {
+padding: 5px 0;
+}
+.conjugation-link {
+flex-direction: row;
+gap: 5px;
+}
+select,
+input[type="text"],
+button {
+font-size: 0.8em;
+padding: 5px;
+min-width: 60px;
+}
+.tense-button {
+flex: 0 1 calc(18% - 5px);
+min-width: 60px;
+max-width: 100px;
+font-size: 0.7em;
+padding: 3px;
+}
+#related-binyan-button {
+width: 15px;
+padding: 5px;
+}
+.related-binyan-menu {
+min-width: 150px;
+}
+}
+@media (min-width: 1024px) {
+.info-section ul {
+flex-direction: row;
+justify-content: center;
+flex-wrap: wrap;
+gap: 10px;
+}
+}
+@media (max-width: 500px) {
+#conjugation-table th:nth-child(4),
+#conjugation-table td:nth-child(4) {
+display: none;
+}
+}
+@media (max-width: 400px) {
+#conjugation-table th:nth-child(4),
+#conjugation-table td:nth-child(4) {
+display: none;
+}
+.conjugation-link select,
+.conjugation-link button,
+.conjugation-link input {
+flex: none;
+min-width: 0;
+max-width: none;
+}
+.selection-row {
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 10px;
+flex-wrap: nowrap;
+}
+.binyan-select-container,
+.verb-select-container {
+width: auto;
+min-width: 0;
+flex: 0 1 auto;
+}
+.verb-select-wrapper {
+width: auto;
+flex-wrap: nowrap;
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 5px;
+}
+.tense-tabs {
+gap: 3px;
+}
+.tense-button {
+min-width: 50px;
+font-size: 0.65em;
+padding: 2px;
+}
+#conjugation-table th,
+#conjugation-table td {
+padding: 4px;
+font-size: 0.8em;
+}
+select {
+min-width: 60px;
+font-size: 0.8em;
+padding: 5px;
+}
+}
+@font-face {
+font-family: "Noto Rashi Hebrew";
+src: url("fonts/NotoRashiHebrew-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+font-family: "Hadasim CLM";
+src: url("fonts/Hadasim CLM Regular.ttf") format("truetype");
+}
+@font-face {
+font-family: "Gveret Levin AlefAlefAlef";
+src: url("fonts/Gveret Levin AlefAlefAlef Regular.ttf") format("truetype");
+}
+@font-face {
+font-family: "Frank Ruehl CLM";
+src: url("fonts/FrankRuehlCLM-Medium.ttf") format("truetype");
+}
+@font-face {
+font-family: "Dorian CLM";
+src: url("fonts/DorianCLM-BookItalic.ttf") format("truetype");
+}
+@font-face {
+font-family: "Ktav Yad CLM";
+src: url("fonts/KtavYadCLM-MediumItalic.ttf") format("truetype");
+}
+@font-face {
+font-family: "Noto Serif";
+src: url("../fonts/NotoSerifHebrew-VariableFont_wdthwght.ttf") format("truetype");
+font-display: swap;
+}
+</style> </head>
 <body>
-
-<div class="conjugation-link">
+<!-- Wrapper for the utility switcher and utility panel -->
+<div class="utilities-container">
+<button id="toggle-utilities" aria-expanded="true">▲</button>
+<div id="utility-panel" class="conjugation-link">
+<label for="highlight-toggle">Highlight Roots</label>
 <input type="checkbox" id="highlight-toggle" checked />
 <button id="dark-mode-toggle">Dark Mode</button>
 <div class="font-menu-container">
-  <button id="font-button" aria-haspopup="true" aria-expanded="false">font</button>
-  <div id="font-menu" style="display: none;">
-      <ul>
-          <li data-font="Varela Round">Varela Round</li>
-          <li data-font="Noto Serif">Noto Serif</li>
-          <li data-font="Hadasim CLM">Hadasim</li>
-          <li data-font="Gveret Levin AlefAlefAlef">AlefAlefAlef</li>
-          <li data-font="Frank Ruehl CLM">Frank Ruehl</li>
-          <li data-font="Dorian CLM">Dorian</li>
-          <li data-font="Ktav Yad CLM">Ktav Yad</li>
-          <li data-font="Noto Rashi Hebrew">Noto Rashi</li>
-      </ul>
-  </div>
-</div>  
-
-</select>
-
-
+<button id="font-button" aria-haspopup="true" aria-expanded="false">font</button>
+<div id="font-menu" style="display: none;">
+<ul>
+<li data-font="Varela Round">Varela Round</li>
+<li data-font="Noto Serif">Noto Serif</li>
+<li data-font="Hadasim CLM">Hadasim</li>
+<li data-font="Gveret Levin AlefAlefAlef">AlefAlefAlef</li>
+<li data-font="Frank Ruehl CLM">Frank Ruehl</li>
+<li data-font="Dorian CLM">Dorian</li>
+<li data-font="Ktav Yad CLM">Ktav Yad</li>
+<li data-font="Noto Rashi Hebrew">Noto Rashi</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 
 <div class="container">
@@ -775,7 +733,7 @@ body.dark-mode #font-button {
 <div class="verb-select-wrapper">
 <select id="verb-select"></select>
 <div id="related-binyan-container" class="related-binyan-wrapper">
-<button id="related-binyan-button">•</button>
+<button id="related-binyan-button"></button>
 <ul id="related-binyan-menu" class="related-binyan-menu"></ul>
 </div>
 </div>
@@ -790,11 +748,9 @@ body.dark-mode #font-button {
 <button class="tense-button" data-tense="infinitive">Infinitive</button>
 </div>
 </div>
-
 <div class="table-container">
 <table id="conjugation-table"></table>
 </div>
-
 <div class="info-section" id="notes-section">
 <h2>Notes</h2>
 <p id="notes-text"></p>
@@ -819,13 +775,11 @@ body.dark-mode #font-button {
 <h2>Idioms</h2>
 <ul id="idioms-list"></ul>
 </div>
-
 <script>
 function playAudio(src) {
 const audio = new Audio(src);
 audio.play();
 }
-
 document.addEventListener("DOMContentLoaded", function () {
 let verbs = {};
 let verbSelect = document.getElementById("verb-select");
@@ -833,7 +787,6 @@ let conjugationTable = document.getElementById("conjugation-table");
 let tenseButtons = document.querySelectorAll(".tense-button");
 let binyanSelect = document.getElementById("binyan-select");
 let currentTense = "past";
-
 const body = document.body;
 const darkModeToggle = document.getElementById("dark-mode-toggle");
 const verbSearch = document.getElementById("verb-search");
@@ -850,7 +803,6 @@ let idiomsSection = document.getElementById("idioms-section");
 let idiomsList = document.getElementById("idioms-list");
 let binyanimSection = document.getElementById("binyanim-section");
 let binyanimTable = document.getElementById("binyanim-table");
-
 function normalizeLetter(char) {
 const sofitMap = {
 "ך": "כ",
@@ -864,8 +816,6 @@ char = sofitMap[char];
 }
 return char.replace(/[\u0591-\u05C7]/g, "");
 }
-
-
 
 function toggleDarkMode() {
 body.classList.toggle("dark-mode");
@@ -882,7 +832,6 @@ if (localStorage.getItem("darkMode") === "true") {
 body.classList.add("dark-mode");
 darkModeToggle.textContent = "Light Mode";
 }
-
 function normalizeSearchText(text) {
 return text.toLowerCase();
 }
@@ -930,7 +879,6 @@ highlightedForm += formChars[i];
 }
 return highlightedForm;
 }
-
 function renderTable(verbKey, tense) {
 const verb = verbs[verbKey];
 if (!verb || !verb.conjugations[tense]) {
@@ -949,7 +897,7 @@ return indexA - indexB;
 });
 const headerData = [
 { text: "Pronoun", class: "" },
-{ text: "Form", class: "" },
+{ text: "Verb", class: "" },
 { text: "Transliteration", class: "ltr" },
 { text: "Phonetics", class: "" },
 { text: "Translation", class: "" }
@@ -986,7 +934,6 @@ rows.push(
 }
 conjugationTable.innerHTML = rows.join("");
 }
-
 function populateBinyanSelect() {
 const binyanMap = new Map();
 for (let verbKey in verbs) {
@@ -1015,7 +962,6 @@ allOption.textContent = "All";
 binyanSelect.appendChild(allOption);
 binyanSelect.value = sortedBinyanim.includes("Paal") ? "Paal" : "all";
 }
-
 function populateVerbSelect(binyanFilter = "all", searchTerm = "") {
 verbSelect.innerHTML = "";
 const normalizedSearch = normalizeSearchText(searchTerm);
@@ -1070,12 +1016,10 @@ renderAdditionalInfo(currentVerbKey);
 renderTranslationsList(currentVerbKey);
 updateBinyanSelect(currentVerbKey);
 }
-
 function updateBinyanSelect(verbKey) {
 const verb = verbs[verbKey];
 binyanSelect.value = verb && verb.binyan_en ? verb.binyan_en : "all";
 }
-
 function updateRelatedBinyanSelect(verbKey) {
 const menu = document.getElementById("related-binyan-menu");
 const button = document.getElementById("related-binyan-button");
@@ -1107,7 +1051,6 @@ button.style.display = "none";
 menu.innerHTML = "";
 }
 }
-
 function renderAdditionalInfo(verbKey) {
 const verb = verbs[verbKey];
 examplesList.innerHTML = "";
@@ -1175,7 +1118,6 @@ notesSection.style.display = "none";
 }
 renderBinyanim(verb ? verb.binyanim : null);
 }
-
 function renderBinyanim(binyanim) {
 if (binyanim && typeof binyanim === "object" && Object.keys(binyanim).length > 0) {
 binyanimSection.style.display = "block";
@@ -1208,7 +1150,6 @@ binyanimTable.innerHTML += `
 binyanimSection.style.display = "none";
 }
 }
-
 function renderTranslationsList(verbKey) {
 translationsList.innerHTML = "";
 const verb = verbs[verbKey];
@@ -1220,7 +1161,6 @@ translationsList.appendChild(listItem);
 }
 }
 }
-
 function addEventListeners() {
 tenseButtons.forEach(button => {
 button.addEventListener("click", () => {
@@ -1249,7 +1189,10 @@ populateVerbSelect("all", searchTerm);
 });
 document.getElementById("related-binyan-button").addEventListener("click", (e) => {
 const menu = document.getElementById("related-binyan-menu");
-menu.style.display = menu.style.display === "block" ? "none" : "block";
+const button = document.getElementById("related-binyan-button");
+const isExpanded = menu.style.display === "block";
+menu.style.display = isExpanded ? "none" : "block";
+button.setAttribute("aria-expanded", !isExpanded);
 e.stopPropagation();
 });
 document.addEventListener("click", (e) => {
@@ -1271,10 +1214,10 @@ verbSelect.value = verbKey;
 verbSelect.dispatchEvent(new Event("change"));
 updateRelatedBinyanSelect(verbKey);
 document.getElementById("related-binyan-menu").style.display = "none";
+document.getElementById("related-binyan-button").setAttribute("aria-expanded", "false");
 }
 });
 }
-
 fetch("verbs.json")
 .then(response => response.json())
 .then(data => {
@@ -1295,7 +1238,6 @@ console.error("Error fetching verbs data:", error);
 conjugationTable.innerHTML = '<tr><td colspan="5">Error loading data.</td></tr>';
 });
 });
-
 document.getElementById("highlight-toggle").addEventListener("change", function () {
 const table = document.getElementById("conjugation-table");
 if (this.checked) {
@@ -1309,27 +1251,33 @@ const fontMenu = document.getElementById('font-menu');
 
 // Toggle menu visibility when the button is clicked
 fontButton.addEventListener('click', function() {
-    const isExpanded = fontButton.getAttribute('aria-expanded') === 'true';
-    fontButton.setAttribute('aria-expanded', !isExpanded);
-    fontMenu.style.display = isExpanded ? 'none' : 'block';
+const isExpanded = fontButton.getAttribute('aria-expanded') === 'true';
+fontButton.setAttribute('aria-expanded', !isExpanded);
+fontMenu.style.display = isExpanded ? 'none' : 'block';
 });
-
 // Apply the selected font and close the menu
 fontMenu.addEventListener('click', function(e) {
-    if (e.target.tagName === 'LI') {
-        const selectedFont = e.target.getAttribute('data-font');
-        document.body.style.fontFamily = selectedFont; // Apply font to the page
-        fontMenu.style.display = 'none'; // Close the menu
-        fontButton.setAttribute('aria-expanded', 'false'); // Update accessibility state
-    }
+if (e.target.tagName === 'LI') {
+const selectedFont = e.target.getAttribute('data-font');
+document.body.style.fontFamily = selectedFont; // Apply font to the page
+fontMenu.style.display = 'none'; // Close the menu
+fontButton.setAttribute('aria-expanded', 'false'); // Update accessibility state
+}
 });
-
 // Close the menu when clicking outside
 document.addEventListener('click', function(e) {
-    if (!fontButton.contains(e.target) && !fontMenu.contains(e.target)) {
-        fontMenu.style.display = 'none';
-        fontButton.setAttribute('aria-expanded', 'false');
-    }
+if (!fontButton.contains(e.target) && !fontMenu.contains(e.target)) {
+fontMenu.style.display = 'none';
+fontButton.setAttribute('aria-expanded', 'false');
+}
+});
+document.getElementById('toggle-utilities').addEventListener('click', function() {
+const panel = document.getElementById('utility-panel');
+panel.classList.toggle('collapsed');
+const isCollapsed = panel.classList.contains('collapsed');
+// Update the button text and aria attribute
+this.textContent = isCollapsed ? '▼' : '▲';
+this.setAttribute('aria-expanded', !isCollapsed);
 });
 </script> </body>
 </html>
