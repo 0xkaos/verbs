@@ -84,18 +84,18 @@ margin: 10px 0;
 padding: 10px 0;
 }
 .utilities-container {
-display: flex;
+  display: flex;
 align-items: center;
 justify-content: flex-start;
+gap: 5px;
 width: 100%;
 max-width: 1000px;
-gap: 5px;
 margin-bottom: 10px;
 }
 
 #toggle-utilities {
-font-size: 0.8em;
-padding: 5px 10px;
+font-size: 0.7em;
+padding: 3px 5px;
 border: 1px solid var(--button-border);
 border-radius: 4px;
 background-color: var(--button-bg);
@@ -545,16 +545,24 @@ display: block;
 margin: 0 auto;
 width: 25%;
 }
+.utilities-container #toggle-utilities {
+grid-column: 1;
+grid-row: 1;
+}
+
+#utility-panel {
+grid-column: 1 / span 2;
+grid-row: 2;
+/* Use your existing transition rules for collapsing/expanding /
+   max-height: 300px; / when expanded */
+opacity: 1;
+transition: all 0.3s ease-in;
+}
 #utility-panel.collapsed {
 max-height: 0;
 opacity: 0;
 overflow: hidden;
 transition: all 0.3s ease-out;
-}
-#utility-panel {
-max-height: 300px; /* adjust based on content */
-opacity: 1;
-transition: all 0.3s ease-in;
 }
 
 @media (max-width: 768px) {
@@ -692,9 +700,13 @@ font-display: swap;
 }
 </style> </head>
 <body>
-<!-- Wrapper for the utility switcher and utility panel -->
+
+
+<div class="container">
 <div class="utilities-container">
+ 
 <button id="toggle-utilities" aria-expanded="true">▲</button>
+
 <div id="utility-panel" class="conjugation-link collapsed">
 <label for="highlight-toggle">Highlight Roots</label>
 <input type="checkbox" id="highlight-toggle" checked />
@@ -716,14 +728,14 @@ font-display: swap;
 </div>
 </div>
 </div>
-
-<div class="container">
 <h1>Verb Conjugation</h1>
+
+
 <input type="text" id="verb-search" placeholder="Search verbs..." />
 <div class="translations-bar">
 <ul id="translations-list"></ul>
 </div>
-<!-- Header menus now include the related verbs button -->
+
 <div class="header-menus">
 <div class="selection-row">
 <div class="binyan-select-container">
