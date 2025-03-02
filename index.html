@@ -94,14 +94,18 @@ margin-bottom: 10px;
 }
 
 #toggle-utilities {
-font-size: 0.7em;
-padding: 3px 5px;
-border: 1px solid var(--button-border);
-border-radius: 4px;
-background-color: var(--button-bg);
-color: var(--button-text-color);
-cursor: pointer;
-box-shadow: var(--box-shadow);
+    font-size: 0.8em; 
+    padding: 1px 4px; 
+    border: 1px solid var(--button-border);
+    border-radius: 2px; 
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    min-width: 30px; 
+    height: 16px; 
+    line-height: 1; 
+    text-align: center; 
 }
 
 .conjugation-link {
@@ -555,8 +559,7 @@ grid-row: 1;
 #utility-panel {
 grid-column: 1 / span 2;
 grid-row: 2;
-/* Use your existing transition rules for collapsing/expanding /
-   max-height: 300px; / when expanded */
+max-height: 300px;
 opacity: 1;
 transition: all 0.3s ease-in;
 }
@@ -566,6 +569,90 @@ opacity: 0;
 overflow: hidden;
 transition: all 0.3s ease-out;
 }
+/* Style for the Pronoun cell (first column) */
+#conjugation-table td:nth-child(1) {
+    position: relative; /* Allows absolute positioning of the button */
+    padding: 4px 24px 4px 4px; /* Adds right padding to accommodate button */
+    text-align: center; /* Centers the pronoun text */
+}
+
+/* Pronoun button sticks to the right */
+#conjugation-table td:nth-child(1) .pronoun-btn {
+    position: absolute;
+    right: 4px; /* Distance from right edge */
+    top: 50%; /* Vertically center */
+    transform: translateY(-50%); /* Adjust for exact centering */
+    font-size: 0.6em;
+    padding: 1px 4px;
+    border: none;
+    background-color: #6490b2;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    line-height: 1;
+    min-width: 20px;
+    height: 16px;
+}
+
+
+
+.pronoun-btn:hover {
+    background-color: #4479b6;
+}
+
+/* Popup styling */
+.popup {
+    display: none;
+    position: absolute;
+    background-color: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    max-width: 300px;
+    text-align: right;
+    font-size: 0.9em;
+}
+.popup .audio-btn {
+    font-size: 0.6em;
+    padding: 1px 4px;
+    border: none;
+    background-color: #a8a8a8;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    line-height: 1;
+    min-width: 20px;
+    height: 16px;
+}
+
+body.dark-mode .popup {
+    background-color: #2a2a2a;
+    color: var(--text-color);
+}
+
+body.dark-mode .popup .hebrew {
+    color: #e0e0e0; 
+}
+
+.popup p {
+    margin: 0;
+}
+
+.popup .hebrew {
+    color: var(--primary-color);
+    direction: rtl;
+}
+
+.popup .english {
+    color: var(--secondary-text-color);
+    direction: ltr;
+    display: none;
+}
+
 
 @media (max-width: 768px) {
 body {
@@ -663,7 +750,7 @@ padding: 2px;
 #conjugation-table th,
 #conjugation-table td {
 padding: 4px;
-font-size: 0.8em;
+font-size: 0.9em;
 }
 select {
 min-width: 60px;
@@ -791,507 +878,594 @@ font-display: swap;
 </div>
 <script>
 function playAudio(src) {
-const audio = new Audio(src);
-audio.play();
+    const audio = new Audio(src);
+    audio.play();
 }
+
 document.addEventListener("DOMContentLoaded", function () {
-let verbs = {};
-let verbSelect = document.getElementById("verb-select");
-let conjugationTable = document.getElementById("conjugation-table");
-let tenseButtons = document.querySelectorAll(".tense-button");
-let binyanSelect = document.getElementById("binyan-select");
-let currentTense = "past";
-const body = document.body;
-const darkModeToggle = document.getElementById("dark-mode-toggle");
-const verbSearch = document.getElementById("verb-search");
-const translationsList = document.getElementById("translations-list");
-let examplesSection = document.getElementById("examples-section");
-let examplesList = document.getElementById("examples-list");
-let notesSection = document.getElementById("notes-section");
-let notesText = document.getElementById("notes-text");
-let relatedWordsSection = document.getElementById("related-words-section");
-let relatedWordsList = document.getElementById("related-words-list");
-let similarVerbsSection = document.getElementById("similar-verbs-section");
-let similarVerbsList = document.getElementById("similar-verbs-list");
-let idiomsSection = document.getElementById("idioms-section");
-let idiomsList = document.getElementById("idioms-list");
-let binyanimSection = document.getElementById("binyanim-section");
-let binyanimTable = document.getElementById("binyanim-table");
-function normalizeLetter(char) {
-const sofitMap = {
-"ך": "כ",
-"ם": "מ",
-"ן": "נ",
-"ף": "פ",
-"ץ": "צ"
-};
-if (sofitMap[char]) {
-char = sofitMap[char];
-}
-return char.replace(/[\u0591-\u05C7]/g, "");
+    let verbs = {};
+    let verbSelect = document.getElementById("verb-select");
+    let conjugationTable = document.getElementById("conjugation-table");
+    let tenseButtons = document.querySelectorAll(".tense-button");
+    let binyanSelect = document.getElementById("binyan-select");
+    let currentTense = "past";
+    const body = document.body;
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const verbSearch = document.getElementById("verb-search");
+    const translationsList = document.getElementById("translations-list");
+    let examplesSection = document.getElementById("examples-section");
+    let examplesList = document.getElementById("examples-list");
+    let notesSection = document.getElementById("notes-section");
+    let notesText = document.getElementById("notes-text");
+    let relatedWordsSection = document.getElementById("related-words-section");
+    let relatedWordsList = document.getElementById("related-words-list");
+    let similarVerbsSection = document.getElementById("similar-verbs-section");
+    let similarVerbsList = document.getElementById("similar-verbs-list");
+    let idiomsSection = document.getElementById("idioms-section");
+    let idiomsList = document.getElementById("idioms-list");
+    let binyanimSection = document.getElementById("binyanim-section");
+    let binyanimTable = document.getElementById("binyanim-table");
+
+// Define a single popup globally
+let activePopup = null;
+
+function togglePopup(event) {
+    const button = event.target;
+    const hebrewSentence = button.dataset.hebrew;
+    const englishTranslation = button.dataset.english;
+    const audioPath = button.dataset.audio;
+    console.log("togglePopup audioPath:", audioPath); // Debug log
+
+    if (!activePopup || activePopup.style.display === 'none') {
+        if (!activePopup) {
+            activePopup = document.createElement('div');
+            activePopup.classList.add('popup');
+            document.body.appendChild(activePopup);
+        }
+
+        const audioButton = audioPath ? `
+            <button class="audio-btn">שמע</button>
+        ` : '';
+        console.log("audioButton HTML:", audioButton); // Debug log
+
+        activePopup.innerHTML = `
+            <div class="hebrew-container">
+                <span class="hebrew">${hebrewSentence}</span>
+                ${audioButton}
+            </div>
+            <p class="english">${englishTranslation}</p>
+        `;
+        const rect = button.getBoundingClientRect();
+        activePopup.style.top = `${rect.bottom + window.scrollY - 28}px`;
+        const rightPosition = window.innerWidth - rect.right + window.scrollX + 10;
+        const popupWidth = activePopup.offsetWidth || 300;
+        activePopup.style.right = `${Math.max(5, rightPosition)}px`;
+        activePopup.style.display = 'block';
+        activePopup.querySelector('.english').style.display = 'none';
+
+        // Add event listener to the audio button to play audio and prevent propagation
+        const audioBtn = activePopup.querySelector('.audio-btn');
+        if (audioBtn) {
+            audioBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent the click from bubbling to the popup
+                playAudio(audioPath); // Play the audio
+            });
+        }
+
+        // Popup click handler to toggle English translation
+        activePopup.onclick = function(e) {
+            const english = activePopup.querySelector('.english');
+            if (english.style.display === 'none') {
+                english.style.display = 'block';
+            } else {
+                english.style.display = 'none';
+            }
+            e.stopPropagation();
+        };
+    } else {
+        activePopup.style.display = 'none';
+    }
+
+    event.stopPropagation();
 }
 
-function toggleDarkMode() {
-body.classList.toggle("dark-mode");
-const isDarkMode = body.classList.contains("dark-mode");
-localStorage.setItem("darkMode", isDarkMode);
-darkModeToggle.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
-const verbKey = verbSelect.value;
-const tense =
-document.querySelector(".tense-button.active")?.dataset.tense || "past";
-renderTable(verbKey, tense);
-}
-darkModeToggle.addEventListener("click", toggleDarkMode);
-if (localStorage.getItem("darkMode") === "true") {
-body.classList.add("dark-mode");
-darkModeToggle.textContent = "Light Mode";
-}
-function normalizeSearchText(text) {
-return text.toLowerCase();
-}
-function normalizeLetterForHighlight(char) {
-const dageshMap = {
-"בּ": "ב",
-"גּ": "ג",
-"דּ": "ד",
-"כּ": "כ",
-"פּ": "פ",
-"תּ": "ת",
-"שׁ": "ש",
-"שׂ": "ש"
-};
-return dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, "");
-}
-function highlightRoots(form, rootLetters) {
-if (!form || !rootLetters || rootLetters.length < 2) return form;
-const normalizedRoot = rootLetters.map(normalizeLetterForHighlight);
-const formChars = form.split("");
-let consonantPositions = [];
-let consonants = [];
-formChars.forEach((char, idx) => {
-if (/[\u05D0-\u05EA]/.test(char)) {
-consonantPositions.push(idx);
-consonants.push(normalizeLetterForHighlight(char));
-}
-});
-if (consonants.length === 0) return form;
-let matchedPositions = [];
-let rootIndex = 0;
-for (let i = 0; i < consonants.length && rootIndex < normalizedRoot.length; i++) {
-if (consonants[i] === normalizedRoot[rootIndex]) {
-matchedPositions.push(consonantPositions[i]);
-rootIndex++;
-}
-}
-let highlightedForm = "";
-for (let i = 0; i < formChars.length; i++) {
-if (matchedPositions.includes(i)) {
-highlightedForm += `<span class="root-letter">${formChars[i]}</span>`;
-} else {
-highlightedForm += formChars[i];
-}
-}
-return highlightedForm;
-}
-function renderTable(verbKey, tense) {
-const verb = verbs[verbKey];
-if (!verb || !verb.conjugations[tense]) {
-conjugationTable.innerHTML =
-'<tr><td colspan="5">No data available for this tense.</td></tr>';
-return;
-}
-let conjugations = verb.conjugations[tense];
-const desiredPronounOrder = ["הוא","היא","את","אתה","אני","אנחנו","אתם","אתן","הם","הן"];
-conjugations.sort((a, b) => {
-let indexA = desiredPronounOrder.indexOf(a.pronoun);
-let indexB = desiredPronounOrder.indexOf(b.pronoun);
-if (indexA === -1) indexA = desiredPronounOrder.length;
-if (indexB === -1) indexB = desiredPronounOrder.length;
-return indexA - indexB;
-});
-const headerData = [
-{ text: "Pronoun", class: "" },
-{ text: "Verb", class: "" },
-{ text: "Transliteration", class: "ltr" },
-{ text: "Phonetics", class: "" },
-{ text: "Translation", class: "" }
-];
-let rows = [
-"<tr>" +
-headerData.map((data) => `<th class="${data.class}">${data.text}</th>`).join("") +
-"</tr>"
-];
-for (let item of conjugations) {
-const highlightedForm = highlightRoots(item.form, verb.root);
-if (item.audio) {
-const clickableForm = `<a href="#" onclick="playAudio('${item.audio}'); event.preventDefault();">${highlightedForm}</a>`;
-rows.push(
-`<tr>
-<td>${item.pronoun}</td>
-<td>${clickableForm}</td>
-<td class="ltr">${item.transliteration}</td>
-<td class="ltr">${item.phonetics}</td>
-<td>${item.translation}</td>
-</tr>`
-);
-} else {
-rows.push(
-`<tr>
-<td>${item.pronoun}</td>
-<td>${highlightedForm}</td>
-<td class="ltr">${item.transliteration}</td>
-<td class="ltr">${item.phonetics}</td>
-<td>${item.translation}</td>
-</tr>`
-);
-}
-}
-conjugationTable.innerHTML = rows.join("");
-}
-function populateBinyanSelect() {
-const binyanMap = new Map();
-for (let verbKey in verbs) {
-const verb = verbs[verbKey];
-if (verb.binyan_en) {
-binyanMap.set(verb.binyan_en, verb.binyan);
-}
-}
-const classicalOrder = ["Paal","Nifal","Piel","Pual","Hitpael","Hifil","Hufal"];
-const sortedBinyanim = [];
-classicalOrder.forEach((binyanEn) => {
-if (binyanMap.has(binyanEn)) {
-sortedBinyanim.push(binyanEn);
-}
-});
-binyanSelect.innerHTML = "";
-sortedBinyanim.forEach((binyanEn) => {
-const option = document.createElement("option");
-option.value = binyanEn;
-option.textContent = binyanEn;
-binyanSelect.appendChild(option);
-});
-const allOption = document.createElement("option");
-allOption.value = "all";
-allOption.textContent = "All";
-binyanSelect.appendChild(allOption);
-binyanSelect.value = sortedBinyanim.includes("Paal") ? "Paal" : "all";
-}
-function populateVerbSelect(binyanFilter = "all", searchTerm = "") {
-verbSelect.innerHTML = "";
-const normalizedSearch = normalizeSearchText(searchTerm);
-const previousVerbKey = verbSelect.value || "";
-let hasSelectedOption = false;
-for (let verbKey in verbs) {
-const verb = verbs[verbKey];
-const verbBinyanEn = verb.binyan_en || "Unknown";
-if (normalizedSearch) {
-const rootText = verb.root && verb.root.length >= 3 ? verb.root.join("") : "";
-const englishTranslation = verb.translations && verb.translations["en"] ? verb.translations["en"] : "";
-const normalizedRoot = normalizeSearchText(rootText);
-const normalizedTranslation = normalizeSearchText(englishTranslation);
-if (normalizedRoot.includes(normalizedSearch) || normalizedTranslation.includes(normalizedSearch)) {
-const option = document.createElement("option");
-option.value = verbKey;
-const displayPastForm = verb.conjugations?.past?.find(c => c.pronoun === "הוא")?.form || "N/A";
-const displayTranslation = englishTranslation || "No translation";
-option.textContent = `${displayPastForm} - ${displayTranslation}`;
-verbSelect.appendChild(option);
-if (verbKey === previousVerbKey) {
-option.selected = true;
-hasSelectedOption = true;
-}
-}
-} else {
-if (binyanFilter === "all" || verbBinyanEn === binyanFilter) {
-const rootText = verb.root && verb.root.length >= 3 ? verb.root.join("") : "";
-const englishTranslation = verb.translations && verb.translations["en"] ? verb.translations["en"] : "";
-const option = document.createElement("option");
-option.value = verbKey;
-const displayPastForm = verb.conjugations?.past?.find(c => c.pronoun === "הוא")?.form || "N/A";
-const displayTranslation = englishTranslation || "No translation";
-option.textContent = `${displayPastForm} - ${displayTranslation}`;
-verbSelect.appendChild(option);
-if (verbKey === previousVerbKey) {
-option.selected = true;
-hasSelectedOption = true;
-}
-}
-}
-}
-if (verbSelect.options.length > 0 && !hasSelectedOption) {
-verbSelect.selectedIndex = 0;
-} else if (verbSelect.options.length === 0) {
-verbSelect.innerHTML = '<option value="">No results</option>';
-}
-const currentVerbKey = verbSelect.value;
-renderTable(currentVerbKey, currentTense);
-updateRelatedBinyanSelect(currentVerbKey);
-renderAdditionalInfo(currentVerbKey);
-renderTranslationsList(currentVerbKey);
-updateBinyanSelect(currentVerbKey);
-}
-function updateBinyanSelect(verbKey) {
-const verb = verbs[verbKey];
-binyanSelect.value = verb && verb.binyan_en ? verb.binyan_en : "all";
-}
-function updateRelatedBinyanSelect(verbKey) {
-const menu = document.getElementById("related-binyan-menu");
-const button = document.getElementById("related-binyan-button");
-if (!verbKey || !verbs[verbKey]) {
-button.style.display = "none";
-menu.innerHTML = "";
-return;
-}
-const verb = verbs[verbKey];
-const rootStr = verb.root.join("");
-const relatedVerbs = Object.entries(verbs)
-.filter(([key, v]) => v.root.join("") === rootStr && key !== verbKey)
-.map(([key, v]) => ({
-key,
-pastForm: v.conjugations?.past?.find(c => c.pronoun === "הוא")?.form || "N/A",
-binyan_en: v.binyan_en
-}));
-if (relatedVerbs.length > 0) {
-button.style.display = "inline-block";
-menu.innerHTML = "";
-relatedVerbs.forEach(({ key, pastForm, binyan_en }) => {
-const li = document.createElement("li");
-li.textContent = `${pastForm} (${binyan_en})`;
-li.dataset.key = key;
-menu.appendChild(li);
-});
-} else {
-button.style.display = "none";
-menu.innerHTML = "";
-}
-}
-function renderAdditionalInfo(verbKey) {
-const verb = verbs[verbKey];
-examplesList.innerHTML = "";
-if (verb && verb.examples && verb.examples.length > 0) {
-examplesSection.style.display = "block";
-verb.examples.forEach(example => {
-const listItem = document.createElement("li");
-listItem.className = "multiline-item";
-listItem.innerHTML = `
-<strong dir="rtl">${example.hebrew}</strong>
-<em dir="ltr">${example.transliteration}</em>
-<p dir="ltr">${example.translation}</p>
-`;
-examplesList.appendChild(listItem);
-});
-} else {
-examplesSection.style.display = "none";
-}
-idiomsList.innerHTML = "";
-if (verb && verb.idioms && verb.idioms.length > 0) {
-idiomsSection.style.display = "block";
-verb.idioms.forEach(idiom => {
-const listItem = document.createElement("li");
-listItem.className = "multiline-item";
-listItem.innerHTML = `
-<strong dir="rtl">${idiom.expression}</strong>
-<em dir="ltr">(${idiom.transliteration})</em>
-<p dir="ltr">${idiom.translation}</p>
-`;
-idiomsList.appendChild(listItem);
-});
-} else {
-idiomsSection.style.display = "none";
-}
-relatedWordsList.innerHTML = "";
-if (verb && verb.related_words && verb.related_words.length > 0) {
-relatedWordsSection.style.display = "block";
-verb.related_words.forEach(word => {
-const listItem = document.createElement("li");
-listItem.setAttribute("dir", "rtl");
-listItem.textContent = word;
-relatedWordsList.appendChild(listItem);
-});
-} else {
-relatedWordsSection.style.display = "none";
-}
-similarVerbsList.innerHTML = "";
-if (verb && verb.similar_verbs && verb.similar_verbs.length > 0) {
-similarVerbsSection.style.display = "block";
-verb.similar_verbs.forEach(similarVerb => {
-const listItem = document.createElement("li");
-listItem.setAttribute("dir", "rtl");
-listItem.textContent = similarVerb;
-similarVerbsList.appendChild(listItem);
-});
-} else {
-similarVerbsSection.style.display = "none";
-}
-if (verb && verb.notes) {
-notesSection.style.display = "block";
-notesText.setAttribute("dir", "ltr");
-notesText.textContent = verb.notes;
-} else {
-notesSection.style.display = "none";
-}
-renderBinyanim(verb ? verb.binyanim : null);
-}
-function renderBinyanim(binyanim) {
-if (binyanim && typeof binyanim === "object" && Object.keys(binyanim).length > 0) {
-binyanimSection.style.display = "block";
-const binyanHeaderData = [
-{ text: "Binyan" },
-{ text: "Infinitive" },
-{ text: "Meaning" }
-];
-let headerRow = "<tr>" + binyanHeaderData.map(data => `<th>${data.text}</th>`).join("") + "</tr>";
-binyanimTable.innerHTML = headerRow;
-for (let binyan in binyanim) {
-const binyanData = binyanim[binyan];
-if (!binyanData || typeof binyanData !== "object") {
-console.warn(`Invalid binyan data for ${binyan}:`, binyanData);
-continue;
-}
-let meaningContent = Array.isArray(binyanData.meaning) ? binyanData.meaning.join(", ") : "N/A";
-if (binyanData.note) {
-meaningContent += `<span class="note">(${binyanData.note})</span>`;
-}
-binyanimTable.innerHTML += `
-<tr>
-<td>${binyan}</td>
-<td>${binyanData.infinitive || "-"}</td>
-<td>${meaningContent}</td>
-</tr>
-`;
-}
-} else {
-binyanimSection.style.display = "none";
-}
-}
-function renderTranslationsList(verbKey) {
-translationsList.innerHTML = "";
-const verb = verbs[verbKey];
-if (verb && verb.translations) {
-for (let [lang, translation] of Object.entries(verb.translations)) {
-const listItem = document.createElement("li");
-listItem.textContent = `${lang}: ${translation}`;
-translationsList.appendChild(listItem);
-}
-}
-}
-function addEventListeners() {
-tenseButtons.forEach(button => {
-button.addEventListener("click", () => {
-tenseButtons.forEach(btn => btn.classList.remove("active"));
-button.classList.add("active");
-currentTense = button.dataset.tense;
-const verbKey = verbSelect.value;
-renderTable(verbKey, currentTense);
-});
-});
-verbSelect.addEventListener("change", () => {
-const verbKey = verbSelect.value;
-renderTable(verbKey, currentTense);
-renderAdditionalInfo(verbKey);
-renderTranslationsList(verbKey);
-updateRelatedBinyanSelect(verbKey);
-});
-binyanSelect.addEventListener("change", () => {
-const selectedBinyan = binyanSelect.value;
-const searchTerm = verbSearch.value.trim();
-populateVerbSelect(selectedBinyan === "all" ? "all" : selectedBinyan, searchTerm);
-});
-verbSearch.addEventListener("input", () => {
-const searchTerm = verbSearch.value.trim();
-populateVerbSelect("all", searchTerm);
-});
-document.getElementById("related-binyan-button").addEventListener("click", (e) => {
-const menu = document.getElementById("related-binyan-menu");
-const button = document.getElementById("related-binyan-button");
-const isExpanded = menu.style.display === "block";
-menu.style.display = isExpanded ? "none" : "block";
-button.setAttribute("aria-expanded", !isExpanded);
-e.stopPropagation();
-});
-document.addEventListener("click", (e) => {
-const container = document.getElementById("related-binyan-container");
-if (!container.contains(e.target)) {
-document.getElementById("related-binyan-menu").style.display = "none";
-}
-});
-document.getElementById("related-binyan-menu").addEventListener("click", (e) => {
-const li = e.target.closest("li");
-if (li && li.dataset.key) {
-const verbKey = li.dataset.key;
-const selectedVerb = verbs[verbKey];
-const newBinyanFilter = selectedVerb.binyan_en || "Unknown";
-binyanSelect.value = newBinyanFilter;
-verbSearch.value = "";
-populateVerbSelect(newBinyanFilter, "");
-verbSelect.value = verbKey;
-verbSelect.dispatchEvent(new Event("change"));
-updateRelatedBinyanSelect(verbKey);
-document.getElementById("related-binyan-menu").style.display = "none";
-document.getElementById("related-binyan-button").setAttribute("aria-expanded", "false");
-}
-});
-}
-fetch("verbs.json")
-.then(response => response.json())
-.then(data => {
-verbs = data;
-populateBinyanSelect();
-populateVerbSelect();
-addEventListeners();
-const initialVerbKey = verbSelect.value;
-if (initialVerbKey) {
-renderTable(initialVerbKey, "past");
-renderAdditionalInfo(initialVerbKey);
-renderTranslationsList(initialVerbKey);
-updateRelatedBinyanSelect(initialVerbKey);
-}
-})
-.catch(error => {
-console.error("Error fetching verbs data:", error);
-conjugationTable.innerHTML = '<tr><td colspan="5">Error loading data.</td></tr>';
-});
-});
-document.getElementById("highlight-toggle").addEventListener("change", function () {
-const table = document.getElementById("conjugation-table");
-if (this.checked) {
-table.classList.remove("no-highlight");
-} else {
-table.classList.add("no-highlight");
-}
-});
-const fontButton = document.getElementById('font-button');
-const fontMenu = document.getElementById('font-menu');
-
-// Toggle menu visibility when the button is clicked
-fontButton.addEventListener('click', function() {
-const isExpanded = fontButton.getAttribute('aria-expanded') === 'true';
-fontButton.setAttribute('aria-expanded', !isExpanded);
-fontMenu.style.display = isExpanded ? 'none' : 'block';
-});
-// Apply the selected font and close the menu
-fontMenu.addEventListener('click', function(e) {
-if (e.target.tagName === 'LI') {
-const selectedFont = e.target.getAttribute('data-font');
-document.body.style.fontFamily = selectedFont; // Apply font to the page
-fontMenu.style.display = 'none'; // Close the menu
-fontButton.setAttribute('aria-expanded', 'false'); // Update accessibility state
-}
-});
-// Close the menu when clicking outside
+// Close popup when clicking outside
 document.addEventListener('click', function(e) {
-if (!fontButton.contains(e.target) && !fontMenu.contains(e.target)) {
-fontMenu.style.display = 'none';
-fontButton.setAttribute('aria-expanded', 'false');
-}
+    if (activePopup && !activePopup.contains(e.target) && !e.target.classList.contains('pronoun-btn')) {
+        activePopup.style.display = 'none';
+    }
 });
-document.getElementById('toggle-utilities').addEventListener('click', function() {
-const panel = document.getElementById('utility-panel');
-panel.classList.toggle('collapsed');
-const isCollapsed = panel.classList.contains('collapsed');
-// Update the button text and aria attribute
-this.textContent = isCollapsed ? '▼' : '▲';
-this.setAttribute('aria-expanded', !isCollapsed);
+
+
+    function normalizeLetter(char) {
+        const sofitMap = { "ך": "כ", "ם": "מ", "ן": "נ", "ף": "פ", "ץ": "צ" };
+        return sofitMap[char] || char.replace(/[\u0591-\u05C7]/g, "");
+    }
+
+    function toggleDarkMode() {
+        body.classList.toggle("dark-mode");
+        const isDarkMode = body.classList.contains("dark-mode");
+        localStorage.setItem("darkMode", isDarkMode);
+        darkModeToggle.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
+        const verbKey = verbSelect.value;
+        renderTable(verbKey, currentTense);
+    }
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+    if (localStorage.getItem("darkMode") === "true") {
+        body.classList.add("dark-mode");
+        darkModeToggle.textContent = "Light Mode";
+    }
+
+    function normalizeSearchText(text) {
+        return text.toLowerCase();
+    }
+
+    function normalizeLetterForHighlight(char) {
+        const dageshMap = { "בּ": "ב", "גּ": "ג", "דּ": "ד", "כּ": "כ", "פּ": "פ", "תּ": "ת", "שׁ": "ש", "שׂ": "ש" };
+        return dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, "");
+    }
+
+    function highlightRoots(form, rootLetters) {
+        if (!form || !rootLetters || rootLetters.length < 2) return form;
+        const normalizedRoot = rootLetters.map(normalizeLetterForHighlight);
+        const formChars = form.split("");
+        let consonantPositions = [];
+        let consonants = [];
+        formChars.forEach((char, idx) => {
+            if (/[\u05D0-\u05EA]/.test(char)) {
+                consonantPositions.push(idx);
+                consonants.push(normalizeLetterForHighlight(char));
+            }
+        });
+        if (consonants.length === 0) return form;
+        let matchedPositions = [];
+        let rootIndex = 0;
+        for (let i = 0; i < consonants.length && rootIndex < normalizedRoot.length; i++) {
+            if (consonants[i] === normalizedRoot[rootIndex]) {
+                matchedPositions.push(consonantPositions[i]);
+                rootIndex++;
+            }
+        }
+        let highlightedForm = "";
+        for (let i = 0; i < formChars.length; i++) {
+            if (matchedPositions.includes(i)) {
+                highlightedForm += `<span class="root-letter">${formChars[i]}</span>`;
+            } else {
+                highlightedForm += formChars[i];
+            }
+        }
+        return highlightedForm;
+    }
+
+    function renderTable(verbKey, tense) {
+    const verb = verbs[verbKey];
+    if (!verb || !verb.conjugations[tense]) {
+        conjugationTable.innerHTML = '<tr><td colspan="5">No data available for this tense.</td></tr>';
+        return;
+    }
+    let conjugations = verb.conjugations[tense];
+    const desiredPronounOrder = ["הוא", "היא", "את", "אתה", "אני", "אנחנו", "אתם", "אתן", "הם", "הן"];
+    conjugations.sort((a, b) => {
+        let indexA = desiredPronounOrder.indexOf(a.pronoun);
+        let indexB = desiredPronounOrder.indexOf(b.pronoun);
+        if (indexA === -1) indexA = desiredPronounOrder.length;
+        if (indexB === -1) indexB = desiredPronounOrder.length;
+        return indexA - indexB;
+    });
+    const headerData = [
+        { text: "Pronoun", class: "" },
+        { text: "Verb", class: "" },
+        { text: "Transliteration", class: "ltr" },
+        { text: "Phonetics", class: "" },
+        { text: "Translation", class: "" }
+    ];
+    let rows = [
+        "<tr>" +
+        headerData.map((data) => `<th class="${data.class}">${data.text}</th>`).join("") +
+        "</tr>"
+    ];
+    for (let item of conjugations) {
+        const highlightedForm = highlightRoots(item.form, verb.root);
+        const hebrewSentence = item.example_sentence_he || "No Hebrew example available";
+        const englishTranslation = item.example_sentence_en || "No English translation available";
+        // Use audio_example if available, otherwise fall back to audio
+        const audioPath = item.audio_example || item.audio || "";
+        // Escape quotes in sentences using HTML entities to prevent HTML breaking
+        const escapedHebrew = hebrewSentence.replace(/'/g, "&#39;").replace(/"/g, "&quot;");
+        const escapedEnglish = englishTranslation.replace(/'/g, "&#39;").replace(/"/g, "&quot;");
+        const pronounCell = `
+            <button class="pronoun-btn" data-hebrew="${escapedHebrew}" data-english="${escapedEnglish}" data-audio="${audioPath}">•</button>
+            ${item.pronoun || "N/A"}
+        `;
+        // Add fallbacks for undefined values
+        const transliteration = item.transliteration || "N/A";
+        const phonetics = item.phonetics || "N/A";
+        const translation = item.translation || "N/A";
+        
+        if (audioPath) {
+            const clickableForm = `<a href="#" onclick="playAudio('${audioPath}'); event.preventDefault();">${highlightedForm}</a>`;
+            rows.push(
+                `<tr>
+                    <td>${pronounCell}</td>
+                    <td>${clickableForm}</td>
+                    <td class="ltr">${transliteration}</td>
+                    <td class="ltr">${phonetics}</td>
+                    <td>${translation}</td>
+                </tr>`
+            );
+        } else {
+            rows.push(
+                `<tr>
+                    <td>${pronounCell}</td>
+                    <td>${highlightedForm}</td>
+                    <td class="ltr">${transliteration}</td>
+                    <td class="ltr">${phonetics}</td>
+                    <td>${translation}</td>
+                </tr>`
+            );
+        }
+    }
+    conjugationTable.innerHTML = rows.join("");
+
+    // Attach event listeners to all pronoun buttons after rendering
+    document.querySelectorAll('.pronoun-btn').forEach(button => {
+        button.addEventListener('click', togglePopup);
+    });
+}
+
+    function populateBinyanSelect() {
+        const binyanMap = new Map();
+        for (let verbKey in verbs) {
+            const verb = verbs[verbKey];
+            if (verb.binyan_en) {
+                binyanMap.set(verb.binyan_en, verb.binyan);
+            }
+        }
+        const classicalOrder = ["Paal", "Nifal", "Piel", "Pual", "Hitpael", "Hifil", "Hufal"];
+        const sortedBinyanim = [];
+        classicalOrder.forEach((binyanEn) => {
+            if (binyanMap.has(binyanEn)) {
+                sortedBinyanim.push(binyanEn);
+            }
+        });
+        binyanSelect.innerHTML = "";
+        sortedBinyanim.forEach((binyanEn) => {
+            const option = document.createElement("option");
+            option.value = binyanEn;
+            option.textContent = binyanEn;
+            binyanSelect.appendChild(option);
+        });
+        const allOption = document.createElement("option");
+        allOption.value = "all";
+        allOption.textContent = "All";
+        binyanSelect.appendChild(allOption);
+        binyanSelect.value = sortedBinyanim.includes("Paal") ? "Paal" : "all";
+    }
+
+    function populateVerbSelect(binyanFilter = "all", searchTerm = "") {
+        verbSelect.innerHTML = "";
+        const normalizedSearch = normalizeSearchText(searchTerm);
+        const previousVerbKey = verbSelect.value || "";
+        let hasSelectedOption = false;
+        for (let verbKey in verbs) {
+            const verb = verbs[verbKey];
+            const verbBinyanEn = verb.binyan_en || "Unknown";
+            if (normalizedSearch) {
+                const rootText = verb.root && verb.root.length >= 3 ? verb.root.join("") : "";
+                const englishTranslation = verb.translations && verb.translations["en"] ? verb.translations["en"] : "";
+                const normalizedRoot = normalizeSearchText(rootText);
+                const normalizedTranslation = normalizeSearchText(englishTranslation);
+                if (normalizedRoot.includes(normalizedSearch) || normalizedTranslation.includes(normalizedSearch)) {
+                    const option = document.createElement("option");
+                    option.value = verbKey;
+                    const displayPastForm = verb.conjugations?.past?.find(c => c.pronoun === "הוא")?.form || "N/A";
+                    const displayTranslation = englishTranslation || "No translation";
+                    option.textContent = `${displayPastForm} - ${displayTranslation}`;
+                    verbSelect.appendChild(option);
+                    if (verbKey === previousVerbKey) {
+                        option.selected = true;
+                        hasSelectedOption = true;
+                    }
+                }
+            } else {
+                if (binyanFilter === "all" || verbBinyanEn === binyanFilter) {
+                    const rootText = verb.root && verb.root.length >= 3 ? verb.root.join("") : "";
+                    const englishTranslation = verb.translations && verb.translations["en"] ? verb.translations["en"] : "";
+                    const option = document.createElement("option");
+                    option.value = verbKey;
+                    const displayPastForm = verb.conjugations?.past?.find(c => c.pronoun === "הוא")?.form || "N/A";
+                    const displayTranslation = englishTranslation || "No translation";
+                    option.textContent = `${displayPastForm} - ${displayTranslation}`;
+                    verbSelect.appendChild(option);
+                    if (verbKey === previousVerbKey) {
+                        option.selected = true;
+                        hasSelectedOption = true;
+                    }
+                }
+            }
+        }
+        if (verbSelect.options.length > 0 && !hasSelectedOption) {
+            verbSelect.selectedIndex = 0;
+        } else if (verbSelect.options.length === 0) {
+            verbSelect.innerHTML = '<option value="">No results</option>';
+        }
+        const currentVerbKey = verbSelect.value;
+        renderTable(currentVerbKey, currentTense);
+        updateRelatedBinyanSelect(currentVerbKey);
+        renderAdditionalInfo(currentVerbKey);
+        renderTranslationsList(currentVerbKey);
+        updateBinyanSelect(currentVerbKey);
+    }
+
+    function updateBinyanSelect(verbKey) {
+        const verb = verbs[verbKey];
+        binyanSelect.value = verb && verb.binyan_en ? verb.binyan_en : "all";
+    }
+
+    function updateRelatedBinyanSelect(verbKey) {
+        const menu = document.getElementById("related-binyan-menu");
+        const button = document.getElementById("related-binyan-button");
+        if (!verbKey || !verbs[verbKey]) {
+            button.style.display = "none";
+            menu.innerHTML = "";
+            return;
+        }
+        const verb = verbs[verbKey];
+        const rootStr = verb.root.join("");
+        const relatedVerbs = Object.entries(verbs)
+            .filter(([key, v]) => v.root.join("") === rootStr && key !== verbKey)
+            .map(([key, v]) => ({
+                key,
+                pastForm: v.conjugations?.past?.find(c => c.pronoun === "הוא")?.form || "N/A",
+                binyan_en: v.binyan_en
+            }));
+        if (relatedVerbs.length > 0) {
+            button.style.display = "inline-block";
+            menu.innerHTML = "";
+            relatedVerbs.forEach(({ key, pastForm, binyan_en }) => {
+                const li = document.createElement("li");
+                li.textContent = `${pastForm} (${binyan_en})`;
+                li.dataset.key = key;
+                menu.appendChild(li);
+            });
+        } else {
+            button.style.display = "none";
+            menu.innerHTML = "";
+        }
+    }
+
+    function renderAdditionalInfo(verbKey) {
+        const verb = verbs[verbKey];
+        examplesList.innerHTML = "";
+        if (verb && verb.examples && verb.examples.length > 0) {
+            examplesSection.style.display = "block";
+            verb.examples.forEach(example => {
+                const listItem = document.createElement("li");
+                listItem.className = "multiline-item";
+                listItem.innerHTML = `
+                    <strong dir="rtl">${example.hebrew}</strong>
+                    <em dir="ltr">${example.transliteration}</em>
+                    <p dir="ltr">${example.translation}</p>
+                `;
+                examplesList.appendChild(listItem);
+            });
+        } else {
+            examplesSection.style.display = "none";
+        }
+        idiomsList.innerHTML = "";
+        if (verb && verb.idioms && verb.idioms.length > 0) {
+            idiomsSection.style.display = "block";
+            verb.idioms.forEach(idiom => {
+                const listItem = document.createElement("li");
+                listItem.className = "multiline-item";
+                listItem.innerHTML = `
+                    <strong dir="rtl">${idiom.expression}</strong>
+                    <em dir="ltr">(${idiom.transliteration})</em>
+                    <p dir="ltr">${idiom.translation}</p>
+                `;
+                idiomsList.appendChild(listItem);
+            });
+        } else {
+            idiomsSection.style.display = "none";
+        }
+        relatedWordsList.innerHTML = "";
+        if (verb && verb.related_words && verb.related_words.length > 0) {
+            relatedWordsSection.style.display = "block";
+            verb.related_words.forEach(word => {
+                const listItem = document.createElement("li");
+                listItem.setAttribute("dir", "rtl");
+                listItem.textContent = word;
+                relatedWordsList.appendChild(listItem);
+            });
+        } else {
+            relatedWordsSection.style.display = "none";
+        }
+        similarVerbsList.innerHTML = "";
+        if (verb && verb.similar_verbs && verb.similar_verbs.length > 0) {
+            similarVerbsSection.style.display = "block";
+            verb.similar_verbs.forEach(similarVerb => {
+                const listItem = document.createElement("li");
+                listItem.setAttribute("dir", "rtl");
+                listItem.textContent = similarVerb;
+                similarVerbsList.appendChild(listItem);
+            });
+        } else {
+            similarVerbsSection.style.display = "none";
+        }
+        if (verb && verb.notes) {
+            notesSection.style.display = "block";
+            notesText.setAttribute("dir", "ltr");
+            notesText.textContent = verb.notes;
+        } else {
+            notesSection.style.display = "none";
+        }
+        renderBinyanim(verb ? verb.binyanim : null);
+    }
+
+    function renderBinyanim(binyanim) {
+        if (binyanim && typeof binyanim === "object" && Object.keys(binyanim).length > 0) {
+            binyanimSection.style.display = "block";
+            const binyanHeaderData = [
+                { text: "Binyan" },
+                { text: "Infinitive" },
+                { text: "Meaning" }
+            ];
+            let headerRow = "<tr>" + binyanHeaderData.map(data => `<th>${data.text}</th>`).join("") + "</tr>";
+            binyanimTable.innerHTML = headerRow;
+            for (let binyan in binyanim) {
+                const binyanData = binyanim[binyan];
+                if (!binyanData || typeof binyanData !== "object") {
+                    console.warn(`Invalid binyan data for ${binyan}:`, binyanData);
+                    continue;
+                }
+                let meaningContent = Array.isArray(binyanData.meaning) ? binyanData.meaning.join(", ") : "N/A";
+                if (binyanData.note) {
+                    meaningContent += `<span class="note">(${binyanData.note})</span>`;
+                }
+                binyanimTable.innerHTML += `
+                    <tr>
+                        <td>${binyan}</td>
+                        <td>${binyanData.infinitive || "-"}</td>
+                        <td>${meaningContent}</td>
+                    </tr>
+                `;
+            }
+        } else {
+            binyanimSection.style.display = "none";
+        }
+    }
+
+    function renderTranslationsList(verbKey) {
+        translationsList.innerHTML = "";
+        const verb = verbs[verbKey];
+        if (verb && verb.translations) {
+            for (let [lang, translation] of Object.entries(verb.translations)) {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${lang}: ${translation}`;
+                translationsList.appendChild(listItem);
+            }
+        }
+    }
+
+    function addEventListeners() {
+        tenseButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                tenseButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+                currentTense = button.dataset.tense;
+                const verbKey = verbSelect.value;
+                renderTable(verbKey, currentTense);
+            });
+        });
+        verbSelect.addEventListener("change", () => {
+            const verbKey = verbSelect.value;
+            renderTable(verbKey, currentTense);
+            renderAdditionalInfo(verbKey);
+            renderTranslationsList(verbKey);
+            updateRelatedBinyanSelect(verbKey);
+        });
+        binyanSelect.addEventListener("change", () => {
+            const selectedBinyan = binyanSelect.value;
+            const searchTerm = verbSearch.value.trim();
+            populateVerbSelect(selectedBinyan === "all" ? "all" : selectedBinyan, searchTerm);
+        });
+        verbSearch.addEventListener("input", () => {
+            const searchTerm = verbSearch.value.trim();
+            populateVerbSelect("all", searchTerm);
+        });
+        document.getElementById("related-binyan-button").addEventListener("click", (e) => {
+            const menu = document.getElementById("related-binyan-menu");
+            const button = document.getElementById("related-binyan-button");
+            const isExpanded = menu.style.display === "block";
+            menu.style.display = isExpanded ? "none" : "block";
+            button.setAttribute("aria-expanded", !isExpanded);
+            e.stopPropagation();
+        });
+        document.addEventListener("click", (e) => {
+            const container = document.getElementById("related-binyan-container");
+            if (!container.contains(e.target)) {
+                document.getElementById("related-binyan-menu").style.display = "none";
+            }
+        });
+        document.getElementById("related-binyan-menu").addEventListener("click", (e) => {
+            const li = e.target.closest("li");
+            if (li && li.dataset.key) {
+                const verbKey = li.dataset.key;
+                const selectedVerb = verbs[verbKey];
+                const newBinyanFilter = selectedVerb.binyan_en || "Unknown";
+                binyanSelect.value = newBinyanFilter;
+                verbSearch.value = "";
+                populateVerbSelect(newBinyanFilter, "");
+                verbSelect.value = verbKey;
+                verbSelect.dispatchEvent(new Event("change"));
+                updateRelatedBinyanSelect(verbKey);
+                document.getElementById("related-binyan-menu").style.display = "none";
+                document.getElementById("related-binyan-button").setAttribute("aria-expanded", "false");
+            }
+        });
+    }
+
+    fetch("verbs.json")
+        .then(response => response.json())
+        .then(data => {
+            verbs = data;
+            populateBinyanSelect();
+            populateVerbSelect();
+            addEventListeners();
+            const initialVerbKey = verbSelect.value;
+            if (initialVerbKey) {
+                renderTable(initialVerbKey, "past");
+                renderAdditionalInfo(initialVerbKey);
+                renderTranslationsList(initialVerbKey);
+                updateRelatedBinyanSelect(initialVerbKey);
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching verbs data:", error);
+            conjugationTable.innerHTML = '<tr><td colspan="5">Error loading data.</td></tr>';
+        });
+
+    document.getElementById("highlight-toggle").addEventListener("change", function () {
+        const table = document.getElementById("conjugation-table");
+        if (this.checked) {
+            table.classList.remove("no-highlight");
+        } else {
+            table.classList.add("no-highlight");
+        }
+    });
+
+    const fontButton = document.getElementById('font-button');
+    const fontMenu = document.getElementById('font-menu');
+
+    fontButton.addEventListener('click', function() {
+        const isExpanded = fontButton.getAttribute('aria-expanded') === 'true';
+        fontButton.setAttribute('aria-expanded', !isExpanded);
+        fontMenu.style.display = isExpanded ? 'none' : 'block';
+    });
+
+    fontMenu.addEventListener('click', function(e) {
+        if (e.target.tagName === 'LI') {
+            const selectedFont = e.target.getAttribute('data-font');
+            document.body.style.fontFamily = selectedFont;
+            fontMenu.style.display = 'none';
+            fontButton.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!fontButton.contains(e.target) && !fontMenu.contains(e.target)) {
+            fontMenu.style.display = 'none';
+            fontButton.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    document.getElementById('toggle-utilities').addEventListener('click', function() {
+        const panel = document.getElementById('utility-panel');
+        panel.classList.toggle('collapsed');
+        const isCollapsed = panel.classList.contains('collapsed');
+        this.textContent = isCollapsed ? '▼' : '▲';
+        this.setAttribute('aria-expanded', !isCollapsed);
+    });
 });
 </script> </body>
 </html>
