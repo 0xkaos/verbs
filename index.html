@@ -877,6 +877,16 @@ font-display: swap;
 <ul id="idioms-list"></ul>
 </div>
 <script>
+    function escapeHTML(str) {
+    const htmlEntities = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+    };
+    return str.replace(/[&<>"']/g, char => htmlEntities[char]);
+}
 function playAudio(src) {
     const audio = new Audio(src);
     audio.play();
@@ -1036,6 +1046,7 @@ document.addEventListener('click', function(e) {
         }
         return highlightedForm;
     }
+    
 
     function renderTable(verbKey, tense) {
     const verb = verbs[verbKey];
@@ -1068,22 +1079,22 @@ document.addEventListener('click', function(e) {
         const highlightedForm = highlightRoots(item.form, verb.root);
         const hebrewSentence = item.example_sentence_he || "No Hebrew example available";
         const englishTranslation = item.example_sentence_en || "No English translation available";
-        // Use audio_example if available, otherwise fall back to audio
-        const audioPath = item.audio_example || item.audio || "";
-        // Escape quotes in sentences using HTML entities to prevent HTML breaking
-        const escapedHebrew = hebrewSentence.replace(/'/g, "&#39;").replace(/"/g, "&quot;");
-        const escapedEnglish = englishTranslation.replace(/'/g, "&#39;").replace(/"/g, "&quot;");
+        // Separate audio paths
+        const verbAudioPath = item.audio || ""; // For verb form audio
+        const exampleAudioPath = item.audio_example || ""; // For example sentence audio (adjust if field name differs)
+        // Properly escape sentences
+        const escapedHebrew = escapeHTML(hebrewSentence);
+        const escapedEnglish = escapeHTML(englishTranslation);
         const pronounCell = `
-            <button class="pronoun-btn" data-hebrew="${escapedHebrew}" data-english="${escapedEnglish}" data-audio="${audioPath}">•</button>
+            <button class="pronoun-btn" data-hebrew="${escapedHebrew}" data-english="${escapedEnglish}" data-audio="${exampleAudioPath}">•</button>
             ${item.pronoun || "N/A"}
         `;
-        // Add fallbacks for undefined values
         const transliteration = item.transliteration || "N/A";
         const phonetics = item.phonetics || "N/A";
         const translation = item.translation || "N/A";
         
-        if (audioPath) {
-            const clickableForm = `<a href="#" onclick="playAudio('${audioPath}'); event.preventDefault();">${highlightedForm}</a>`;
+        if (verbAudioPath) {
+            const clickableForm = `<a href="#" onclick="playAudio('${verbAudioPath}'); event.preventDefault();">${highlightedForm}</a>`;
             rows.push(
                 `<tr>
                     <td>${pronounCell}</td>
