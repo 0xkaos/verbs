@@ -895,7 +895,12 @@ body.dark-mode .popup {
     #conjugation-table th,
     #conjugation-table td {
         padding: 4px;
-        font-size: calc(0.9 * var(--hebrew-adjusted-font-size));
+    }
+    #conjugation-table th {
+        font-size: calc(0.8 * var(--adjusted-font-size)); /* Match the desktop size, only scales with --font-scale-factor */
+    }
+    #conjugation-table td {
+        font-size: calc(0.9 * var(--hebrew-adjusted-font-size)); /* Scales with both --font-scale-factor and --hebrew-font-scale */
     }
     select {
         min-width: 60px;
