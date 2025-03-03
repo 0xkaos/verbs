@@ -667,22 +667,30 @@ body.dark-mode .note {
     right: 4px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 0.6em;             
-    padding: 2px 4px;             
+    font-size: 0.6em;
+    padding: 2px 4px;
     border: none;
-    background-color: #4479b6;    
+    background-color: #6490b2; /* Light mode default */
     color: #fff;
     border-radius: 2px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     line-height: 1;
-    min-width: 20px;             
+    min-width: 20px;
     height: 16px;
-    text-align: center;         
+    text-align: center;
+}
+
+body.dark-mode #conjugation-table td:nth-child(1) .pronoun-btn {
+    background-color: #4479b6; /* Dark mode default */
 }
 
 .pronoun-btn:hover {
-    background-color: #4479b6;    /* Darker blue on hover */
+    background-color: #4479b6; /* Light mode hover */
+}
+
+body.dark-mode .pronoun-btn:hover {
+    background-color: #6d97c8; /* Dark mode hover */
 }
 
 .popup {
@@ -697,6 +705,17 @@ body.dark-mode .note {
     max-width: 300px;
     text-align: right;
     font-size: 0.9em;
+    color: var(--text-color);
+    direction: rtl; /* Ensure entire popup is RTL by default */
+}
+
+body.dark-mode .popup {
+    background-color: #2a2a2a;
+}
+
+.popup .hebrew {
+    color: var(--text-color);
+    direction: rtl; /* Already present, reinforced for clarity */
 }
 
 .popup .audio-btn {
@@ -713,28 +732,13 @@ body.dark-mode .note {
     height: 16px;
 }
 
-body.dark-mode .popup {
-    background-color: #2a2a2a;
-    color: var(--text-color);
-}
-
-body.dark-mode .popup .hebrew {
-    color: #e0e0e0;
-}
-
 .popup p {
     margin: 0;
 }
 
-.popup .hebrew {
-    color: var(--primary-color);
-    direction: rtl;
-}
-
-.popup .english {
-    color: var(--secondary-text-color);
-    direction: ltr;
-    display: none;
+.highlight-verb {
+    color: var(--root-letter-color);
+    font-weight: bold;
 }
 
 /* Media Queries */
@@ -1029,7 +1033,8 @@ function togglePopup(event) {
     const hebrewSentence = button.dataset.hebrew;
     const englishTranslation = button.dataset.english;
     const audioPath = button.dataset.audio;
-    console.log("togglePopup audioPath:", audioPath); // Debug log
+    const verbForm = button.dataset.form;
+    const highlightToggle = document.getElementById('highlight-toggle').checked; // Check toggle state
 
     if (!activePopup || activePopup.style.display === 'none') {
         if (!activePopup) {
@@ -1038,36 +1043,42 @@ function togglePopup(event) {
             document.body.appendChild(activePopup);
         }
 
+        // Highlight the verb form only if toggle is checked
+        let highlightedHebrew = hebrewSentence;
+        if (highlightToggle) {
+            highlightedHebrew = hebrewSentence.replace(
+                new RegExp(`(${verbForm})`, 'g'),
+                '<span class="highlight-verb">$1</span>'
+            );
+        }
+
         const audioButton = audioPath ? `
             <button class="audio-btn">שמע</button>
         ` : '';
-        console.log("audioButton HTML:", audioButton); // Debug log
 
         activePopup.innerHTML = `
             <div class="hebrew-container">
-                <span class="hebrew">${hebrewSentence}</span>
                 ${audioButton}
+                <span class="hebrew">${highlightedHebrew}</span>
+                
             </div>
             <p class="english">${englishTranslation}</p>
         `;
         const rect = button.getBoundingClientRect();
         activePopup.style.top = `${rect.bottom + window.scrollY - 28}px`;
         const rightPosition = window.innerWidth - rect.right + window.scrollX + 10;
-        const popupWidth = activePopup.offsetWidth || 300;
         activePopup.style.right = `${Math.max(5, rightPosition)}px`;
         activePopup.style.display = 'block';
         activePopup.querySelector('.english').style.display = 'none';
 
-        // Add event listener to the audio button to play audio and prevent propagation
         const audioBtn = activePopup.querySelector('.audio-btn');
         if (audioBtn) {
             audioBtn.addEventListener('click', (e) => {
-                e.stopPropagation(); // Prevent the click from bubbling to the popup
-                playAudio(audioPath); // Play the audio
+                e.stopPropagation();
+                playAudio(audioPath);
             });
         }
 
-        // Popup click handler to toggle English translation
         activePopup.onclick = function(e) {
             const english = activePopup.querySelector('.english');
             if (english.style.display === 'none') {
@@ -1188,8 +1199,9 @@ document.addEventListener('click', function(e) {
         const exampleAudioPath = item.audio_example || "";
         const escapedHebrew = escapeHTML(hebrewSentence);
         const escapedEnglish = escapeHTML(englishTranslation);
+        const escapedForm = escapeHTML(item.form); // Escape the raw form
         const pronounCell = `
-            <button class="pronoun-btn" data-hebrew="${escapedHebrew}" data-english="${escapedEnglish}" data-audio="${exampleAudioPath}">◄</button>
+            <button class="pronoun-btn" data-hebrew="${escapedHebrew}" data-english="${escapedEnglish}" data-audio="${exampleAudioPath}" data-form="${escapedForm}">◄</button>
             ${item.pronoun || "N/A"}
         `;
         const transliteration = item.transliteration || "N/A";
