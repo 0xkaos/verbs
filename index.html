@@ -1702,53 +1702,76 @@ body.dark-mode .popup {
         }
 
         function addEventListeners() {
-            tenseButtons.forEach(button => {
-                button.addEventListener("click", () => {
-                    tenseButtons.forEach(btn => btn.classList.remove("active"));
-                    button.classList.add("active");
-                    currentTense = button.dataset.tense;
-                    const verbKey = verbSelect.value;
-                    renderTable(verbKey, currentTense);
-                });
-            });
-            verbSelect.addEventListener("change", () => {
-                const verbKey = verbSelect.value;
-                renderTable(verbKey, currentTense);
-                renderAdditionalInfo(verbKey);
-                renderTranslationsList(verbKey);
-                updateRelatedBinyanSelect(verbKey);
-            });
-            binyanSelect.addEventListener("change", () => {
-                const selectedBinyan = binyanSelect.value;
-                const searchTerm = verbSearch.value.trim();
-                populateVerbSelect(selectedBinyan === "all" ? "all" : selectedBinyan, searchTerm);
-            });
-            verbSearch.addEventListener("input", () => {
-                const searchTerm = verbSearch.value.trim();
-                populateVerbSelect("all", searchTerm);
-            });
-            document.getElementById("related-binyan-button").addEventListener("click", (e) => {
-    const menu = document.getElementById("related-binyan-menu");
-    const button = document.getElementById("related-binyan-button");
-    const icon = button.querySelector('ion-icon');
-    const isExpanded = menu.style.display === "block";
-    menu.style.display = isExpanded ? "none" : "block";
-    icon.setAttribute('name', isExpanded ? 'chevron-down' : 'chevron-up');
-    button.setAttribute("aria-expanded", !isExpanded);
-    e.stopPropagation();
-});
+    tenseButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            tenseButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+            currentTense = button.dataset.tense;
+            const verbKey = verbSelect.value;
+            renderTable(verbKey, currentTense);
+        });
+    });
 
-document.addEventListener("click", (e) => {
-    const container = document.getElementById("related-binyan-container");
-    if (!container.contains(e.target)) {
+    verbSelect.addEventListener("change", () => {
+        const verbKey = verbSelect.value;
+        renderTable(verbKey, currentTense);
+        renderAdditionalInfo(verbKey);
+        renderTranslationsList(verbKey);
+        updateRelatedBinyanSelect(verbKey);
+        updateBinyanSelect(verbKey); // Add this to sync #binyan-select with the selected verb
+    });
+
+    binyanSelect.addEventListener("change", () => {
+        const selectedBinyan = binyanSelect.value;
+        const searchTerm = verbSearch.value.trim();
+        populateVerbSelect(selectedBinyan === "all" ? "all" : selectedBinyan, searchTerm);
+    });
+
+    verbSearch.addEventListener("input", () => {
+        const searchTerm = verbSearch.value.trim();
+        populateVerbSelect("all", searchTerm);
+    });
+
+    document.getElementById("related-binyan-button").addEventListener("click", (e) => {
         const menu = document.getElementById("related-binyan-menu");
         const button = document.getElementById("related-binyan-button");
         const icon = button.querySelector('ion-icon');
-        menu.style.display = "none";
-        icon.setAttribute('name', 'chevron-down');
-        button.setAttribute("aria-expanded", "false");
-    }
-});
+        const isExpanded = menu.style.display === "block";
+        menu.style.display = isExpanded ? "none" : "block";
+        icon.setAttribute('name', isExpanded ? 'chevron-down' : 'chevron-up');
+        button.setAttribute("aria-expanded", !isExpanded);
+        e.stopPropagation();
+    });
+
+    document.addEventListener("click", (e) => {
+        const container = document.getElementById("related-binyan-container");
+        if (!container.contains(e.target)) {
+            const menu = document.getElementById("related-binyan-menu");
+            const button = document.getElementById("related-binyan-button");
+            const icon = button.querySelector('ion-icon');
+            menu.style.display = "none";
+            icon.setAttribute('name', 'chevron-down');
+            button.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    document.getElementById("related-binyan-menu").addEventListener("click", (e) => {
+        const li = e.target.closest("li");
+        if (li && li.dataset.key) {
+            const verbKey = li.dataset.key;
+            const selectedVerb = verbs[verbKey];
+            const newBinyanFilter = selectedVerb.binyan_en || "Unknown";
+            binyanSelect.value = newBinyanFilter;
+            verbSearch.value = "";
+            populateVerbSelect(newBinyanFilter, "");
+            verbSelect.value = verbKey;
+            verbSelect.dispatchEvent(new Event("change"));
+            updateRelatedBinyanSelect(verbKey);
+            document.getElementById("related-binyan-menu").style.display = "none";
+            document.getElementById("related-binyan-button").setAttribute("aria-expanded", "false");
+        }
+    });
+
             document.getElementById("related-binyan-menu").addEventListener("click", (e) => {
                 const li = e.target.closest("li");
                 if (li && li.dataset.key) {
