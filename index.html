@@ -99,7 +99,7 @@ body {
 }
 
 #toggle-utilities {
-    font-size: 0.8em;
+    font-size: 0.7em;
     padding: 1px 4px;
     border: 1px solid var(--button-border);
     border-radius: 2px;
@@ -819,6 +819,10 @@ body.dark-mode .popup {
     #conjugation-table td:nth-child(4) {
         display: none;
     }
+    #conjugation-table td:nth-child(2) {
+
+    font-size: 1em;
+}
     .conjugation-link select,
     .conjugation-link button,
     .conjugation-link input {
@@ -906,7 +910,7 @@ body.dark-mode .popup {
 <button id="toggle-utilities" aria-expanded="true">▲</button>
 
 <div id="utility-panel" class="conjugation-link collapsed">
-<label for="highlight-toggle">Highlight Roots</label>
+<label for="highlight-toggle">Highlights</label>
 <input type="checkbox" id="highlight-toggle" checked />
 <button id="dark-mode-toggle">Dark Mode</button>
 <div class="font-menu-container">
