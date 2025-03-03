@@ -130,10 +130,81 @@ body {
 .conjugation-link {
     flex: 1;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;    /* Stack children (font-size-controls, utility-toggles) vertically */
+    gap: 10px;                 /* Space between sections */
+}
+
+.font-size-controls {
+    display: flex;
+    flex-direction: column;    /* Stack global and Hebrew adjusters vertically */
+    gap: 5px;                  /* Space between adjusters */
+}
+
+.font-size-group {
+    display: flex;
+    flex-direction: row;        /* Place buttons and label inline */
+    align-items: center;       /* Center vertically */
+    gap: 5px;                  /* Space between buttons and label */
+}
+
+.font-size-group label {
+    font-size: calc(0.9 * var(--adjusted-font-size));
+    color: var(--secondary-text-color);
+    text-align: left;          /* Align label left */
+}
+
+.font-size-adjuster {
+    display: flex;
+    gap: 2px;
+}
+
+.font-size-adjuster button {
+    font-size: calc(0.8 * var(--adjusted-font-size));
+    padding: 2px;
+    border: 1px solid var(--button-border);
+    border-radius: 4px;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    width: 20px;
+    height: 20px;
+    display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    min-width: 0;
+}
+
+.font-size-adjuster button i {
+    font-size: 10px;
+}
+
+.utility-toggles {
+    display: flex;
+    flex-wrap: wrap;           /* Allow wrapping if needed */
+    gap: 10px;                 /* Space between toggles */
+    align-items: center;
+}
+
+.font-menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#font-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    min-width: 150px;
 }
 
 .conjugation-link select,
@@ -462,7 +533,7 @@ body.dark-mode input[type="checkbox"]:checked {
 #verb-search {
     display: block;
     margin: 0 auto;
-    width: 25%;
+    width: 30%;
 }
 
 #utility-panel {
@@ -471,7 +542,9 @@ body.dark-mode input[type="checkbox"]:checked {
     max-height: 300px;
     opacity: 1;
     transition: all 0.3s ease-in;
-    /* Removed overflow-x: auto, overflow-y: hidden, white-space: nowrap */
+    display: flex;
+    flex-direction: column;    /* Stack rows vertically */
+    gap: 10px;                 /* Space between rows */
 }
 
 #utility-panel.collapsed {
@@ -479,6 +552,64 @@ body.dark-mode input[type="checkbox"]:checked {
     opacity: 0;
     overflow: hidden;
     transition: all 0.3s ease-out;
+}
+
+
+#examples-list li {
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--input-bg);
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: right; /* Base alignment for RTL */
+    display: flex;     /* Use flexbox for controlled layout */
+    flex-direction: column; /* Stack children vertically */
+    gap: 5px;          /* Space between lines */
+}
+
+#examples-list li strong {
+    display: block;    /* Ensure Hebrew is its own line */
+    direction: rtl;    /* RTL for Hebrew */
+    text-align: right; /* Align right for RTL */
+    font-weight: bold;
+    font-size: calc(1 * var(--hebrew-adjusted-font-size)); /* Consistent scaling */
+}
+
+#examples-list li em {
+    display: block;    /* Ensure transliteration is its own line */
+    direction: ltr;    /* LTR for transliteration */
+    text-align: left;  /* Align left for LTR */
+    font-style: italic;
+    color: var(--secondary-text-color); /* Slightly lighter for distinction */
+    font-size: calc(1 * var(--adjusted-font-size));
+}
+
+#examples-list li p {
+    display: block;    /* Ensure translation is its own line */
+    direction: ltr;    /* LTR for translation */
+    text-align: left;  /* Align left for LTR */
+    margin: 0;         /* Remove default margin */
+    font-size: calc(1 * var(--adjusted-font-size));
+}
+#notes-section {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 30px;
+}
+
+#notes-text {
+    background-color: var(--input-bg);          /* Match card background */
+    padding: 10px;                              /* Consistent padding */
+    border: 1px solid var(--border-color);      /* Add border */
+    border-radius: 8px;                         /* Rounded corners */
+    box-shadow: var(--box-shadow);              /* Add shadow */
+    direction: ltr;                             /* Keep LTR for notes */
+    text-align: left;                           /* Align text left */
+    margin: 0;                                  /* Remove default <p> margin */
+    font-size: calc(1 * var(--adjusted-font-size)); /* Consistent scaling */
 }
 
 .tense-tabs {
@@ -745,7 +876,7 @@ body.dark-mode .pronoun-btn:hover {
     padding: 10px;
     box-shadow: var(--box-shadow);
     z-index: 1000;
-    max-width: 300px;
+    max-width: 400px;
     text-align: right;
     font-size: calc(0.9 * var(--hebrew-adjusted-font-size));
     color: var(--text-color);
@@ -952,43 +1083,50 @@ body.dark-mode .popup {
 </head>
 <body>
 
-<div class="utilities-container">
-    <button id="toggle-utilities" aria-expanded="true"><ion-icon name="chevron-up"></ion-icon></button>
-    <div id="utility-panel" class="conjugation-link collapsed">
-        <div class="font-size-adjuster" id="global-font-adjuster">
-            <button id="global-font-decrease"><ion-icon name="remove"></ion-icon></button>
-            <button id="global-font-increase"><ion-icon name="add"></ion-icon></button>
-        </div>
-        
-        <div class="font-menu-container">
-            <button id="font-button" aria-haspopup="true" aria-expanded="false">
-                font <ion-icon name="chevron-down"></ion-icon>
-            </button>
-            <div id="font-menu" style="display: none;">
-                <ul>
-                    <li data-font="Varela Round">Varela Round</li>
-                    <li data-font="Noto Serif">Noto Serif</li>
-                    <li data-font="Hadasim CLM">Hadasim</li>
-                    <li data-font="Gveret Levin AlefAlefAlef">AlefAlefAlef</li>
-                    <li data-font="Frank Ruehl CLM">Frank Ruehl</li>
-                    <li data-font="Dorian CLM">Dorian</li>
-                    <li data-font="Ktav Yad CLM">Ktav Yad</li>
-                    <li data-font="Noto Rashi Hebrew">Noto Rashi</li>
-                </ul>
+    <div class="utilities-container">
+        <button id="toggle-utilities" aria-expanded="true"><ion-icon name="chevron-up"></ion-icon></button>
+        <div id="utility-panel" class="conjugation-link collapsed">
+            <div class="utility-toggles">
+                <div class="font-menu-container">
+                    <button id="font-button" aria-haspopup="true" aria-expanded="false">
+                        Font <ion-icon name="chevron-down"></ion-icon>
+                    </button>
+                    <div id="font-menu" style="display: none;">
+                        <ul>
+                            <li data-font="Varela Round">Varela Round</li>
+                            <li data-font="Noto Serif">Noto Serif</li>
+                            <li data-font="Hadasim CLM">Hadasim</li>
+                            <li data-font="Gveret Levin AlefAlefAlef">AlefAlefAlef</li>
+                            <li data-font="Frank Ruehl CLM">Frank Ruehl</li>
+                            <li data-font="Dorian CLM">Dorian</li>
+                            <li data-font="Ktav Yad CLM">Ktav Yad</li>
+                            <li data-font="Noto Rashi Hebrew">Noto Rashi</li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="dark-mode-toggle">Dark Mode</button>
+                <label for="highlight-toggle">Highlights</label>
+                <input type="checkbox" id="highlight-toggle" checked />
             </div>
-            </div>
-
-            <div class="font-size-adjuster" id="hebrew-font-adjuster">
-                <button id="hebrew-font-decrease"><ion-icon name="remove"></ion-icon></button>
-                <button id="hebrew-font-increase"><ion-icon name="add"></ion-icon></button>
+            <div class="font-size-controls">
+                <div class="font-size-group">
+                    <div class="font-size-adjuster" id="global-font-adjuster">
+                        <button id="global-font-decrease"><ion-icon name="remove"></ion-icon></button>
+                        <button id="global-font-increase"><ion-icon name="add"></ion-icon></button>
+                    </div>
+                    <label for="global-font-adjuster">size</label>
+                </div>
+                <div class="font-size-group">
+                    <div class="font-size-adjuster" id="hebrew-font-adjuster">
+                        <button id="hebrew-font-decrease"><ion-icon name="remove"></ion-icon></button>
+                        <button id="hebrew-font-increase"><ion-icon name="add"></ion-icon></button>
+                    </div>
+                    <label for="hebrew-font-adjuster">גוֹדֶל</label>
+                </div>
             </div>
             
-            <button id="dark-mode-toggle">Dark Mode</button>
-            <label for="highlight-toggle">Highlights</label>
-            <input type="checkbox" id="highlight-toggle" checked />
         </div>
     </div>
-</div>
 <h1>Verb Conjugation</h1>
 <input type="text" id="verb-search" placeholder="Search verbs..." />
 <div class="translations-bar">
