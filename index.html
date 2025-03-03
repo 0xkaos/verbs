@@ -84,6 +84,7 @@ margin: 10px 0;
 padding: 10px 0;
 }
 .utilities-container {
+    padding: 1px 4px;
   display: flex;
 align-items: center;
 justify-content: flex-start;
@@ -467,8 +468,12 @@ color: #fff;
 font-weight: bold;
 }
 #conjugation-table th {
-border-bottom: 2px solid #0056b3;
-font-size: 0.8em;
+    border-bottom: 2px solid #0056b3;
+    font-size: 0.8em;
+    white-space: nowrap;          
+    overflow: hidden;             
+    text-overflow: ellipsis;      
+    max-width: 0;                 
 }
 #conjugation-table td:nth-child(2) {
 font-size: 1.3em;
@@ -693,11 +698,28 @@ min-width: 150px;
 }
 }
 @media (min-width: 1024px) {
-.info-section ul {
-flex-direction: row;
-justify-content: center;
-flex-wrap: wrap;
-gap: 10px;
+    .info-section ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .info-section ul li {
+        flex: 1 1 calc(33.33% - 10px); /* Three columns, adjust as needed */
+        max-width: 300px;
+    }
+}
+@media (min-width: 600px) {
+    .info-section ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .info-section ul li {
+        flex: 1 1 calc(50% - 10px); /* Two columns, accounting for gap */
+        max-width: 300px; /* Maintain max-width */
+    }
 }
 }
 @media (max-width: 500px) {
