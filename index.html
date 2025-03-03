@@ -300,13 +300,13 @@ label {
 #font-menu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 100%;                 /* Position below #font-button */
     left: 0;
     background-color: var(--input-bg);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     box-shadow: var(--box-shadow);
-    z-index: 1000;
+    z-index: 1000;             /* Ensure it’s above other elements */
     min-width: 150px;
 }
 
@@ -471,10 +471,7 @@ body.dark-mode input[type="checkbox"]:checked {
     max-height: 300px;
     opacity: 1;
     transition: all 0.3s ease-in;
-    overflow-x: auto;          /* Enable horizontal scrolling */
-    overflow-y: hidden;        /* Prevent vertical scrolling unless needed */
-    white-space: nowrap;       /* Keep content inline to trigger horizontal overflow */
-    max-width: 100%;           /* Ensure it respects parent container width */
+    /* Removed overflow-x: auto, overflow-y: hidden, white-space: nowrap */
 }
 
 #utility-panel.collapsed {
@@ -964,7 +961,9 @@ body.dark-mode .popup {
         </div>
         
         <div class="font-menu-container">
-            <button id="font-button" aria-haspopup="true" aria-expanded="false">font <i class="icon ion-chevron-down"></i></button>
+            <button id="font-button" aria-haspopup="true" aria-expanded="false">
+                font <ion-icon name="chevron-down"></ion-icon>
+            </button>
             <div id="font-menu" style="display: none;">
                 <ul>
                     <li data-font="Varela Round">Varela Round</li>
@@ -1665,35 +1664,35 @@ document.addEventListener("click", (e) => {
         });
 
         const fontButton = document.getElementById('font-button');
-        const fontMenu = document.getElementById('font-menu');
+const fontMenu = document.getElementById('font-menu');
 
-        fontButton.addEventListener('click', function() {
-            const isExpanded = fontButton.getAttribute('aria-expanded') === 'true';
-            const icon = fontButton.querySelector('i');
-            fontButton.setAttribute('aria-expanded', !isExpanded);
-            fontMenu.style.display = isExpanded ? 'none' : 'block';
-            icon.className = isExpanded ? 'icon ion-chevron-down' : 'icon ion-chevron-up';
-        });
+fontButton.addEventListener('click', function() {
+    const isExpanded = fontButton.getAttribute('aria-expanded') === 'true';
+    const icon = fontButton.querySelector('ion-icon'); // Select ion-icon instead of i
+    fontButton.setAttribute('aria-expanded', !isExpanded);
+    fontMenu.style.display = isExpanded ? 'none' : 'block';
+    icon.setAttribute('name', isExpanded ? 'chevron-down' : 'chevron-up'); // Update icon name
+});
 
-        fontMenu.addEventListener('click', function(e) {
-            if (e.target.tagName === 'LI') {
-                const selectedFont = e.target.getAttribute('data-font');
-                document.body.style.fontFamily = selectedFont;
-                fontMenu.style.display = 'none';
-                fontButton.setAttribute('aria-expanded', 'false');
-                const icon = fontButton.querySelector('i');
-                icon.className = 'icon ion-chevron-down';
-            }
-        });
+fontMenu.addEventListener('click', function(e) {
+    if (e.target.tagName === 'LI') {
+        const selectedFont = e.target.getAttribute('data-font');
+        document.body.style.fontFamily = selectedFont;
+        fontMenu.style.display = 'none';
+        fontButton.setAttribute('aria-expanded', 'false');
+        const icon = fontButton.querySelector('ion-icon');
+        icon.setAttribute('name', 'chevron-down');
+    }
+});
 
-        document.addEventListener('click', function(e) {
-            if (!fontButton.contains(e.target) && !fontMenu.contains(e.target)) {
-                fontMenu.style.display = 'none';
-                fontButton.setAttribute('aria-expanded', 'false');
-                const icon = fontButton.querySelector('i');
-                icon.className = 'icon ion-chevron-down';
-            }
-        });
+document.addEventListener('click', function(e) {
+    if (!fontButton.contains(e.target) && !fontMenu.contains(e.target)) {
+        fontMenu.style.display = 'none';
+        fontButton.setAttribute('aria-expanded', 'false');
+        const icon = fontButton.querySelector('ion-icon');
+        icon.setAttribute('name', 'chevron-down');
+    }
+});
 
         document.getElementById('toggle-utilities').addEventListener('click', function() {
     const panel = document.getElementById('utility-panel');
