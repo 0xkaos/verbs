@@ -715,6 +715,7 @@ body.dark-mode .related-binyan-menu li:hover {
     background-color: #404040;
 }
 
+/* General table styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -726,67 +727,80 @@ table {
     margin-bottom: 10px;
 }
 
+/* Specific styles for conjugation table */
 #conjugation-table {
-    direction: rtl;
-    table-layout: fixed;
+    direction: rtl; /* Base direction RTL for Hebrew */
+    table-layout: fixed; /* Ensures consistent column widths */
     width: 100%;
     max-width: 1000px;
     font-size: calc(1.1 * var(--hebrew-adjusted-font-size));
 }
 
+/* Table headers and cells */
 th,
 td {
-    padding: 4px;
-    text-align: center;
+    padding: 8px; /* Increased padding for better spacing */
     border-bottom: 1px solid var(--border-color);
-    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color); /* Consistent vertical borders (RTL: right) */
 }
 
+
+
+/* Header-specific styles */
 th {
     background-color: var(--primary-color);
     color: #fff;
     font-weight: bold;
-}
-
-#conjugation-table th {
-    direction: ltr;
-    border-bottom: 2px solid #0056b3;
+    text-align: center; /* Center headers */
+    direction: ltr; /* LTR for English headers */
     font-size: calc(0.8 * var(--adjusted-font-size));
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 0;
+    max-width: 0; /* Allows table-layout: fixed to distribute widths */
 }
 
-#conjugation-table td {
+/* Pronoun column (1st column) */
+#conjugation-table td:nth-child(1) {
+    direction: rtl;
+    text-align: right; /* Right-aligned for Hebrew pronouns */
+    padding-right: 26px; /* Padding for button space */
+    padding-left: 0px; /* Consistent left padding */
+    position: relative; /* For button positioning */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 0;
 }
 
-#conjugation-table td:nth-child(1) {
-    direction: rtl;
-    position: relative;
-    padding: 4px 24px 4px 4px;
-}
-
+/* Verb column (2nd column) */
 #conjugation-table td:nth-child(2) {
     direction: rtl;
-    white-space: normal;
+    text-align: right; /* Right-aligned for Hebrew verbs */
+    padding-right: 12px; /* Extra padding for readability */
+    padding-left: 10px;
+    white-space: normal; /* Allow wrapping if needed */
     overflow: visible;
     text-overflow: clip;
     max-width: none;
-    font-size: calc(1.2 * var(--hebrew-adjusted-font-size)); 
+    font-size: calc(1.2 * var(--hebrew-adjusted-font-size));
 }
 
+/* Other columns (Transliteration, Phonetics, Translation) */
 #conjugation-table td:nth-child(3),
 #conjugation-table td:nth-child(4),
 #conjugation-table td:nth-child(5) {
     direction: ltr;
+    text-align: left; /* Left-aligned for LTR content */
+    padding-left: 12px; /* Extra padding for readability */
+    padding-right: 8px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 0; /* Controlled by table-layout: fixed */
     font-size: calc(1 * var(--adjusted-font-size));
 }
 
+/* Verb column link styles */
 #conjugation-table td:nth-child(2) a {
     color: inherit;
     text-decoration: none;
@@ -805,6 +819,7 @@ th {
     color: inherit;
 }
 
+/* Row styles */
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
@@ -821,21 +836,7 @@ body.dark-mode tr:hover {
     background-color: #404040;
 }
 
-.note {
-    display: block;
-    padding: 5px;
-    background-color: #f9f9f9;
-    color: var(--secondary-text-color);
-    font-style: italic;
-    text-align: left;
-    font-size: calc(1 * var(--adjusted-font-size));
-}
-
-body.dark-mode .note {
-    background-color: #333;
-    color: #aaa;
-}
-
+/* Pronoun button positioning */
 #conjugation-table td:nth-child(1) .pronoun-btn {
     position: absolute;
     right: 4px;
