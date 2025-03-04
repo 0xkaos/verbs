@@ -1522,7 +1522,7 @@ function highlightRoots(form, rootLetters) {
             allOption.value = "all";
             allOption.textContent = "All";
             binyanSelect.appendChild(allOption);
-            binyanSelect.value = sortedBinyanim.includes("Paal") ? "Paal" : "all";
+            binyanSelect.value = "Paal";
         }
 
         function populateVerbSelect(binyanFilter = "all", searchTerm = "") {
@@ -1744,17 +1744,19 @@ function highlightRoots(form, rootLetters) {
 
     verbSelect.addEventListener("change", () => {
         const verbKey = verbSelect.value;
+        verbSearch.value = ""; // Clear search input
         renderTable(verbKey, currentTense);
         renderAdditionalInfo(verbKey);
         renderTranslationsList(verbKey);
         updateRelatedBinyanSelect(verbKey);
-        updateBinyanSelect(verbKey); // Add this to sync #binyan-select with the selected verb
+        updateBinyanSelect(verbKey);
     });
 
     binyanSelect.addEventListener("change", () => {
         const selectedBinyan = binyanSelect.value;
         const searchTerm = verbSearch.value.trim();
-        populateVerbSelect(selectedBinyan === "all" ? "all" : selectedBinyan, searchTerm);
+        verbSearch.value = ""; // Clear search input
+        populateVerbSelect(selectedBinyan === "all" ? "all" : selectedBinyan, "");
     });
 
     verbSearch.addEventListener("input", () => {
@@ -1792,7 +1794,7 @@ function highlightRoots(form, rootLetters) {
             const selectedVerb = verbs[verbKey];
             const newBinyanFilter = selectedVerb.binyan_en || "Unknown";
             binyanSelect.value = newBinyanFilter;
-            verbSearch.value = "";
+            verbSearch.value = ""; // Clear search input
             populateVerbSelect(newBinyanFilter, "");
             verbSelect.value = verbKey;
             verbSelect.dispatchEvent(new Event("change"));
@@ -1801,49 +1803,33 @@ function highlightRoots(form, rootLetters) {
             document.getElementById("related-binyan-button").setAttribute("aria-expanded", "false");
         }
     });
+}
 
-            document.getElementById("related-binyan-menu").addEventListener("click", (e) => {
-                const li = e.target.closest("li");
-                if (li && li.dataset.key) {
-                    const verbKey = li.dataset.key;
-                    const selectedVerb = verbs[verbKey];
-                    const newBinyanFilter = selectedVerb.binyan_en || "Unknown";
-                    binyanSelect.value = newBinyanFilter;
-                    verbSearch.value = "";
-                    populateVerbSelect(newBinyanFilter, "");
-                    verbSelect.value = verbKey;
-                    verbSelect.dispatchEvent(new Event("change"));
-                    updateRelatedBinyanSelect(verbKey);
-                    document.getElementById("related-binyan-menu").style.display = "none";
-                    document.getElementById("related-binyan-button").setAttribute("aria-expanded", "false");
-                }
-            });
+fetch("verbs.json")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
-
-        fetch("verbs.json")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                verbs = data;
-                populateBinyanSelect();
-                populateVerbSelect();
-                addEventListeners();
-                const initialVerbKey = verbSelect.value;
-                if (initialVerbKey) {
-                    renderTable(initialVerbKey, "past");
-                    renderAdditionalInfo(initialVerbKey);
-                    renderTranslationsList(initialVerbKey);
-                    updateRelatedBinyanSelect(initialVerbKey);
-                }
-            })
-            .catch(error => {
-                console.error("Error fetching verbs data:", error);
-                conjugationTable.innerHTML = '<tr><td colspan="5">Error loading data: ' + error.message + '</td></tr>';
-            });
+        return response.json();
+    })
+    .then(data => {
+        verbs = data;
+        populateBinyanSelect();
+        const initialBinyan = binyanSelect.value; // Get the default Binyan ("Paal")
+        populateVerbSelect(initialBinyan); // Pass the default Binyan to populateVerbSelect
+        addEventListeners();
+        const initialVerbKey = verbSelect.value;
+        if (initialVerbKey) {
+            renderTable(initialVerbKey, "past");
+            renderAdditionalInfo(initialVerbKey);
+            renderTranslationsList(initialVerbKey);
+            updateRelatedBinyanSelect(initialVerbKey);
+        }
+    })
+    .catch(error => {
+        console.error("Error fetching verbs data:", error);
+        conjugationTable.innerHTML = '<tr><td colspan="5">Error loading data: ' + error.message + '</td></tr>';
+    });
 
         document.getElementById("highlight-toggle").addEventListener("change", function () {
             const table = document.getElementById("conjugation-table");
