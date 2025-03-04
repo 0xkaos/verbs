@@ -1802,31 +1802,31 @@ function highlightRoots(form, rootLetters) {
     });
 }
 
-        fetch("verbs.json")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                verbs = data;
-                populateBinyanSelect();
-                populateVerbSelect();
-                addEventListeners();
-                const initialVerbKey = verbSelect.value;
-                if (initialVerbKey) {
-                    renderTable(initialVerbKey, "past");
-                    renderAdditionalInfo(initialVerbKey);
-                    renderTranslationsList(initialVerbKey);
-                    updateRelatedBinyanSelect(initialVerbKey);
-                }
-            })
-            .catch(error => {
-                console.error("Error fetching verbs data:", error);
-                conjugationTable.innerHTML = '<tr><td colspan="5">Error loading data: ' + error.message + '</td></tr>';
-            });
-
+fetch("verbs.json")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        verbs = data;
+        populateBinyanSelect();
+        const initialBinyan = binyanSelect.value; // Get the default Binyan ("Paal")
+        populateVerbSelect(initialBinyan); // Pass the default Binyan to populateVerbSelect
+        addEventListeners();
+        const initialVerbKey = verbSelect.value;
+        if (initialVerbKey) {
+            renderTable(initialVerbKey, "past");
+            renderAdditionalInfo(initialVerbKey);
+            renderTranslationsList(initialVerbKey);
+            updateRelatedBinyanSelect(initialVerbKey);
+        }
+    })
+    .catch(error => {
+        console.error("Error fetching verbs data:", error);
+        conjugationTable.innerHTML = '<tr><td colspan="5">Error loading data: ' + error.message + '</td></tr>';
+    });
         document.getElementById("highlight-toggle").addEventListener("change", function () {
             const table = document.getElementById("conjugation-table");
             if (this.checked) {
