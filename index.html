@@ -1355,10 +1355,7 @@ body.dark-mode .popup {
             return text.toLowerCase();
         }
 
-        function normalizeLetterForHighlight(char) {
-            const dageshMap = { "בּ": "ב", "גּ": "ג", "דּ": "ד", "כּ": "כ", "פּ": "פ", "תּ": "ת", "שׁ": "ש", "שׂ": "ש" };
-            return dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, "");
-        }
+
 
         function normalizeLetterForHighlight(char) {
     const dageshMap = { "בּ": "ב", "גּ": "ג", "דּ": "ד", "כּ": "כ", "פּ": "פ", "תּ": "ת", "שׁ": "ש", "שׂ": "ש" };
