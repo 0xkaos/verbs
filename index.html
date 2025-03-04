@@ -14,1093 +14,1072 @@ href="https://fonts.googleapis.com/css2?family=Alef&family=Varela+Round&display=
 rel="stylesheet"
 />
 <style>
-    /* ========================================================================= */
-    /* Global Variables */
-    /* ========================================================================= */
-    :root {
-        /* Font Scaling */
-        --base-font-size: 16px;
-        --font-scale-factor: 1;
-        --hebrew-font-scale: 1;
-        --adjusted-font-size: calc(var(--base-font-size) * var(--font-scale-factor));
-        --hebrew-adjusted-font-size: calc(var(--adjusted-font-size) * var(--hebrew-font-scale));
+:root {
+    --base-font-size: 16px; /* Default base font size */
+    --font-scale-factor: 1; /* Global scaling factor, starts at 1 (no scaling) */
+    --hebrew-font-scale: 1; /* Hebrew scaling factor, starts at 1 (no scaling) */
+    --adjusted-font-size: calc(var(--base-font-size) * var(--font-scale-factor));
+    --hebrew-adjusted-font-size: calc(var(--adjusted-font-size) * var(--hebrew-font-scale));
+
+    --font-family: "Varela Round", Arial, sans-serif;
+    --background-color: #f0f1f4;
+    --background-image: linear-gradient(to bottom, #f0f1f4, #e0e0e0);
+    --text-color: #333;
+    --secondary-text-color: #555;
+    --primary-color: #364991;
+    --accent-color: #ff6600;
+    --container-bg: #fff;
+    --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    --border-color: #ccc;
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --input-bg: #fff;
+    --input-border-color: #364991;
+    --button-bg: #e7e7e7;
+    --button-border: #bbb;
+    --button-text-color: #333;
+    --root-letter-color: #d9534f;
+    --root-letter-hover: #ff6600;
+}
+
+body.dark-mode {
+    --background-color: #121212;
+    --background-image: none;
+    --text-color: #e0e0e0;
+    --secondary-text-color: #aaa;
+    --container-bg: rgba(30, 30, 30, 0.9);
+    --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    --border-color: #333;
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    --input-bg: #2a2a2a;
+    --input-border-color: #444;
+    --button-bg: #444;
+    --button-border: #555;
+    --button-text-color: #e0e0e0;
+    --root-letter-color: #4479b6;
+    --root-letter-hover: #6d97c8;
+    --accent-color: #8fb0d6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em; /* Inherit and scale relative to parent */
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--adjusted-font-size);
+    background-color: var(--background-color);
+    background-image: var(--background-image);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--container-shadow);
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.utilities-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 10px;
+    padding: 1px 4px;
     
-        /* Colors and Styles - Light Mode */
-        --font-family: "Varela Round", Arial, sans-serif;
-        --background-color: #f0f1f4;
-        --background-image: linear-gradient(to bottom, #f0f1f4, #e0e0e0);
-        --text-color: #333;
-        --secondary-text-color: #555;
-        --primary-color: #364991;
-        --accent-color: #ff6600;
-        --container-bg: #fff;
-        --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        --border-color: #ccc;
-        --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        --input-bg: #fff;
-        --input-border-color: #364991;
-        --button-bg: #e7e7e7;
-        --button-border: #bbb;
-        --button-text-color: #333;
-        --root-letter-color: #d9534f;
-        --root-letter-hover: #ff6600;
-    }
     
-    body.dark-mode {
-        /* Colors and Styles - Dark Mode */
-        --background-color: #121212;
-        --background-image: none;
-        --text-color: #e0e0e0;
-        --secondary-text-color: #aaa;
-        --container-bg: rgba(30, 30, 30, 0.9);
-        --container-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        --border-color: #333;
-        --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-        --input-bg: #2a2a2a;
-        --input-border-color: #444;
-        --button-bg: #444;
-        --button-border: #555;
-        --button-text-color: #e0e0e0;
-        --root-letter-color: #4479b6;
-        --root-letter-hover: #6d97c8;
-        --accent-color: #8fb0d6;
-    }
-    
-    /* ========================================================================= */
-    /* Base Styles */
-    /* ========================================================================= */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-size: 1em; /* Inherit and scale relative to parent */
-    }
-    
+}
+
+#toggle-utilities {
+    font-size: 0.7em;
+    padding: 1px 4px;
+    border: 1px solid var(--button-border);
+    border-radius: 2px;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    min-width: 30px;
+    height: 16px;
+    line-height: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toggle-utilities i {
+    font-size: 12px; /* Adjust icon size */
+}
+
+.conjugation-link {
+    flex: 1;
+    display: flex;
+    flex-direction: column;    /* Stack children (font-size-controls, utility-toggles) vertically */
+    gap: 10px;                 /* Space between sections */
+}
+
+.font-size-controls {
+    display: flex;
+    flex-direction: column;    /* Stack global and Hebrew adjusters vertically */
+    gap: 5px;                  /* Space between adjusters */
+}
+
+.font-size-group {
+    display: flex;
+    flex-direction: row;        /* Place buttons and label inline */
+    align-items: center;       /* Center vertically */
+    gap: 5px;                  /* Space between buttons and label */
+}
+
+.font-size-group label {
+    font-size: calc(0.9 * var(--adjusted-font-size));
+    color: var(--secondary-text-color);
+    text-align: left;          /* Align label left */
+}
+
+.font-size-adjuster {
+    display: flex;
+    gap: 2px;
+}
+
+.font-size-adjuster button {
+    font-size: calc(0.8 * var(--adjusted-font-size));
+    padding: 2px;
+    border: 1px solid var(--button-border);
+    border-radius: 4px;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.font-size-adjuster button i {
+    font-size: 10px;
+}
+
+.utility-toggles {
+    display: flex;
+    flex-wrap: wrap;           /* Allow wrapping if needed */
+    gap: 10px;                 /* Space between toggles */
+    align-items: center;
+}
+
+.font-menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#font-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.conjugation-link select,
+.conjugation-link button,
+.conjugation-link input {
+    flex-shrink: 0;
+}
+
+.header-menus {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 0;
+    background-color: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--container-shadow);
+}
+
+.selection-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.binyan-select-container,
+.verb-select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 50px;
+}
+
+.verb-select-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.verb-select-wrapper > #related-binyan-container {
+    margin-left: 0;
+}
+
+h1 {
+    font-family: var(--font-family);
+    font-size: calc(1.6 * var(--adjusted-font-size));
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.info-section {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 30px;
+}
+
+.info-section h2 {
+    font-size: calc(1.5 * var(--adjusted-font-size));
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.info-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.info-section ul li {
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--input-bg);
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: right;
+}
+
+#translations-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+#translations-list li {
+    font-size: calc(0.9 * var(--adjusted-font-size));
+}
+
+.root-letter {
+    font-size: inherit; 
+    font-weight: normal;
+    color: var(--root-letter-color);
+}
+
+.root-letter:hover {
+    color: var(--root-letter-hover);
+}
+
+.no-highlight .root-letter {
+    color: var(--text-color);
+    font-size: inherit;
+    font-weight: normal;
+}
+
+.no-highlight .root-letter:hover {
+    color: var(--text-color);
+}
+
+label {
+    font-size: calc(0.9 * var(--adjusted-font-size));
+    color: var(--secondary-text-color);
+    text-align: center;
+}
+
+.font-menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#font-button {
+    font-size: calc(0.8 * var(--adjusted-font-size));
+    padding: 5px 10px;
+    border: 1px solid var(--button-border);
+    border-radius: 4px;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    min-width: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#font-button i {
+    font-size: 14px; 
+}
+
+#font-menu {
+    display: none;
+    position: absolute;
+    top: 100%;                 /* Position below #font-button */
+    left: 0;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;             /* Ensure it’s above other elements */
+    min-width: 150px;
+}
+
+#font-menu ul {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+}
+
+#font-menu li {
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: left;
+    font-size: calc(1 * var(--adjusted-font-size));
+}
+
+#font-menu li:hover {
+    background-color: #f1f1f1;
+}
+
+body.dark-mode #font-menu li:hover {
+    background-color: #404040;
+}
+
+body.dark-mode #font-button {
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border-color: var(--button-border);
+}
+
+/* Font Size Adjuster Buttons */
+.font-size-adjuster {
+    display: flex;
+    gap: 2px;
+}
+
+.font-size-adjuster button {
+    font-size: calc(0.8 * var(--adjusted-font-size));
+    padding: 2px;
+    border: 1px solid var(--button-border);
+    border-radius: 4px;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.font-size-adjuster button i {
+    font-size: 10px;
+}
+
+select,
+input[type="text"] {
+    padding: 8px;
+    font-size: calc(1 * var(--adjusted-font-size));
+    border: 1px solid var(--input-border-color);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    text-align: center;
+    appearance: none;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+}
+
+select:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
+}
+
+button {
+    font-size: calc(0.8 * var(--adjusted-font-size));
+    padding: 5px 10px;
+    border: 1px solid var(--button-border);
+    border-radius: 4px;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    min-width: 80px;
+}
+
+button:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
+}
+
+button:hover {
+    background-color: #d5d5d5;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode button:hover {
+    background-color: #555;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--input-bg);
+    position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✓";
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 3px;
+}
+
+body:not(.dark-mode) input[type="checkbox"]:checked {
+    background-color: var(--root-letter-color);
+    border-color: var(--root-letter-color);
+}
+
+body.dark-mode input[type="checkbox"]:not(:checked) {
+    background-color: gray;
+    border-color: gray;
+}
+
+body.dark-mode input[type="checkbox"]:checked {
+    background-color: #4479b6;
+    border-color: #4479b6;
+}
+
+#dark-mode-toggle {
+    font-size: calc(0.8 * var(--adjusted-font-size));
+    white-space: nowrap;
+    max-width: 80px;
+}
+
+#verb-search {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+}
+
+#utility-panel {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    max-height: 300px;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+    display: flex;
+    flex-direction: column;    /* Stack rows vertically */
+    gap: 10px;                 /* Space between rows */
+}
+
+#utility-panel.collapsed {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+
+
+#examples-list li {
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--input-bg);
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: right; /* Base alignment for RTL */
+    display: flex;     /* Use flexbox for controlled layout */
+    flex-direction: column; /* Stack children vertically */
+    gap: 5px;          /* Space between lines */
+}
+
+#examples-list li strong {
+    display: block;    /* Ensure Hebrew is its own line */
+    direction: rtl;    /* RTL for Hebrew */
+    text-align: right; /* Align right for RTL */
+    font-weight: bold;
+    font-size: calc(1 * var(--hebrew-adjusted-font-size)); /* Consistent scaling */
+}
+
+#examples-list li em {
+    display: block;    /* Ensure transliteration is its own line */
+    direction: ltr;    /* LTR for transliteration */
+    text-align: left;  /* Align left for LTR */
+    font-style: italic;
+    color: var(--secondary-text-color); /* Slightly lighter for distinction */
+    font-size: calc(1 * var(--adjusted-font-size));
+}
+
+#examples-list li p {
+    display: block;    /* Ensure translation is its own line */
+    direction: ltr;    /* LTR for translation */
+    text-align: left;  /* Align left for LTR */
+    margin: 0;         /* Remove default margin */
+    font-size: calc(1 * var(--adjusted-font-size));
+}
+#notes-section {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 30px;
+}
+
+#notes-text {
+    background-color: var(--input-bg);          /* Match card background */
+    padding: 10px;                              /* Consistent padding */
+    border: 1px solid var(--border-color);      /* Add border */
+    border-radius: 8px;                         /* Rounded corners */
+    box-shadow: var(--box-shadow);              /* Add shadow */
+    direction: ltr;                             /* Keep LTR for notes */
+    text-align: left;                           /* Align text left */
+    margin: 0;                                  /* Remove default <p> margin */
+    font-size: calc(1 * var(--adjusted-font-size)); /* Consistent scaling */
+}
+
+.tense-tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    width: 100%;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.2);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tense-button {
+    flex: 0 0 auto;
+    width: 18%;
+    min-width: 80px;
+    max-width: 120px;
+    text-align: center;
+    font-size: calc(1 * var(--adjusted-font-size));
+    padding: 5px;
+    border-radius: 4px;
+    background-color: var(--button-bg);
+    border: 1px solid var(--button-border);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tense-button.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#related-binyan-button {
+    width: auto;
+    min-width: 30px;
+    padding: 5px 8px;
+    text-align: center;
+    background-color: var(--button-bg);
+    border: 1px solid var(--button-border);
+    border-radius: 4px;
+    color: var(--button-text-color);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#related-binyan-button i {
+    font-size: 12px;
+}
+
+body.dark-mode #related-binyan-button {
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border-color: var(--button-border);
+}
+
+.related-binyan-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.related-binyan-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 250px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+    list-style: none;
+    padding: 8px 0;
+    z-index: 10;
+    text-align: right;
+    font-size: calc(0.9 * var(--hebrew-adjusted-font-size));
+}
+
+.related-binyan-menu li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.related-binyan-menu li:hover {
+    background-color: #f1f1f1;
+}
+
+body.dark-mode .related-binyan-menu li:hover {
+    background-color: #404040;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--container-shadow);
+    margin-bottom: 10px;
+}
+
+#conjugation-table {
+    direction: rtl;
+    table-layout: fixed;
+    width: 100%;
+    max-width: 1000px;
+    font-size: calc(1.1 * var(--hebrew-adjusted-font-size));
+}
+
+th,
+td {
+    padding: 4px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+#conjugation-table th {
+    direction: ltr;
+    border-bottom: 2px solid #0056b3;
+    font-size: calc(0.8 * var(--adjusted-font-size));
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 0;
+}
+
+#conjugation-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 0;
+}
+
+#conjugation-table td:nth-child(1) {
+    direction: rtl;
+    position: relative;
+    padding: 4px 24px 4px 4px;
+}
+
+#conjugation-table td:nth-child(2) {
+    direction: rtl;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    max-width: none;
+    font-size: calc(1.2 * var(--hebrew-adjusted-font-size)); 
+}
+
+#conjugation-table td:nth-child(3),
+#conjugation-table td:nth-child(4),
+#conjugation-table td:nth-child(5) {
+    direction: ltr;
+    font-size: calc(1 * var(--adjusted-font-size));
+}
+
+#conjugation-table td:nth-child(2) a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#conjugation-table td:nth-child(2) a:hover {
+    color: var(--accent-color);
+}
+
+#conjugation-table.no-highlight td:nth-child(2) a:hover {
+    color: var(--text-color);
+}
+
+#conjugation-table.no-highlight td:nth-child(2) a:hover .root-letter {
+    color: inherit;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+body.dark-mode tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+body.dark-mode tr:hover {
+    background-color: #404040;
+}
+
+.note {
+    display: block;
+    padding: 5px;
+    background-color: #f9f9f9;
+    color: var(--secondary-text-color);
+    font-style: italic;
+    text-align: left;
+    font-size: calc(1 * var(--adjusted-font-size));
+}
+
+body.dark-mode .note {
+    background-color: #333;
+    color: #aaa;
+}
+
+#conjugation-table td:nth-child(1) .pronoun-btn {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: calc(0.6 * var(--adjusted-font-size));
+    padding: 2px 4px;
+    border: none;
+    background-color: #6490b2;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    line-height: 1;
+    min-width: 20px;
+    height: 16px;
+    text-align: center;
+}
+
+body.dark-mode #conjugation-table td:nth-child(1) .pronoun-btn {
+    background-color: #4479b6;
+}
+
+.pronoun-btn:hover {
+    background-color: #4479b6;
+}
+
+body.dark-mode .pronoun-btn:hover {
+    background-color: #6d97c8;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    background-color: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    max-width: 400px;
+    text-align: right;
+    font-size: calc(0.9 * var(--hebrew-adjusted-font-size));
+    color: var(--text-color);
+    direction: rtl;
+}
+
+body.dark-mode .popup {
+    background-color: #2a2a2a;
+}
+
+.popup .hebrew {
+    color: var(--text-color);
+    direction: rtl;
+}
+
+.popup .audio-btn {
+    font-size: calc(0.6 * var(--adjusted-font-size));
+    padding: 1px 4px;
+    border: none;
+    background-color: #a8a8a8;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    line-height: 1;
+    min-width: 20px;
+    height: 16px;
+}
+
+.popup p {
+    margin: 0;
+}
+
+.highlight-verb {
+    color: var(--root-letter-color);
+    font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
     body {
-        font-family: var(--font-family);
-        font-size: var(--adjusted-font-size);
-        background-color: var(--background-color);
-        background-image: var(--background-image);
-        color: var(--text-color);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         padding: 5px;
-        transition: background-color 0.3s ease, color 0.3s ease;
     }
-    
-    /* ========================================================================= */
-    /* Layout Components */
-    /* ========================================================================= */
-    .container {
-        width: 100%;
-        max-width: 1000px;
-        background-color: var(--container-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        box-shadow: var(--container-shadow);
-        margin: 10px 0;
-        padding: 10px 0;
-    }
-    
-    .utilities-container {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 5px;
-        width: 100%;
-        max-width: 1000px;
-        margin-bottom: 10px;
-        padding: 1px 4px;
-    }
-    
-    .header-menus {
-        width: 100%;
-        max-width: 1000px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        padding: 5px 0;
-        background-color: var(--container-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        box-shadow: var(--container-shadow);
-    }
-    
-    .selection-row {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: nowrap;
-    }
-    
-    .binyan-select-container,
-    .verb-select-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 1 1 auto;
-        min-width: 50px;
-    }
-    
-    .verb-select-wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 5px;
-    }
-    
-    .verb-select-wrapper > #related-binyan-container {
-        margin-left: 0;
-    }
-    
-    .info-section {
-        width: 100%;
-        max-width: 1000px;
-        margin-top: 30px;
-    }
-    
-    /* ========================================================================= */
-    /* Typography */
-    /* ========================================================================= */
     h1 {
-        font-family: var(--font-family);
-        font-size: calc(1.6 * var(--adjusted-font-size));
-        text-align: center;
-        margin-bottom: 10px;
-        color: var(--primary-color);
+        font-size: calc(1.2 * var(--adjusted-font-size));
     }
-    
-    .info-section h2 {
-        font-size: calc(1.5 * var(--adjusted-font-size));
-        margin-bottom: 15px;
-        padding-bottom: 5px;
-        color: var(--primary-color);
-        border-bottom: 2px solid var(--primary-color);
+    .container,
+    .header-menus,
+    .tense-tabs {
+        padding: 5px 0;
     }
-    
-    /* ========================================================================= */
-    /* Form Elements */
-    /* ========================================================================= */
+    .conjugation-link {
+        flex-direction: row;
+        gap: 5px;
+        flex-wrap: nowrap; 
+    }
     select,
-    input[type="text"] {
-        padding: 8px;
-        font-size: calc(1 * var(--adjusted-font-size));
-        border: 1px solid var(--input-border-color);
-        border-radius: 6px;
-        background-color: var(--input-bg);
-        color: var(--text-color);
-        text-align: center;
-        appearance: none;
-        box-shadow: var(--box-shadow);
-        transition: all 0.3s ease;
-    }
-    
-    select:focus,
-    input[type="text"]:focus {
-        outline: none;
-        border-color: var(--primary-color);
-        box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
-    }
-    
+    input[type="text"],
     button {
         font-size: calc(0.8 * var(--adjusted-font-size));
-        padding: 5px 10px;
-        border: 1px solid var(--button-border);
-        border-radius: 4px;
-        background-color: var(--button-bg);
-        color: var(--button-text-color);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: var(--box-shadow);
-        min-width: 80px;
+        padding: 5px;
+        min-width: 60px;
     }
-    
-    button:focus {
-        outline: none;
-        border-color: var(--primary-color);
-        box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
+    .tense-button {
+        flex: 0 1 calc(18% - 5px);
+        min-width: 60px;
+        max-width: 100px;
+        font-size: calc(0.7 * var(--adjusted-font-size));
+        padding: 3px;
     }
-    
-    button:hover {
-        background-color: #d5d5d5;
-        transform: scale(1.05);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    #related-binyan-button {
+        width: 15px;
+        padding: 5px;
     }
-    
-    body.dark-mode button:hover {
-        background-color: #555;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    .related-binyan-menu {
+        min-width: 150px;
     }
-    
-    input[type="checkbox"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        width: 18px;
-        height: 18px;
-        border: 1px solid var(--input-border-color);
-        border-radius: 4px;
-        cursor: pointer;
-        background-color: var(--input-bg);
-        position: relative;
-    }
-    
-    input[type="checkbox"]:checked::after {
-        content: "✓";
-        font-size: 14px;
-        color: #fff;
-        position: absolute;
-        top: 0;
-        left: 3px;
-    }
-    
-    body:not(.dark-mode) input[type="checkbox"]:checked {
-        background-color: var(--root-letter-color);
-        border-color: var(--root-letter-color);
-    }
-    
-    body.dark-mode input[type="checkbox"]:not(:checked) {
-        background-color: gray;
-        border-color: gray;
-    }
-    
-    body.dark-mode input[type="checkbox"]:checked {
-        background-color: #4479b6;
-        border-color: #4479b6;
-    }
-    
-    #verb-search {
-        display: block;
-        margin: 0 auto;
-        width: 30%;
-        min-width: 250px;
-        max-width: 400px;
-    }
-    
-    /* ========================================================================= */
-    /* Utility Panel */
-    /* ========================================================================= */
-    #utility-panel {
-        grid-column: 1 / span 2;
-        grid-row: 2;
-        max-height: 300px;
-        opacity: 1;
-        transition: all 0.3s ease-in;
-        display: flex;
-        flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .info-section ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
     }
-    
-    #utility-panel.collapsed {
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        transition: all 0.3s ease-out;
+    .info-section ul li {
+        flex: 1 1 calc(50% - 10px);
+        max-width: 300px;
     }
-    
-    .conjugation-link {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .info-section ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
     }
-    
+    .info-section ul li {
+        flex: 1 1 calc(33.33% - 10px);
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    #conjugation-table th:nth-child(4),
+    #conjugation-table td:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    #conjugation-table th:nth-child(4),
+    #conjugation-table td:nth-child(4) {
+        display: none;
+    }
+    #conjugation-table td:nth-child(2) {
+        font-size: calc(1 * var(--hebrew-adjusted-font-size));
+    }
     .conjugation-link select,
     .conjugation-link button,
     .conjugation-link input {
-        flex-shrink: 0;
-    }
-    
-    .utility-toggles {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        align-items: center;
-    }
-    
-    #toggle-utilities {
-        font-size: 0.7em;
-        padding: 1px 4px;
-        border: 1px solid var(--button-border);
-        border-radius: 2px;
-        background-color: var(--button-bg);
-        color: var(--button-text-color);
-        cursor: pointer;
-        box-shadow: var(--box-shadow);
-        min-width: 30px;
-        height: 16px;
-        line-height: 1;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    #dark-mode-toggle {
-        font-size: calc(0.8 * var(--adjusted-font-size));
-        white-space: nowrap;
-        max-width: 80px;
-    }
-    
-    /* Font Menu */
-    .font-menu-container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-    
-    #font-button {
-        font-size: calc(0.8 * var(--adjusted-font-size));
-        padding: 5px 10px;
-        border: 1px solid var(--button-border);
-        border-radius: 4px;
-        background-color: var(--button-bg);
-        color: var(--button-text-color);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: var(--box-shadow);
-        min-width: 80px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-    }
-    
-    body.dark-mode #font-button {
-        background-color: var(--button-bg);
-        color: var(--button-text-color);
-        border-color: var(--button-border);
-    }
-    
-    #font-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: var(--input-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 4px;
-        box-shadow: var(--box-shadow);
-        z-index: 1000;
-        min-width: 150px;
-    }
-    
-    #font-menu ul {
-        list-style: none;
-        padding: 5px 0;
-        margin: 0;
-    }
-    
-    #font-menu li {
-        padding: 5px 10px;
-        cursor: pointer;
-        text-align: left;
-        font-size: calc(1 * var(--adjusted-font-size));
-    }
-    
-    #font-menu li:hover {
-        background-color: #f1f1f1;
-    }
-    
-    body.dark-mode #font-menu li:hover {
-        background-color: #404040;
-    }
-    
-    /* Font Size Adjuster */
-    .font-size-controls {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-    
-    .font-size-group {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 5px;
-    }
-    
-    .font-size-group label {
-        font-size: calc(0.9 * var(--adjusted-font-size));
-        color: var(--secondary-text-color);
-        text-align: left;
-    }
-    
-    .font-size-adjuster {
-        display: flex;
-        gap: 2px;
-    }
-    
-    .font-size-adjuster button {
-        font-size: calc(0.8 * var(--adjusted-font-size));
-        padding: 2px;
-        border: 1px solid var(--button-border);
-        border-radius: 4px;
-        background-color: var(--button-bg);
-        color: var(--button-text-color);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: var(--box-shadow);
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        flex: none;
         min-width: 0;
-    }
-    
-    /* ========================================================================= */
-    /* Tense Tabs */
-    /* ========================================================================= */
-    .tense-tabs {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: 5px;
-        padding: 5px;
-        width: 100%;
-        max-width: 1000px;
-        background-color: rgba(255, 255, 255, 0.2);
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-    
-    .tense-button {
-        flex: 0 0 auto;
-        width: 18%;
-        min-width: 80px;
-        max-width: 120px;
-        text-align: center;
-        font-size: calc(1 * var(--adjusted-font-size));
-        padding: 5px;
-        border-radius: 4px;
-        background-color: var(--button-bg);
-        border: 1px solid var(--button-border);
-        color: var(--button-text-color);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: var(--box-shadow);
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    .tense-button.active {
-        background-color: var(--primary-color);
-        color: #fff;
-        border: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* ========================================================================= */
-    /* Conjugation Table */
-    /* ========================================================================= */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: var(--input-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: var(--container-shadow);
-        margin-bottom: 10px;
-    }
-    
-    #conjugation-table {
-        direction: rtl;
-        table-layout: fixed;
-        width: 100%;
-        max-width: 1000px;
-        font-size: calc(1.1 * var(--hebrew-adjusted-font-size));
-    }
-    
-    th,
-    td {
-        padding: 4px;
-        text-align: center;
-        border-bottom: 1px solid var(--border-color);
-        border-left: 1px solid var(--border-color);
-    }
-    
-    th {
-        background-color: var(--primary-color);
-        color: #fff;
-        font-weight: bold;
-    }
-    
-    #conjugation-table th {
-        direction: ltr;
-        border-bottom: 2px solid #0056b3;
-        font-size: calc(0.8 * var(--adjusted-font-size));
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 0;
-    }
-    
-    /* Pronoun column: RTL, tightened */
-    #conjugation-table td:nth-child(1) {
-        direction: rtl;
-        text-align: right;
-        position: relative;
-        padding: 4px 18px 4px 4px;
-        width: 50px;
-        max-width: 50px;
-        box-sizing: border-box;
-    }
-    
-    .pronoun-text {
-        padding-right: 12px; /* Gap between pronoun text and button */
-    }
-    #conjugation-table th:nth-child(1) {
-    width: 80px; 
-    max-width: 80px; 
-}
-    #conjugation-table td:nth-child(1) .pronoun-btn {
-        position: absolute;
-        right: 4px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: calc(0.6 * var(--adjusted-font-size));
-        padding: 2px 4px;
-        border: none;
-        background-color: #6490b2;
-        color: #fff;
-        border-radius: 2px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        line-height: 1;
-        min-width: 20px;
-        height: 16px;
-        text-align: center;
-        
-    }
-    
-    body.dark-mode #conjugation-table td:nth-child(1) .pronoun-btn {
-        background-color: #4479b6;
-    }
-    
-    .pronoun-btn:hover {
-        background-color: #4479b6;
-    }
-    
-    body.dark-mode .pronoun-btn:hover {
-        background-color: #6d97c8;
-    }
-    
-    /* Verb column: RTL */
-    #conjugation-table td:nth-child(2) {
-        direction: rtl;
-        text-align: right;
-        white-space: normal;
-        overflow: visible;
-        text-overflow: clip;
         max-width: none;
-        font-size: calc(1.2 * var(--hebrew-adjusted-font-size));
-        color: var(--text-color);
     }
-    
-    /* Style the <a> tag in the Verb column */
-    #conjugation-table td:nth-child(2) a {
-        color: var(--text-color);
-        text-decoration: none;
-        transition: color 0.3s ease;
+    .selection-row {
+        flex-wrap: nowrap;
     }
-    
-    /* Ensure root letters within <a> use --root-letter-color */
-    #conjugation-table td:nth-child(2) a .root-letter {
-        color: var(--root-letter-color);
+    .binyan-select-container,
+    .verb-select-container {
+        width: auto;
+        min-width: 0;
+        flex: 0 1 auto;
     }
-    
-    /* Hover effect for <a> */
-    #conjugation-table td:nth-child(2) a:hover {
-        color: var(--accent-color);
-    }
-    
-    /* When highlighting is disabled, reset root letters to --text-color */
-    #conjugation-table.no-highlight td:nth-child(2) a .root-letter {
-        color: var(--text-color);
-    }
-    
-    /* Ensure hover effect doesn't change root letter color when highlighting is disabled */
-    #conjugation-table.no-highlight td:nth-child(2) a:hover {
-        color: var(--text-color);
-    }
-    
-    /* Transliteration, Phonetics, Translation: LTR with ellipses */
-    #conjugation-table td:nth-child(3),
-    #conjugation-table td:nth-child(4),
-    #conjugation-table td:nth-child(5) {
-        direction: ltr;
-        text-align: left;
-        font-size: calc(1 * var(--adjusted-font-size));
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 0;
-    }
-    
-    /* Table Row Styles */
-    tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
-    
-    body.dark-mode tr:nth-child(even) {
-        background-color: #2a2a2a;
-    }
-    
-    tr:hover {
-        background-color: #f1f1f1;
-    }
-    
-    body.dark-mode tr:hover {
-        background-color: #404040;
-    }
-    
-    /* ========================================================================= */
-    /* Highlighting */
-    /* ========================================================================= */
-    .root-letter {
-        font-size: inherit;
-        font-weight: normal;
-        color: var(--root-letter-color);
-    }
-    
-    .root-letter:hover {
-        color: var(--root-letter-hover);
-    }
-    
-    .no-highlight .root-letter {
-        color: var(--text-color);
-        font-size: inherit;
-        font-weight: normal;
-    }
-    
-    .no-highlight .root-letter:hover {
-        color: var(--text-color);
-    }
-    
-    /* ========================================================================= */
-    /* Info Sections */
-    /* ========================================================================= */
-    #translations-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
-    }
-    
-    #translations-list li {
-        font-size: calc(0.9 * var(--adjusted-font-size));
-    }
-    
-    #examples-list li {
-        width: 100%;
-        max-width: 300px;
-        background-color: var(--input-bg);
-        padding: 10px;
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        box-shadow: var(--box-shadow);
-        transition: transform 0.3s ease, background-color 0.3s ease;
-        text-align: right;
-        display: flex;
-        flex-direction: column;
+    .verb-select-wrapper {
+        width: auto;
+        flex-wrap: nowrap;
         gap: 5px;
     }
-    
-    #examples-list li strong {
-        display: block;
-        direction: rtl;
-        text-align: right;
-        font-weight: bold;
-        font-size: calc(1 * var(--hebrew-adjusted-font-size));
+    .tense-tabs {
+        gap: 3px;
     }
-    
-    #examples-list li em {
-        display: block;
-        direction: ltr;
-        text-align: left;
-        font-style: italic;
-        color: var(--secondary-text-color);
-        font-size: calc(1 * var(--adjusted-font-size));
+    .tense-button {
+        min-width: 50px;
+        font-size: calc(0.65 * var(--adjusted-font-size));
+        padding: 2px;
     }
-    
-    #examples-list li p {
-        display: block;
-        direction: ltr;
-        text-align: left;
-        margin: 0;
-        font-size: calc(1 * var(--adjusted-font-size));
+    #conjugation-table th,
+    #conjugation-table td {
+        padding: 4px;
     }
-    
-    #notes-section {
-        width: 100%;
-        max-width: 1000px;
-        margin-top: 30px;
+    #conjugation-table th {
+        font-size: calc(0.8 * var(--adjusted-font-size)); /* Match the desktop size, only scales with --font-scale-factor */
     }
-    
-    #notes-text {
-        background-color: var(--input-bg);
-        padding: 10px;
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        box-shadow: var(--box-shadow);
-        direction: ltr;
-        text-align: left;
-        margin: 0;
-        font-size: calc(1 * var(--adjusted-font-size));
+    #conjugation-table td {
+        font-size: calc(0.9 * var(--hebrew-adjusted-font-size)); /* Scales with both --font-scale-factor and --hebrew-font-scale */
     }
-    
-    /* ========================================================================= */
-    /* Related Binyan Menu */
-    /* ========================================================================= */
-    .related-binyan-wrapper {
-        position: relative;
-        display: inline-block;
-    }
-    
-    #related-binyan-button {
-        width: auto;
-        min-width: 30px;
-        padding: 5px 8px;
-        text-align: center;
-        background-color: var(--button-bg);
-        border: 1px solid var(--button-border);
-        border-radius: 4px;
-        color: var(--button-text-color);
-        cursor: pointer;
-        box-shadow: var(--box-shadow);
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    body.dark-mode #related-binyan-button {
-        background-color: var(--button-bg);
-        color: var(--button-text-color);
-        border-color: var(--button-border);
-    }
-    
-    .related-binyan-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        min-width: 250px;
-        background-color: var(--input-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 4px;
-        box-shadow: var(--box-shadow);
-        list-style: none;
-        padding: 8px 0;
-        z-index: 10;
-        text-align: right;
-        font-size: calc(0.9 * var(--hebrew-adjusted-font-size));
-    }
-    
-    .related-binyan-menu li {
-        padding: 5px 10px;
-        cursor: pointer;
-    }
-    
-    .related-binyan-menu li:hover {
-        background-color: #f1f1f1;
-    }
-    
-    body.dark-mode .related-binyan-menu li:hover {
-        background-color: #404040;
-    }
-    
-    /* ========================================================================= */
-    /* Popup */
-    /* ========================================================================= */
-    .popup {
-        display: none;
-        position: absolute;
-        background-color: var(--container-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-        padding: 10px;
-        box-shadow: var(--box-shadow);
-        z-index: 1000;
-        max-width: 400px;
-        text-align: right;
-        font-size: calc(0.9 * var(--hebrew-adjusted-font-size));
-        color: var(--text-color);
-        direction: rtl;
-    }
-    
-    body.dark-mode .popup {
-        background-color: #2a2a2a;
-    }
-    
-    .hebrew-container {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-    }
-    
-    .popup .audio-btn {
-        font-size: calc(0.6 * var(--adjusted-font-size));
-        padding: 1px 4px;
-        border: none;
-        background-color: #a8a8a8;
-        color: #fff;
-        border-radius: 2px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        line-height: 1;
-        min-width: 20px;
-        height: 16px;
-        flex: 0 0 auto;
-        order: 0;
-        margin-left: 5px;
-    }
-    
-    .hebrew-wrapper {
-        flex: 1;
-        direction: rtl;
-        text-align: right;
-    }
-    
-    .popup .hebrew {
-        color: var(--text-color);
-        display: inline;
-    }
-    
-    .popup p {
-        margin: 0;
-    }
-    
-    .highlight-verb {
-        color: var(--root-letter-color);
-        font-weight: bold;
-    }
-    
-    /* ========================================================================= */
-    /* Notes and Miscellaneous */
-    /* ========================================================================= */
-    .note {
-        display: block;
+    select {
+        min-width: 60px;
+        font-size: calc(0.8 * var(--adjusted-font-size));
         padding: 5px;
-        background-color: #f9f9f9;
-        color: var(--secondary-text-color);
-        font-style: italic;
-        text-align: left;
-        font-size: calc(1 * var(--adjusted-font-size));
     }
-    
-    body.dark-mode .note {
-        background-color: #333;
-        color: #aaa;
-    }
-    
-    /* ========================================================================= */
-    /* Media Queries */
-    /* ========================================================================= */
-    @media (max-width: 768px) {
-        body {
-            padding: 5px;
-        }
-    
-        h1 {
-            font-size: calc(1.2 * var(--adjusted-font-size));
-        }
-    
-        .container,
-        .header-menus,
-        .tense-tabs {
-            padding: 5px 0;
-        }
-    
-        .conjugation-link {
-            flex-direction: row;
-            gap: 5px;
-            flex-wrap: nowrap;
-        }
-    
-        select,
-        input[type="text"],
-        button {
-            font-size: calc(0.8 * var(--adjusted-font-size));
-            padding: 5px;
-            min-width: 60px;
-        }
-    
-        .tense-button {
-            flex: 0 1 calc(18% - 5px);
-            min-width: 60px;
-            max-width: 100px;
-            font-size: calc(0.7 * var(--adjusted-font-size));
-            padding: 3px;
-        }
-    
-        #related-binyan-button {
-            width: 15px;
-            padding: 5px;
-        }
-    
-        .related-binyan-menu {
-            min-width: 150px;
-        }
-    }
-    
-    @media (min-width: 600px) {
-        .info-section ul {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-    
-        .info-section ul li {
-            flex: 1 1 calc(50% - 10px);
-            max-width: 300px;
-        }
-    }
-    
-    @media (min-width: 1024px) {
-        .info-section ul {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-    
-        .info-section ul li {
-            flex: 1 1 calc(33.33% - 10px);
-            max-width: 300px;
-        }
-    }
-    
-    @media (max-width: 500px) {
-        #conjugation-table th:nth-child(4),
-        #conjugation-table td:nth-child(4) {
-            display: none;
-        }
-    }
-    
-    @media (max-width: 400px) {
-        #conjugation-table th:nth-child(4),
-        #conjugation-table td:nth-child(4) {
-            display: none;
-        }
-        #conjugation-table th:nth-child(1) {
-            width: 70px; 
-            max-width: 70px; 
-        }
-    
-        #conjugation-table td:nth-child(2) {
-            font-size: calc(1 * var(--hebrew-adjusted-font-size));
-        }
-    
-        .conjugation-link select,
-        .conjugation-link button,
-        .conjugation-link input {
-            flex: none;
-            min-width: 0;
-            max-width: none;
-        }
-    
-        .selection-row {
-            flex-wrap: nowrap;
-        }
-    
-        .binyan-select-container,
-        .verb-select-container {
-            width: auto;
-            min-width: 0;
-            flex: 0 1 auto;
-        }
-    
-        .verb-select-wrapper {
-            width: auto;
-            flex-wrap: nowrap;
-            gap: 5px;
-        }
-    
-        .tense-tabs {
-            gap: 3px;
-        }
-    
-        .tense-button {
-            min-width: 50px;
-            font-size: calc(0.65 * var(--adjusted-font-size));
-            padding: 2px;
-        }
-    
-        #conjugation-table th,
-        #conjugation-table td {
-            padding: 4px;
-        }
-    
-        #conjugation-table th {
-            font-size: calc(0.8 * var(--adjusted-font-size));
-        }
-    
-        #conjugation-table td {
-            font-size: calc(0.9 * var(--hebrew-adjusted-font-size));
-        }
-    
-        select {
-            min-width: 60px;
-            font-size: calc(0.8 * var(--adjusted-font-size));
-            padding: 5px;
-        }
-    }
-    
-    /* ========================================================================= */
-    /* Font Faces */
-    /* ========================================================================= */
-    @font-face {
-        font-family: "Noto Rashi Hebrew";
-        src: url("fonts/NotoRashiHebrew-VariableFont_wght.ttf") format("truetype");
-    }
-    
-    @font-face {
-        font-family: "Hadasim CLM";
-        src: url("fonts/Hadasim CLM Regular.ttf") format("truetype");
-    }
-    
-    @font-face {
-        font-family: "Gveret Levin AlefAlefAlef";
-        src: url("fonts/Gveret Levin AlefAlefAlef Regular.ttf") format("truetype");
-    }
-    
-    @font-face {
-        font-family: "Frank Ruehl CLM";
-        src: url("fonts/FrankRuehlCLM-Medium.ttf") format("truetype");
-    }
-    
-    @font-face {
-        font-family: "Dorian CLM";
-        src: url("fonts/DorianCLM-BookItalic.ttf") format("truetype");
-    }
-    
-    @font-face {
-        font-family: "Ktav Yad CLM";
-        src: url("fonts/KtavYadCLM-MediumItalic.ttf") format("truetype");
-    }
-    
-    @font-face {
-        font-family: "Noto Serif";
-        src: url("../fonts/NotoSerifHebrew-VariableFont_wdthwght.ttf") format("truetype");
-        font-display: swap;
-    }
-    </style>
+}
+
+/* Font Faces */
+@font-face {
+    font-family: "Noto Rashi Hebrew";
+    src: url("fonts/NotoRashiHebrew-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Hadasim CLM";
+    src: url("fonts/Hadasim CLM Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Gveret Levin AlefAlefAlef";
+    src: url("fonts/Gveret Levin AlefAlefAlef Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Frank Ruehl CLM";
+    src: url("fonts/FrankRuehlCLM-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Dorian CLM";
+    src: url("fonts/DorianCLM-BookItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Ktav Yad CLM";
+    src: url("fonts/KtavYadCLM-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Noto Serif";
+    src: url("../fonts/NotoSerifHebrew-VariableFont_wdthwght.ttf") format("truetype");
+    font-display: swap;
+}
+</style>
 </head>
 <body>
 
@@ -1376,7 +1355,10 @@ rel="stylesheet"
             return text.toLowerCase();
         }
 
-        
+        function normalizeLetterForHighlight(char) {
+            const dageshMap = { "בּ": "ב", "גּ": "ג", "דּ": "ד", "כּ": "כ", "פּ": "פ", "תּ": "ת", "שׁ": "ש", "שׂ": "ש" };
+            return dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, "");
+        }
 
         function normalizeLetterForHighlight(char) {
     const dageshMap = { "בּ": "ב", "גּ": "ג", "דּ": "ד", "כּ": "כ", "פּ": "פ", "תּ": "ת", "שׁ": "ש", "שׂ": "ש" };
@@ -1440,79 +1422,79 @@ function highlightRoots(form, rootLetters) {
     return highlightedForm;
 }
 
-function renderTable(verbKey, tense) {
-    const verb = verbs[verbKey];
-    if (!verb || !verb.conjugations[tense]) {
-        conjugationTable.innerHTML = '<tr><td colspan="5">No data available for this tense.</td></tr>';
-        return;
-    }
-    let conjugations = verb.conjugations[tense];
-    const desiredPronounOrder = ["הוא", "היא", "את", "אתה", "אני", "אנחנו", "אתם", "אתן", "הם", "הן"];
-    conjugations.sort((a, b) => {
-        let indexA = desiredPronounOrder.indexOf(a.pronoun);
-        let indexB = desiredPronounOrder.indexOf(b.pronoun);
-        if (indexA === -1) indexA = desiredPronounOrder.length;
-        if (indexB === -1) indexB = desiredPronounOrder.length;
-        return indexA - indexB;
-    });
-    const headerData = [
-        { text: "Pronoun", class: "" },
-        { text: "Verb", class: "" },
-        { text: "Transliteration", class: "ltr" },
-        { text: "Phonetics", class: "" },
-        { text: "Translation", class: "" }
-    ];
-    let rows = [
-        "<tr>" +
-        headerData.map((data) => `<th class="${data.class}">${data.text}</th>`).join("") +
-        "</tr>"
-    ];
-    for (let item of conjugations) {
-        const highlightedForm = highlightRoots(item.form, verb.root);
-        const hebrewSentence = item.example_sentence_he || "No Hebrew example available";
-        const englishTranslation = item.example_sentence_en || "No English translation available";
-        const verbAudioPath = item.audio || "";
-        const exampleAudioPath = item.audio_example || "";
-        const escapedHebrew = escapeHTML(hebrewSentence);
-        const escapedEnglish = escapeHTML(englishTranslation);
-        const escapedForm = escapeHTML(item.form);
-        const pronounCell = `
-            <button class="pronoun-btn" data-hebrew="${escapedHebrew}" data-english="${escapedEnglish}" data-audio="${exampleAudioPath}" data-form="${escapedForm}">◄</button>
-            <span class="pronoun-text">${item.pronoun || "N/A"}</span>
-        `;
-        const transliteration = item.transliteration || "N/A";
-        const phonetics = item.phonetics || "N/A";
-        const translation = item.translation || "N/A";
-        
-        if (verbAudioPath) {
-            const clickableForm = `<a href="#" onclick="playAudio('${verbAudioPath}'); event.preventDefault();">${highlightedForm}</a>`;
-            rows.push(
-                `<tr>
-                    <td>${pronounCell}</td>
-                    <td>${clickableForm}</td>
-                    <td class="ltr">${transliteration}</td>
-                    <td class="ltr">${phonetics}</td>
-                    <td>${translation}</td>
-                </tr>`
-            );
-        } else {
-            rows.push(
-                `<tr>
-                    <td>${pronounCell}</td>
-                    <td>${highlightedForm}</td>
-                    <td class="ltr">${transliteration}</td>
-                    <td class="ltr">${phonetics}</td>
-                    <td>${translation}</td>
-                </tr>`
-            );
-        }
-    }
-    conjugationTable.innerHTML = rows.join("");
+        function renderTable(verbKey, tense) {
+            const verb = verbs[verbKey];
+            if (!verb || !verb.conjugations[tense]) {
+                conjugationTable.innerHTML = '<tr><td colspan="5">No data available for this tense.</td></tr>';
+                return;
+            }
+            let conjugations = verb.conjugations[tense];
+            const desiredPronounOrder = ["הוא", "היא", "את", "אתה", "אני", "אנחנו", "אתם", "אתן", "הם", "הן"];
+            conjugations.sort((a, b) => {
+                let indexA = desiredPronounOrder.indexOf(a.pronoun);
+                let indexB = desiredPronounOrder.indexOf(b.pronoun);
+                if (indexA === -1) indexA = desiredPronounOrder.length;
+                if (indexB === -1) indexB = desiredPronounOrder.length;
+                return indexA - indexB;
+            });
+            const headerData = [
+                { text: "Pronoun", class: "" },
+                { text: "Verb", class: "" },
+                { text: "Transliteration", class: "ltr" },
+                { text: "Phonetics", class: "" },
+                { text: "Translation", class: "" }
+            ];
+            let rows = [
+                "<tr>" +
+                headerData.map((data) => `<th class="${data.class}">${data.text}</th>`).join("") +
+                "</tr>"
+            ];
+            for (let item of conjugations) {
+                const highlightedForm = highlightRoots(item.form, verb.root);
+                const hebrewSentence = item.example_sentence_he || "No Hebrew example available";
+                const englishTranslation = item.example_sentence_en || "No English translation available";
+                const verbAudioPath = item.audio || "";
+                const exampleAudioPath = item.audio_example || "";
+                const escapedHebrew = escapeHTML(hebrewSentence);
+                const escapedEnglish = escapeHTML(englishTranslation);
+                const escapedForm = escapeHTML(item.form); // Escape the raw form
+                const pronounCell = `
+                    <button class="pronoun-btn" data-hebrew="${escapedHebrew}" data-english="${escapedEnglish}" data-audio="${exampleAudioPath}" data-form="${escapedForm}">◄</button>
+                    ${item.pronoun || "N/A"}
+                `;
+                const transliteration = item.transliteration || "N/A";
+                const phonetics = item.phonetics || "N/A";
+                const translation = item.translation || "N/A";
+                
+                if (verbAudioPath) {
+                    const clickableForm = `<a href="#" onclick="playAudio('${verbAudioPath}'); event.preventDefault();">${highlightedForm}</a>`;
+                    rows.push(
+                        `<tr>
+                            <td>${pronounCell}</td>
+                            <td>${clickableForm}</td>
+                            <td class="ltr">${transliteration}</td>
+                            <td class="ltr">${phonetics}</td>
+                            <td>${translation}</td>
+                        </tr>`
+                    );
+                } else {
+                    rows.push(
+                        `<tr>
+                            <td>${pronounCell}</td>
+                            <td>${highlightedForm}</td>
+                            <td class="ltr">${transliteration}</td>
+                            <td class="ltr">${phonetics}</td>
+                            <td>${translation}</td>
+                        </tr>`
+                    );
+                }
+            }
+            conjugationTable.innerHTML = rows.join("");
 
-    document.querySelectorAll('.pronoun-btn').forEach(button => {
-        button.addEventListener('click', togglePopup);
-    });
-}
+            document.querySelectorAll('.pronoun-btn').forEach(button => {
+                button.addEventListener('click', togglePopup);
+            });
+        }
 
         function populateBinyanSelect() {
             const binyanMap = new Map();
@@ -1823,31 +1805,30 @@ function renderTable(verbKey, tense) {
     });
 }
 
-fetch("verbs.json")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        verbs = data;
-        populateBinyanSelect();
-        const initialBinyan = binyanSelect.value; // Get the default Binyan ("Paal")
-        populateVerbSelect(initialBinyan); // Pass the default Binyan to populateVerbSelect
-        addEventListeners();
-        const initialVerbKey = verbSelect.value;
-        if (initialVerbKey) {
-            renderTable(initialVerbKey, "past");
-            renderAdditionalInfo(initialVerbKey);
-            renderTranslationsList(initialVerbKey);
-            updateRelatedBinyanSelect(initialVerbKey);
-        }
-    })
-    .catch(error => {
-        console.error("Error fetching verbs data:", error);
-        conjugationTable.innerHTML = '<tr><td colspan="5">Error loading data: ' + error.message + '</td></tr>';
-    });
+        fetch("verbs.json")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                verbs = data;
+                populateBinyanSelect();
+                populateVerbSelect();
+                addEventListeners();
+                const initialVerbKey = verbSelect.value;
+                if (initialVerbKey) {
+                    renderTable(initialVerbKey, "past");
+                    renderAdditionalInfo(initialVerbKey);
+                    renderTranslationsList(initialVerbKey);
+                    updateRelatedBinyanSelect(initialVerbKey);
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching verbs data:", error);
+                conjugationTable.innerHTML = '<tr><td colspan="5">Error loading data: ' + error.message + '</td></tr>';
+            });
 
         document.getElementById("highlight-toggle").addEventListener("change", function () {
             const table = document.getElementById("conjugation-table");
