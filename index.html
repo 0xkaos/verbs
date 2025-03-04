@@ -130,7 +130,7 @@ body {
 .conjugation-link {
     flex: 1;
     display: flex;
-    flex-direction: column;    /* Stack children (font-size-controls, utility-toggles) vertically */
+    flex-direction: column;    
     gap: 10px;                 /* Space between sections */
 }
 
@@ -736,6 +736,41 @@ table {
     font-size: calc(1.1 * var(--hebrew-adjusted-font-size));
 }
 
+#conjugation-table th,
+#conjugation-table td {
+    padding: 8px; /* Consistent padding */
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color); /* Consistent vertical borders (RTL: right) */
+}
+
+
+
+/* Column widths */
+#conjugation-table th:nth-child(1),
+#conjugation-table td:nth-child(1) {
+    width: 17%; /* Reduced width for Pronoun column */
+}
+
+#conjugation-table th:nth-child(2),
+#conjugation-table td:nth-child(2) {
+    width: 20%; /* Verb column */
+}
+
+#conjugation-table th:nth-child(3),
+#conjugation-table td:nth-child(3) {
+    width: 25%; /* Transliteration column, increased to avoid ellipsis */
+}
+
+#conjugation-table th:nth-child(4),
+#conjugation-table td:nth-child(4) {
+    width: 20%; /* Phonetics column */
+}
+
+#conjugation-table th:nth-child(5),
+#conjugation-table td:nth-child(5) {
+    width: 18%; /* Translation column */
+}
+
 /* Table headers and cells */
 th,
 td {
@@ -793,7 +828,7 @@ th {
     text-align: left; /* Left-aligned for LTR content */
     padding-left: 12px; /* Extra padding for readability */
     padding-right: 8px;
-
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 0; /* Controlled by table-layout: fixed */
@@ -995,6 +1030,27 @@ body.dark-mode .popup {
     #conjugation-table td:nth-child(4) {
         display: none;
     }
+    /* Column widths */
+#conjugation-table th:nth-child(1),
+#conjugation-table td:nth-child(1) {
+    width: 17%; /* Reduced width for Pronoun column */
+}
+
+#conjugation-table th:nth-child(2),
+#conjugation-table td:nth-child(2) {
+    width: 25%; /* Verb column */
+}
+
+#conjugation-table th:nth-child(3),
+#conjugation-table td:nth-child(3) {
+    width: 30%; /* Transliteration column, increased to avoid ellipsis */
+}
+
+
+#conjugation-table th:nth-child(5),
+#conjugation-table td:nth-child(5) {
+    width: 18%; /* Translation column */
+}
     #conjugation-table td:nth-child(2) {
         font-size: calc(1 * var(--hebrew-adjusted-font-size));
     }
