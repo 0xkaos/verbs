@@ -1023,6 +1023,26 @@ body.dark-mode .popup {
     #conjugation-table td:nth-child(4) {
         display: none;
     }
+    #conjugation-table th:nth-child(1),
+#conjugation-table td:nth-child(1) {
+    width: 17%; /* Reduced width for Pronoun column */
+}
+
+#conjugation-table th:nth-child(2),
+#conjugation-table td:nth-child(2) {
+    width: 22%; /* Verb column */
+}
+
+#conjugation-table th:nth-child(3),
+#conjugation-table td:nth-child(3) {
+    width: 28%; /* Transliteration column, increased to avoid ellipsis */
+}
+
+
+#conjugation-table th:nth-child(5),
+#conjugation-table td:nth-child(5) {
+    width: 23%; /* Translation column */
+}
 }
 
 @media (max-width: 400px) {
@@ -1038,7 +1058,7 @@ body.dark-mode .popup {
 
 #conjugation-table th:nth-child(2),
 #conjugation-table td:nth-child(2) {
-    width: 25%; /* Verb column */
+    width: 23%; /* Verb column */
 }
 
 #conjugation-table th:nth-child(3),
@@ -1049,7 +1069,7 @@ body.dark-mode .popup {
 
 #conjugation-table th:nth-child(5),
 #conjugation-table td:nth-child(5) {
-    width: 18%; /* Translation column */
+    width: 21%; /* Translation column */
 }
     #conjugation-table td:nth-child(2) {
         font-size: calc(1 * var(--hebrew-adjusted-font-size));
