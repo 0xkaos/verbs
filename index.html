@@ -651,7 +651,7 @@ h1 {
     display: flex;
     flex-wrap: nowrap; /* Prevent wrapping */
     gap: 12px; /* Keep the spacing between items */
-    justify-content: center; 
+    justify-content: center; /* Align items to the start */
     list-style: none;
     padding: 0;
     margin: 0; /* Remove default margin */
@@ -1042,6 +1042,44 @@ body.dark-mode .popup {
     padding: 8px; /* Consistent padding */
     border: 1px solid var(--border-color); /* Internal borders */
     text-align: right; /* Align text to the right for RTL */
+}
+/* Ensure clickable cells have a pointer cursor and initial ellipsis state */
+#conjugation-table td.clickable {
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* When a cell is in wrapping mode, allow text to wrap */
+#conjugation-table td.clickable.wrapping {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    /* Add a visual indicator for debugging */
+    background-color: #f0f0f0; /* Light gray background when wrapping */
+}
+
+/* Ensure the clickable text span can wrap and is properly contained */
+#conjugation-table td.clickable .clickable-text {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Reinforce styles for columns 3, 4, and 5 to ensure ellipsis in default state */
+#conjugation-table td:nth-child(3),
+#conjugation-table td:nth-child(4),
+#conjugation-table td:nth-child(5) {
+    direction: ltr;
+    text-align: left;
+    padding-left: 12px;
+    padding-right: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--adjusted-font-size);
 }
 
 @media (max-width: 768px) {
@@ -1520,80 +1558,122 @@ function highlightRoots(form, rootLetters) {
     return highlightedForm;
 }
         
-            function renderTable(verbKey, tense) {
-                const verb = verbs[verbKey];
-                if (!verb || !verb.conjugations[tense]) {
-                    conjugationTable.innerHTML = '<tr><td colspan="5">No data available for this tense.</td></tr>';
-                    return;
-                }
-                let conjugations = verb.conjugations[tense];
-                const desiredPronounOrder = ["הוא", "היא", "את", "אתה", "אני", "אנחנו", "אתם", "אתן", "הם", "הן"];
-                conjugations.sort((a, b) => {
-                    let indexA = desiredPronounOrder.indexOf(a.pronoun);
-                    let indexB = desiredPronounOrder.indexOf(b.pronoun);
-                    if (indexA === -1) indexA = desiredPronounOrder.length;
-                    if (indexB === -1) indexB = desiredPronounOrder.length;
-                    return indexA - indexB;
-                });
-                const headerData = [
-                    { text: "Pronoun", class: "" },
-                    { text: "Verb", class: "" },
-                    { text: "Transliteration", class: "ltr" },
-                    { text: "Phonetics", class: "" },
-                    { text: "Translation", class: "" }
-                ];
-                let rows = [
-                    "<tr>" +
-                    headerData.map((data) => `<th class="${data.class}">${data.text}</th>`).join("") +
-                    "</tr>"
-                ];
-                for (let item of conjugations) {
-                    const highlightedForm = highlightRoots(item.form, verb.root);
-                    const hebrewSentence = item.example_sentence_he || "No Hebrew example available";
-                    const englishTranslation = item.example_sentence_en || "No English translation available";
-                    const verbAudioPath = item.audio || "";
-                    const exampleAudioPath = item.audio_example || "";
-                    const escapedHebrew = escapeHTML(hebrewSentence);
-                    const escapedEnglish = escapeHTML(englishTranslation);
-                    const escapedForm = escapeHTML(item.form);
-                    const pronounCell = `
-                        <button class="pronoun-btn" data-hebrew="${escapedHebrew}" data-english="${escapedEnglish}" data-audio="${exampleAudioPath}" data-form="${escapedForm}">◄</button>
-                        ${item.pronoun || "N/A"}
-                    `;
-                    const transliteration = item.transliteration || "N/A";
-                    const phonetics = item.phonetics || "N/A";
-                    const translation = item.translation || "N/A";
-                    
-                    if (verbAudioPath) {
-                        const clickableForm = `<a href="#" onclick="playAudio('${verbAudioPath}'); event.preventDefault();">${highlightedForm}</a>`;
-                        rows.push(
-                            `<tr>
-                                <td>${pronounCell}</td>
-                                <td>${clickableForm}</td>
-                                <td class="ltr">${transliteration}</td>
-                                <td class="ltr">${phonetics}</td>
-                                <td>${translation}</td>
-                            </tr>`
-                        );
-                    } else {
-                        rows.push(
-                            `<tr>
-                                <td>${pronounCell}</td>
-                                <td>${highlightedForm}</td>
-                                <td class="ltr">${transliteration}</td>
-                                <td class="ltr">${phonetics}</td>
-                                <td>${translation}</td>
-                            </tr>`
-                        );
-                    }
-                }
-                conjugationTable.innerHTML = rows.join("");
-        
-                document.querySelectorAll('.pronoun-btn').forEach(button => {
-                    button.addEventListener('click', togglePopup);
-                });
-            }
-        
+let currentlyWrappingCell = null;
+
+function renderTable(verbKey, tense) {
+    const verb = verbs[verbKey];
+    if (!verb || !verb.conjugations[tense]) {
+        conjugationTable.innerHTML = '<tr><td colspan="5">No data available for this tense.</td></tr>';
+        return;
+    }
+    let conjugations = verb.conjugations[tense];
+    const desiredPronounOrder = ["הוא", "היא", "את", "אתה", "אני", "אנחנו", "אתם", "אתן", "הם", "הן"];
+    conjugations.sort((a, b) => {
+        let indexA = desiredPronounOrder.indexOf(a.pronoun);
+        let indexB = desiredPronounOrder.indexOf(b.pronoun);
+        if (indexA === -1) indexA = desiredPronounOrder.length;
+        if (indexB === -1) indexB = desiredPronounOrder.length;
+        return indexA - indexB;
+    });
+    const headerData = [
+        { text: "Pronoun", class: "" },
+        { text: "Verb", class: "" },
+        { text: "Transliteration", class: "ltr" },
+        { text: "Phonetics", class: "" },
+        { text: "Translation", class: "" }
+    ];
+    let rows = [
+        "<tr>" +
+        headerData.map((data) => `<th class="${data.class}">${data.text}</th>`).join("") +
+        "</tr>"
+    ];
+    for (let item of conjugations) {
+        const highlightedForm = highlightRoots(item.form, verb.root);
+        const hebrewSentence = item.example_sentence_he || "No Hebrew example available";
+        const englishTranslation = item.example_sentence_en || "No English translation available";
+        const verbAudioPath = item.audio || "";
+        const exampleAudioPath = item.audio_example || "";
+        const escapedHebrew = escapeHTML(hebrewSentence);
+        const escapedEnglish = escapeHTML(englishTranslation);
+        const escapedForm = escapeHTML(item.form);
+        const pronounCell = `
+            <button class="pronoun-btn" data-hebrew="${escapedHebrew}" data-english="${escapedEnglish}" data-audio="${exampleAudioPath}" data-form="${escapedForm}">◄</button>
+            ${item.pronoun || "N/A"}
+        `;
+        const transliteration = item.transliteration || "N/A";
+        const phonetics = item.phonetics || "N/A";
+        const translation = item.translation || "N/A";
+        const phoneticsCell = `<span class="clickable-text">${phonetics}</span>`;
+        const translationCell = `<span class="clickable-text">${translation}</span>`;
+
+        if (verbAudioPath) {
+            const clickableForm = `<a href="#" onclick="playAudio('${verbAudioPath}'); event.preventDefault();">${highlightedForm}</a>`;
+            rows.push(
+                `<tr>
+                    <td>${pronounCell}</td>
+                    <td>${clickableForm}</td>
+                    <td class="ltr">${transliteration}</td>
+                    <td class="ltr clickable">${phoneticsCell}</td>
+                    <td class="clickable">${translationCell}</td>
+                </tr>`
+            );
+        } else {
+            rows.push(
+                `<tr>
+                    <td>${pronounCell}</td>
+                    <td>${highlightedForm}</td>
+                    <td class="ltr">${transliteration}</td>
+                    <td class="ltr clickable">${phoneticsCell}</td>
+                    <td class="clickable">${translationCell}</td>
+                </tr>`
+            );
+        }
+    }
+    conjugationTable.innerHTML = rows.join("");
+
+    // Add event listeners for pronoun buttons
+    document.querySelectorAll('.pronoun-btn').forEach(button => {
+        button.addEventListener('click', togglePopup);
+    });
+
+    // Add event listeners for clickable cells
+    document.querySelectorAll('#conjugation-table td.clickable').forEach(cell => {
+        cell.removeEventListener('click', toggleCellWrapping); // Remove any existing listener to avoid duplicates
+        cell.addEventListener('click', toggleCellWrapping);
+        console.log('Attached click listener to cell:', cell); // Debug: Confirm listener attachment
+    });
+}
+
+function toggleCellWrapping(event) {
+    const cell = event.currentTarget;
+
+    // Ignore clicks on the pronoun button or other non-text elements
+    if (event.target.closest('.pronoun-btn')) return;
+
+    console.log('Toggling cell:', cell); // Debug: Log the cell being toggled
+
+    // If the clicked cell is already wrapping, collapse it
+    if (cell === currentlyWrappingCell) {
+        console.log('Collapsing wrapping state');
+        cell.classList.remove('wrapping');
+        currentlyWrappingCell = null;
+        return;
+    }
+
+    // Collapse any previously wrapping cell
+    if (currentlyWrappingCell) {
+        console.log('Collapsing previous wrapping cell:', currentlyWrappingCell);
+        currentlyWrappingCell.classList.remove('wrapping');
+    }
+
+    // Expand the clicked cell to wrap
+    console.log('Expanding to wrapping state');
+    cell.classList.add('wrapping');
+    currentlyWrappingCell = cell;
+}
+
+
+
             function populateRootSearch() {
     const rootInput = document.getElementById("root-input");
     const rootList = document.getElementById("root-list");
