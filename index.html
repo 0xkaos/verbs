@@ -1439,60 +1439,81 @@ body.dark-mode .popup {
             });
         
             function normalizeLetterForHighlight(char) {
-                const dageshMap = { "בּ": "ב", "גּ": "ג", "דּ": "ד", "כּ": "כ", "פּ": "פ", "תּ": "ת", "שׁ": "ש", "שׂ": "ש" };
-                const sofitMap = { "ך": "כ", "ם": "מ", "ן": "נ", "ף": "פ", "ץ": "צ" };
-                const normalizedChar = dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, "");
-                return sofitMap[normalizedChar] || normalizedChar;
+    // Map for dagesh and shin/sin variations
+    const dageshMap = { 
+        "בּ": "ב", "גּ": "ג", "דּ": "ד", "כּ": "כ", "פּ": "פ", "תּ": "ת", 
+        "שׁ": "ש", "שׂ": "ש" 
+    };
+    // Map for sofit (final) forms
+    const sofitMap = { 
+        "ך": "כ", "ם": "מ", "ן": "נ", "ף": "פ", "ץ": "צ" 
+    };
+    // Remove all diacritical marks (niqqud, dagesh, etc.)
+    const normalizedChar = dageshMap[char] || char.replace(/[\u0591-\u05CF]/g, "");
+    return sofitMap[normalizedChar] || normalizedChar;
+}
+
+function normalizeLetterForHighlight(char) {
+    const dageshMap = { "בּ": "ב", "גּ": "ג", "דּ": "ד", "כּ": "כ", "פּ": "פ", "תּ": "ת", "שׁ": "ש", "שׂ": "ש" };
+    const sofitMap = { "ך": "כ", "ם": "מ", "ן": "נ", "ף": "פ", "ץ": "צ" }; // Add sofit mapping
+    // First remove dagesh and diacritics
+    const normalizedChar = dageshMap[char] || char.replace(/[\u0591-\u05C7\u05BC]/g, "");
+    // Then map sofit forms to their non-final equivalents
+    return sofitMap[normalizedChar] || normalizedChar;
+}
+
+function highlightRoots(form, rootLetters) {
+    if (!form || !rootLetters || rootLetters.length < 2) return form;
+    const normalizedRoot = rootLetters.map(normalizeLetterForHighlight); // Normalize root letters
+    const formChars = form.split("");
+    let consonantPositions = [];
+    let consonants = [];
+    formChars.forEach((char, idx) => {
+        if (/[\u05D0-\u05EA]/.test(char)) { // Hebrew letter range
+            consonantPositions.push(idx);
+            consonants.push(normalizeLetterForHighlight(char)); // Normalize form letters
+        }
+    });
+    if (consonants.length === 0) return form;
+
+    // Find matches for root letters in the form, allowing for partial matches
+    let matchedPositions = [];
+    let rootIndex = 0;
+    let usedPositions = new Set(); // Track positions already matched to avoid duplicates
+
+    for (let i = 0; i < consonants.length && rootIndex < normalizedRoot.length; i++) {
+        if (!usedPositions.has(i) && consonants[i] === normalizedRoot[rootIndex]) {
+            matchedPositions.push(consonantPositions[i]);
+            usedPositions.add(i);
+            rootIndex++;
+        }
+    }
+
+    // If we didn't match all root letters, try matching from the end (common for two-letter roots with suffixes)
+    if (rootIndex < normalizedRoot.length) {
+        for (let i = consonants.length - 1; i >= 0 && rootIndex < normalizedRoot.length; i--) {
+            if (!usedPositions.has(i) && consonants[i] === normalizedRoot[rootIndex]) {
+                matchedPositions.push(consonantPositions[i]);
+                usedPositions.add(i);
+                rootIndex++;
             }
-        
-            function highlightRoots(form, rootLetters) {
-                if (!form || !rootLetters || rootLetters.length < 2) return form;
-                const normalizedRoot = rootLetters.map(normalizeLetterForHighlight);
-                const formChars = form.split("");
-                let consonantPositions = [];
-                let consonants = [];
-                formChars.forEach((char, idx) => {
-                    if (/[\u05D0-\u05EA]/.test(char)) {
-                        consonantPositions.push(idx);
-                        consonants.push(normalizeLetterForHighlight(char));
-                    }
-                });
-                if (consonants.length === 0) return form;
-        
-                let matchedPositions = [];
-                let rootIndex = 0;
-                let usedPositions = new Set();
-        
-                for (let i = 0; i < consonants.length && rootIndex < normalizedRoot.length; i++) {
-                    if (!usedPositions.has(i) && consonants[i] === normalizedRoot[rootIndex]) {
-                        matchedPositions.push(consonantPositions[i]);
-                        usedPositions.add(i);
-                        rootIndex++;
-                    }
-                }
-        
-                if (rootIndex < normalizedRoot.length) {
-                    for (let i = consonants.length - 1; i >= 0 && rootIndex < normalizedRoot.length; i--) {
-                        if (!usedPositions.has(i) && consonants[i] === normalizedRoot[rootIndex]) {
-                            matchedPositions.push(consonantPositions[i]);
-                            usedPositions.add(i);
-                            rootIndex++;
-                        }
-                    }
-                }
-        
-                matchedPositions.sort((a, b) => a - b);
-        
-                let highlightedForm = "";
-                for (let i = 0; i < formChars.length; i++) {
-                    if (matchedPositions.includes(i)) {
-                        highlightedForm += `<span class="root-letter">${formChars[i]}</span>`;
-                    } else {
-                        highlightedForm += formChars[i];
-                    }
-                }
-                return highlightedForm;
-            }
+        }
+    }
+
+    // Sort matched positions to apply highlighting in order
+    matchedPositions.sort((a, b) => a - b);
+
+    // Apply highlighting
+    let highlightedForm = "";
+    for (let i = 0; i < formChars.length; i++) {
+        if (matchedPositions.includes(i)) {
+            highlightedForm += `<span class="root-letter">${formChars[i]}</span>`;
+        } else {
+            highlightedForm += formChars[i];
+        }
+    }
+    return highlightedForm;
+}
         
             function renderTable(verbKey, tense) {
                 const verb = verbs[verbKey];
@@ -1865,11 +1886,11 @@ function updateVerbDisplay() {
     );
     if (verbEntry) {
         const [verbKey, verb] = verbEntry;
-        const displayPastForm = verb.conjugations?.past?.find(c => c.pronoun === "הוא")?.form || "N/A";
-        const binyanDisplay = verb.binyan_en || "Unknown";
-        const englishMeaning = verb.translations?.en || "N/A"; // Get English meaning
+        // Get the infinitive form; assume it's an array with at least one entry
+        const infinitiveForm = verb.conjugations?.infinitive?.[0]?.form || "N/A";
+        const englishMeaning = verb.translations?.en || "N/A";
         verbDisplay.innerHTML = `
-            <span>${displayPastForm} (${binyanDisplay})</span>
+            <span>${infinitiveForm}</span>
             <span class="english-meaning">${englishMeaning}</span>
         `;
         renderTable(verbKey, currentTense);
