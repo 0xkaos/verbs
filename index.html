@@ -1707,13 +1707,20 @@ function toggleCellWrapping(event) {
 
     // Sort: roots with Paal first, then alphabetically
     rootOptions.sort((a, b) => {
-        const aHasPaal = a.binyanim.has("Paal");
-        const bHasPaal = b.binyanim.has("Paal");
-        if (aHasPaal === bHasPaal) {
+    const aHasPaal = a.binyanim.has("Paal");
+    const bHasPaal = b.binyanim.has("Paal");
+    if (aHasPaal === bHasPaal) {
+        // If both have Paal or neither has Paal, sort by number of binyanim (descending)
+        const aBinyanimCount = a.binyanim.size;
+        const bBinyanimCount = b.binyanim.size;
+        if (aBinyanimCount === bBinyanimCount) {
+            // If equal number of binyanim, sort alphabetically
             return a.root.localeCompare(b.root);
         }
-        return aHasPaal ? -1 : 1;
-    });
+        return bBinyanimCount - aBinyanimCount; // Descending order
+    }
+    return aHasPaal ? -1 : 1; // Prioritize Paal as before
+});
 
     function updateRootList(filter = "") {
         rootList.innerHTML = '';
