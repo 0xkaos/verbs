@@ -278,23 +278,34 @@ body.dark-mode #font-menu li:hover {
 .combobox {
     position: relative;
     width: 100%;
-    max-width: 260px;
-    display: flex; /* Ensure input and button are inline */
-    align-items: stretch; /* Align heights */
+    max-width: 300px;
+    display: flex;
+    align-items: stretch;
 }
 
+.combobox {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: stretch;
+    --combobox-border-radius: 8px; /* More rounded corners */
+}
+
+/* Update root-input */
 #root-input {
-    width: calc(100% - 40px); /* Account for toggle button width */
-    padding: 8px;
-    font-size: var(--adjusted-font-size);
+    width: calc(100% - 36px); /* Adjust for slimmer toggle */
+    padding: 4px 8px; /* Reduce vertical padding for slimness */
+    height: 28px; /* Explicitly set a slimmer height */
+    font-size: calc(0.9 * var(--adjusted-font-size)); /* Slightly smaller font */
     border: 1px solid var(--input-border-color);
-    border-right: none; /* Remove right border to attach to button */
-    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    border-right: none;
+    border-radius: var(--combobox-border-radius) 0 0 var(--combobox-border-radius);
     background-color: var(--input-bg);
     color: var(--text-color);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
-    flex: 1; /* Allow input to fill available space */
+    flex: 1;
 }
 
 #root-input:focus {
@@ -303,11 +314,13 @@ body.dark-mode #font-menu li:hover {
     box-shadow: 0 0 5px rgba(54, 73, 145, 0.5);
 }
 
+/* Update root-toggle */
 #root-toggle {
-    width: 40px;
+    width: 36px; /* Slightly slimmer width */
+    height: 28px; /* Match input height for slimness */
     padding: 0;
     border: 1px solid var(--button-border);
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    border-radius: 0 var(--combobox-border-radius) var(--combobox-border-radius) 0;
     background-color: var(--button-bg);
     color: var(--button-text-color);
     cursor: pointer;
@@ -316,7 +329,7 @@ body.dark-mode #font-menu li:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0; /* Prevent button from shrinking */
+    flex-shrink: 0;
 }
 
 #root-toggle:hover {
