@@ -554,10 +554,11 @@ body.dark-mode .binyan-dot.active {
 }
 
 .tense-button.active {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+    transform: none !important;
 }
 
 .binyan-tabs .tense-button.inactive {
@@ -650,7 +651,7 @@ h1 {
     display: flex;
     flex-wrap: nowrap; /* Prevent wrapping */
     gap: 12px; /* Keep the spacing between items */
-    justify-content: flex-start; /* Align items to the start */
+    justify-content: center; 
     list-style: none;
     padding: 0;
     margin: 0; /* Remove default margin */
@@ -1080,6 +1081,7 @@ body.dark-mode .popup {
     }
 }
 
+
 /* New media query for sub-500px screens */
 @media (max-width: 500px) {
     .binyan-tabs {
@@ -1331,6 +1333,7 @@ body.dark-mode .popup {
             const globalFontDecrease = document.getElementById('global-font-decrease');
             const hebrewFontIncrease = document.getElementById('hebrew-font-increase');
             const hebrewFontDecrease = document.getElementById('hebrew-font-decrease');
+            
         
             globalFontIncrease.addEventListener('click', function() {
                 let currentScale = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--font-scale-factor')) || 1;
@@ -1355,6 +1358,7 @@ body.dark-mode .popup {
                 currentScale = Math.max(currentScale - 0.1, 0.5);
                 document.documentElement.style.setProperty('--hebrew-font-scale', currentScale);
             });
+            
         
             function escapeHTML(str) {
                 const htmlEntities = {
@@ -1366,6 +1370,7 @@ body.dark-mode .popup {
                 };
                 return str.replace(/[&<>"']/g, char => htmlEntities[char]);
             }
+            
         
             function togglePopup(event) {
                 const button = event.target;
