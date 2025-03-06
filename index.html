@@ -1775,10 +1775,18 @@ function toggleCellWrapping(event) {
             rootList.appendChild(li);
         });
 
-        if (filteredOptions.length > 0 && !selectedRoot) {
-            selectedRoot = filteredOptions[0].root;
-            updateRootDisplay();
-            updateBinyanArray();
+        if (!selectedRoot && !filter && rootOptions.length > 0) {
+            const lamadOption = rootOptions.find(option => option.root === "למד");
+            if (lamadOption) {
+                selectedRoot = lamadOption.root;
+                updateRootDisplay();
+                updateBinyanArray();
+            } else if (filteredOptions.length > 0) {
+                // Fallback to first option if "למד" is not found
+                selectedRoot = filteredOptions[0].root;
+                updateRootDisplay();
+                updateBinyanArray();
+            }
         }
     }
 
@@ -1845,7 +1853,12 @@ function toggleCellWrapping(event) {
     });
 
     if (rootOptions.length > 0) {
-        selectedRoot = rootOptions[0].root;
+        const lamadOption = rootOptions.find(option => option.root === "למד");
+        if (lamadOption) {
+            selectedRoot = lamadOption.root;
+        } else {
+            selectedRoot = rootOptions[0].root; // Fallback to first root if "למד" not found
+        }
         updateRootDisplay();
         updateBinyanArray();
     }
