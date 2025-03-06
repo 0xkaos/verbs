@@ -1131,7 +1131,10 @@ body.dark-mode .popup {
         font-size: calc(0.65 * var(--hebrew-adjusted-font-size)); /* Slightly smaller font */
         padding: 4px; /* Adjust padding */
     }
-    
+    #conjugation-table th:nth-child(4),
+    #conjugation-table td:nth-child(4) {
+        display: none;
+    }
 
     .info-section ul li {
         flex: 1 1 100%; 
@@ -1141,21 +1144,17 @@ body.dark-mode .popup {
 
 /* Refined media query for sub-400px screens */
 @media (max-width: 400px) {
-    #conjugation-table th:nth-child(4),
-    #conjugation-table td:nth-child(4) {
-        display: none;
-    }
+
+    /* Adjust widths since phonetics are hidden */
     #conjugation-table th:nth-child(1),
-    #conjugation-table td:nth-child(1) { width: 17%; }
+    #conjugation-table td:nth-child(1) { width: 20%; }
     #conjugation-table th:nth-child(2),
-    #conjugation-table td:nth-child(2) { width: 23%; }
+    #conjugation-table td:nth-child(2) { width: 30%; }
     #conjugation-table th:nth-child(3),
     #conjugation-table td:nth-child(3) { width: 30%; }
     #conjugation-table th:nth-child(5),
-    #conjugation-table td:nth-child(5) { width: 21%; }
-    #conjugation-table td:nth-child(2) {
-        font-size: var(--hebrew-adjusted-font-size);
-    }
+    #conjugation-table td:nth-child(5) { width: 20%; }
+
     .tense-tabs {
         gap: 3px;
     }
@@ -1603,8 +1602,8 @@ function renderTable(verbKey, tense) {
         const transliteration = item.transliteration || "N/A";
         const phonetics = item.phonetics || "N/A";
         const translation = item.translation || "N/A";
-        const phoneticsCell = `<span class="clickable-text">${phonetics}</span>`;
-        const translationCell = `<span class="clickable-text">${translation}</span>`;
+        const phoneticsCell = `<span>${phonetics}</span>`; // No clickable-text class for phonetics
+        const translationCell = `<span class="clickable-text">${translation}</span>`; // Apply clickable-text for translation
 
         if (verbAudioPath) {
             const clickableForm = `<a href="#" onclick="playAudio('${verbAudioPath}'); event.preventDefault();">${highlightedForm}</a>`;
@@ -1613,7 +1612,7 @@ function renderTable(verbKey, tense) {
                     <td>${pronounCell}</td>
                     <td>${clickableForm}</td>
                     <td class="ltr">${transliteration}</td>
-                    <td class="ltr clickable">${phoneticsCell}</td>
+                    <td class="ltr">${phoneticsCell}</td>
                     <td class="clickable">${translationCell}</td>
                 </tr>`
             );
@@ -1623,7 +1622,7 @@ function renderTable(verbKey, tense) {
                     <td>${pronounCell}</td>
                     <td>${highlightedForm}</td>
                     <td class="ltr">${transliteration}</td>
-                    <td class="ltr clickable">${phoneticsCell}</td>
+                    <td class="ltr">${phoneticsCell}</td>
                     <td class="clickable">${translationCell}</td>
                 </tr>`
             );
@@ -1636,11 +1635,10 @@ function renderTable(verbKey, tense) {
         button.addEventListener('click', togglePopup);
     });
 
-    // Add event listeners for clickable cells
-    document.querySelectorAll('#conjugation-table td.clickable').forEach(cell => {
+    // Add event listeners only to translation cells (column 5)
+    document.querySelectorAll('#conjugation-table td:nth-child(5).clickable').forEach(cell => {
         cell.removeEventListener('click', toggleCellWrapping); // Remove any existing listener to avoid duplicates
         cell.addEventListener('click', toggleCellWrapping);
-        console.log('Attached click listener to cell:', cell); // Debug: Confirm listener attachment
     });
 }
 
@@ -1650,11 +1648,8 @@ function toggleCellWrapping(event) {
     // Ignore clicks on the pronoun button or other non-text elements
     if (event.target.closest('.pronoun-btn')) return;
 
-    console.log('Toggling cell:', cell); // Debug: Log the cell being toggled
-
     // If the clicked cell is already wrapping, collapse it
     if (cell === currentlyWrappingCell) {
-        console.log('Collapsing wrapping state');
         cell.classList.remove('wrapping');
         currentlyWrappingCell = null;
         return;
@@ -1662,16 +1657,13 @@ function toggleCellWrapping(event) {
 
     // Collapse any previously wrapping cell
     if (currentlyWrappingCell) {
-        console.log('Collapsing previous wrapping cell:', currentlyWrappingCell);
         currentlyWrappingCell.classList.remove('wrapping');
     }
 
     // Expand the clicked cell to wrap
-    console.log('Expanding to wrapping state');
     cell.classList.add('wrapping');
     currentlyWrappingCell = cell;
 }
-
 
 
             function populateRootSearch() {
