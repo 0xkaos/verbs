@@ -128,7 +128,7 @@ def prepare(batch_size: int) -> dict[str, int]:
             "\n".join(item.text for item in items) + "\n", encoding="utf-8"
         )
         with (lists_dir / f"{kind}.tsv").open("w", encoding="utf-8", newline="") as handle:
-            writer = csv.writer(handle, delimiter="\t")
+            writer = csv.writer(handle, delimiter="\t", lineterminator="\n")
             writer.writerow([
                 "sequence", "batch", "scene", "relative_path", "verb_key",
                 "binyan", "tense", "row", "pronoun", "text",
@@ -260,12 +260,21 @@ def build(voices: list[str], kinds: list[str], batch_size: int, force: bool) -> 
     for voice in voices:
         for kind in kinds:
             items = by_kind[kind]
-            all_batches = list(batches(items, batch_size))
+            if force:
+                pending = items
+            else:
+                pending = [
+                    item for item in items
+                    if not (
+                        (AUDIO_ROOT / slug(voice) / Path(item.relative_path)).is_file()
+                        and (AUDIO_ROOT / slug(voice) / Path(item.relative_path)).stat().st_size > 1000
+                    )
+                ]
+            all_batches = list(batches(pending, batch_size))
+            if not all_batches:
+                print(f"[{voice}] {kind} already complete", flush=True)
+                continue
             for batch_number, batch in all_batches:
-                targets = [AUDIO_ROOT / slug(voice) / Path(item.relative_path) for item in batch]
-                if not force and all(target.is_file() and target.stat().st_size > 1000 for target in targets):
-                    print(f"[{voice}] {kind} {batch_number}/{len(all_batches)} already complete", flush=True)
-                    continue
                 print(
                     f"[{voice}] building {kind} {batch_number}/{len(all_batches)} "
                     f"({len(batch)} scenes)", flush=True,

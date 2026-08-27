@@ -31,8 +31,9 @@ export NARAKEET_API_KEY="..."
 python3 audio-generation/audio_pipeline.py build --voices Tamar Doron
 ```
 
-The build is resumable at batch boundaries. Existing complete batches are
-skipped. After both voices finish, verify the files and update the dataset:
+The build is resumable at individual clips: existing audio is skipped and only
+missing targets are grouped into new batches. After both voices finish, verify
+the files and update the dataset:
 
 ```sh
 python3 audio-generation/audio_pipeline.py verify --voices Tamar Doron

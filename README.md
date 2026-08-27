@@ -37,4 +37,5 @@ instructions are under `audio-generation/`.
 - study order: present, past, future, imperative, infinitive
 - common plural future and imperative forms are favored over formal feminine-plural variants
 - no standalone invented Hufal infinitives
-- selectable Tamar and Doron audio for every conjugation and available example sentence
+- an example sentence and English translation for all 4,564 conjugation rows
+- selectable Tamar and Doron audio for every conjugation and example sentence

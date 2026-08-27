@@ -3,7 +3,7 @@
   "batch_size": 450,
   "counts": {
     "conjugations": 4564,
-    "examples": 4146
+    "examples": 4564
   },
   "voices": [
     "Tamar",
