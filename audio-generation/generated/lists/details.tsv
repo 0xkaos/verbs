@@ -1,0 +1,285 @@
+sequence	batch	scene	relative_path	verb_key	binyan	tense	row	pronoun	text
+1	1	1	details/katav/example-01.mp3	katav	Paal	details	1		הוא כָּתַב מִכְתָּב אֲרֹךְ.
+2	1	2	details/katav/example-02.mp3	katav	Paal	details	2		הם כָּתְבוּ סִפְרִים מְעַנְיְנִים.
+3	1	3	details/lamad/example-01.mp3	lamad	Paal	details	1		אני לָמַדְתִּי עִבְרִית בָּאוּנִיבֶרְסִיטָה.
+4	1	4	details/lamad/example-02.mp3	lamad	Paal	details	2		הילדים לוֹמְדִים בֵּית סֵפֶר.
+5	1	5	details/kara/example-01.mp3	kara	Paal	details	1		היא קוֹרֵאת סֵפֶר חָדָשׁ.
+6	1	6	details/kara/example-02.mp3	kara	Paal	details	2		אנחנו קָרָאנוּ אֶת הַמֶּסֶר.
+7	1	7	details/shir/example-01.mp3	shir	Paal	details	1		היא שָׁרָה שִׁיר יָפֶה.
+8	1	8	details/shir/example-02.mp3	shir	Paal	details	2		אנחנו נָשִׁיר בַּמַּסִּבָּה מָחָר.
+9	1	9	details/shamar/example-01.mp3	shamar	Paal	details	1		הוא שָׁמַר עַל הַבַּיִת בַּלַּיְלָה.
+10	1	10	details/shamar/example-02.mp3	shamar	Paal	details	2		אני שׁוֹמֵר עַל הַסוֹד שֶׁלָּךְ.
+11	1	11	details/shamar/example-03.mp3	shamar	Paal	details	3		נִשְׁמוֹר עַל הַמָּסֹרֶת הַזּוֹ.
+12	1	12	details/ratz/example-01.mp3	ratz	Paal	details	1		הילדים רָצִים בַּפָּארְק כָּל בּוֹקֶר.
+13	1	13	details/ratz/example-02.mp3	ratz	Paal	details	2		היא רָצָה מָהֵר לַאֲוִוירוֹן.
+14	1	14	details/avad/example-01.mp3	avad	Paal	details	1		אנחנו עוֹבְדִים בְּיַחַד עַל הַפְּרוֹיֶקְט.
+15	1	15	details/avad/example-02.mp3	avad	Paal	details	2		הוא עָבַד בְּחֶבְרָה גְּדוֹלָה.
+16	1	16	details/sichek/example-01.mp3	sichek	Piel	details	1		הילדים מְשַׂחֲקִים בַּחֲצֵר.
+17	1	17	details/sichek/example-02.mp3	sichek	Piel	details	2		הוא שִׂחֵק בַּסֶּרֶט הַחָדָשׁ.
+18	1	18	details/tzachak/example-01.mp3	tzachak	Paal	details	1		היא צָחֲקָה מִן הַבְּדִיחָה.
+19	1	19	details/tzachak/example-02.mp3	tzachak	Paal	details	2		אנחנו צוֹחֲקִים יַחַד.
+20	1	20	details/shata/example-01.mp3	shata	Paal	details	1		הוא שָׁתָה כוֹס מַיִם.
+21	1	21	details/shata/example-02.mp3	shata	Paal	details	2		אנחנו שׁוֹתִים קָפֶה בַּבֹּקֶר.
+22	1	22	details/ra-ah/example-01.mp3	ra'ah	Paal	details	1		היא רָאֲתָה סֶרֶט מְעֻלֶּה.
+23	1	23	details/ra-ah/example-02.mp3	ra'ah	Paal	details	2		האם אתה רוֹאֶה אֶת הַכּוֹכָבִים?
+24	1	24	details/paal/example-01.mp3	paal	Paal	details	1		הוא פָּעַל בְּמַהֲלַךְ הַמִּשְׁבָּר.
+25	1	25	details/paal/example-02.mp3	paal	Paal	details	2		אנחנו פּוֹעֲלִים לְמַעַן הַסְּבִיבָה.
+26	1	26	details/achal/example-01.mp3	achal	Paal	details	1		אנחנו אוֹכְלִים אֲרוּחָה בְּיָחַד.
+27	1	27	details/achal/example-02.mp3	achal	Paal	details	2		הוא אָכַל בַּמִּסְעָדָה הַחֲדָשָׁה.
+28	1	28	details/halach/example-01.mp3	halach	Paal	details	1		אני הוֹלֵךְ לַחֲנוּת.
+29	1	29	details/halach/example-02.mp3	halach	Paal	details	2		היא הָלְכָה לְבַקֵּר אֶת סַבְתָּהּ.
+30	1	30	details/yada/example-01.mp3	yada	Paal	details	1		אני יוֹדֵעַ אֶת הַתְּשׁוּבָה.
+31	1	31	details/yada/example-02.mp3	yada	Paal	details	2		היא יָדְעָה אֶת הַסּוֹד.
+32	1	32	details/hevin/example-01.mp3	hevin	Hifil	details	1		אני מֵבִין אֶת הַמַּצָּב.
+33	1	33	details/hevin/example-02.mp3	hevin	Hifil	details	2		היא לֹא הֵבִינָה אֶת הַשְּׁאֵלָה.
+34	1	34	details/amar/example-01.mp3	amar	Paal	details	1		היא אָמְרָה שֶׁהִיא תָּבוֹא.
+35	1	35	details/amar/example-02.mp3	amar	Paal	details	2		מה אַתָּה אוֹמֵר?
+36	1	36	details/ba/example-01.mp3	ba	Paal	details	1		האם תָּבוֹא לַמְּסִבָּה?
+37	1	37	details/ba/example-02.mp3	ba	Paal	details	2		הם בָּאוּ מִמְּקוֹמוֹת רְחוֹקִים.
+38	1	38	details/chashav/example-01.mp3	chashav	Paal	details	1		אני חוֹשֵׁב שֶׁזֶּה רַעְיוֹן טוֹב.
+39	1	39	details/chashav/example-02.mp3	chashav	Paal	details	2		היא חָשְׁבָה עַל הַהַצָּעָה.
+40	1	40	details/ahav/example-01.mp3	ahav	Paal	details	1		היא אוֹהֶבֶת שׁוֹקוֹלָד.
+41	1	41	details/ahav/example-02.mp3	ahav	Paal	details	2		הם אָהֲבוּ לְטַיֵּל בַּטֶּבַע.
+42	1	42	details/ratzah/example-01.mp3	ratzah	Paal	details	1		אני רוֹצֶה לְלֶכֶת לַסֶּרֶט.
+43	1	43	details/ratzah/example-02.mp3	ratzah	Paal	details	2		מה אַתָּה רוֹצֶה לֶאֱכֹל?
+44	1	44	details/natan/example-01.mp3	natan	Paal	details	1		היא נָתְנָה לוֹ מַתָּנָה יָפָה.
+45	1	45	details/natan/example-02.mp3	natan	Paal	details	2		אפשר לִתֵּן עֲזוֹר לַצְּווּת.
+46	1	46	details/pagash/example-01.mp3	pagash	Paal	details	1		אני פּוֹגֵשׁ אֶת חֲבֵרַי בְּקָפֶה.
+47	1	47	details/pagash/example-02.mp3	pagash	Paal	details	2		היא פָּגְשָׁה אוֹתוֹ בַּרְחוֹב.
+48	1	48	details/yashan/example-01.mp3	yashan	Paal	details	1		הילד יָשַׁן כָּל הַלַּיְלָה.
+49	1	49	details/yashan/example-02.mp3	yashan	Paal	details	2		אנו יְשֵׁנִים בְּאוֹהֶל בַּטֶּבַע.
+50	1	50	details/hishtamesh/example-01.mp3	hishtamesh	Hitpael	details	1		אֲנִי מִשְׁתַּמֵּשׁ בַּמַּחְשֵׁב לַעֲבוֹדָה.
+51	1	51	details/hishtamesh/example-02.mp3	hishtamesh	Hitpael	details	2		הם הִשְׁתַּמְּשׁוּ בַּמַּפָּה לְהִתְמַצֵּא בָּעִיר.
+52	1	52	details/niknas/example-01.mp3	niknas	Nifal	details	1		הם נִכְנְסוּ לַבַּיִת לְהִתְחַמֵּם.
+53	1	53	details/niknas/example-02.mp3	niknas	Nifal	details	2		בְּבַקָּשָׁה לֹא לְהִכָּנֵס לְחֶדֶר זֶה.
+54	1	54	details/hisbir/example-01.mp3	hisbir	Hifil	details	1		הוּא הִסְבִּיר אֶת הַחֹק לִתְּלַמִּידִים.
+55	1	55	details/hisbir/example-02.mp3	hisbir	Hifil	details	2		אֵינִי מֵבִין, אַתְּ יְכוֹלָה לְהַסְבִּיר לִי?
+56	1	56	details/hirgish/example-01.mp3	hirgish	Hifil	details	1		אני מַרְגִּישׁ שֶׁקַּר.
+57	1	57	details/hirgish/example-02.mp3	hirgish	Hifil	details	2		היא הִרְגִּישָׁה עֲיֵיפָה אַחֲרֵי הָרִיצָה.
+58	1	58	details/hishpia/example-01.mp3	hishpia	Hifil	details	1		הסרט הזה הִשְׁפִּיעַ עלי בצורה עמוקה.
+59	1	59	details/hishpia/example-02.mp3	hishpia	Hifil	details	2		הם מַשְׁפִּיעִים רבות על דעת הקהל.
+60	1	60	details/hitnaheg/example-01.mp3	hitnaheg	Hitpael	details	1		הילד מִתְנַהֵג בְּאופֶן מְצוּיָן בַּגַּן.
+61	1	61	details/hitnaheg/example-02.mp3	hitnaheg	Hitpael	details	2		אֲנַחנוּ צְרִיכִים לְהִתְנַהֵג בְּכָבוֹד זֶה לַזֶה.
+62	1	62	details/leha-amin/example-01.mp3	leha'amin	Hifil	details	1		אֲנִי מַאֲמִין בְּכִשְׁרוֹנוֹתֶיךָ.
+63	1	63	details/leha-amin/example-02.mp3	leha'amin	Hifil	details	2		הם הֶאֱמִינוּ שֶׁהַכֹּל יִהְיֶה בְּסֵדֶר.
+64	1	64	details/lehakir/example-01.mp3	lehakir	Hifil	details	1		אֲנִי מַכִּיר אוֹתוֹ מִבֵּית הַסֵּפֶר.
+65	1	65	details/lehakir/example-02.mp3	lehakir	Hifil	details	2		הִיא הִכִּירָה אֶת הַמָּקוֹם.
+66	1	66	details/lehatkhil/example-01.mp3	lehatkhil	Hifil	details	1		אֲנַחנוּ מַתְחִילִים אֶת הַשִּׁעוּר עַכְשָׁו.
+67	1	67	details/lehatkhil/example-02.mp3	lehatkhil	Hifil	details	2		הִיא הִתְחִילָה לִלְמוֹד עִבְרִית.
+68	1	68	details/lehitkadem/example-01.mp3	lehitkadem	Hitpael	details	1		אֲנִי רוֹצֶה לְהִתְקַדֵּם בַּעֲבוֹדָה.
+69	1	69	details/lehitkadem/example-02.mp3	lehitkadem	Hitpael	details	2		הַמְּפַתֵּחַ מִתְקַדֵּם בִּפְתּוּחַ הַתָּכְנִית.
+70	1	70	details/lehafsik/example-01.mp3	lehafsik	Hifil	details	1		הוּא הִפְסִיק לְדַבֵּר בַּשִּׁיעוּר.
+71	1	71	details/lehafsik/example-02.mp3	lehafsik	Hifil	details	2		אֲנִי מַפְסִיקָה לַעֲבוֹד בְּשָׁעָה שֵׁשׁ.
+72	1	72	details/lehazmin/example-01.mp3	lehazmin	Hifil	details	1		הוּא הִזְמִין אוֹתִי לְמְסִיבָה.
+73	1	73	details/lehazmin/example-02.mp3	lehazmin	Hifil	details	2		אֲנִי מַזְמִינָה אוֹכֶל בָּאִינְטֶרְנֵט.
+74	1	74	details/lehash-ir/example-01.mp3	lehash'ir	Hifil	details	1		אֲנִי מַשְׁאִיר אֶת הַמַּפְתְּחוֹת בַּשֻּׁלְחָן.
+75	1	75	details/lehash-ir/example-02.mp3	lehash'ir	Hifil	details	2		הִיא הִשְׁאִירָה לִי הוֹדָעָה.
+76	1	76	details/lehatzia/example-01.mp3	lehatzia	Hifil	details	1		אֲנִי מַצִּיעַ לָךְ לְהִתְחִיל לָלֶכֶת.
+77	1	77	details/lehatzia/example-02.mp3	lehatzia	Hifil	details	2		הוּא הִצִּיעַ לָנוּ רַעֲיוֹן חָדָשׁ.
+78	1	78	details/lechapes/example-01.mp3	lechapes	Piel	details	1		אֲנִי מְחַפֵּשׂ עֲבוֹדָה חֲדָשָׁה.
+79	1	79	details/lechapes/example-02.mp3	lechapes	Piel	details	2		הִיא חִפְּשָׂה אֶת הַמַּפְתֵּחוֹת בְּכָל הַבַּיִת.
+80	1	80	details/lehashlim/example-01.mp3	lehashlim	Hifil	details	1		הוּא הִשְׁלִים אֶת הַמַּסָּה בַּזְּמַן.
+81	1	81	details/lehashlim/example-02.mp3	lehashlim	Hifil	details	2		אֲנַחְנוּ צָרִיכִים לְהַשְׁלִים אֶת הַפְּרוֹיֶקְט.
+82	1	82	details/lehavtiach/example-01.mp3	lehavtiach	Hifil	details	1		אֲנִי מַבְטִיחַ לָבוֹא מֻקְדָּם מָחָר.
+83	1	83	details/lehavtiach/example-02.mp3	lehavtiach	Hifil	details	2		הִיא הִבְטִיחָה לִי עֶזְרָה בַּמִּבְחָן.
+84	1	84	details/lenasot/example-01.mp3	lenasot	Piel	details	1		אֲנִי מְנַסֶּה לִלְמֹד עִבְרִית.
+85	1	85	details/lenasot/example-02.mp3	lenasot	Piel	details	2		הֵם נִסּוּ לִפְתֹּר אֶת הַבְּעָיָה.
+86	1	86	details/legalot/example-01.mp3	legalot	Piel	details	1		הוּא גִּילָּה תַּחֲרוּשֶׁת חֲדָשָׁה.
+87	1	87	details/legalot/example-02.mp3	legalot	Piel	details	2		אֲנִי מְגַלֶּה עֲנָקִים בְּמַסָּעַי.
+88	1	88	details/livchor/example-01.mp3	livchor	Paal	details	1		אֲנִי בּוֹחֵר לִלְמוֹד מוּסִיקָה.
+89	1	89	details/livchor/example-02.mp3	livchor	Paal	details	2		הֵם בָּחֲרוּ בִּפְרוֹיֶקְט חָדָשׁ.
+90	1	90	details/la-azor/example-01.mp3	la'azor	Paal	details	1		אֲנִי עוֹזֵר לַחֲבֵרִים שֶׁלִּי.
+91	1	91	details/la-azor/example-02.mp3	la'azor	Paal	details	2		הִיא עָזְרָה לָנוּ בַּמַּטָּרָה.
+92	1	92	details/lish-ol/example-01.mp3	lish'ol	Paal	details	1		אֲנִי רוֹצֶה לִשְׁאוֹל שְׁאֵלָה.
+93	1	93	details/lish-ol/example-02.mp3	lish'ol	Paal	details	2		הַתַּלְמִידִים שׁוֹאֲלִים שְׁאֵלוֹת בַּשִּׁיעוּר.
+94	1	94	details/lizkor/example-01.mp3	lizkor	Paal	details	1		אֲנִי זוֹכֵר אֶת הַיּוֹם הַזֶּה.
+95	1	95	details/lizkor/example-02.mp3	lizkor	Paal	details	2		הִיא לֹא זָכְרָה אֶת הַשֵּׁם שֶׁלּוֹ.
+96	1	96	details/liknot/example-01.mp3	liknot	Paal	details	1		אֲנִי רוֹצֶה לִקְנוֹת מְתָנָה לְחָבֵר.
+97	1	97	details/liknot/example-02.mp3	liknot	Paal	details	2		הֵם קָנוּ בַּיִת חָדָשׁ.
+98	1	98	details/liftoach/example-01.mp3	liftoach	Paal	details	1		הוּא פּוֹתֵחַ אֶת הַדֶּלֶת.
+99	1	99	details/liftoach/example-02.mp3	liftoach	Paal	details	2		אַתָּה יָכוֹל לִפְתּוֹחַ אֶת הַתְּרוּפָה?
+100	1	100	details/lesaper/example-01.mp3	lesaper	Piel	details	1		הוא סיפר לי סיפור מצחיק.
+101	1	101	details/lesaper/example-02.mp3	lesaper	Piel	details	2		אני רוצה לספר לך את האמת.
+102	1	102	details/ledamot/example-01.mp3	ledamot	Piel	details	1		אֲנִי מְדַמֶּה אֶת הַחֲלוֹם שֶׁלִּי כָּל יוֹם.
+103	1	103	details/ledamot/example-02.mp3	ledamot	Piel	details	2		הֵם דִּמּוּ אֶת הָעֹלָם בְּלִי מִלְחָמוֹת.
+104	1	104	details/lehachin/example-01.mp3	lehachin	Hifil	details	1		אֲנִי מֵכִין אֶת הָאֹכֶל לָעֶרֶב.
+105	1	105	details/lehachin/example-02.mp3	lehachin	Hifil	details	2		הֵם הֵכִינוּ תּוֹכְנִית לַיּוֹם הֻלֶּדֶת.
+106	1	106	details/lehamtsia/example-01.mp3	lehamtsia	Hifil	details	1		אֲנִי מַמְצִיא סִיפּוּר חָדָשׁ לַיְּלָדִים.
+107	1	107	details/lehamtsia/example-02.mp3	lehamtsia	Hifil	details	2		הֵם הִמְצִיאוּ מָכוֹן לְחִסָּכוֹן בְּזֹמַן.
+108	1	108	details/nasoa/example-01.mp3	nasoa	Paal	details	1		אני נָסַעְתִּי לְיוָּן בַּקַּיִץ.
+109	1	109	details/nasoa/example-02.mp3	nasoa	Paal	details	2		הם נוֹסְעִים לְעבוֹדָה בָּרַכֶּבֶת.
+110	1	110	details/banah/example-01.mp3	banah	Paal	details	1		הוּא בָּנָה בַּיִת גָּדוֹל בָּעִיר.
+111	1	111	details/banah/example-02.mp3	banah	Paal	details	2		אֲנַחְנוּ בּוֹנִים גֶּשֶׁר חָדָשׁ עַכְשָׁו.
+112	1	112	details/shatef/example-01.mp3	shatef	Piel	details	1		שִׁתַּפְתִּי אֶת הַחֲבֵרִים בַּרַעְיוֹן שֶׁלִּי.
+113	1	113	details/shatef/example-02.mp3	shatef	Piel	details	2		הִיא מְשַׁתֶּפֶת אֶת כּוּלָם בַּהַחְלָטוֹת.
+114	1	114	details/shanot/example-01.mp3	shanot	Piel	details	1		שִׁנִּיתִי אֶת דַּעְתִּי עַל הַנּוֹשֵׂא.
+115	1	115	details/shanot/example-02.mp3	shanot	Piel	details	2		הֵם מְשַׁנִּים אֶת הַתָּכְנִית כָּל שָׁנָה.
+116	1	116	details/hatzil/example-01.mp3	hatzil	Hifil	details	1		הִצַּלְתִּי אֶת הַיֶּלֶד מֵהַמַּיִם.
+117	1	117	details/hatzil/example-02.mp3	hatzil	Hifil	details	2		הֵם מַצִּילִים אֶת הַפְּרוֹיֶקְט מִכִּשָּׁלוֹן.
+118	1	118	details/haskim/example-01.mp3	haskim	Hifil	details	1		הִסְכַּמְתִּי לָתֵת לוֹ עֶזְרָה.
+119	1	119	details/haskim/example-02.mp3	haskim	Hifil	details	2		הֵם מַסְכִּימִים עַל הַתָּכְנִית הַזּוֹ.
+120	1	120	details/anot/example-01.mp3	anot	Paal	details	1		עָנִיתִי לַשְּׁאֵלָה שֶׁלּוֹ בְּמַהֵר.
+121	1	121	details/anot/example-02.mp3	anot	Paal	details	2		הִיא עוֹנָה לְכָל הַשְּׁאֵלוֹת בַּכִּתָּה.
+122	1	122	details/tzor/example-01.mp3	tzor	Paal	details	1		יָצַרְתִּי צִיּוּר יָפֶה בְּעֵט.
+123	1	123	details/tzor/example-02.mp3	tzor	Paal	details	2		הֵם יוֹצְרִים מוּסִיקָה מְקוֹרִית.
+124	1	124	details/hitztaref/example-01.mp3	hitztaref	Hitpael	details	1		הִצְטָרַפְתִּי לַקְּבוּצָה שֶׁלָּהֶם.
+125	1	125	details/hitztaref/example-02.mp3	hitztaref	Hitpael	details	2		הִיא מִצְטָרֶפֶת לַמְּסִיבָּה מָחָר.
+126	1	126	details/akov/example-01.mp3	akov	Paal	details	1		עָקַבְתִּי אַחֲרֵי הַמּוֹרֶה בַּדֶּרֶךְ.
+127	1	127	details/akov/example-02.mp3	akov	Paal	details	2		הוּא עוֹקֵב אַחֲרֵי הַחֲדָשׁוֹת בַּיּוֹם.
+128	1	128	details/hovil/example-01.mp3	hovil	Hifil	details	1		הוֹבַלْתִּי אֶת הַקְּבוּצָה לַנִּצָּחוֹן.
+129	1	129	details/hovil/example-02.mp3	hovil	Hifil	details	2		הִיא מוֹבִילָה אֶת הַפְּרוֹיֶקְט בְּבִטָּחוֹן.
+130	1	130	details/hagen/example-01.mp3	hagen	Hifil	details	1		הָגַנְתִּי עַל הַיֶּלֶד מֵהַסַּכָּנָה.
+131	1	131	details/hagen/example-02.mp3	hagen	Hifil	details	2		הֵם מְגִינִים עַל הָעִיר בְּכָל הַלֵּב.
+132	1	132	details/hodia/example-01.mp3	hodia	Hifil	details	1		הוֹדַעְתִּי לָהֶם עַל הַשִּׁנוּי בַּתָּכְנִית.
+133	1	133	details/hodia/example-02.mp3	hodia	Hifil	details	2		הַמּוֹרָה מוֹדִיעָה לַהוֹרִים עַל הַצְלָחוֹת הַתַּלְמִידִים.
+134	1	134	details/hodia/example-03.mp3	hodia	Hifil	details	3		אוֹדִיעַ לְכֻלָּם אֶת הַחֲדָשׁוֹת בְּעוֹד שָׁעָה.
+135	1	135	details/hishtatef/example-01.mp3	hishtatef	Hitpael	details	1		הִשְׁתַּתַּפְתִּי בַּתַּחֲרוּת הַשְּׁנָתִית.
+136	1	136	details/hishtatef/example-02.mp3	hishtatef	Hitpael	details	2		הֵם מִשְׁתַּתְּפִים בְּפְגִישָׁה חָשׁוּבָה.
+137	1	137	details/chagot/example-01.mp3	chagot	Paal	details	1		חָגַגְתִּי אֶת חַג הַפֶּסַח עִם מִשְׁפַּחְתִּי.
+138	1	138	details/chagot/example-02.mp3	chagot	Paal	details	2		הֵם חוֹגְגִים אֶת יוֹם הָעַצְמָאוּת בָּרְחוֹבוֹת.
+139	1	139	details/esof/example-01.mp3	esof	Paal	details	1		אָסַפְתִּי אֶת הַסְּפָרִים מֵהַשּׁוּלְחָן.
+140	1	140	details/esof/example-02.mp3	esof	Paal	details	2		הֵם אוֹסְפִים תְּרוּמוֹת לְעוֹנִים.
+141	1	141	details/chalom/example-01.mp3	chalom	Paal	details	1		חָלַמְתִּי עַל טִיּוּל לָעוֹלָם.
+142	1	142	details/chalom/example-02.mp3	chalom	Paal	details	2		הִיא חוֹלֶמֶת עַל עָתִיד טוֹב יוֹתֵר.
+143	1	143	details/ha-ir/example-01.mp3	ha’ir	Hifil	details	1		הֵאַרְתִּי אֶת הַחֶדֶר בְּמֵנוֹרָה.
+144	1	144	details/ha-ir/example-02.mp3	ha’ir	Hifil	details	2		הַשֶּׁמֶשׁ מְאִירָה עַל הַרְרֵי יְרוּשָׁלַיִם.
+145	1	145	details/machar/example-01.mp3	machar	Paal	details	1		הוּא מָכַר אֶת הַמְּכוֹנִית שֶׁלּוֹ.
+146	1	146	details/machar/example-02.mp3	machar	Paal	details	2		הם מוֹכְרִים פֵּרוֹת בַּשּׁוּק.
+147	1	147	details/taar/example-01.mp3	taar	Piel	details	1		בְּבַקָּשָׁה תְּתָאֵר אֶת הַבַּעְיָה.
+148	1	148	details/taar/example-02.mp3	taar	Piel	details	2		הִיא תֵּאֲרָה אֶת הַנּוֹף בִּפְרָטִיּוּת.
+149	1	149	details/lehavi/example-01.mp3	lehavi	Hifil	details	1		בְּבַקָּשָׁה הָבֵא אֶת הַסֵּפֶר.
+150	1	150	details/lehavi/example-02.mp3	lehavi	Hifil	details	2		הִיא הֵבִיאָה עוּגָה לַמְּסִבָּה.
+151	1	151	details/levaker/example-01.mp3	levaker	Piel	details	1		הוּא מְבַקֵּר אֶת הַהוֹרִים בְּכָל שַׁבָּת.
+152	1	152	details/levaker/example-02.mp3	levaker	Piel	details	2		אָנוּ בִּקַּרְנוּ בְּמִוזֵיאוֹן הָאֻמָּנוּת.
+153	1	153	details/litzpot/example-01.mp3	litzpot	Paal	details	1		אֲנִי צוֹפֶה בַּטֵּלֵוִיזְיָה כָּל עֶרֶב.
+154	1	154	details/litzpot/example-02.mp3	litzpot	Paal	details	2		הִיא צָפְתָה בַּשֶּׁמֶשׁ הַזּוֹרַחַת.
+155	1	155	details/linhog/example-01.mp3	linhog	Paal	details	1		אֲנִי נוֹהֵג לָעֲבוֹדָה כָּל בֹּקֶר.
+156	1	156	details/linhog/example-02.mp3	linhog	Paal	details	2		הִיא נָהֲגָה בְּמֶשֶׁךְ שָׁעָה לְלֹא הַפְסָקָה.
+157	1	157	details/litpos/example-01.mp3	litpos	Paal	details	1		אֲנִי תּוֹפֵס אֶת הַכַּדּוּר בְּיָד אַחַת.
+158	1	158	details/litpos/example-02.mp3	litpos	Paal	details	2		הִיא תָּפְסָה אֶת הָרַעְיוֹן מַהֵר מְאוֹד.
+159	1	159	details/limshoch/example-01.mp3	limshoch	Paal	details	1		אֲנִי מוֹשֵׁךְ אֶת הַחֶבֶל בְּכֹחַ.
+160	1	160	details/limshoch/example-02.mp3	limshoch	Paal	details	2		הִיא מָשְׁכָה אֶת הַוִּילוֹן לְצַד.
+161	1	161	details/leharim/example-01.mp3	leharim	Hifil	details	1		אֲנִי מָרִים אֶת הַתִּיק הַכָּבֵד.
+162	1	162	details/leharim/example-02.mp3	leharim	Hifil	details	2		הֵם הֵרִימוּ אֶת הַדֶּגֶל בַּטֶּקֶס.
+163	1	163	details/nikra-nifal/example-01.mp3	nikra_nifal	Nifal	details	1		הַסֵּפֶר נִקְרָא בְּכָל הָעוֹלָם.
+164	1	164	details/nikra-nifal/example-02.mp3	nikra_nifal	Nifal	details	2		הוּא נִקְרָא לְשִׁמְשׁוֹן.
+165	1	165	details/nikhtav/example-01.mp3	nikhtav	Nifal	details	1		הַסֵּפֶר נִכְתַּב בְּשָׁנָה שֶׁעָבְרָה.
+166	1	166	details/nikhtav/example-02.mp3	nikhtav	Nifal	details	2		הַמִּכְתָּבִים נִכְתָּבִים בְּכָל יוֹם.
+167	1	167	details/nikhtav/example-03.mp3	nikhtav	Nifal	details	3		הַדּוּ''ח יִכָּתֵב עַד סוֹף הַחֹדֶשׁ.
+168	1	168	details/hiktiv/example-01.mp3	hiktiv	Hifil	details	1		הַמּוֹרָה הִכְתִּיבָה מִכְתָּב לַתַּלְמִידִים.
+169	1	169	details/hiktiv/example-02.mp3	hiktiv	Hifil	details	2		הַמְּנַהֵל מַכְתִּיב הוֹרָאוֹת לַמַּזְכִּירָה.
+170	1	170	details/hiktiv/example-03.mp3	hiktiv	Hifil	details	3		אני אַכְתִּיב לָךְ אֶת הַתּוֹכְנִית מָחָר.
+171	1	171	details/hakria/example-01.mp3	hakria	Hifil	details	1		הִקְרֵאתִי אֶת הַחֲבֵרִים לְמִסִּבַּת הַיּוֹם הֻלֶּדֶת.
+172	1	172	details/hakria/example-02.mp3	hakria	Hifil	details	2		הַמּוֹרֶה מַקְרִיא אֶת הַתַּלְמִיד לִקְרֹא אֶת הַשִּׁיר.
+173	1	173	details/hakria/example-03.mp3	hakria	Hifil	details	3		נַקְרִיא אֶת הַמִּשְׁפָּחָה לַחֲגִיגָה בְּיוֹם שִׁשִּׁי.
+174	1	174	details/davar/example-01.mp3	davar	Piel	details	1		אנחנו מְדַבְּרִים עַל הַתָּכְנִית.
+175	1	175	details/davar/example-02.mp3	davar	Piel	details	2		הוא דִּבֵּר בְּפִרְטֵי הַפְּרוֹיֶקְט.
+176	1	176	details/naasah/example-01.mp3	naasah	Nifal	details	1		הָעֲבוֹדָה נַעֲשְׂתָה בְּזֹאת עַל יְדֵי הַתַּלְמִידִים.
+177	1	177	details/naasah/example-02.mp3	naasah	Nifal	details	2		הַבֵּיצוֹת נַעֲשׂוֹת בְּמַחֲבַת בְּכָל בֹּקֶר.
+178	1	178	details/naasah/example-03.mp3	naasah	Nifal	details	3		הַתּוֹכְנִית תֵּעָשֶׂה אִם נִמְצָא אֶת הַזְּמַן הַמַּתְאִים.
+179	1	179	details/nechshav/example-01.mp3	nechshav	Nifal	details	1		הָרַעְיוֹן נֶחְשַׁב חָשׁוּב עַל יְדֵי כֻּלָּם.
+180	1	180	details/nechshav/example-02.mp3	nechshav	Nifal	details	2		הַתַּלְמִידִים נֶחְשָׁבִים חֲכָמִים בְּבֵית הַסֵּפֶר.
+181	1	181	details/nechshav/example-03.mp3	nechshav	Nifal	details	3		הַפִּתְרוֹן יֵחָשֵׁב נָכוֹן אִם נִבְדֹּק אוֹתוֹ.
+182	1	182	details/hashir/example-01.mp3	hashir	Hifil	details	1		הִשַּׁרְתִּי אֶת הַיְלָדִים לָשִׁיר שִׁירֵי חֲגִים.
+183	1	183	details/hashir/example-02.mp3	hashir	Hifil	details	2		הַמּוֹרָה מַשִּׁירָה אֶת הַתַּלְמִידִים בְּכָל שִׁעוּר.
+184	1	184	details/hashir/example-03.mp3	hashir	Hifil	details	3		אַשִּׁיר אֶת הַקָּהָל לָשִׁיר בְּטֶקֶס הַחֲגִיגָה מָחָר.
+185	1	185	details/haritz/example-01.mp3	haritz	Hifil	details	1		הֲרַצְתִּי אֶת הַיְלָדִים לְרוץ לְפָנַי בַּמֵּרוֹץ.
+186	1	186	details/haritz/example-02.mp3	haritz	Hifil	details	2		הַמּוֹרֶה מֵרִיץ אֶת הַתַּרְגִּילִים לְהִסָּיֵם בְּמָהִירוּת.
+187	1	187	details/haritz/example-03.mp3	haritz	Hifil	details	3		אָרִיץ אֶת הַמִּסְלוּל לְהֵרָצוֹת אִם נִרְצֶה לְנַצֵּחַ.
+188	1	188	details/hitahev/example-01.mp3	hitahev	Hitpael	details	1		הִתְאַהַבְתִּי בָּהּ מֵרֶגַע שֶׁפָּגַשְׁתִּי אוֹתָהּ.
+189	1	189	details/hitahev/example-02.mp3	hitahev	Hitpael	details	2		הוּא מִתְאַהֵב בְּכָל סֵפֶר חָדָשׁ שֶׁיּוֹצֵא.
+190	1	190	details/hitahev/example-03.mp3	hitahev	Hitpael	details	3		אֶתְאַהֵב בַּמּוּסִיקָה אִם אֶשְׁמַע אוֹתָהּ שׁוּב.
+191	1	191	details/hifagesh/example-01.mp3	hifagesh	Nifal	details	1		נִפְגַּשְׁתִּי אִתּוֹ בְּבֵית הַקָּפֶה.
+192	1	192	details/hifagesh/example-02.mp3	hifagesh	Nifal	details	2		הֵם נִפְגָּשִׁים כָּל יוֹם שִׁשִּׁי.
+193	1	193	details/hifagesh/example-03.mp3	hifagesh	Nifal	details	3		אִם תִּרְצִי, נִפָּגֵשׁ מָחָר.
+194	1	194	details/hifagesh/example-04.mp3	hifagesh	Nifal	details	4		הִפָּגְשׁוּ בְּשָׁעָה שֶׁבַע!
+195	1	195	details/hivacher/example-01.mp3	hivacher	Nifal	details	1		נִבְחַרְתִּי לַתַּפְקִיד.
+196	1	196	details/hivacher/example-02.mp3	hivacher	Nifal	details	2		הוּא נִבְחָר לִהְיוֹת הַמַּנְהִיג.
+197	1	197	details/hivacher/example-03.mp3	hivacher	Nifal	details	3		אִם תִּבָּחֵר, תִּהְיֶה לָךְ הַהִזְדַּמְּנוּת.
+198	1	198	details/hivacher/example-04.mp3	hivacher	Nifal	details	4		הִבָּחֵר לַעֲבוֹדָה!
+199	1	199	details/lehatzchik/example-01.mp3	lehatzchik	Hifil	details	1		הוּא הִצְחִיק אֶת כֻּלָּם בְּסִפּוּרָיו.
+200	1	200	details/lehatzchik/example-02.mp3	lehatzchik	Hifil	details	2		הַסֶּרֶט מַצְחִיק מְאֹד.
+201	1	201	details/lehatzchik/example-03.mp3	lehatzchik	Hifil	details	3		אִם תִּרְצֶה, אַצְחִיק אוֹתְךָ.
+202	1	202	details/lehatzchik/example-04.mp3	lehatzchik	Hifil	details	4		הַצְחֵק אֶת הַיְלָדִים!
+203	1	203	details/leheraot/example-01.mp3	leheraot	Nifal	details	1		הַבַּיִת נִרְאָה מֵרָחוֹק.
+204	1	204	details/leheraot/example-02.mp3	leheraot	Nifal	details	2		הַכּוֹכָבִים נִרְאִים בַּלַּיְלָה.
+205	1	205	details/leheraot/example-03.mp3	leheraot	Nifal	details	3		אֵרָאֶה בַּתְּמוּנָה.
+206	1	206	details/leheraot/example-04.mp3	leheraot	Nifal	details	4		הֵרָאוּ בַּמָּקוֹם הַנָּכוֹן!
+207	1	207	details/lehaf-il/example-01.mp3	lehaf'il	Hifil	details	1		הוא הִפְעִיל אֶת הַמַּכְשִׁיר.
+208	1	208	details/lehaf-il/example-02.mp3	lehaf'il	Hifil	details	2		הַמְּנַהֵל מַפְעִיל אֶת הַתָּכְנִית הַחֲדָשָׁה.
+209	1	209	details/lehaf-il/example-03.mp3	lehaf'il	Hifil	details	3		אַפְעִיל אֶת הַמַּעֲרֶכֶת בְּעוֹד שָׁעָה.
+210	1	210	details/lehaf-il/example-04.mp3	lehaf'il	Hifil	details	4		הַפְעֵל אֶת הַמִּתְקָן!
+211	1	211	details/le-amer/example-01.mp3	le'amer	Nifal	details	1		נֶאֱמַר שֶׁהוּא יָבוֹא מָחָר.
+212	1	212	details/le-amer/example-02.mp3	le'amer	Nifal	details	2		הַדָּבָר נֶאֱמָר בְּבָרִיוּת.
+213	1	213	details/le-amer/example-03.mp3	le'amer	Nifal	details	3		יֵאָמֵר שֶׁזֶּה לֹא יָדוּעַ.
+214	1	214	details/le-amer/example-04.mp3	le'amer	Nifal	details	4		הֵאָמֵר בְּשֵׁם הַמְּנַהֵל!
+215	1	215	details/leheamen/example-01.mp3	leheamen	Nifal	details	1		הוּא נֶאֱמַן לִדְבָרוֹ.
+216	1	216	details/leheamen/example-02.mp3	leheamen	Nifal	details	2		הִיא נֶאֱמֶנֶת בְּעֵינֵי כֻּלָּם.
+217	1	217	details/leheamen/example-03.mp3	leheamen	Nifal	details	3		אֲנַחְנוּ נֵאָמֵן לְמִשְׁפָּחָה.
+218	1	218	details/leheamen/example-04.mp3	leheamen	Nifal	details	4		הֵאָמֵן לַחֲבֵרֶיךָ!
+219	1	219	details/leharot/example-01.mp3	leharot	Hifil	details	1		הוּא הִרְאָה לִי אֶת הַתְּמוּנָה.
+220	1	220	details/leharot/example-02.mp3	leharot	Hifil	details	2		הִיא מַרְאָה אֶת הַדֶּרֶךְ.
+221	1	221	details/leharot/example-03.mp3	leharot	Hifil	details	3		אַרְאֶה לְךָ אֶת הַסֶּרֶט.
+222	1	222	details/leharot/example-04.mp3	leharot	Hifil	details	4		הַרְאִי לִי אֶת הַסֵּפֶר!
+223	1	223	details/lehafgish/example-01.mp3	lehafgish	Hifil	details	1		הִפְגַּשְׁתִּי אֶת הַחֲבֵרִים.
+224	1	224	details/lehafgish/example-02.mp3	lehafgish	Hifil	details	2		הוּא מַפְגִּישׁ אֶת הַצְּוָתִים.
+225	1	225	details/leshamesh/example-01.mp3	leshamesh	Piel	details	1		הוּא שִׁמֵּשׁ אֶת הַמֶּלֶךְ.
+226	1	226	details/leshamesh/example-02.mp3	leshamesh	Piel	details	2		אֲנִי מְשַׁמֵּשׁ אֶת הַמַּכְשִׁיר.
+227	1	227	details/lehachnis/example-01.mp3	lehachnis	Hifil	details	1		הִכְנַסְתִּי אֶת הַצוֹעֲנִים.
+228	1	228	details/lehachnis/example-02.mp3	lehachnis	Hifil	details	2		הוּא מַכְנִיס אֶת הַחֲפָצִים.
+229	1	229	details/lesader/example-01.mp3	lesader	Piel	details	1		הִיא סִדְּרָה אֶת הַחֶדֶר.
+230	1	230	details/lesader/example-02.mp3	lesader	Piel	details	2		אֲנִי מְסַדֵּר אֶת הַסְּפָרִים.
+231	1	231	details/lesader/example-03.mp3	lesader	Piel	details	3		נְסַדֵּר אֶת הַמִּסְמָכִים מָחָר.
+232	1	232	details/lesader/example-04.mp3	lesader	Piel	details	4		סַדֵּר אֶת הַשֻּׁלְחָן!
+233	1	233	details/likdom/example-01.mp3	likdom	Paal	details	1		הַשֶּׁמֶשׁ קָדְמָה לַיָּרֵחַ.
+234	1	234	details/likdom/example-02.mp3	likdom	Paal	details	2		הוּא קוֹדֵם לִי בְּשָׁנָה.
+235	1	235	details/likdom/example-03.mp3	likdom	Paal	details	3		אֲנִי אֶקְדֹּם אֶת הַפְּגִישָׁה.
+236	1	236	details/likdom/example-04.mp3	likdom	Paal	details	4		קְדֹם לַפְּגִישָׁה!
+237	1	237	details/pasek/example-01.mp3	pasek	Paal	details	1		הַגֶּשֶׁם פָּסַק פִּתְאוֹם.
+238	1	238	details/pasek/example-02.mp3	pasek	Paal	details	2		הַמּוּזִיקָה פּוֹסֶקֶת כָּל לַיְלָה בְּשָׁעָה עֶשֶׂר.
+239	1	239	details/pasek/example-03.mp3	pasek	Paal	details	3		אִם לֹא תִּפְסֹק, אֵצֵא מֵהַחֶדֶר.
+240	1	240	details/pasek/example-04.mp3	pasek	Paal	details	4		פְּסֹק לְדַבֵּר עַכְשָׁו!
+241	1	241	details/kashar/example-01.mp3	kashar	Paal	details	1		הוּא קָשַׁר אֶת הַחֶבֶל.
+242	1	242	details/kashar/example-02.mp3	kashar	Paal	details	2		הִיא קוֹשֶׁרֶת אֶת הַשַּׂרְכֹת.
+243	1	243	details/kashar/example-03.mp3	kashar	Paal	details	3		אֶקְשֹׁר אֶת הַכֶּלֶב לַעֵץ.
+244	1	244	details/kashar/example-04.mp3	kashar	Paal	details	4		קְשֹׁר אֶת הַחֲבִילָה!
+245	1	245	details/liglot/example-01.mp3	liglot	Paal	details	1		גָּלִיתִי אֶת הַסּוֹד.
+246	1	246	details/liglot/example-02.mp3	liglot	Paal	details	2		הוּא גּוֹלֶה אֶת הָאֱמֶת.
+247	1	247	details/liglot/example-03.mp3	liglot	Paal	details	3		אֶגְלֶה אֶת הַתְּכָנִים.
+248	1	248	details/liglot/example-04.mp3	liglot	Paal	details	4		גְּלֵה אֶת הַמִּסְמָךְ!
+249	1	249	details/lehazkir/example-01.mp3	lehazkir	Hifil	details	1		הִזְכַּרְתִּי לָהּ אֶת הַמּוֹעֵד.
+250	1	250	details/lehazkir/example-02.mp3	lehazkir	Hifil	details	2		הוּא מַזְכִּיר אֶת הַמִּשְׂימָה.
+251	1	251	details/lehazkir/example-03.mp3	lehazkir	Hifil	details	3		אַזְכִּיר לְךָ אֶת הַפְּגִישָׁה.
+252	1	252	details/lehazkir/example-04.mp3	lehazkir	Hifil	details	4		הַזְכֵּר אֶת הַתָּכְנִית!
+253	1	253	details/lehoshev-hifil/example-01.mp3	lehoshev_hifil	Hifil	details	1		הוּא הוֹשִׁיב אֶת הַיֶּלֶד עַל הַכִּסֵּא.
+254	1	254	details/lehoshev-hifil/example-02.mp3	lehoshev_hifil	Hifil	details	2		הִיא מֵשִׁיבָה אֶת הַתַּלְמִידִים.
+255	1	255	details/lehoshev-hifil/example-03.mp3	lehoshev_hifil	Hifil	details	3		אֲנִי אוֹשִׁיב אֶת הַאוֹרְחִים.
+256	1	256	details/lehoshev-hifil/example-04.mp3	lehoshev_hifil	Hifil	details	4		הוֹשִׁיבוּ אֶת הַכֹּל!
+257	1	257	details/leha-amid/example-01.mp3	leha'amid	Hifil	details	1		הוּא הֶעֱמִיד אֶת הַסֵּפֶר עַל הַמַּדָּף.
+258	1	258	details/leha-amid/example-02.mp3	leha'amid	Hifil	details	2		הִיא מַעֲמִידָה אֶת הַכִּסֵּא.
+259	1	259	details/leha-amid/example-03.mp3	leha'amid	Hifil	details	3		אֲנִי אַעֲמִיד אֶת הַמַּכְשִׁיר.
+260	1	260	details/leha-amid/example-04.mp3	leha'amid	Hifil	details	4		הַעֲמִידוּ אֶת הַדַּגְלִים!
+261	1	261	details/lepateach/example-01.mp3	lepateach	Piel	details	1		הוּא פִּתֵּחַ אֶת הַתּוֹכְנִית.
+262	1	262	details/lepateach/example-02.mp3	lepateach	Piel	details	2		הִיא מְפַתַּחַת אֶת הַפְּרוֹיֶקְט.
+263	1	263	details/lepateach/example-03.mp3	lepateach	Piel	details	3		אֲנִי אֲפַתֵּחַ אֶת הַרַעְיוֹן.
+264	1	264	details/lepateach/example-04.mp3	lepateach	Piel	details	4		פַּתְּחוּ אֶת הַדַּף!
+265	1	265	details/leha-alot/example-01.mp3	leha'alot	Hifil	details	1		הוּא הֶעֱלָה אֶת הַדֶּגֶל.
+266	1	266	details/leha-alot/example-02.mp3	leha'alot	Hifil	details	2		הַמּוֹרֶה מַעֲלֶה אֶת הַשְּׁאֵלָה.
+267	1	267	details/leha-alot/example-03.mp3	leha'alot	Hifil	details	3		אֲנִי אַעֲלֶה אֶת הַמִּזְוָדָה.
+268	1	268	details/leha-alot/example-04.mp3	leha'alot	Hifil	details	4		הַעֲלוּ אֶת הַדֶּגֶל!
+269	1	269	details/lehafil/example-01.mp3	lehafil	Hifil	details	1		הוּא הִפִּיל אֶת הַסֵּפֶר.
+270	1	270	details/lehafil/example-02.mp3	lehafil	Hifil	details	2		הַיֶּלֶד מַפִּיל אֶת הַכַּדּוּר.
+271	1	271	details/lehafil/example-03.mp3	lehafil	Hifil	details	3		אֲנִי אַפִּיל אֶת הַצַּלַּחַת.
+272	1	272	details/lehafil/example-04.mp3	lehafil	Hifil	details	4		הַפִּילוּ אֶת הַכַּדּוּר!
+273	1	273	details/lerakez/example-01.mp3	lerakez	Piel	details	1		הַמֶּמְשָׁלָה רִכְּזָה אֶת הַשֵׁרוּתִים.
+274	1	274	details/lerakez/example-02.mp3	lerakez	Piel	details	2		הוּא מְרַכֵּז אֶת הַמַּאֲמָצִים.
+275	1	275	details/lerakez/example-03.mp3	lerakez	Piel	details	3		אֲנִי אֲרַכֵּז אֶת הַמִּסְמָכִים.
+276	1	276	details/lerakez/example-04.mp3	lerakez	Piel	details	4		רַכְּזוּ אֶת הַמַּאֲמָצִים!
+277	1	277	details/lehatrim/example-01.mp3	lehatrim	Hifil	details	1		הוּא הִתְרִים לָאֹרְגָנִיזַצְיָה.
+278	1	278	details/lehatrim/example-02.mp3	lehatrim	Hifil	details	2		הִיא מַתְרִימָה לְצְדָקָה.
+279	1	279	details/lehatrim/example-03.mp3	lehatrim	Hifil	details	3		אַתְרִים לַפְּרוֹיֶקְט הַחָדָשׁ.
+280	1	280	details/lehatrim/example-04.mp3	lehatrim	Hifil	details	4		הַתְרִימוּ לַמַּטָּרָה הַזּוֹ!
+281	1	281	details/lispor/example-01.mp3	lispor	Paal	details	1		הוּא סָפַר אֶת הַכּוֹכָבִים.
+282	1	282	details/lispor/example-02.mp3	lispor	Paal	details	2		הִיא סוֹפֶרֶת אֶת הַמִּסְפָּרִים.
+283	1	283	details/lispor/example-03.mp3	lispor	Paal	details	3		אֲנִי אֶסְפֹּר אֶת הַכֶּסֶף.
+284	1	284	details/lispor/example-04.mp3	lispor	Paal	details	4		סִפְרוּ אֶת הַדַּפִּים!

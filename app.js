@@ -17,11 +17,23 @@ const PRONOUN_ORDER = {
   imperative: ["אתה", "את", "אתם", "אתן"],
   infinitive: [""],
 };
+const HEBREW_FONTS = {
+  Hadasim: '"Hadasim", "Noto Serif Hebrew", serif',
+  FrankRuehl: '"Frank Ruehl", "Noto Serif Hebrew", serif',
+  Dorian: '"Dorian", "Noto Serif Hebrew", serif',
+  KtavYad: '"Ktav Yad", "Noto Serif Hebrew", cursive',
+  DanaYad: '"Dana Yad", "Noto Serif Hebrew", cursive',
+  GveretLevin: '"Gveret Levin", "Noto Serif Hebrew", cursive',
+  NotoRashi: '"Noto Rashi Hebrew", "Noto Serif Hebrew", serif',
+  KetefHinnom: '"Ketef Hinnom", "Noto Serif Hebrew", serif',
+  PaleoHebrew: '"Paleo Hebrew", "Noto Serif Hebrew", serif',
+  ProtoSinaitic: '"Proto Sinaitic", "Noto Serif Hebrew", serif',
+};
 
 const state = {
   verbs: {}, entries: [], roots: [], selectedRoot: null,
   selectedBinyan: null, selectedKey: null, tense: "present", searchIndex: 0,
-  voice: "Tamar",
+  voice: "Tamar", sizeTarget: "hebrew",
 };
 const elements = {};
 const hebrewCollator = new Intl.Collator("he");
@@ -53,7 +65,7 @@ function cacheElements() {
     "root-position", "verb-binyan-label", "verb-infinitive", "verb-meaning",
     "verb-facts", "root-meaning",
     "translation-chips", "binyan-tabs", "lemma-tabs", "tense-tabs", "conjugation-body",
-    "voice-select",
+    "voice-select", "hebrew-font-select", "size-target",
     "table-note", "examples-section", "examples-list", "notes-section", "notes-text",
     "binyanim-section", "binyanim-body", "related-section", "related-list",
     "similar-section", "similar-list", "idioms-section", "idioms-list", "theme-toggle",
@@ -76,8 +88,16 @@ function restorePreferences() {
   document.body.classList.toggle("no-root-highlights", !highlights);
   elements.highlightToggle.setAttribute("aria-pressed", String(highlights));
 
-  const scale = clamp(Number(localStorage.getItem("verb-atlas-scale")) || 1, .85, 1.25);
-  document.documentElement.style.setProperty("--font-scale", scale);
+  const pageScale = clamp(Number(localStorage.getItem("verb-atlas-scale")) || 1, .85, 1.25);
+  const hebrewScale = clamp(Number(localStorage.getItem("verb-atlas-hebrew-scale")) || 1, .8, 1.35);
+  document.documentElement.style.setProperty("--font-scale", pageScale);
+  document.documentElement.style.setProperty("--hebrew-scale", hebrewScale);
+  const font = localStorage.getItem("verb-atlas-hebrew-font") || "Hadasim";
+  elements.hebrewFontSelect.value = HEBREW_FONTS[font] ? font : "Hadasim";
+  applyHebrewFont(elements.hebrewFontSelect.value);
+  state.sizeTarget = localStorage.getItem("verb-atlas-size-target") === "page" ? "page" : "hebrew";
+  elements.sizeTarget.value = state.sizeTarget;
+  updateSizeControls();
   state.voice = localStorage.getItem("verb-atlas-voice") || "Tamar";
 }
 
@@ -117,6 +137,15 @@ function bindGlobalEvents() {
   });
   elements.fontDecrease.addEventListener("click", () => adjustScale(-.05));
   elements.fontIncrease.addEventListener("click", () => adjustScale(.05));
+  elements.hebrewFontSelect.addEventListener("change", () => {
+    applyHebrewFont(elements.hebrewFontSelect.value);
+    localStorage.setItem("verb-atlas-hebrew-font", elements.hebrewFontSelect.value);
+  });
+  elements.sizeTarget.addEventListener("change", () => {
+    state.sizeTarget = elements.sizeTarget.value;
+    localStorage.setItem("verb-atlas-size-target", state.sizeTarget);
+    updateSizeControls();
+  });
   elements.voiceSelect.addEventListener("change", () => {
     state.voice = elements.voiceSelect.value;
     localStorage.setItem("verb-atlas-voice", state.voice);
@@ -249,6 +278,10 @@ function renderVerb() {
   if (!verb) return;
   elements.verbBinyanLabel.textContent = `${verb.binyan_en} · ${verb.binyan}`;
   elements.verbInfinitive.innerHTML = highlightRoots(verb.infinitive, verb.root);
+  const infinitiveAudio = resolveAudio(verb.conjugations?.infinitive?.[0]?.audio);
+  elements.verbInfinitive.disabled = !infinitiveAudio;
+  elements.verbInfinitive.setAttribute("aria-label", `Play ${verb.infinitive}`);
+  elements.verbInfinitive.onclick = infinitiveAudio ? () => playAudio(infinitiveAudio) : null;
   elements.verbMeaning.textContent = (verb.meaning || []).join(" · ") || "Meaning unavailable";
   renderFacts(verb);
   renderTranslations(verb);
@@ -367,7 +400,19 @@ function renderExamples(examples) {
   for (const example of examples) {
     const card = document.createElement("div");
     card.className = "example";
-    appendParagraph(card, example.hebrew, "example__hebrew", "rtl");
+    const audio = resolveAudio(example.audio);
+    if (audio) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "example__hebrew text-audio";
+      button.dir = "rtl";
+      button.textContent = example.hebrew;
+      button.setAttribute("aria-label", `Play example: ${example.hebrew}`);
+      button.addEventListener("click", () => playAudio(audio));
+      card.append(button);
+    } else {
+      appendParagraph(card, example.hebrew, "example__hebrew", "rtl");
+    }
     appendParagraph(card, example.transliteration, "example__transliteration");
     appendParagraph(card, example.translation, "example__translation");
     elements.examplesList.append(card);
@@ -484,12 +529,13 @@ function closeSearchResults() {
 
 function showExample(form, anchor) {
   const popover = elements.examplePopover;
-  popover.querySelector(".popover-hebrew").textContent = form.example_sentence_he || "";
+  const hebrewButton = popover.querySelector(".popover-hebrew");
+  hebrewButton.textContent = form.example_sentence_he || "";
   popover.querySelector(".popover-english").textContent = form.example_sentence_en || "";
-  const audioButton = popover.querySelector(".popover-audio");
   const exampleAudio = resolveAudio(form.audio_example);
-  audioButton.hidden = !exampleAudio;
-  audioButton.onclick = exampleAudio ? () => playAudio(exampleAudio) : null;
+  hebrewButton.disabled = !exampleAudio;
+  hebrewButton.setAttribute("aria-label", `Play example: ${form.example_sentence_he || "Hebrew sentence"}`);
+  hebrewButton.onclick = exampleAudio ? () => playAudio(exampleAudio) : null;
   popover.hidden = false;
   anchor.setAttribute("aria-expanded", "true");
 }
@@ -515,10 +561,26 @@ function resolveAudio(source) {
 }
 
 function adjustScale(amount) {
-  const current = Number(getComputedStyle(document.documentElement).getPropertyValue("--font-scale")) || 1;
-  const next = clamp(Math.round((current + amount) * 100) / 100, .85, 1.25);
-  document.documentElement.style.setProperty("--font-scale", next);
-  localStorage.setItem("verb-atlas-scale", String(next));
+  const hebrew = state.sizeTarget === "hebrew";
+  const property = hebrew ? "--hebrew-scale" : "--font-scale";
+  const storage = hebrew ? "verb-atlas-hebrew-scale" : "verb-atlas-scale";
+  const limits = hebrew ? [.8, 1.35] : [.85, 1.25];
+  const current = Number(getComputedStyle(document.documentElement).getPropertyValue(property)) || 1;
+  const next = clamp(Math.round((current + amount) * 100) / 100, ...limits);
+  document.documentElement.style.setProperty(property, next);
+  localStorage.setItem(storage, String(next));
+}
+
+function applyHebrewFont(name) {
+  document.documentElement.style.setProperty("--hebrew-font", HEBREW_FONTS[name] || HEBREW_FONTS.Hadasim);
+}
+
+function updateSizeControls() {
+  const label = state.sizeTarget === "hebrew" ? "Hebrew text" : "the whole page";
+  elements.fontDecrease.title = `Decrease ${label} size`;
+  elements.fontDecrease.setAttribute("aria-label", `Decrease ${label} size`);
+  elements.fontIncrease.title = `Increase ${label} size`;
+  elements.fontIncrease.setAttribute("aria-label", `Increase ${label} size`);
 }
 
 function pronounRank(pronoun, tense) {

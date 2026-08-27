@@ -19,6 +19,19 @@
       </a>
       <div class="toolbar" aria-label="Display settings">
         <button class="icon-button" id="highlight-toggle" type="button" aria-pressed="true" title="Toggle root highlighting"><span class="root-swatch" aria-hidden="true">ש</span><span class="toolbar-label">Roots</span></button>
+        <label class="toolbar-select" for="hebrew-font-select"><span class="toolbar-label">Font</span><select id="hebrew-font-select" aria-label="Hebrew font">
+          <option value="Hadasim">Hadasim</option>
+          <option value="FrankRuehl">Frank Ruehl</option>
+          <option value="Dorian">Dorian</option>
+          <option value="KtavYad">Ktav Yad</option>
+          <option value="DanaYad">Dana Yad</option>
+          <option value="GveretLevin">Gveret Levin</option>
+          <option value="NotoRashi">Noto Rashi</option>
+          <option value="KetefHinnom">Ketef Hinnom</option>
+          <option value="PaleoHebrew">Paleo Hebrew</option>
+          <option value="ProtoSinaitic">Proto-Sinaitic</option>
+        </select></label>
+        <label class="toolbar-select toolbar-select--size" for="size-target"><select id="size-target" aria-label="Text size target"><option value="hebrew">Hebrew size</option><option value="page">Whole page</option></select></label>
         <button class="icon-button" id="font-decrease" type="button" title="Decrease type size" aria-label="Decrease type size">A−</button>
         <button class="icon-button" id="font-increase" type="button" title="Increase type size" aria-label="Increase type size">A+</button>
         <button class="icon-button" id="theme-toggle" type="button" aria-pressed="false" title="Switch color theme"><span aria-hidden="true">◐</span><span class="toolbar-label">Theme</span></button>
@@ -47,7 +60,7 @@
     <section class="verb-card" id="verb-card" aria-live="polite">
       <div class="verb-card__main">
         <div class="verb-heading">
-          <div><p class="eyebrow" id="verb-binyan-label">Select a root</p><h2 class="hebrew-title" id="verb-infinitive" dir="rtl">בחרו שורש</h2></div>
+          <div><p class="eyebrow" id="verb-binyan-label">Select a root</p><h2 class="hebrew-title-wrap"><button class="hebrew-title text-audio" id="verb-infinitive" type="button" dir="rtl" disabled>בחרו שורש</button></h2></div>
           <div class="verb-summary">
             <div class="verb-meaning" id="verb-meaning">Choose a root above to begin.</div>
             <div class="verb-facts" id="verb-facts"></div>
@@ -94,8 +107,7 @@
 
   <div class="example-popover" id="example-popover" hidden role="dialog" aria-label="Example sentence">
     <button class="popover-close" type="button" aria-label="Close example">×</button>
-    <p class="popover-hebrew" dir="rtl"></p><p class="popover-english"></p>
-    <button class="audio-button popover-audio" type="button" hidden>▶ Play example</button>
+    <button class="popover-hebrew text-audio" type="button" dir="rtl"></button><p class="popover-english"></p>
   </div>
 </body>
 </html>

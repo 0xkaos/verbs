@@ -29,7 +29,7 @@ GENERATED = Path(__file__).resolve().parent / "generated"
 AUDIO_ROOT = SITE / "audio-v2"
 API_ENDPOINT = "https://api.narakeet.com/text-to-speech/mp3"
 DEFAULT_BATCH_SIZE = 450
-KINDS = ("conjugations", "examples")
+KINDS = ("conjugations", "examples", "details")
 
 
 @dataclass(frozen=True)
@@ -88,6 +88,17 @@ def records(dataset: dict) -> list[Clip]:
                         "examples", verb_key, verb.get("binyan_en", ""), tense,
                         row_index, form.get("pronoun", ""), sentence, example_path,
                     ))
+        for example_index, example in enumerate(verb.get("examples", []), start=1):
+            sentence = spoken_text(example.get("hebrew", ""))
+            if not sentence:
+                continue
+            detail_path = PurePosixPath(
+                "details", verb_slug, f"example-{example_index:02d}.mp3"
+            )
+            clips.append(Clip(
+                "details", verb_key, verb.get("binyan_en", ""), "details",
+                example_index, "", sentence, detail_path,
+            ))
     for clip in clips:
         if clip.relative_path in paths:
             raise ValueError(f"duplicate output path: {clip.relative_path}")
@@ -123,7 +134,11 @@ def prepare(batch_size: int) -> dict[str, int]:
     counts: dict[str, int] = {}
     for kind, items in by_kind.items():
         counts[kind] = len(items)
-        list_name = "example-sentences.txt" if kind == "examples" else "conjugations.txt"
+        list_name = {
+            "conjugations": "conjugations.txt",
+            "examples": "example-sentences.txt",
+            "details": "detail-examples.txt",
+        }[kind]
         (lists_dir / list_name).write_text(
             "\n".join(item.text for item in items) + "\n", encoding="utf-8"
         )
@@ -324,6 +339,12 @@ def apply(voices: list[str]) -> None:
                     form["audio_example"] = voice_paths(example_clip.relative_path, voices)
                 else:
                     form.pop("audio_example", None)
+        for example_index, example in enumerate(verb.get("examples", []), start=1):
+            detail_clip = by_location.get(("details", verb_key, "details", example_index))
+            if detail_clip:
+                example["audio"] = voice_paths(detail_clip.relative_path, voices)
+            else:
+                example.pop("audio", None)
     DATASET.write_text(
         json.dumps(dataset, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

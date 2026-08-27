@@ -7,6 +7,7 @@ The generated lists are derived directly from `../verbs.canonical.json`:
 
 - `generated/lists/conjugations.txt` — one Hebrew conjugation per dataset row
 - `generated/lists/example-sentences.txt` — one accepted Hebrew sentence per row
+- `generated/lists/detail-examples.txt` — standalone examples shown in the details cards
 - matching TSV files — dataset key, tense, row, pronoun, batch, scene and target path
 - `generated/batches/*.txt` — Narakeet multi-scene input files (at most 450 scenes)
 

@@ -667,12 +667,20 @@
       {
         "hebrew": "הוא כָּתַב מִכְתָּב אֲרֹךְ.",
         "transliteration": "Hu katáv míchtav arókh.",
-        "translation": "He wrote a long letter."
+        "translation": "He wrote a long letter.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/katav/example-01.mp3",
+          "Doron": "audio-v2/doron/details/katav/example-01.mp3"
+        }
       },
       {
         "hebrew": "הם כָּתְבוּ סִפְרִים מְעַנְיְנִים.",
         "transliteration": "Hem katvú sifrím me'anyením.",
-        "translation": "They wrote interesting books."
+        "translation": "They wrote interesting books.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/katav/example-02.mp3",
+          "Doron": "audio-v2/doron/details/katav/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root כ.ת.ב is associated with writing and lettering.",
@@ -1372,12 +1380,20 @@
       {
         "hebrew": "אני לָמַדְתִּי עִבְרִית בָּאוּנִיבֶרְסִיטָה.",
         "transliteration": "Ani lamádti ivrít ba-universitá.",
-        "translation": "I learned Hebrew at the university."
+        "translation": "I learned Hebrew at the university.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lamad/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lamad/example-01.mp3"
+        }
       },
       {
         "hebrew": "הילדים לוֹמְדִים בֵּית סֵפֶר.",
         "transliteration": "Hayeladim lomdím beit séfer.",
-        "translation": "The children are learning at school."
+        "translation": "The children are learning at school.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lamad/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lamad/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root ל.מ.ד is associated with learning and education.",
@@ -2086,12 +2102,20 @@
       {
         "hebrew": "היא קוֹרֵאת סֵפֶר חָדָשׁ.",
         "transliteration": "Hi korét séfer chadásh.",
-        "translation": "She is reading a new book."
+        "translation": "She is reading a new book.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/kara/example-01.mp3",
+          "Doron": "audio-v2/doron/details/kara/example-01.mp3"
+        }
       },
       {
         "hebrew": "אנחנו קָרָאנוּ אֶת הַמֶּסֶר.",
         "transliteration": "Anachnu karánu et ha-méser.",
-        "translation": "We read the message."
+        "translation": "We read the message.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/kara/example-02.mp3",
+          "Doron": "audio-v2/doron/details/kara/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root ק.ר.א relates to reading and calling. Note that 'קָרָא' can also mean 'he called'. Context determines the meaning.",
@@ -2791,12 +2815,20 @@
       {
         "hebrew": "היא שָׁרָה שִׁיר יָפֶה.",
         "transliteration": "Hi shará shir yafé.",
-        "translation": "She sang a beautiful song."
+        "translation": "She sang a beautiful song.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/shir/example-01.mp3",
+          "Doron": "audio-v2/doron/details/shir/example-01.mp3"
+        }
       },
       {
         "hebrew": "אנחנו נָשִׁיר בַּמַּסִּבָּה מָחָר.",
         "transliteration": "Anachnu nashír ba-masibá machár.",
-        "translation": "We will sing at the party tomorrow."
+        "translation": "We will sing at the party tomorrow.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/shir/example-02.mp3",
+          "Doron": "audio-v2/doron/details/shir/example-02.mp3"
+        }
       }
     ],
     "notes": "Irregular verb in binyan Pa'al (פָּעַל). The root ש.י.ר is associated with singing and songs.",
@@ -3502,17 +3534,29 @@
       {
         "hebrew": "הוא שָׁמַר עַל הַבַּיִת בַּלַּיְלָה.",
         "transliteration": "Hu shamár al ha-báyit ba-láyla.",
-        "translation": "He guarded the house at night."
+        "translation": "He guarded the house at night.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/shamar/example-01.mp3",
+          "Doron": "audio-v2/doron/details/shamar/example-01.mp3"
+        }
       },
       {
         "hebrew": "אני שׁוֹמֵר עַל הַסוֹד שֶׁלָּךְ.",
         "transliteration": "Ani shomér al ha-sod shelách.",
-        "translation": "I am keeping your secret."
+        "translation": "I am keeping your secret.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/shamar/example-02.mp3",
+          "Doron": "audio-v2/doron/details/shamar/example-02.mp3"
+        }
       },
       {
         "hebrew": "נִשְׁמוֹר עַל הַמָּסֹרֶת הַזּוֹ.",
         "transliteration": "Nishmór al ha-masóret ha-zó.",
-        "translation": "We will observe this tradition."
+        "translation": "We will observe this tradition.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/shamar/example-03.mp3",
+          "Doron": "audio-v2/doron/details/shamar/example-03.mp3"
+        }
       }
     ],
     "notes": "Regular verb in Pa'al (פָּעַל). The root שׁ.מ.ר can mean 'to guard', 'to keep', or 'to observe', depending on context (e.g., guarding a place, keeping a secret, or observing rules). It’s widely used in both modern and biblical Hebrew.",
@@ -4223,12 +4267,20 @@
       {
         "hebrew": "הילדים רָצִים בַּפָּארְק כָּל בּוֹקֶר.",
         "transliteration": "Hayeladim ratzím ba-párk kol bóker.",
-        "translation": "The children run in the park every morning."
+        "translation": "The children run in the park every morning.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ratz/example-01.mp3",
+          "Doron": "audio-v2/doron/details/ratz/example-01.mp3"
+        }
       },
       {
         "hebrew": "היא רָצָה מָהֵר לַאֲוִוירוֹן.",
         "transliteration": "Hi ratzá mahér la-aviron.",
-        "translation": "She ran quickly to the airplane."
+        "translation": "She ran quickly to the airplane.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ratz/example-02.mp3",
+          "Doron": "audio-v2/doron/details/ratz/example-02.mp3"
+        }
       }
     ],
     "notes": "Irregular verb in binyan Pa'al (פָּעַל). The root ר.ו.צ is associated with running and rushing. Note the vowel changes and the presence of י during conjugation.",
@@ -4957,12 +5009,20 @@
       {
         "hebrew": "אנחנו עוֹבְדִים בְּיַחַד עַל הַפְּרוֹיֶקְט.",
         "transliteration": "Anachnu ovdím beyáhad al ha-proyékt.",
-        "translation": "We are working together on the project."
+        "translation": "We are working together on the project.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/avad/example-01.mp3",
+          "Doron": "audio-v2/doron/details/avad/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוא עָבַד בְּחֶבְרָה גְּדוֹלָה.",
         "transliteration": "Hu avád be-chevrá gdolá.",
-        "translation": "He worked at a big company."
+        "translation": "He worked at a big company.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/avad/example-02.mp3",
+          "Doron": "audio-v2/doron/details/avad/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root ע.ב.ד is associated with work, labor, and service.",
@@ -5674,12 +5734,20 @@
       {
         "hebrew": "הילדים מְשַׂחֲקִים בַּחֲצֵר.",
         "transliteration": "Hayeladim mesachakím ba-chatzér.",
-        "translation": "The children are playing in the yard."
+        "translation": "The children are playing in the yard.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/sichek/example-01.mp3",
+          "Doron": "audio-v2/doron/details/sichek/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוא שִׂחֵק בַּסֶּרֶט הַחָדָשׁ.",
         "transliteration": "Hu sichék ba-séret ha-chadásh.",
-        "translation": "He acted in the new movie."
+        "translation": "He acted in the new movie.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/sichek/example-02.mp3",
+          "Doron": "audio-v2/doron/details/sichek/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Piel (פִּעֵל). The root ש.ח.ק is associated with playing, acting, and joking.",
@@ -6396,12 +6464,20 @@
       {
         "hebrew": "היא צָחֲקָה מִן הַבְּדִיחָה.",
         "transliteration": "Hi tzachaká min ha-b'díchah.",
-        "translation": "She laughed at the joke."
+        "translation": "She laughed at the joke.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/tzachak/example-01.mp3",
+          "Doron": "audio-v2/doron/details/tzachak/example-01.mp3"
+        }
       },
       {
         "hebrew": "אנחנו צוֹחֲקִים יַחַד.",
         "transliteration": "Anachnu tzochakím yáchad.",
-        "translation": "We are laughing together."
+        "translation": "We are laughing together.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/tzachak/example-02.mp3",
+          "Doron": "audio-v2/doron/details/tzachak/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root צ.ח.ק is associated with laughter and joy.",
@@ -7117,12 +7193,20 @@
       {
         "hebrew": "הוא שָׁתָה כוֹס מַיִם.",
         "transliteration": "Hu shatá kos máyim.",
-        "translation": "He drank a glass of water."
+        "translation": "He drank a glass of water.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/shata/example-01.mp3",
+          "Doron": "audio-v2/doron/details/shata/example-01.mp3"
+        }
       },
       {
         "hebrew": "אנחנו שׁוֹתִים קָפֶה בַּבֹּקֶר.",
         "transliteration": "Anachnu shotím kafé ba-bóker.",
-        "translation": "We drink coffee in the morning."
+        "translation": "We drink coffee in the morning.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/shata/example-02.mp3",
+          "Doron": "audio-v2/doron/details/shata/example-02.mp3"
+        }
       }
     ],
     "notes": "Irregular verb in binyan Pa'al (פָּעַל). The root ש.ת.ה is associated with drinking. Note the changes in the root letters during conjugation.",
@@ -7833,12 +7917,20 @@
       {
         "hebrew": "היא רָאֲתָה סֶרֶט מְעֻלֶּה.",
         "transliteration": "Hi ra'atá séret me'ullé.",
-        "translation": "She saw an excellent movie."
+        "translation": "She saw an excellent movie.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ra-ah/example-01.mp3",
+          "Doron": "audio-v2/doron/details/ra-ah/example-01.mp3"
+        }
       },
       {
         "hebrew": "האם אתה רוֹאֶה אֶת הַכּוֹכָבִים?",
         "transliteration": "Ha'im atah ro'eh et ha-kochavím?",
-        "translation": "Do you see the stars?"
+        "translation": "Do you see the stars?",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ra-ah/example-02.mp3",
+          "Doron": "audio-v2/doron/details/ra-ah/example-02.mp3"
+        }
       }
     ],
     "notes": "The verb 'לִרְאוֹת' is irregular in binyan Pa'al (פָּעַל). The root ר-א-ה involves weak letters, resulting in irregular conjugations, especially in the imperative and future tenses.",
@@ -8566,12 +8658,20 @@
       {
         "hebrew": "הוא פָּעַל בְּמַהֲלַךְ הַמִּשְׁבָּר.",
         "transliteration": "Hu pa'ál be-mahalákh ha-mishbár.",
-        "translation": "He acted during the crisis."
+        "translation": "He acted during the crisis.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/paal/example-01.mp3",
+          "Doron": "audio-v2/doron/details/paal/example-01.mp3"
+        }
       },
       {
         "hebrew": "אנחנו פּוֹעֲלִים לְמַעַן הַסְּבִיבָה.",
         "transliteration": "Anachnu po'alím le-ma'án ha-sviva.",
-        "translation": "We are acting for the environment."
+        "translation": "We are acting for the environment.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/paal/example-02.mp3",
+          "Doron": "audio-v2/doron/details/paal/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root פ.ע.ל is central in Hebrew and is associated with action and work. Interestingly, 'פָּעַל' is also the name of this verb pattern (binyan).",
@@ -9295,12 +9395,20 @@
       {
         "hebrew": "אנחנו אוֹכְלִים אֲרוּחָה בְּיָחַד.",
         "transliteration": "Anachnu ochlím aruchá beyáchad.",
-        "translation": "We are eating a meal together."
+        "translation": "We are eating a meal together.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/achal/example-01.mp3",
+          "Doron": "audio-v2/doron/details/achal/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוא אָכַל בַּמִּסְעָדָה הַחֲדָשָׁה.",
         "transliteration": "Hu achál ba-mis'adá ha-chadashá.",
-        "translation": "He ate at the new restaurant."
+        "translation": "He ate at the new restaurant.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/achal/example-02.mp3",
+          "Doron": "audio-v2/doron/details/achal/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root א.כ.ל is associated with eating and consumption. Note that in some forms, the initial א is silent in pronunciation.",
@@ -10009,12 +10117,20 @@
       {
         "hebrew": "אני הוֹלֵךְ לַחֲנוּת.",
         "transliteration": "Ani holéch la-chanút.",
-        "translation": "I am going to the store."
+        "translation": "I am going to the store.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/halach/example-01.mp3",
+          "Doron": "audio-v2/doron/details/halach/example-01.mp3"
+        }
       },
       {
         "hebrew": "היא הָלְכָה לְבַקֵּר אֶת סַבְתָּהּ.",
         "transliteration": "Hi halchá levakér et savtáh.",
-        "translation": "She went to visit her grandmother."
+        "translation": "She went to visit her grandmother.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/halach/example-02.mp3",
+          "Doron": "audio-v2/doron/details/halach/example-02.mp3"
+        }
       }
     ],
     "notes": "Irregular verb in binyan Pa'al (פָּעַל). The root ה.ל.ך involves a third-letter weak root (the letter ך), resulting in irregular conjugations, especially in the future and imperative tenses.",
@@ -10742,12 +10858,20 @@
       {
         "hebrew": "אני יוֹדֵעַ אֶת הַתְּשׁוּבָה.",
         "transliteration": "Ani yodéa et ha-t'shuvá.",
-        "translation": "I know the answer."
+        "translation": "I know the answer.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/yada/example-01.mp3",
+          "Doron": "audio-v2/doron/details/yada/example-01.mp3"
+        }
       },
       {
         "hebrew": "היא יָדְעָה אֶת הַסּוֹד.",
         "transliteration": "Hi yad'á et ha-sód.",
-        "translation": "She knew the secret."
+        "translation": "She knew the secret.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/yada/example-02.mp3",
+          "Doron": "audio-v2/doron/details/yada/example-02.mp3"
+        }
       }
     ],
     "notes": "Irregular verb in binyan Pa'al (פָּעַל). The root י.ד.ע involves weak letters, resulting in some irregular conjugations, especially in the imperative and future tenses.",
@@ -11472,12 +11596,20 @@
       {
         "hebrew": "אני מֵבִין אֶת הַמַּצָּב.",
         "transliteration": "Ani mevín et ha-matzáv.",
-        "translation": "I understand the situation."
+        "translation": "I understand the situation.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hevin/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hevin/example-01.mp3"
+        }
       },
       {
         "hebrew": "היא לֹא הֵבִינָה אֶת הַשְּׁאֵלָה.",
         "transliteration": "Hi lo hevínah et ha-she'elá.",
-        "translation": "She didn't understand the question."
+        "translation": "She didn't understand the question.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hevin/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hevin/example-02.mp3"
+        }
       }
     ],
     "notes": "Irregular verb in binyan Hif'il (הִפְעִיל). The root ב.י.ן is associated with understanding and comprehension. 'לְהָבִין' is in the Hif'il binyan, which often indicates causative action.",
@@ -12188,12 +12320,20 @@
       {
         "hebrew": "היא אָמְרָה שֶׁהִיא תָּבוֹא.",
         "transliteration": "Hi amrá she-hi tavó.",
-        "translation": "She said that she will come."
+        "translation": "She said that she will come.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/amar/example-01.mp3",
+          "Doron": "audio-v2/doron/details/amar/example-01.mp3"
+        }
       },
       {
         "hebrew": "מה אַתָּה אוֹמֵר?",
         "transliteration": "Ma atah omér?",
-        "translation": "What do you say?"
+        "translation": "What do you say?",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/amar/example-02.mp3",
+          "Doron": "audio-v2/doron/details/amar/example-02.mp3"
+        }
       }
     ],
     "notes": "Irregular verb in binyan Pa'al (פָּעַל). The root א.מ.ר is associated with saying and speech. Note the irregular infinitive 'לוֹמַר'.",
@@ -12901,12 +13041,20 @@
       {
         "hebrew": "האם תָּבוֹא לַמְּסִבָּה?",
         "transliteration": "Ha'im tavó la-mesibá?",
-        "translation": "Will you come to the party?"
+        "translation": "Will you come to the party?",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ba/example-01.mp3",
+          "Doron": "audio-v2/doron/details/ba/example-01.mp3"
+        }
       },
       {
         "hebrew": "הם בָּאוּ מִמְּקוֹמוֹת רְחוֹקִים.",
         "transliteration": "Hem ba'ú mimkomót rechokím.",
-        "translation": "They came from distant places."
+        "translation": "They came from distant places.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ba/example-02.mp3",
+          "Doron": "audio-v2/doron/details/ba/example-02.mp3"
+        }
       }
     ],
     "notes": "Irregular verb in binyan Pa'al (פָּעַל). The root ב.ו.א is associated with coming and arriving. Note the irregular forms due to the presence of weak letters.",
@@ -13621,12 +13769,20 @@
       {
         "hebrew": "אני חוֹשֵׁב שֶׁזֶּה רַעְיוֹן טוֹב.",
         "transliteration": "Ani choshev she-ze ra'ayon tov.",
-        "translation": "I think that it's a good idea."
+        "translation": "I think that it's a good idea.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/chashav/example-01.mp3",
+          "Doron": "audio-v2/doron/details/chashav/example-01.mp3"
+        }
       },
       {
         "hebrew": "היא חָשְׁבָה עַל הַהַצָּעָה.",
         "transliteration": "Hi chashvá al ha-hatzá'ah.",
-        "translation": "She thought about the proposal."
+        "translation": "She thought about the proposal.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/chashav/example-02.mp3",
+          "Doron": "audio-v2/doron/details/chashav/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root ח.ש.ב is associated with thinking and calculation. This root is also used in words related to computers (מַחְשֵׁב).",
@@ -14361,12 +14517,20 @@
       {
         "hebrew": "היא אוֹהֶבֶת שׁוֹקוֹלָד.",
         "transliteration": "Hi ohévet shokolád.",
-        "translation": "She loves chocolate."
+        "translation": "She loves chocolate.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ahav/example-01.mp3",
+          "Doron": "audio-v2/doron/details/ahav/example-01.mp3"
+        }
       },
       {
         "hebrew": "הם אָהֲבוּ לְטַיֵּל בַּטֶּבַע.",
         "transliteration": "Hem ahavú letayél ba-téva.",
-        "translation": "They loved hiking in nature."
+        "translation": "They loved hiking in nature.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ahav/example-02.mp3",
+          "Doron": "audio-v2/doron/details/ahav/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root א.ה.ב is associated with love and affection. Note that in pronunciation, the initial א is often silent.",
@@ -15080,12 +15244,20 @@
       {
         "hebrew": "אני רוֹצֶה לְלֶכֶת לַסֶּרֶט.",
         "transliteration": "Ani rotzéh lalechet la-séret.",
-        "translation": "I want to go to the movie."
+        "translation": "I want to go to the movie.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ratzah/example-01.mp3",
+          "Doron": "audio-v2/doron/details/ratzah/example-01.mp3"
+        }
       },
       {
         "hebrew": "מה אַתָּה רוֹצֶה לֶאֱכֹל?",
         "transliteration": "Ma atah rotzéh le'echól?",
-        "translation": "What do you want to eat?"
+        "translation": "What do you want to eat?",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ratzah/example-02.mp3",
+          "Doron": "audio-v2/doron/details/ratzah/example-02.mp3"
+        }
       }
     ],
     "notes": "Irregular verb in binyan Pa'al (פָּעַל). The root ר.צ.ה is associated with wanting and desiring. Note the changes in vowels in different conjugations due to the weak letter ה at the end of the root.",
@@ -15799,12 +15971,20 @@
       {
         "hebrew": "היא נָתְנָה לוֹ מַתָּנָה יָפָה.",
         "transliteration": "Hi nat'ná lo mataná yafá.",
-        "translation": "She gave him a beautiful gift."
+        "translation": "She gave him a beautiful gift.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/natan/example-01.mp3",
+          "Doron": "audio-v2/doron/details/natan/example-01.mp3"
+        }
       },
       {
         "hebrew": "אפשר לִתֵּן עֲזוֹר לַצְּווּת.",
         "transliteration": "Efshar litén ezór la-tzévet.",
-        "translation": "It is possible to give help to the team."
+        "translation": "It is possible to give help to the team.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/natan/example-02.mp3",
+          "Doron": "audio-v2/doron/details/natan/example-02.mp3"
+        }
       }
     ],
     "notes": "Irregular verb in binyan Pa'al (פָּעַל). The root נ.ת.ן is associated with giving and providing. Note the irregular forms in the future and imperative due to the root letters.",
@@ -16508,12 +16688,20 @@
       {
         "hebrew": "אני פּוֹגֵשׁ אֶת חֲבֵרַי בְּקָפֶה.",
         "transliteration": "Ani pogésh et chavérai be-kafé.",
-        "translation": "I meet my friends at the café."
+        "translation": "I meet my friends at the café.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/pagash/example-01.mp3",
+          "Doron": "audio-v2/doron/details/pagash/example-01.mp3"
+        }
       },
       {
         "hebrew": "היא פָּגְשָׁה אוֹתוֹ בַּרְחוֹב.",
         "transliteration": "Hi pagshá oto ba-rechov.",
-        "translation": "She met him on the street."
+        "translation": "She met him on the street.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/pagash/example-02.mp3",
+          "Doron": "audio-v2/doron/details/pagash/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root פ.ג.שׁ is associated with meeting or encountering.",
@@ -17228,12 +17416,20 @@
       {
         "hebrew": "הילד יָשַׁן כָּל הַלַּיְלָה.",
         "transliteration": "Hayéled yashán kol ha-láilah.",
-        "translation": "The child slept all night."
+        "translation": "The child slept all night.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/yashan/example-01.mp3",
+          "Doron": "audio-v2/doron/details/yashan/example-01.mp3"
+        }
       },
       {
         "hebrew": "אנו יְשֵׁנִים בְּאוֹהֶל בַּטֶּבַע.",
         "transliteration": "Anu yeshením be-óhel ba-téva.",
-        "translation": "We sleep in a tent in nature."
+        "translation": "We sleep in a tent in nature.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/yashan/example-02.mp3",
+          "Doron": "audio-v2/doron/details/yashan/example-02.mp3"
+        }
       }
     ],
     "notes": "Irregular verb in binyan Pa'al (פָּעַל). The root י.ש.נ involves weak letters, resulting in irregular forms, especially in the future and imperative. The verb 'לִישׁוֹן' is commonly used to express sleeping.",
@@ -17927,12 +18123,20 @@
       {
         "hebrew": "אֲנִי מִשְׁתַּמֵּשׁ בַּמַּחְשֵׁב לַעֲבוֹדָה.",
         "transliteration": "Ani mishtamésh ba-machshév la'avodá.",
-        "translation": "I use the computer for work."
+        "translation": "I use the computer for work.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hishtamesh/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hishtamesh/example-01.mp3"
+        }
       },
       {
         "hebrew": "הם הִשְׁתַּמְּשׁוּ בַּמַּפָּה לְהִתְמַצֵּא בָּעִיר.",
         "transliteration": "Hem hishtamshú ba-mapá lehitmatzéa ba-ir.",
-        "translation": "They used the map to navigate the city."
+        "translation": "They used the map to navigate the city.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hishtamesh/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hishtamesh/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hitpael (הִתְפַּעֵל), which often indicates a reflexive or reciprocal action. The root ש.מ.ש relates to using or serving. 'להשתמש' means 'to use' in the sense of making use of something for a purpose.",
@@ -18647,12 +18851,20 @@
       {
         "hebrew": "הם נִכְנְסוּ לַבַּיִת לְהִתְחַמֵּם.",
         "transliteration": "Hem nikh'nesú la-báyit lehitchamém.",
-        "translation": "They entered the house to warm up."
+        "translation": "They entered the house to warm up.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/niknas/example-01.mp3",
+          "Doron": "audio-v2/doron/details/niknas/example-01.mp3"
+        }
       },
       {
         "hebrew": "בְּבַקָּשָׁה לֹא לְהִכָּנֵס לְחֶדֶר זֶה.",
         "transliteration": "Bevakashá lo lehikanés le-chéder ze.",
-        "translation": "Please do not enter this room."
+        "translation": "Please do not enter this room.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/niknas/example-02.mp3",
+          "Doron": "audio-v2/doron/details/niknas/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Nif'al (נִפְעַל), which often has a passive or reflexive meaning. The root כ.נ.ס relates to entering and gathering. 'להיכנס' means 'to enter' or 'to go in'.",
@@ -19374,12 +19586,20 @@
       {
         "hebrew": "הוּא הִסְבִּיר אֶת הַחֹק לִתְּלַמִּידִים.",
         "transliteration": "Hu hisbír et ha-chok litalmidím.",
-        "translation": "He explained the law to the students."
+        "translation": "He explained the law to the students.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hisbir/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hisbir/example-01.mp3"
+        }
       },
       {
         "hebrew": "אֵינִי מֵבִין, אַתְּ יְכוֹלָה לְהַסְבִּיר לִי?",
         "transliteration": "Eini mevín, at yecholá lehasbír li?",
-        "translation": "I don't understand; can you explain to me?"
+        "translation": "I don't understand; can you explain to me?",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hisbir/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hisbir/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hif'il (הִפְעִיל), which often expresses causative actions. The root ס.ב.ר is associated with reasoning and explanation.",
@@ -20088,12 +20308,20 @@
       {
         "hebrew": "אני מַרְגִּישׁ שֶׁקַּר.",
         "transliteration": "Ani margísh she-kar.",
-        "translation": "I feel that it's cold."
+        "translation": "I feel that it's cold.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hirgish/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hirgish/example-01.mp3"
+        }
       },
       {
         "hebrew": "היא הִרְגִּישָׁה עֲיֵיפָה אַחֲרֵי הָרִיצָה.",
         "transliteration": "Hi hirgíshah ayeifah acharei ha-ritzah.",
-        "translation": "She felt tired after the run."
+        "translation": "She felt tired after the run.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hirgish/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hirgish/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hif'il (הִפְעִיל), indicating causative action. The root ר.ג.ש relates to feeling and emotion. 'להרגיש' means 'to feel' or 'to sense'.",
@@ -20816,12 +21044,20 @@
       {
         "hebrew": "הסרט הזה הִשְׁפִּיעַ עלי בצורה עמוקה.",
         "transliteration": "Ha-séret ha-ze hishpía alai be-tzurá amuká.",
-        "translation": "This movie influenced me deeply."
+        "translation": "This movie influenced me deeply.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hishpia/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hishpia/example-01.mp3"
+        }
       },
       {
         "hebrew": "הם מַשְׁפִּיעִים רבות על דעת הקהל.",
         "transliteration": "Hem mashpi'ím rabot al da'at ha-kahál.",
-        "translation": "They greatly influence public opinion."
+        "translation": "They greatly influence public opinion.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hishpia/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hishpia/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hif'il (הִפְעִיל), which often indicates causative actions. The root ש-פ-ע relates to influence and abundance.",
@@ -21526,12 +21762,20 @@
       {
         "hebrew": "הילד מִתְנַהֵג בְּאופֶן מְצוּיָן בַּגַּן.",
         "transliteration": "Ha-yeled mitnahég be-ofen metzuyán ba-gan.",
-        "translation": "The child behaves excellently in kindergarten."
+        "translation": "The child behaves excellently in kindergarten.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hitnaheg/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hitnaheg/example-01.mp3"
+        }
       },
       {
         "hebrew": "אֲנַחנוּ צְרִיכִים לְהִתְנַהֵג בְּכָבוֹד זֶה לַזֶה.",
         "transliteration": "Anachnu tzrichím lehitnahég be-kavód ze la-ze.",
-        "translation": "We need to behave respectfully toward each other."
+        "translation": "We need to behave respectfully toward each other.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hitnaheg/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hitnaheg/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hitpa'el (הִתְפַּעֵל), which often indicates reflexive or reciprocal actions. The root נ-ה-ג is associated with driving, leading, or behaving. 'להתנהג' means 'to behave' or 'to conduct oneself'.",
@@ -22253,12 +22497,20 @@
       {
         "hebrew": "אֲנִי מַאֲמִין בְּכִשְׁרוֹנוֹתֶיךָ.",
         "transliteration": "Ani ma'amin be-kishronotécha.",
-        "translation": "I believe in your talents."
+        "translation": "I believe in your talents.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leha-amin/example-01.mp3",
+          "Doron": "audio-v2/doron/details/leha-amin/example-01.mp3"
+        }
       },
       {
         "hebrew": "הם הֶאֱמִינוּ שֶׁהַכֹּל יִהְיֶה בְּסֵדֶר.",
         "transliteration": "Hem he'emínu she-ha-kol yihye be-séder.",
-        "translation": "They believed that everything would be alright."
+        "translation": "They believed that everything would be alright.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leha-amin/example-02.mp3",
+          "Doron": "audio-v2/doron/details/leha-amin/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hif'il (הִפְעִיל), which often indicates causative actions. The root א-מ-נ is associated with belief, faith, and trust. 'להאמין' means 'to believe' or 'to have faith'.",
@@ -22966,12 +23218,20 @@
       {
         "hebrew": "אֲנִי מַכִּיר אוֹתוֹ מִבֵּית הַסֵּפֶר.",
         "transliteration": "Ani makír oto mi-beit ha-séfer.",
-        "translation": "I know him from school."
+        "translation": "I know him from school.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehakir/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehakir/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא הִכִּירָה אֶת הַמָּקוֹם.",
         "transliteration": "Hi hikírah et ha-makom.",
-        "translation": "She recognized the place."
+        "translation": "She recognized the place.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehakir/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehakir/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hif'il (הִפְעִיל), which often indicates causative actions. The root נ-כ-ר is associated with recognition, acquaintance, and being foreign. 'להכיר' means 'to recognize', 'to know someone', or 'to be acquainted with'.",
@@ -23663,12 +23923,20 @@
       {
         "hebrew": "אֲנַחנוּ מַתְחִילִים אֶת הַשִּׁעוּר עַכְשָׁו.",
         "transliteration": "Anachnu matchilim et ha-shiur achshav.",
-        "translation": "We are starting the lesson now."
+        "translation": "We are starting the lesson now.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatkhil/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehatkhil/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא הִתְחִילָה לִלְמוֹד עִבְרִית.",
         "transliteration": "Hi hitchilah lilmod ivrit.",
-        "translation": "She started learning Hebrew."
+        "translation": "She started learning Hebrew.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatkhil/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehatkhil/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hif'il (הִפְעִיל), which often indicates causative actions. The root ת-ח-ל is associated with beginning or starting. 'להתחיל' means 'to start' or 'to begin' an action or process.",
@@ -24383,12 +24651,20 @@
       {
         "hebrew": "אֲנִי רוֹצֶה לְהִתְקַדֵּם בַּעֲבוֹדָה.",
         "transliteration": "Ani rotze lehitkadém ba'avodáh.",
-        "translation": "I want to advance at work."
+        "translation": "I want to advance at work.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehitkadem/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehitkadem/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַמְּפַתֵּחַ מִתְקַדֵּם בִּפְתּוּחַ הַתָּכְנִית.",
         "transliteration": "Ha-mefte'áh mitkadém bi-ftúach ha-tochnít.",
-        "translation": "The developer is progressing in developing the program."
+        "translation": "The developer is progressing in developing the program.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehitkadem/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehitkadem/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hitpa'el (הִתְפַּעֵל), which often indicates reflexive or reciprocal actions. The root ק-ד-ם is associated with advancing or moving forward. 'להתקדם' means 'to progress' or 'to advance' physically, professionally, or in other contexts.",
@@ -25094,12 +25370,20 @@
       {
         "hebrew": "הוּא הִפְסִיק לְדַבֵּר בַּשִּׁיעוּר.",
         "transliteration": "Hu hifsík ledabér ba-shiur.",
-        "translation": "He stopped talking during the lesson."
+        "translation": "He stopped talking during the lesson.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehafsik/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehafsik/example-01.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי מַפְסִיקָה לַעֲבוֹד בְּשָׁעָה שֵׁשׁ.",
         "transliteration": "Ani mafsikáh la'avód be-sha'á shesh.",
-        "translation": "I stop working at six o'clock."
+        "translation": "I stop working at six o'clock.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehafsik/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehafsik/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hif'il (הִפְעִיל), which often indicates causative actions. The root פ-ס-ק is associated with stopping or ceasing. 'להפסיק' means 'to stop' or 'to cease' an action. It can be used both transitively ('to stop something') and intransitively ('to stop').",
@@ -25815,12 +26099,20 @@
       {
         "hebrew": "הוּא הִזְמִין אוֹתִי לְמְסִיבָה.",
         "transliteration": "Hu hizmín oti le-mesibáh.",
-        "translation": "He invited me to a party."
+        "translation": "He invited me to a party.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehazmin/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehazmin/example-01.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי מַזְמִינָה אוֹכֶל בָּאִינְטֶרְנֵט.",
         "transliteration": "Ani mazmináh okhel ba-internet.",
-        "translation": "I order food online."
+        "translation": "I order food online.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehazmin/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehazmin/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hif'il (הִפְעִיל), which often indicates causative actions. The root ז-מ-נ is associated with invitation and ordering. 'להזמין' means 'to invite' someone or 'to order' something like food or products.",
@@ -26518,12 +26810,20 @@
       {
         "hebrew": "אֲנִי מַשְׁאִיר אֶת הַמַּפְתְּחוֹת בַּשֻּׁלְחָן.",
         "transliteration": "Ani mash'ír et ha-maftechót ba-shulchán.",
-        "translation": "I am leaving the keys on the table."
+        "translation": "I am leaving the keys on the table.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehash-ir/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehash-ir/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא הִשְׁאִירָה לִי הוֹדָעָה.",
         "transliteration": "Hi hish'írah li hodá'ah.",
-        "translation": "She left me a message."
+        "translation": "She left me a message.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehash-ir/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehash-ir/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hif'il (הִפְעִיל) and is used to express leaving something behind or retaining something. The root ש-א-ר is associated with remaining or leaving behind.",
@@ -27238,12 +27538,20 @@
       {
         "hebrew": "אֲנִי מַצִּיעַ לָךְ לְהִתְחִיל לָלֶכֶת.",
         "transliteration": "Ani matzía lach lehitkhíl laléchet.",
-        "translation": "I suggest that you start walking."
+        "translation": "I suggest that you start walking.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatzia/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehatzia/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוּא הִצִּיעַ לָנוּ רַעֲיוֹן חָדָשׁ.",
         "transliteration": "Hu hitzía lanu ra'ayon chadásh.",
-        "translation": "He suggested a new idea to us."
+        "translation": "He suggested a new idea to us.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatzia/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehatzia/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hif'il (הִפְעִיל), which often indicates causative actions. The root י-צ-ע is associated with proposing or offering. 'להציע' means 'to suggest', 'to propose', or 'to offer' something to someone.",
@@ -27932,12 +28240,20 @@
       {
         "hebrew": "אֲנִי מְחַפֵּשׂ עֲבוֹדָה חֲדָשָׁה.",
         "transliteration": "Ani mechapés avodá chadashá.",
-        "translation": "I am looking for a new job."
+        "translation": "I am looking for a new job.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lechapes/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lechapes/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא חִפְּשָׂה אֶת הַמַּפְתֵּחוֹת בְּכָל הַבַּיִת.",
         "transliteration": "Hi chipésah et ha-maftechót be-chol ha-báyit.",
-        "translation": "She searched for the keys all over the house."
+        "translation": "She searched for the keys all over the house.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lechapes/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lechapes/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Piel (פִּעֵל), which often indicates an intensive or deliberate action. The root ח-פ-שׂ is associated with searching or seeking. 'לחפש' means 'to search' or 'to look for' something actively.",
@@ -28644,12 +28960,20 @@
       {
         "hebrew": "הוּא הִשְׁלִים אֶת הַמַּסָּה בַּזְּמַן.",
         "transliteration": "Hu hishlim et ha-masá bazmán.",
-        "translation": "He completed the essay on time."
+        "translation": "He completed the essay on time.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehashlim/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehashlim/example-01.mp3"
+        }
       },
       {
         "hebrew": "אֲנַחְנוּ צָרִיכִים לְהַשְׁלִים אֶת הַפְּרוֹיֶקְט.",
         "transliteration": "Anachnu tzrichim lehashlim et ha-proyekt.",
-        "translation": "We need to complete the project."
+        "translation": "We need to complete the project.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehashlim/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehashlim/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hif'il (הִפְעִיל), which often indicates causative actions. The root שׁ-ל-מ is associated with wholeness and completion. 'להשלים' means 'to complete' or 'to finish' something.",
@@ -29359,12 +29683,20 @@
       {
         "hebrew": "אֲנִי מַבְטִיחַ לָבוֹא מֻקְדָּם מָחָר.",
         "transliteration": "Ani mavtiach lavo mukdam machar.",
-        "translation": "I am promising to come early tomorrow."
+        "translation": "I am promising to come early tomorrow.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehavtiach/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehavtiach/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא הִבְטִיחָה לִי עֶזְרָה בַּמִּבְחָן.",
         "transliteration": "Hi hivtiacha li ezra bamivchan.",
-        "translation": "She promised me help with the exam."
+        "translation": "She promised me help with the exam.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehavtiach/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehavtiach/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in the Hif'il binyan (הִפְעִיל), typically used for causative actions. The root ב-ט-ח relates to security or assurance, and 'לְהַבְטִיחַ' is transitive, often taking a direct object (what is promised) or לְ (le-, 'to') with an infinitive or recipient. Its Hif'il form and interpersonal commitment make it intermediate, distinct from simpler verbs like 'to say' (לְהַגִּיד).",
@@ -30063,12 +30395,20 @@
       {
         "hebrew": "אֲנִי מְנַסֶּה לִלְמֹד עִבְרִית.",
         "transliteration": "Ani menassé lilmod ivrit.",
-        "translation": "I am trying to learn Hebrew."
+        "translation": "I am trying to learn Hebrew.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lenasot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lenasot/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם נִסּוּ לִפְתֹּר אֶת הַבְּעָיָה.",
         "transliteration": "Hem nisú liftór et ha-be'ayah.",
-        "translation": "They tried to solve the problem."
+        "translation": "They tried to solve the problem.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lenasot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lenasot/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Piel (פִּעֵל), which often indicates an intensive or repetitive action. The root נ-ס-ה is associated with trying or testing. 'לנסות' means 'to try' or 'to attempt' to do something.",
@@ -30773,12 +31113,20 @@
       {
         "hebrew": "הוּא גִּילָּה תַּחֲרוּשֶׁת חֲדָשָׁה.",
         "transliteration": "Hu gilá tacharúshet chadashá.",
-        "translation": "He discovered a new invention."
+        "translation": "He discovered a new invention.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/legalot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/legalot/example-01.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי מְגַלֶּה עֲנָקִים בְּמַסָּעַי.",
         "transliteration": "Ani megallé anakím be-masa'ai.",
-        "translation": "I discover giants in my journey."
+        "translation": "I discover giants in my journey.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/legalot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/legalot/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Piel (פִּעֵל), which often indicates an intensive or intentional action. The root ג-ל-ה is associated with revealing, uncovering, or discovering. 'לגלות' means 'to discover' or 'to reveal' something that was previously hidden.",
@@ -31489,12 +31837,20 @@
       {
         "hebrew": "אֲנִי בּוֹחֵר לִלְמוֹד מוּסִיקָה.",
         "transliteration": "Ani bochér lilmod musiká.",
-        "translation": "I choose to study music."
+        "translation": "I choose to study music.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/livchor/example-01.mp3",
+          "Doron": "audio-v2/doron/details/livchor/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם בָּחֲרוּ בִּפְרוֹיֶקְט חָדָשׁ.",
         "transliteration": "Hem bacharú bi-proyékt chadásh.",
-        "translation": "They chose a new project."
+        "translation": "They chose a new project.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/livchor/example-02.mp3",
+          "Doron": "audio-v2/doron/details/livchor/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Pa'al (פָּעַל), which is the basic active form. The root ב-ח-ר relates to choosing or selecting. 'לבחור' means 'to choose' or 'to select' something from among options.",
@@ -32208,12 +32564,20 @@
       {
         "hebrew": "אֲנִי עוֹזֵר לַחֲבֵרִים שֶׁלִּי.",
         "transliteration": "Ani ozér la-chaverím sheli.",
-        "translation": "I help my friends."
+        "translation": "I help my friends.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/la-azor/example-01.mp3",
+          "Doron": "audio-v2/doron/details/la-azor/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא עָזְרָה לָנוּ בַּמַּטָּרָה.",
         "transliteration": "Hi azráh lanu ba-mataráh.",
-        "translation": "She helped us with the goal."
+        "translation": "She helped us with the goal.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/la-azor/example-02.mp3",
+          "Doron": "audio-v2/doron/details/la-azor/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Pa'al (פָּעַל), which is the most common verb pattern in Hebrew. The root ע-ז-ר is associated with helping or assisting. 'לעזור' means 'to help' or 'to assist' someone in need.",
@@ -32926,12 +33290,20 @@
       {
         "hebrew": "אֲנִי רוֹצֶה לִשְׁאוֹל שְׁאֵלָה.",
         "transliteration": "Ani rotze lish'ol she'elá.",
-        "translation": "I want to ask a question."
+        "translation": "I want to ask a question.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lish-ol/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lish-ol/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַתַּלְמִידִים שׁוֹאֲלִים שְׁאֵלוֹת בַּשִּׁיעוּר.",
         "transliteration": "Ha-talmidím sho'alím she'elót ba-shiur.",
-        "translation": "The students ask questions during the lesson."
+        "translation": "The students ask questions during the lesson.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lish-ol/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lish-ol/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Pa'al (פָּעַל), which is the simple active form. The root ש-א-ל is associated with asking or questioning. 'לשאול' means 'to ask' a question or to inquire about something.",
@@ -33650,12 +34022,20 @@
       {
         "hebrew": "אֲנִי זוֹכֵר אֶת הַיּוֹם הַזֶּה.",
         "transliteration": "Ani zochér et ha-yom hazeh.",
-        "translation": "I remember this day."
+        "translation": "I remember this day.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lizkor/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lizkor/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא לֹא זָכְרָה אֶת הַשֵּׁם שֶׁלּוֹ.",
         "transliteration": "Hi lo zachrá et ha-shem shelo.",
-        "translation": "She did not remember his name."
+        "translation": "She did not remember his name.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lizkor/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lizkor/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Pa'al (פָּעַל), which is the basic active form. The root ז-כ-ר is associated with remembering and memory. 'לזכור' means 'to remember' or 'to recall' something.",
@@ -34377,12 +34757,20 @@
       {
         "hebrew": "אֲנִי רוֹצֶה לִקְנוֹת מְתָנָה לְחָבֵר.",
         "transliteration": "Ani rotze liknót matana le-chaver.",
-        "translation": "I want to buy a gift for a friend."
+        "translation": "I want to buy a gift for a friend.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/liknot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/liknot/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם קָנוּ בַּיִת חָדָשׁ.",
         "transliteration": "Hem kanú bayit chadash.",
-        "translation": "They bought a new house."
+        "translation": "They bought a new house.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/liknot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/liknot/example-02.mp3"
+        }
       }
     ],
     "notes": "This is an irregular verb in the Pa'al (פָּעַל) binyan. The root ק.נ.ה is associated with acquiring or purchasing. The verb **לִקְנוֹת** is commonly used in everyday Hebrew when talking about buying items, whether small like groceries or big like houses.",
@@ -35104,12 +35492,20 @@
       {
         "hebrew": "הוּא פּוֹתֵחַ אֶת הַדֶּלֶת.",
         "transliteration": "Hu potéach et ha-delet.",
-        "translation": "He opens the door."
+        "translation": "He opens the door.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/liftoach/example-01.mp3",
+          "Doron": "audio-v2/doron/details/liftoach/example-01.mp3"
+        }
       },
       {
         "hebrew": "אַתָּה יָכוֹל לִפְתּוֹחַ אֶת הַתְּרוּפָה?",
         "transliteration": "Atá yachól liftoach et ha-trufá?",
-        "translation": "Can you open the medicine?"
+        "translation": "Can you open the medicine?",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/liftoach/example-02.mp3",
+          "Doron": "audio-v2/doron/details/liftoach/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Pa'al (פָּעַל), which is the basic active pattern in Hebrew. The root פ-ת-ח is associated with opening and beginning. 'לפתוח' means 'to open' physical objects like doors, books, or metaphorically, to start something new.",
@@ -35830,12 +36226,20 @@
       {
         "hebrew": "הוא סיפר לי סיפור מצחיק.",
         "transliteration": "Hu sipér li sipur matzhik.",
-        "translation": "He told me a funny story."
+        "translation": "He told me a funny story.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lesaper/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lesaper/example-01.mp3"
+        }
       },
       {
         "hebrew": "אני רוצה לספר לך את האמת.",
         "transliteration": "Ani rotze lesapér lecha et ha'emet.",
-        "translation": "I want to tell you the truth."
+        "translation": "I want to tell you the truth.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lesaper/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lesaper/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Piel (פִּעֵל), which often indicates an intensive or iterative action. The root ס-פ-ר is associated with recounting, telling, or counting. 'לספר' means 'to tell' a story or an account of something.",
@@ -36548,12 +36952,20 @@
       {
         "hebrew": "אֲנִי מְדַמֶּה אֶת הַחֲלוֹם שֶׁלִּי כָּל יוֹם.",
         "transliteration": "Ani medamme et hachalom sheli kol yom.",
-        "translation": "I am imagining my dream every day."
+        "translation": "I am imagining my dream every day.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ledamot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/ledamot/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם דִּמּוּ אֶת הָעֹלָם בְּלִי מִלְחָמוֹת.",
         "transliteration": "Hem dimmu et ha’olam bli milchamot.",
-        "translation": "They imagined a world without wars."
+        "translation": "They imagined a world without wars.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ledamot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/ledamot/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in the Piel binyan (פִּעֵל), often used for intensive or causative actions. The root ד-מ-ה relates to imagining or resembling, and 'לְדַמּוֹת' is transitive in Piel, requiring a direct object (what is imagined), often marked with אֶת (et). Its cognitive nature and Piel structure make it intermediate, distinct from simpler Pa'al verbs.",
@@ -37256,12 +37668,20 @@
       {
         "hebrew": "אֲנִי מֵכִין אֶת הָאֹכֶל לָעֶרֶב.",
         "transliteration": "Ani mekhin et ha’okhel la’erev.",
-        "translation": "I am preparing the food for the evening."
+        "translation": "I am preparing the food for the evening.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehachin/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehachin/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם הֵכִינוּ תּוֹכְנִית לַיּוֹם הֻלֶּדֶת.",
         "transliteration": "Hem hekhinu tokhnit leyom huledet.",
-        "translation": "They prepared a plan for the birthday."
+        "translation": "They prepared a plan for the birthday.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehachin/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehachin/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in the Hif'il binyan (הִפְעִיל), typically used for causative actions. The root כ-ו-ן relates to establishing or preparing, and 'לְהָכִין' is transitive, requiring a direct object (what is prepared), often with אֶת (et). It can also take לְ (le-, 'for') to indicate purpose or recipient. Its Hif'il form, causative sense, and everyday utility make it intermediate.",
@@ -37948,12 +38368,20 @@
       {
         "hebrew": "אֲנִי מַמְצִיא סִיפּוּר חָדָשׁ לַיְּלָדִים.",
         "transliteration": "Ani mamtsia sipur chadash layeladim.",
-        "translation": "I am inventing a new story for the children."
+        "translation": "I am inventing a new story for the children.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehamtsia/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehamtsia/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם הִמְצִיאוּ מָכוֹן לְחִסָּכוֹן בְּזֹמַן.",
         "transliteration": "Hem hamtsi’u machon lechisachon b’zman.",
-        "translation": "They invented a device to save time."
+        "translation": "They invented a device to save time.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehamtsia/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehamtsia/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in the Hif'il binyan (הִפְעִיל), typically used for causative actions. The root מ-צ-א relates to finding or creating, and 'לְהַמְצִיא' is transitive, requiring a direct object (what is invented), often with אֶת (et), though it can omit it in informal use. It can also mean 'to make up' (e.g., a story). Its Hif'il form and creative nuance make it intermediate.",
@@ -38653,12 +39081,20 @@
       {
         "hebrew": "אני נָסַעְתִּי לְיוָּן בַּקַּיִץ.",
         "transliteration": "Ani nasa’ti le-yavan ba-kayitz.",
-        "translation": "I traveled to Greece in the summer."
+        "translation": "I traveled to Greece in the summer.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/nasoa/example-01.mp3",
+          "Doron": "audio-v2/doron/details/nasoa/example-01.mp3"
+        }
       },
       {
         "hebrew": "הם נוֹסְעִים לְעבוֹדָה בָּרַכֶּבֶת.",
         "transliteration": "Hem nos’im la’avoda ba-rakevet.",
-        "translation": "They travel to work by train."
+        "translation": "They travel to work by train.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/nasoa/example-02.mp3",
+          "Doron": "audio-v2/doron/details/nasoa/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root נ.ס.ע is associated with movement, traveling, or driving.",
@@ -39363,12 +39799,20 @@
       {
         "hebrew": "הוּא בָּנָה בַּיִת גָּדוֹל בָּעִיר.",
         "transliteration": "Hu bana bayit gadol ba-ir.",
-        "translation": "He built a big house in the city."
+        "translation": "He built a big house in the city.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/banah/example-01.mp3",
+          "Doron": "audio-v2/doron/details/banah/example-01.mp3"
+        }
       },
       {
         "hebrew": "אֲנַחְנוּ בּוֹנִים גֶּשֶׁר חָדָשׁ עַכְשָׁו.",
         "transliteration": "Anachnu bonim gesher chadash achshav.",
-        "translation": "We are building a new bridge now."
+        "translation": "We are building a new bridge now.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/banah/example-02.mp3",
+          "Doron": "audio-v2/doron/details/banah/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root ב.נ.ה is associated with building and construction, both physically and metaphorically (e.g., building a family or future).",
@@ -40070,12 +40514,20 @@
       {
         "hebrew": "שִׁתַּפְתִּי אֶת הַחֲבֵרִים בַּרַעְיוֹן שֶׁלִּי.",
         "transliteration": "Shitafti et ha-chaverim ba-ra’ayon sheli.",
-        "translation": "I shared my idea with the friends."
+        "translation": "I shared my idea with the friends.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/shatef/example-01.mp3",
+          "Doron": "audio-v2/doron/details/shatef/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא מְשַׁתֶּפֶת אֶת כּוּלָם בַּהַחְלָטוֹת.",
         "transliteration": "Hi meshatefet et kulam ba-hachlatot.",
-        "translation": "She is sharing the decisions with everyone."
+        "translation": "She is sharing the decisions with everyone.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/shatef/example-02.mp3",
+          "Doron": "audio-v2/doron/details/shatef/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Piel (פִּעֵל), which often indicates an intensive or causative action. The root שׁ.ת.ף relates to partnership or collaboration, and לְשַׁתֵּף can mean 'to share' (e.g., information, feelings), 'to involve' (e.g., in a process), or 'to collaborate' depending on context.",
@@ -40781,12 +41233,20 @@
       {
         "hebrew": "שִׁנִּיתִי אֶת דַּעְתִּי עַל הַנּוֹשֵׂא.",
         "transliteration": "Shiniti et da’ati al ha-nose.",
-        "translation": "I changed my mind about the topic."
+        "translation": "I changed my mind about the topic.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/shanot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/shanot/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם מְשַׁנִּים אֶת הַתָּכְנִית כָּל שָׁנָה.",
         "transliteration": "Hem meshanim et ha-tochnit kol shana.",
-        "translation": "They are changing the plan every year."
+        "translation": "They are changing the plan every year.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/shanot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/shanot/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Piel (פִּעֵל), which often indicates an intensive or deliberate action. The root שׁ.נ.ה relates to change or repetition (also linked to 'shana,' year), and לְשַׁנּוֹת is used for both tangible (e.g., objects) and intangible (e.g., opinions) changes.",
@@ -41493,12 +41953,20 @@
       {
         "hebrew": "הִצַּלְתִּי אֶת הַיֶּלֶד מֵהַמַּיִם.",
         "transliteration": "Hitzalti et ha-yeled me-ha-mayim.",
-        "translation": "I saved the child from the water."
+        "translation": "I saved the child from the water.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hatzil/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hatzil/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם מַצִּילִים אֶת הַפְּרוֹיֶקְט מִכִּשָּׁלוֹן.",
         "transliteration": "Hem matzilim et ha-proyekt mi-kishalon.",
-        "translation": "They are saving the project from failure."
+        "translation": "They are saving the project from failure.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hatzil/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hatzil/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Hifil (הִפְעִיל), which often indicates a causative action. The root נ.צ.ל relates to rescue or deliverance, and לְהַצִּיל is used for both physical (e.g., saving a life) and abstract (e.g., saving a situation) contexts.",
@@ -42195,12 +42663,20 @@
       {
         "hebrew": "הִסְכַּמְתִּי לָתֵת לוֹ עֶזְרָה.",
         "transliteration": "Hiskamti latet lo ezra.",
-        "translation": "I agreed to give him help."
+        "translation": "I agreed to give him help.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/haskim/example-01.mp3",
+          "Doron": "audio-v2/doron/details/haskim/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם מַסְכִּימִים עַל הַתָּכְנִית הַזּוֹ.",
         "transliteration": "Hem maskimim al ha-tochnit hazo.",
-        "translation": "They are agreeing on this plan."
+        "translation": "They are agreeing on this plan.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/haskim/example-02.mp3",
+          "Doron": "audio-v2/doron/details/haskim/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Hifil (הִפְעִיל), which often indicates a causative or active action. The root ס.כ.ם relates to agreement or consent, and לְהַסְכִּים is typically followed by לְ (le-, 'to') or עַל (al, 'on/about') to indicate what is agreed upon.",
@@ -42898,12 +43374,20 @@
       {
         "hebrew": "עָנִיתִי לַשְּׁאֵלָה שֶׁלּוֹ בְּמַהֵר.",
         "transliteration": "Aniti la-she’ela shelo be-maher.",
-        "translation": "I answered his question quickly."
+        "translation": "I answered his question quickly.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/anot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/anot/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא עוֹנָה לְכָל הַשְּׁאֵלוֹת בַּכִּתָּה.",
         "transliteration": "Hi ona le-chol ha-she’elot ba-kita.",
-        "translation": "She is answering all the questions in class."
+        "translation": "She is answering all the questions in class.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/anot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/anot/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל), though the guttural ע affects vowel patterns (e.g., עוֹנֶה instead of a typical Pa'al pattern). The root ע.נ.ה relates to answering or responding, and לַעֲנוֹת is often followed by לְ (le-, 'to') to indicate the recipient or context of the response.",
@@ -43603,12 +44087,20 @@
       {
         "hebrew": "יָצַרְתִּי צִיּוּר יָפֶה בְּעֵט.",
         "transliteration": "Yatzarti tziyur yafeh be-et.",
-        "translation": "I created a beautiful drawing with a pen."
+        "translation": "I created a beautiful drawing with a pen.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/tzor/example-01.mp3",
+          "Doron": "audio-v2/doron/details/tzor/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם יוֹצְרִים מוּסִיקָה מְקוֹרִית.",
         "transliteration": "Hem yotzrim musika mekorit.",
-        "translation": "They are creating original music."
+        "translation": "They are creating original music.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/tzor/example-02.mp3",
+          "Doron": "audio-v2/doron/details/tzor/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל), with the guttural צ slightly influencing vowel patterns (e.g., יוֹצֵר). The root י.צ.ר relates to creating or forming, and לִיצוֹר is used for artistic, practical, or conceptual creation, often implying an active process.",
@@ -44308,12 +44800,20 @@
       {
         "hebrew": "הִצְטָרַפְתִּי לַקְּבוּצָה שֶׁלָּהֶם.",
         "transliteration": "Hiztarafti la-kvutza shelahem.",
-        "translation": "I joined their group."
+        "translation": "I joined their group.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hitztaref/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hitztaref/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא מִצְטָרֶפֶת לַמְּסִיבָּה מָחָר.",
         "transliteration": "Hi mitztarefet la-mesiba machar.",
-        "translation": "She is joining the party tomorrow."
+        "translation": "She is joining the party tomorrow.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hitztaref/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hitztaref/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Hitpael (הִתְפַּעֵל), which often indicates reflexive or reciprocal action, here suggesting joining oneself to something or someone. The root צ.ר.ף relates to combining or attaching, and לְהִצְטָרֵף is typically followed by לְ (le-, 'to') to indicate what is being joined.",
@@ -45012,12 +45512,20 @@
       {
         "hebrew": "עָקַבְתִּי אַחֲרֵי הַמּוֹרֶה בַּדֶּרֶךְ.",
         "transliteration": "Akavti acharei ha-more ba-derech.",
-        "translation": "I followed the teacher on the way."
+        "translation": "I followed the teacher on the way.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/akov/example-01.mp3",
+          "Doron": "audio-v2/doron/details/akov/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוּא עוֹקֵב אַחֲרֵי הַחֲדָשׁוֹת בַּיּוֹם.",
         "transliteration": "Hu okev acharei ha-chadashot ba-yom.",
-        "translation": "He is following the news today."
+        "translation": "He is following the news today.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/akov/example-02.mp3",
+          "Doron": "audio-v2/doron/details/akov/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל), with the guttural ע affecting vowel patterns (e.g., עוֹקֵב instead of a typical Pa'al pattern). The root ע.ק.ב relates to following or tracking, and לַעֲקֹב is often followed by אַחֲרֵי (acharei, 'after') or לְ (le-, 'to') to indicate what is being followed.",
@@ -45718,12 +46226,20 @@
       {
         "hebrew": "הוֹבַלْתִּי אֶת הַקְּבוּצָה לַנִּצָּחוֹן.",
         "transliteration": "Hovalti et ha-kvutza la-nitzachon.",
-        "translation": "I led the team to victory."
+        "translation": "I led the team to victory.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hovil/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hovil/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא מוֹבִילָה אֶת הַפְּרוֹיֶקְט בְּבִטָּחוֹן.",
         "transliteration": "Hi movila et ha-proyekt be-bitachon.",
-        "translation": "She is leading the project with confidence."
+        "translation": "She is leading the project with confidence.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hovil/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hovil/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Hifil (הִפְעִיל), which often indicates a causative action, here meaning to cause others to follow or to guide. The root י.ב.ל (often appearing as ה.ב.ל in Hifil) relates to leading or bringing, and לְהוֹבִיל can be used literally (e.g., guiding people) or figuratively (e.g., leading a project).",
@@ -46411,12 +46927,20 @@
       {
         "hebrew": "הָגַנְתִּי עַל הַיֶּלֶד מֵהַסַּכָּנָה.",
         "transliteration": "Haganti al ha-yeled me-ha-sakana.",
-        "translation": "I protected the child from the danger."
+        "translation": "I protected the child from the danger.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hagen/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hagen/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם מְגִינִים עַל הָעִיר בְּכָל הַלֵּב.",
         "transliteration": "Hem meginim al ha-ir be-chol ha-lev.",
-        "translation": "They are protecting the city with all their heart."
+        "translation": "They are protecting the city with all their heart.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hagen/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hagen/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Hifil (הִפְעִיל), which often indicates a causative action, here meaning to cause protection or defense. The root ג.נ.ן relates to guarding or shielding, and לְהָגֵן is typically followed by עַל (al, 'on/over') to indicate what is being protected.",
@@ -47106,17 +47630,29 @@
       {
         "hebrew": "הוֹדַעְתִּי לָהֶם עַל הַשִּׁנוּי בַּתָּכְנִית.",
         "transliteration": "Hoda’tí lahém al ha-shinúi ba-tachnít.",
-        "translation": "I informed them about the change in the plan."
+        "translation": "I informed them about the change in the plan.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hodia/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hodia/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַמּוֹרָה מוֹדִיעָה לַהוֹרִים עַל הַצְלָחוֹת הַתַּלְמִידִים.",
         "transliteration": "Ha-morá modí’a la-horím al ha-hatzlachót ha-talmidím.",
-        "translation": "The teacher informs the parents about the students’ successes."
+        "translation": "The teacher informs the parents about the students’ successes.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hodia/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hodia/example-02.mp3"
+        }
       },
       {
         "hebrew": "אוֹדִיעַ לְכֻלָּם אֶת הַחֲדָשׁוֹת בְּעוֹד שָׁעָה.",
         "transliteration": "Odía le-kulám et ha-chadashót be-ód sha’á.",
-        "translation": "I will inform everyone of the news in an hour."
+        "translation": "I will inform everyone of the news in an hour.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hodia/example-03.mp3",
+          "Doron": "audio-v2/doron/details/hodia/example-03.mp3"
+        }
       }
     ],
     "notes": "Hif'il is the causative form of Pa'al, shifting 'to know' into 'to cause to know' or 'to inform'. It’s one of the most common forms for this root in modern Hebrew, widely used for notifying or reporting, contrasting with Pi’el’s less frequent 'to inform' (יִדֵּעַ).",
@@ -47824,12 +48360,20 @@
       {
         "hebrew": "הִשְׁתַּתַּפְתִּי בַּתַּחֲרוּת הַשְּׁנָתִית.",
         "transliteration": "Hishtatafti ba-tacharut ha-shnatit.",
-        "translation": "I participated in the annual competition."
+        "translation": "I participated in the annual competition.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hishtatef/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hishtatef/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם מִשְׁתַּתְּפִים בְּפְגִישָׁה חָשׁוּבָה.",
         "transliteration": "Hem mishtatfim be-pgisha chashuva.",
-        "translation": "They are participating in an important meeting."
+        "translation": "They are participating in an important meeting.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hishtatef/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hishtatef/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Hitpael (הִתְפַּעֵל), which often indicates reflexive or reciprocal action, here suggesting involving oneself in an activity or group. The root שׁ.ת.ף relates to sharing or partnership, and לְהִשְׁתַּתֵּף is typically followed by בְּ (be-, 'in') to indicate what is being participated in.",
@@ -48528,12 +49072,20 @@
       {
         "hebrew": "חָגַגְתִּי אֶת חַג הַפֶּסַח עִם מִשְׁפַּחְתִּי.",
         "transliteration": "Chagagti et chag ha-Pesach im mishpachti.",
-        "translation": "I celebrated Passover with my family."
+        "translation": "I celebrated Passover with my family.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/chagot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/chagot/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם חוֹגְגִים אֶת יוֹם הָעַצְמָאוּת בָּרְחוֹבוֹת.",
         "transliteration": "Hem chogGim et yom ha-atzma’ut ba-rechovot.",
-        "translation": "They are celebrating Independence Day in the streets."
+        "translation": "They are celebrating Independence Day in the streets.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/chagot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/chagot/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל), with the guttural ח affecting vowel patterns (e.g., חוֹגֵג instead of a typical Pa'al pattern). The root ח.ג.ה relates to festivity or holidays, and לְחַגּוֹת is often used specifically for observing holidays or special occasions, distinguishing it slightly from לְחַגֵּג (Piel), which has a broader celebratory connotation.",
@@ -49902,12 +50454,20 @@
       {
         "hebrew": "אָסַפְתִּי אֶת הַסְּפָרִים מֵהַשּׁוּלְחָן.",
         "transliteration": "Asafti et ha-sfarim me-ha-shulchan.",
-        "translation": "I collected the books from the table."
+        "translation": "I collected the books from the table.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/esof/example-01.mp3",
+          "Doron": "audio-v2/doron/details/esof/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם אוֹסְפִים תְּרוּמוֹת לְעוֹנִים.",
         "transliteration": "Hem osfim t’rumot le-onim.",
-        "translation": "They are collecting donations for the poor."
+        "translation": "They are collecting donations for the poor.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/esof/example-02.mp3",
+          "Doron": "audio-v2/doron/details/esof/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל), with the guttural א affecting vowel patterns (e.g., אוֹסֵף). The root א.ס.ף relates to gathering or collecting, and לֶאֱסוֹף is often followed by אֶת (et) to indicate what is being collected, or used with מֵ (me-, 'from') to specify the source.",
@@ -50605,12 +51165,20 @@
       {
         "hebrew": "חָלַמְתִּי עַל טִיּוּל לָעוֹלָם.",
         "transliteration": "Chalamti al tiyul la-olam.",
-        "translation": "I dreamed about a trip around the world."
+        "translation": "I dreamed about a trip around the world.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/chalom/example-01.mp3",
+          "Doron": "audio-v2/doron/details/chalom/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא חוֹלֶמֶת עַל עָתִיד טוֹב יוֹתֵר.",
         "transliteration": "Hi cholemet al atid tov yoter.",
-        "translation": "She is dreaming of a better future."
+        "translation": "She is dreaming of a better future.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/chalom/example-02.mp3",
+          "Doron": "audio-v2/doron/details/chalom/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל), with the guttural ח affecting vowel patterns (e.g., חוֹלֵם). The root ח.ל.ם relates to dreaming, either in sleep or as an aspiration, and לַחֲלוֹם is often followed by עַל (al, 'about') to specify the content of the dream.",
@@ -51308,12 +51876,20 @@
       {
         "hebrew": "הֵאַרְתִּי אֶת הַחֶדֶר בְּמֵנוֹרָה.",
         "transliteration": "He’arti et ha-cheder be-menora.",
-        "translation": "I shone light into the room with a lamp."
+        "translation": "I shone light into the room with a lamp.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ha-ir/example-01.mp3",
+          "Doron": "audio-v2/doron/details/ha-ir/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַשֶּׁמֶשׁ מְאִירָה עַל הַרְרֵי יְרוּשָׁלַיִם.",
         "transliteration": "Ha-shemesh me’ira al harerei Yerushalayim.",
-        "translation": "The sun is shining on the mountains of Jerusalem."
+        "translation": "The sun is shining on the mountains of Jerusalem.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/ha-ir/example-02.mp3",
+          "Doron": "audio-v2/doron/details/ha-ir/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Hifil (הִפְעִיל), which often indicates a causative action, here meaning to cause light to shine or to illuminate. The root א.ו.ר relates to light, and לְהָאִיר can be used literally (e.g., to light up) or figuratively (e.g., to enlighten). It’s often followed by אֶת (et) with an object or עַל (al, 'on') to specify what is illuminated.",
@@ -52004,12 +52580,20 @@
       {
         "hebrew": "הוּא מָכַר אֶת הַמְּכוֹנִית שֶׁלּוֹ.",
         "transliteration": "Hu machár et ha-mechonít shelo.",
-        "translation": "He sold his car."
+        "translation": "He sold his car.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/machar/example-01.mp3",
+          "Doron": "audio-v2/doron/details/machar/example-01.mp3"
+        }
       },
       {
         "hebrew": "הם מוֹכְרִים פֵּרוֹת בַּשּׁוּק.",
         "transliteration": "Hem mochrím perot ba-shuk.",
-        "translation": "They are selling fruits at the market."
+        "translation": "They are selling fruits at the market.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/machar/example-02.mp3",
+          "Doron": "audio-v2/doron/details/machar/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Pa'al (פָּעַל). The root מ.כ.ר is associated with selling or commerce. It's a common verb used in everyday Hebrew when talking about selling items, services, or even abstract concepts like selling an idea.",
@@ -52721,12 +53305,20 @@
       {
         "hebrew": "בְּבַקָּשָׁה תְּתָאֵר אֶת הַבַּעְיָה.",
         "transliteration": "Bevakasha teta'er et ha-ba'ya.",
-        "translation": "Please describe the problem."
+        "translation": "Please describe the problem.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/taar/example-01.mp3",
+          "Doron": "audio-v2/doron/details/taar/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא תֵּאֲרָה אֶת הַנּוֹף בִּפְרָטִיּוּת.",
         "transliteration": "Hi te'ara et ha-nof bipratiyut.",
-        "translation": "She described the landscape in detail."
+        "translation": "She described the landscape in detail.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/taar/example-02.mp3",
+          "Doron": "audio-v2/doron/details/taar/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Piel (פִּעֵל), which often indicates an intensive or causative action. The root ת.א.ר is associated with forms and descriptions. לְתָאֵר is used when providing details or explanations about something.",
@@ -53428,12 +54020,20 @@
       {
         "hebrew": "בְּבַקָּשָׁה הָבֵא אֶת הַסֵּפֶר.",
         "transliteration": "Bevakasha have et ha-sefer.",
-        "translation": "Please bring the book."
+        "translation": "Please bring the book.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehavi/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehavi/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא הֵבִיאָה עוּגָה לַמְּסִבָּה.",
         "transliteration": "Hi hevía uga la-mesiba.",
-        "translation": "She brought a cake to the party."
+        "translation": "She brought a cake to the party.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehavi/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehavi/example-02.mp3"
+        }
       }
     ],
     "notes": "The verb **להביא** (*lehavi*) is a regular verb in binyan **Hif'il** (הִפְעִיל), which often indicates a causative action. Here, it means 'to cause to come,' i.e., to bring. The root letters ב.ו.א generally relate to 'coming' or 'entering' (as in the verb **לָבוֹא** - 'to come'). **להביא** is commonly used in daily speech for bringing objects, people, or even abstract concepts.",
@@ -54141,12 +54741,20 @@
       {
         "hebrew": "הוּא מְבַקֵּר אֶת הַהוֹרִים בְּכָל שַׁבָּת.",
         "transliteration": "Hu mevakér et ha-horim bechol Shabbat.",
-        "translation": "He visits his parents every weekend."
+        "translation": "He visits his parents every weekend.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/levaker/example-01.mp3",
+          "Doron": "audio-v2/doron/details/levaker/example-01.mp3"
+        }
       },
       {
         "hebrew": "אָנוּ בִּקַּרְנוּ בְּמִוזֵיאוֹן הָאֻמָּנוּת.",
         "transliteration": "Anu bikárnu be-muze'on ha-omanut.",
-        "translation": "We visited the art museum."
+        "translation": "We visited the art museum.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/levaker/example-02.mp3",
+          "Doron": "audio-v2/doron/details/levaker/example-02.mp3"
+        }
       }
     ],
     "notes": "The verb **לְבַקֵּר** (*levaker*) is a regular verb in the **Piel** (פִּעֵל) binyan, which often indicates an intensive or frequentative action. The root ב.ק.ר is associated with visiting, inspecting, or criticizing. In everyday Hebrew, **לְבַקֵּר** is commonly used to talk about visiting places or people. It can also mean 'to criticize' in a different context.",
@@ -54856,12 +55464,20 @@
       {
         "hebrew": "אֲנִי צוֹפֶה בַּטֵּלֵוִיזְיָה כָּל עֶרֶב.",
         "transliteration": "Ani tzofé ba-televízya kol érev.",
-        "translation": "I watch TV every evening."
+        "translation": "I watch TV every evening.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/litzpot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/litzpot/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא צָפְתָה בַּשֶּׁמֶשׁ הַזּוֹרַחַת.",
         "transliteration": "Hi tzaftá ba-shémesh ha-zoráchat.",
-        "translation": "She watched the rising sun."
+        "translation": "She watched the rising sun.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/litzpot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/litzpot/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root צ-פ-ה relates to watching or expecting. In modern Hebrew, 'litzpot' is commonly used for watching (e.g., TV) and expecting (e.g., an event).",
@@ -55562,12 +56178,20 @@
       {
         "hebrew": "אֲנִי נוֹהֵג לָעֲבוֹדָה כָּל בֹּקֶר.",
         "transliteration": "Ani nohég la’avodá kol bóker.",
-        "translation": "I drive to work every morning."
+        "translation": "I drive to work every morning.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/linhog/example-01.mp3",
+          "Doron": "audio-v2/doron/details/linhog/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא נָהֲגָה בְּמֶשֶׁךְ שָׁעָה לְלֹא הַפְסָקָה.",
         "transliteration": "Hi nahagá bémeshech sha’á leló hafsaká.",
-        "translation": "She drove for an hour without stopping."
+        "translation": "She drove for an hour without stopping.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/linhog/example-02.mp3",
+          "Doron": "audio-v2/doron/details/linhog/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root נ-ה-ג relates to driving or leading, with modern usage focused on driving vehicles. It can also mean 'to behave' in different contexts, but 'to drive' is primary here. The guttural ה affects pronunciation.",
@@ -56282,12 +56906,20 @@
       {
         "hebrew": "אֲנִי תּוֹפֵס אֶת הַכַּדּוּר בְּיָד אַחַת.",
         "transliteration": "Ani tofés et ha-kadúr be-yád achát.",
-        "translation": "I catch the ball with one hand."
+        "translation": "I catch the ball with one hand.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/litpos/example-01.mp3",
+          "Doron": "audio-v2/doron/details/litpos/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא תָּפְסָה אֶת הָרַעְיוֹן מַהֵר מְאוֹד.",
         "transliteration": "Hi tafsá et ha-ra’ayón mahér me’ód.",
-        "translation": "She caught the idea very quickly."
+        "translation": "She caught the idea very quickly.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/litpos/example-02.mp3",
+          "Doron": "audio-v2/doron/details/litpos/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root ת-פ-ס is tied to catching or seizing, used both physically (e.g., catching a ball) and figuratively (e.g., understanding). It’s regular with no guttural sounds.",
@@ -56999,12 +57631,20 @@
       {
         "hebrew": "אֲנִי מוֹשֵׁךְ אֶת הַחֶבֶל בְּכֹחַ.",
         "transliteration": "Ani moshéch et ha-chével be-kóach.",
-        "translation": "I pull the rope with force."
+        "translation": "I pull the rope with force.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/limshoch/example-01.mp3",
+          "Doron": "audio-v2/doron/details/limshoch/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא מָשְׁכָה אֶת הַוִּילוֹן לְצַד.",
         "transliteration": "Hi mashchá et ha-vilón le-tzad.",
-        "translation": "She pulled the curtain to the side."
+        "translation": "She pulled the curtain to the side.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/limshoch/example-02.mp3",
+          "Doron": "audio-v2/doron/details/limshoch/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Pa'al (פָּעַל), the simple active form. The root מ-ש-ך has no guttural sounds, making it straightforward to conjugate. It’s used for physical pulling or dragging, and occasionally figuratively (e.g., delaying).",
@@ -57716,12 +58356,20 @@
       {
         "hebrew": "אֲנִי מָרִים אֶת הַתִּיק הַכָּבֵד.",
         "transliteration": "Ani marím et ha-tík ha-kavéd.",
-        "translation": "I lift the heavy bag."
+        "translation": "I lift the heavy bag.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leharim/example-01.mp3",
+          "Doron": "audio-v2/doron/details/leharim/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם הֵרִימוּ אֶת הַדֶּגֶל בַּטֶּקֶס.",
         "transliteration": "Hem herímu et ha-dégel ba-tékes.",
-        "translation": "They raised the flag at the ceremony."
+        "translation": "They raised the flag at the ceremony.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leharim/example-02.mp3",
+          "Doron": "audio-v2/doron/details/leharim/example-02.mp3"
+        }
       }
     ],
     "notes": "This verb is in binyan Hifil (הִפְעִיל), which often conveys causation or an active raising action. The root ר-ו-מ (r-u-m) relates to height or elevation, with the ו (vav) typically dropping in conjugation. It’s used both literally (lifting objects) and figuratively (raising spirits, voices).",
@@ -58412,12 +59060,20 @@
       {
         "hebrew": "הַסֵּפֶר נִקְרָא בְּכָל הָעוֹלָם.",
         "transliteration": "Ha-sefer nikrá bekhol ha-olám.",
-        "translation": "The book is read all over the world."
+        "translation": "The book is read all over the world.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/nikra-nifal/example-01.mp3",
+          "Doron": "audio-v2/doron/details/nikra-nifal/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוּא נִקְרָא לְשִׁמְשׁוֹן.",
         "transliteration": "Hu nikrá le-Shimshón.",
-        "translation": "He is called Samson."
+        "translation": "He is called Samson.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/nikra-nifal/example-02.mp3",
+          "Doron": "audio-v2/doron/details/nikra-nifal/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Nifal (נִפְעַל). The root ק.ר.א is associated with reading and calling, and in Nifal, it indicates a passive or reflexive action, such as being read or called.",
@@ -59065,17 +59721,29 @@
       {
         "hebrew": "הַסֵּפֶר נִכְתַּב בְּשָׁנָה שֶׁעָבְרָה.",
         "transliteration": "Ha-sefer nikhtav be-shana she'avra.",
-        "translation": "The book was written last year."
+        "translation": "The book was written last year.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/nikhtav/example-01.mp3",
+          "Doron": "audio-v2/doron/details/nikhtav/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַמִּכְתָּבִים נִכְתָּבִים בְּכָל יוֹם.",
         "transliteration": "Ha-michtavim nikhtavim be-khol yom.",
-        "translation": "The letters are written every day."
+        "translation": "The letters are written every day.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/nikhtav/example-02.mp3",
+          "Doron": "audio-v2/doron/details/nikhtav/example-02.mp3"
+        }
       },
       {
         "hebrew": "הַדּוּ''ח יִכָּתֵב עַד סוֹף הַחֹדֶשׁ.",
         "transliteration": "Ha-du''ach yikatev ad sof ha-chodesh.",
-        "translation": "The report will be written by the end of the month."
+        "translation": "The report will be written by the end of the month.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/nikhtav/example-03.mp3",
+          "Doron": "audio-v2/doron/details/nikhtav/example-03.mp3"
+        }
       }
     ],
     "notes": "Nif'al is the passive form of Pa'al, used to indicate that the subject is being acted upon. For the root כ.ת.ב, it means 'to be written'. In modern Hebrew, feminine plural forms in the future tense may be less commonly used, with masculine plural forms often substituted.",
@@ -59775,17 +60443,29 @@
       {
         "hebrew": "הַמּוֹרָה הִכְתִּיבָה מִכְתָּב לַתַּלְמִידִים.",
         "transliteration": "Ha-mora hiktíva michtav la-talmidim.",
-        "translation": "The teacher dictated a letter to the students."
+        "translation": "The teacher dictated a letter to the students.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hiktiv/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hiktiv/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַמְּנַהֵל מַכְתִּיב הוֹרָאוֹת לַמַּזְכִּירָה.",
         "transliteration": "Ha-menahél maktív hora’ot la-mazkira.",
-        "translation": "The manager dictates instructions to the secretary."
+        "translation": "The manager dictates instructions to the secretary.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hiktiv/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hiktiv/example-02.mp3"
+        }
       },
       {
         "hebrew": "אני אַכְתִּיב לָךְ אֶת הַתּוֹכְנִית מָחָר.",
         "transliteration": "Ani aktív lach et ha-tochnit machar.",
-        "translation": "I will dictate the plan to you tomorrow."
+        "translation": "I will dictate the plan to you tomorrow.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hiktiv/example-03.mp3",
+          "Doron": "audio-v2/doron/details/hiktiv/example-03.mp3"
+        }
       }
     ],
     "notes": "Hif'il is the causative form of Pa'al, meaning 'to cause something to be written'. For the root כ.ת.ב, it translates to 'to dictate'. In modern Hebrew, feminine plural forms in the future and imperative may be less commonly used, with masculine plural forms often substituted.",
@@ -60499,17 +61179,29 @@
       {
         "hebrew": "הִקְרֵאתִי אֶת הַחֲבֵרִים לְמִסִּבַּת הַיּוֹם הֻלֶּדֶת.",
         "transliteration": "Hikréti et ha-chaverím le-misíbat ha-yom hulédet.",
-        "translation": "I invited the friends to the birthday party."
+        "translation": "I invited the friends to the birthday party.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hakria/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hakria/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַמּוֹרֶה מַקְרִיא אֶת הַתַּלְמִיד לִקְרֹא אֶת הַשִּׁיר.",
         "transliteration": "Ha-moré makría et ha-talmíd likró et ha-shir.",
-        "translation": "The teacher causes the student to read the poem."
+        "translation": "The teacher causes the student to read the poem.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hakria/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hakria/example-02.mp3"
+        }
       },
       {
         "hebrew": "נַקְרִיא אֶת הַמִּשְׁפָּחָה לַחֲגִיגָה בְּיוֹם שִׁשִּׁי.",
         "transliteration": "Nakría et ha-mishpachá la-chagigá be-yom shishí.",
-        "translation": "We will invite the family to the celebration on Friday."
+        "translation": "We will invite the family to the celebration on Friday.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hakria/example-03.mp3",
+          "Doron": "audio-v2/doron/details/hakria/example-03.mp3"
+        }
       }
     ],
     "notes": "Hif'il is the causative form of Pa'al, shifting 'to read' or 'to call' into 'to cause to read' or 'to invite'. In modern Hebrew, 'to invite' is the dominant usage, while 'to cause to read' appears in educational contexts. It’s moderately common, particularly for social or formal invitations.",
@@ -61203,12 +61895,20 @@
       {
         "hebrew": "אנחנו מְדַבְּרִים עַל הַתָּכְנִית.",
         "transliteration": "Anachnu medabrím al ha-tochnít.",
-        "translation": "We are talking about the plan."
+        "translation": "We are talking about the plan.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/davar/example-01.mp3",
+          "Doron": "audio-v2/doron/details/davar/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוא דִּבֵּר בְּפִרְטֵי הַפְּרוֹיֶקְט.",
         "transliteration": "Hu dibér b'pirtei ha-proyékt.",
-        "translation": "He spoke about the project's details."
+        "translation": "He spoke about the project's details.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/davar/example-02.mp3",
+          "Doron": "audio-v2/doron/details/davar/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular verb in binyan Piel (פִּעֵל). The root ד.ב.ר is associated with speech and communication.",
@@ -61850,17 +62550,29 @@
       {
         "hebrew": "הָעֲבוֹדָה נַעֲשְׂתָה בְּזֹאת עַל יְדֵי הַתַּלְמִידִים.",
         "transliteration": "Ha’avodá na’astáh be-zót al yedéi ha-talmidím.",
-        "translation": "The work was done by the students."
+        "translation": "The work was done by the students.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/naasah/example-01.mp3",
+          "Doron": "audio-v2/doron/details/naasah/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַבֵּיצוֹת נַעֲשׂוֹת בְּמַחֲבַת בְּכָל בֹּקֶר.",
         "transliteration": "Ha-beitzót na’asót be-machavát be-chól bóker.",
-        "translation": "The eggs are made in a pan every morning."
+        "translation": "The eggs are made in a pan every morning.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/naasah/example-02.mp3",
+          "Doron": "audio-v2/doron/details/naasah/example-02.mp3"
+        }
       },
       {
         "hebrew": "הַתּוֹכְנִית תֵּעָשֶׂה אִם נִמְצָא אֶת הַזְּמַן הַמַּתְאִים.",
         "transliteration": "Ha-tochnít té’aséh im nimtzá et ha-zman ha-mat’ím.",
-        "translation": "The plan will be done if we find the right time."
+        "translation": "The plan will be done if we find the right time.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/naasah/example-03.mp3",
+          "Doron": "audio-v2/doron/details/naasah/example-03.mp3"
+        }
       }
     ],
     "notes": "Nif'al is the passive form of Pa'al, turning 'to do' or 'to make' into 'to be done' or 'to be made'. It’s very common in modern Hebrew, used for both literal actions (e.g., cooking) and abstract completions (e.g., tasks), making it a versatile and frequent form.",
@@ -62492,17 +63204,29 @@
       {
         "hebrew": "הָרַעְיוֹן נֶחְשַׁב חָשׁוּב עַל יְדֵי כֻּלָּם.",
         "transliteration": "Ha-ra’ayón nechsháv chashúv al yedéi kulám.",
-        "translation": "The idea was thought important by everyone."
+        "translation": "The idea was thought important by everyone.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/nechshav/example-01.mp3",
+          "Doron": "audio-v2/doron/details/nechshav/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַתַּלְמִידִים נֶחְשָׁבִים חֲכָמִים בְּבֵית הַסֵּפֶר.",
         "transliteration": "Ha-talmidím nechshavím chachamím be-véit ha-séfer.",
-        "translation": "The students are considered wise in the school."
+        "translation": "The students are considered wise in the school.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/nechshav/example-02.mp3",
+          "Doron": "audio-v2/doron/details/nechshav/example-02.mp3"
+        }
       },
       {
         "hebrew": "הַפִּתְרוֹן יֵחָשֵׁב נָכוֹן אִם נִבְדֹּק אוֹתוֹ.",
         "transliteration": "Ha-pit’rón yéchashev nachón im nivdók otó.",
-        "translation": "The solution will be thought correct if we check it."
+        "translation": "The solution will be thought correct if we check it.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/nechshav/example-03.mp3",
+          "Doron": "audio-v2/doron/details/nechshav/example-03.mp3"
+        }
       }
     ],
     "notes": "Nif'al is the passive form of Pa'al, turning 'to think' into 'to be thought' or 'to be considered'. It’s widely used in modern Hebrew to express being regarded or evaluated, making it a common and versatile form.",
@@ -63222,17 +63946,29 @@
       {
         "hebrew": "הִשַּׁרְתִּי אֶת הַיְלָדִים לָשִׁיר שִׁירֵי חֲגִים.",
         "transliteration": "Hishárti et ha-yeladím lashír shiréi chagím.",
-        "translation": "I caused the children to sing holiday songs."
+        "translation": "I caused the children to sing holiday songs.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hashir/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hashir/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַמּוֹרָה מַשִּׁירָה אֶת הַתַּלְמִידִים בְּכָל שִׁעוּר.",
         "transliteration": "Ha-morá mashíra et ha-talmidím be-chól shi’úr.",
-        "translation": "The teacher causes the students to sing in every class."
+        "translation": "The teacher causes the students to sing in every class.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hashir/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hashir/example-02.mp3"
+        }
       },
       {
         "hebrew": "אַשִּׁיר אֶת הַקָּהָל לָשִׁיר בְּטֶקֶס הַחֲגִיגָה מָחָר.",
         "transliteration": "Ashír et ha-kahál lashír be-tékes ha-chagigá máchar.",
-        "translation": "I will cause the audience to sing at the celebration ceremony tomorrow."
+        "translation": "I will cause the audience to sing at the celebration ceremony tomorrow.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hashir/example-03.mp3",
+          "Doron": "audio-v2/doron/details/hashir/example-03.mp3"
+        }
       }
     ],
     "notes": "Hif'il is the causative form of Pa'al, shifting 'to sing' (שר) into 'to cause to sing'. It’s moderately common in modern Hebrew, often used in educational or performative contexts where someone prompts others to sing.",
@@ -63935,17 +64671,29 @@
       {
         "hebrew": "הֲרַצְתִּי אֶת הַיְלָדִים לְרוץ לְפָנַי בַּמֵּרוֹץ.",
         "transliteration": "Harátzti et ha-yeladím larútz lefanái ba-merótz.",
-        "translation": "I caused the children to run ahead of me in the race."
+        "translation": "I caused the children to run ahead of me in the race.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/haritz/example-01.mp3",
+          "Doron": "audio-v2/doron/details/haritz/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַמּוֹרֶה מֵרִיץ אֶת הַתַּרְגִּילִים לְהִסָּיֵם בְּמָהִירוּת.",
         "transliteration": "Ha-moré merítz et ha-targilím lehisayém be-mahirút.",
-        "translation": "The teacher accelerates the exercises to finish quickly."
+        "translation": "The teacher accelerates the exercises to finish quickly.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/haritz/example-02.mp3",
+          "Doron": "audio-v2/doron/details/haritz/example-02.mp3"
+        }
       },
       {
         "hebrew": "אָרִיץ אֶת הַמִּסְלוּל לְהֵרָצוֹת אִם נִרְצֶה לְנַצֵּחַ.",
         "transliteration": "Arítz et ha-mislúl leheratzót im nirtzéh lenatzéach.",
-        "translation": "I will cause the track to be run if we want to win."
+        "translation": "I will cause the track to be run if we want to win.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/haritz/example-03.mp3",
+          "Doron": "audio-v2/doron/details/haritz/example-03.mp3"
+        }
       }
     ],
     "notes": "Hif'il is the causative form of Pa'al, shifting 'to run' into 'to cause to run' or 'to accelerate'. It’s moderately common in modern Hebrew, used both literally (e.g., making someone run) and figuratively (e.g., speeding up processes), contrasting with Pa'al’s direct action.",
@@ -64662,17 +65410,29 @@
       {
         "hebrew": "הִתְאַהַבְתִּי בָּהּ מֵרֶגַע שֶׁפָּגַשְׁתִּי אוֹתָהּ.",
         "transliteration": "Hit’ahavtí bah mérega she-pagashtí otáh.",
-        "translation": "I fell in love with her the moment I met her."
+        "translation": "I fell in love with her the moment I met her.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hitahev/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hitahev/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוּא מִתְאַהֵב בְּכָל סֵפֶר חָדָשׁ שֶׁיּוֹצֵא.",
         "transliteration": "Hu mit’ahév be-chól séfer chadásh she-yotzé.",
-        "translation": "He falls in love with every new book that comes out."
+        "translation": "He falls in love with every new book that comes out.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hitahev/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hitahev/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֶתְאַהֵב בַּמּוּסִיקָה אִם אֶשְׁמַע אוֹתָהּ שׁוּב.",
         "transliteration": "Et’ahév ba-musíka im eshmá otáh shuv.",
-        "translation": "I will fall in love with the music if I hear it again."
+        "translation": "I will fall in love with the music if I hear it again.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hitahev/example-03.mp3",
+          "Doron": "audio-v2/doron/details/hitahev/example-03.mp3"
+        }
       }
     ],
     "notes": "Hitpa'el indicates reflexive or intensive action. For א.ה.ב, it primarily means 'to fall in love' (reflexive affection toward someone or something) and less commonly 'to make oneself loved'. It’s very common in modern Hebrew, especially in romantic contexts, contrasting with Pa'al’s general 'to love'.",
@@ -65374,22 +66134,38 @@
       {
         "hebrew": "נִפְגַּשְׁתִּי אִתּוֹ בְּבֵית הַקָּפֶה.",
         "transliteration": "Nifgashti ito be'veit ha-kafe.",
-        "translation": "I met him at the café."
+        "translation": "I met him at the café.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hifagesh/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hifagesh/example-01.mp3"
+        }
       },
       {
         "hebrew": "הֵם נִפְגָּשִׁים כָּל יוֹם שִׁשִּׁי.",
         "transliteration": "Hem nifgashim kol yom shishi.",
-        "translation": "They meet every Friday."
+        "translation": "They meet every Friday.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hifagesh/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hifagesh/example-02.mp3"
+        }
       },
       {
         "hebrew": "אִם תִּרְצִי, נִפָּגֵשׁ מָחָר.",
         "transliteration": "Im tirtzi, nipagesh machar.",
-        "translation": "If you want, we will meet tomorrow."
+        "translation": "If you want, we will meet tomorrow.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hifagesh/example-03.mp3",
+          "Doron": "audio-v2/doron/details/hifagesh/example-03.mp3"
+        }
       },
       {
         "hebrew": "הִפָּגְשׁוּ בְּשָׁעָה שֶׁבַע!",
         "transliteration": "Hifagshu be'sha'ah sheva!",
-        "translation": "Meet at seven o'clock!"
+        "translation": "Meet at seven o'clock!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hifagesh/example-04.mp3",
+          "Doron": "audio-v2/doron/details/hifagesh/example-04.mp3"
+        }
       }
     ],
     "notes": "Nif'al is often used for passive or reflexive actions. In this case, לְהִפָּגֵשׁ means 'to meet each other' or 'to be met.' It’s commonly used in social contexts to describe mutual meetings or gatherings.",
@@ -65963,22 +66739,38 @@
       {
         "hebrew": "נִבְחַרְתִּי לַתַּפְקִיד.",
         "transliteration": "Nivcharti la'tafkid.",
-        "translation": "I was chosen for the role."
+        "translation": "I was chosen for the role.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hivacher/example-01.mp3",
+          "Doron": "audio-v2/doron/details/hivacher/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוּא נִבְחָר לִהְיוֹת הַמַּנְהִיג.",
         "transliteration": "Hu nivchar lihyot ha'manhig.",
-        "translation": "He is chosen to be the leader."
+        "translation": "He is chosen to be the leader.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hivacher/example-02.mp3",
+          "Doron": "audio-v2/doron/details/hivacher/example-02.mp3"
+        }
       },
       {
         "hebrew": "אִם תִּבָּחֵר, תִּהְיֶה לָךְ הַהִזְדַּמְּנוּת.",
         "transliteration": "Im tibacher, tihye lach ha'hizdamnut.",
-        "translation": "If you are chosen, you will have the opportunity."
+        "translation": "If you are chosen, you will have the opportunity.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hivacher/example-03.mp3",
+          "Doron": "audio-v2/doron/details/hivacher/example-03.mp3"
+        }
       },
       {
         "hebrew": "הִבָּחֵר לַעֲבוֹדָה!",
         "transliteration": "Hibacher la'avoda!",
-        "translation": "Be chosen for the job!"
+        "translation": "Be chosen for the job!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/hivacher/example-04.mp3",
+          "Doron": "audio-v2/doron/details/hivacher/example-04.mp3"
+        }
       }
     ],
     "notes": "Nif'al is the passive form of Pa'al, turning 'to choose' into 'to be chosen.' It’s commonly used in contexts involving selection or election, such as in competitions, elections, or appointments.",
@@ -66546,22 +67338,38 @@
       {
         "hebrew": "הוּא הִצְחִיק אֶת כֻּלָּם בְּסִפּוּרָיו.",
         "transliteration": "Hu hitzchik et kulam be'sipurav.",
-        "translation": "He made everyone laugh with his stories."
+        "translation": "He made everyone laugh with his stories.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatzchik/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehatzchik/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַסֶּרֶט מַצְחִיק מְאֹד.",
         "transliteration": "Ha'seret matzchik me'od.",
-        "translation": "The movie is very funny (makes one laugh a lot)."
+        "translation": "The movie is very funny (makes one laugh a lot).",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatzchik/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehatzchik/example-02.mp3"
+        }
       },
       {
         "hebrew": "אִם תִּרְצֶה, אַצְחִיק אוֹתְךָ.",
         "transliteration": "Im tirzeh, atzchik otcha.",
-        "translation": "If you want, I will make you laugh."
+        "translation": "If you want, I will make you laugh.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatzchik/example-03.mp3",
+          "Doron": "audio-v2/doron/details/lehatzchik/example-03.mp3"
+        }
       },
       {
         "hebrew": "הַצְחֵק אֶת הַיְלָדִים!",
         "transliteration": "Hatzchek et ha'yeladim!",
-        "translation": "Make the children laugh!"
+        "translation": "Make the children laugh!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatzchik/example-04.mp3",
+          "Doron": "audio-v2/doron/details/lehatzchik/example-04.mp3"
+        }
       }
     ],
     "notes": "Hif'il is the causative form of the verb, turning 'to laugh' into 'to make laugh' or 'to cause laughter.' It’s commonly used in contexts where someone or something induces laughter, such as through humor, jokes, or amusing situations.",
@@ -67134,22 +67942,38 @@
       {
         "hebrew": "הַבַּיִת נִרְאָה מֵרָחוֹק.",
         "transliteration": "Ha'bayit nir'ah merachok.",
-        "translation": "The house was seen from afar."
+        "translation": "The house was seen from afar.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leheraot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/leheraot/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַכּוֹכָבִים נִרְאִים בַּלַּיְלָה.",
         "transliteration": "Ha'kochavim nir'im ba'layla.",
-        "translation": "The stars are seen at night."
+        "translation": "The stars are seen at night.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leheraot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/leheraot/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֵרָאֶה בַּתְּמוּנָה.",
         "transliteration": "Era'eh ba'tmuna.",
-        "translation": "I will be seen in the picture."
+        "translation": "I will be seen in the picture.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leheraot/example-03.mp3",
+          "Doron": "audio-v2/doron/details/leheraot/example-03.mp3"
+        }
       },
       {
         "hebrew": "הֵרָאוּ בַּמָּקוֹם הַנָּכוֹן!",
         "transliteration": "Hera'u ba'makom ha'nachon!",
-        "translation": "Be seen in the right place!"
+        "translation": "Be seen in the right place!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leheraot/example-04.mp3",
+          "Doron": "audio-v2/doron/details/leheraot/example-04.mp3"
+        }
       }
     ],
     "notes": "Nif'al is often used for passive or stative actions. In this case, it means 'to be seen' or 'to appear,' indicating visibility or presence. It’s commonly used in contexts where something becomes visible or is perceived.",
@@ -67729,22 +68553,38 @@
       {
         "hebrew": "הוא הִפְעִיל אֶת הַמַּכְשִׁיר.",
         "transliteration": "Hu hif'il et ha'machshir.",
-        "translation": "He activated the device."
+        "translation": "He activated the device.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehaf-il/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehaf-il/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַמְּנַהֵל מַפְעִיל אֶת הַתָּכְנִית הַחֲדָשָׁה.",
         "transliteration": "Ha'menahel maf'il et ha'tochnit ha'chadasha.",
-        "translation": "The manager operates the new program."
+        "translation": "The manager operates the new program.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehaf-il/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehaf-il/example-02.mp3"
+        }
       },
       {
         "hebrew": "אַפְעִיל אֶת הַמַּעֲרֶכֶת בְּעוֹד שָׁעָה.",
         "transliteration": "Af'il et ha'ma'arechet be'od sha'ah.",
-        "translation": "I will activate the system in an hour."
+        "translation": "I will activate the system in an hour.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehaf-il/example-03.mp3",
+          "Doron": "audio-v2/doron/details/lehaf-il/example-03.mp3"
+        }
       },
       {
         "hebrew": "הַפְעֵל אֶת הַמִּתְקָן!",
         "transliteration": "Haf'el et ha'mitkan!",
-        "translation": "Activate the facility!"
+        "translation": "Activate the facility!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehaf-il/example-04.mp3",
+          "Doron": "audio-v2/doron/details/lehaf-il/example-04.mp3"
+        }
       }
     ],
     "notes": "Hif'il often serves as the causative form of Pa'al, turning 'to act' from Pa'al (לִפְעֹל) into 'to cause to act' or 'to activate' in Hif'il (לְהַפְעִיל). It’s commonly used in technological or operational contexts, such as activating devices or operating systems.",
@@ -68319,22 +69159,38 @@
       {
         "hebrew": "נֶאֱמַר שֶׁהוּא יָבוֹא מָחָר.",
         "transliteration": "Ne'emar she'hu yavo machar.",
-        "translation": "It was said that he would come tomorrow."
+        "translation": "It was said that he would come tomorrow.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/le-amer/example-01.mp3",
+          "Doron": "audio-v2/doron/details/le-amer/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַדָּבָר נֶאֱמָר בְּבָרִיוּת.",
         "transliteration": "Ha'davar ne'emar be'variyut.",
-        "translation": "The matter is said clearly."
+        "translation": "The matter is said clearly.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/le-amer/example-02.mp3",
+          "Doron": "audio-v2/doron/details/le-amer/example-02.mp3"
+        }
       },
       {
         "hebrew": "יֵאָמֵר שֶׁזֶּה לֹא יָדוּעַ.",
         "transliteration": "Ye'amar she'ze lo yadua.",
-        "translation": "It will be said that this is unknown."
+        "translation": "It will be said that this is unknown.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/le-amer/example-03.mp3",
+          "Doron": "audio-v2/doron/details/le-amer/example-03.mp3"
+        }
       },
       {
         "hebrew": "הֵאָמֵר בְּשֵׁם הַמְּנַהֵל!",
         "transliteration": "He'amar beshem ha'menahel!",
-        "translation": "Be said in the name of the manager!"
+        "translation": "Be said in the name of the manager!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/le-amer/example-04.mp3",
+          "Doron": "audio-v2/doron/details/le-amer/example-04.mp3"
+        }
       }
     ],
     "notes": "Nif'al is often the passive form of Pa'al. For אמר, it shifts from 'to say' in Pa'al (לֵאמֹר) to 'to be said' in Nif'al (לֵאָמֵר). It is commonly used in formal or narrative contexts to indicate something that was or will be said.",
@@ -68902,22 +69758,38 @@
       {
         "hebrew": "הוּא נֶאֱמַן לִדְבָרוֹ.",
         "transliteration": "Hu ne'eman lidvaro.",
-        "translation": "He was faithful to his word."
+        "translation": "He was faithful to his word.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leheamen/example-01.mp3",
+          "Doron": "audio-v2/doron/details/leheamen/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא נֶאֱמֶנֶת בְּעֵינֵי כֻּלָּם.",
         "transliteration": "Hi ne'emenet be'einei kulam.",
-        "translation": "She is believed in everyone's eyes."
+        "translation": "She is believed in everyone's eyes.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leheamen/example-02.mp3",
+          "Doron": "audio-v2/doron/details/leheamen/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֲנַחְנוּ נֵאָמֵן לְמִשְׁפָּחָה.",
         "transliteration": "Anachnu ne'amen le'mishpacha.",
-        "translation": "We will be faithful to the family."
+        "translation": "We will be faithful to the family.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leheamen/example-03.mp3",
+          "Doron": "audio-v2/doron/details/leheamen/example-03.mp3"
+        }
       },
       {
         "hebrew": "הֵאָמֵן לַחֲבֵרֶיךָ!",
         "transliteration": "He'amen la'chavereicha!",
-        "translation": "Be faithful to your friends!"
+        "translation": "Be faithful to your friends!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leheamen/example-04.mp3",
+          "Doron": "audio-v2/doron/details/leheamen/example-04.mp3"
+        }
       }
     ],
     "notes": "Passive/reflexive form of the root [\"א\", \"מ\", \"נ\"], meaning 'to be faithful' or 'to be believed.' Often used in contexts of trust or loyalty, e.g., 'He was faithful to his word.'",
@@ -69489,22 +70361,38 @@
       {
         "hebrew": "הוּא הִרְאָה לִי אֶת הַתְּמוּנָה.",
         "transliteration": "Hu hir'a li et ha'tmuna.",
-        "translation": "He showed me the picture."
+        "translation": "He showed me the picture.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leharot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/leharot/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא מַרְאָה אֶת הַדֶּרֶךְ.",
         "transliteration": "Hi mar'a et ha'derech.",
-        "translation": "She shows the way."
+        "translation": "She shows the way.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leharot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/leharot/example-02.mp3"
+        }
       },
       {
         "hebrew": "אַרְאֶה לְךָ אֶת הַסֶּרֶט.",
         "transliteration": "Ar'e lecha et ha'seret.",
-        "translation": "I will show you the movie."
+        "translation": "I will show you the movie.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leharot/example-03.mp3",
+          "Doron": "audio-v2/doron/details/leharot/example-03.mp3"
+        }
       },
       {
         "hebrew": "הַרְאִי לִי אֶת הַסֵּפֶר!",
         "transliteration": "Har'i li et ha'sefer!",
-        "translation": "Show me the book!"
+        "translation": "Show me the book!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leharot/example-04.mp3",
+          "Doron": "audio-v2/doron/details/leharot/example-04.mp3"
+        }
       }
     ],
     "notes": "The Hif'il form of the root ר-א-ה shifts the meaning from 'to see' (Pa'al) to 'to cause to see' or 'to show.' It is a common verb in both formal and informal contexts.",
@@ -69779,12 +70667,20 @@
       {
         "hebrew": "הִפְגַּשְׁתִּי אֶת הַחֲבֵרִים.",
         "transliteration": "Hifgashti et ha'chaverim.",
-        "translation": "I arranged a meeting with the friends."
+        "translation": "I arranged a meeting with the friends.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehafgish/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehafgish/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוּא מַפְגִּישׁ אֶת הַצְּוָתִים.",
         "transliteration": "Hu mafgish et ha'tzvatim.",
-        "translation": "He arranges meetings for the teams."
+        "translation": "He arranges meetings for the teams.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehafgish/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehafgish/example-02.mp3"
+        }
       }
     ],
     "notes": "Hif'il form shifts the Pa'al meaning 'to meet' to a causative 'to arrange a meeting'.",
@@ -69976,12 +70872,20 @@
       {
         "hebrew": "הוּא שִׁמֵּשׁ אֶת הַמֶּלֶךְ.",
         "transliteration": "Hu shimésh et ha'melech.",
-        "translation": "He served the king."
+        "translation": "He served the king.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leshamesh/example-01.mp3",
+          "Doron": "audio-v2/doron/details/leshamesh/example-01.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי מְשַׁמֵּשׁ אֶת הַמַּכְשִׁיר.",
         "transliteration": "Ani meshamésh et ha'makshir.",
-        "translation": "I use the device."
+        "translation": "I use the device.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leshamesh/example-02.mp3",
+          "Doron": "audio-v2/doron/details/leshamesh/example-02.mp3"
+        }
       }
     ],
     "notes": "Regular Pa'al verb. Can mean 'to serve' (e.g., a person) or 'to use' (e.g., an object).",
@@ -70137,12 +71041,20 @@
       {
         "hebrew": "הִכְנַסְתִּי אֶת הַצוֹעֲנִים.",
         "transliteration": "Hichnasti et ha'tzoanim.",
-        "translation": "I assembled the team."
+        "translation": "I assembled the team.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehachnis/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehachnis/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוּא מַכְנִיס אֶת הַחֲפָצִים.",
         "transliteration": "Hu machnis et ha'chafatzim.",
-        "translation": "He assembles the items."
+        "translation": "He assembles the items.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehachnis/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehachnis/example-02.mp3"
+        }
       }
     ],
     "notes": "Hif'il form shifts Pa'al 'to enter' to causative 'to bring in' or 'to assemble'.",
@@ -70709,22 +71621,38 @@
       {
         "hebrew": "הִיא סִדְּרָה אֶת הַחֶדֶר.",
         "transliteration": "Hi sidra et ha'cheder.",
-        "translation": "She arranged the room."
+        "translation": "She arranged the room.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lesader/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lesader/example-01.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי מְסַדֵּר אֶת הַסְּפָרִים.",
         "transliteration": "Ani mesader et ha'sfarim.",
-        "translation": "I arrange the books."
+        "translation": "I arrange the books.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lesader/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lesader/example-02.mp3"
+        }
       },
       {
         "hebrew": "נְסַדֵּר אֶת הַמִּסְמָכִים מָחָר.",
         "transliteration": "Nesader et ha'mismachim machar.",
-        "translation": "We will arrange the documents tomorrow."
+        "translation": "We will arrange the documents tomorrow.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lesader/example-03.mp3",
+          "Doron": "audio-v2/doron/details/lesader/example-03.mp3"
+        }
       },
       {
         "hebrew": "סַדֵּר אֶת הַשֻּׁלְחָן!",
         "transliteration": "Sader et ha'shulchan!",
-        "translation": "Arrange the table!"
+        "translation": "Arrange the table!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lesader/example-04.mp3",
+          "Doron": "audio-v2/doron/details/lesader/example-04.mp3"
+        }
       }
     ],
     "notes": "The Pi'el form of the root ס-ד-ר is commonly used in Modern Hebrew for arranging or organizing physical objects or abstract concepts.",
@@ -71291,22 +72219,38 @@
       {
         "hebrew": "הַשֶּׁמֶשׁ קָדְמָה לַיָּרֵחַ.",
         "transliteration": "Ha'shemesh kadma la'yareach.",
-        "translation": "The sun preceded the moon."
+        "translation": "The sun preceded the moon.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/likdom/example-01.mp3",
+          "Doron": "audio-v2/doron/details/likdom/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוּא קוֹדֵם לִי בְּשָׁנָה.",
         "transliteration": "Hu kodem li be'shana.",
-        "translation": "He precedes me by a year."
+        "translation": "He precedes me by a year.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/likdom/example-02.mp3",
+          "Doron": "audio-v2/doron/details/likdom/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי אֶקְדֹּם אֶת הַפְּגִישָׁה.",
         "transliteration": "Ani ekdom et ha'pgisha.",
-        "translation": "I will precede the meeting."
+        "translation": "I will precede the meeting.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/likdom/example-03.mp3",
+          "Doron": "audio-v2/doron/details/likdom/example-03.mp3"
+        }
       },
       {
         "hebrew": "קְדֹם לַפְּגִישָׁה!",
         "transliteration": "Kdom la'pgisha!",
-        "translation": "Precede the meeting!"
+        "translation": "Precede the meeting!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/likdom/example-04.mp3",
+          "Doron": "audio-v2/doron/details/likdom/example-04.mp3"
+        }
       }
     ],
     "notes": "The Pa'al form of the root ק-ד-מ is used in Modern Hebrew to indicate preceding in time or order. It is moderately common.",
@@ -72021,22 +72965,38 @@
       {
         "hebrew": "הַגֶּשֶׁם פָּסַק פִּתְאוֹם.",
         "transliteration": "Ha'geshem pasak pit'om.",
-        "translation": "The rain ceased suddenly."
+        "translation": "The rain ceased suddenly.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/pasek/example-01.mp3",
+          "Doron": "audio-v2/doron/details/pasek/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַמּוּזִיקָה פּוֹסֶקֶת כָּל לַיְלָה בְּשָׁעָה עֶשֶׂר.",
         "transliteration": "Ha'muzika poseket kol laila be'sha'a eser.",
-        "translation": "The music stops every night at ten o'clock."
+        "translation": "The music stops every night at ten o'clock.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/pasek/example-02.mp3",
+          "Doron": "audio-v2/doron/details/pasek/example-02.mp3"
+        }
       },
       {
         "hebrew": "אִם לֹא תִּפְסֹק, אֵצֵא מֵהַחֶדֶר.",
         "transliteration": "Im lo tif'sok, etze me'ha'cheder.",
-        "translation": "If you don't stop, I will leave the room."
+        "translation": "If you don't stop, I will leave the room.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/pasek/example-03.mp3",
+          "Doron": "audio-v2/doron/details/pasek/example-03.mp3"
+        }
       },
       {
         "hebrew": "פְּסֹק לְדַבֵּר עַכְשָׁו!",
         "transliteration": "P'sok ledaber achshav!",
-        "translation": "Stop talking now!"
+        "translation": "Stop talking now!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/pasek/example-04.mp3",
+          "Doron": "audio-v2/doron/details/pasek/example-04.mp3"
+        }
       }
     ],
     "notes": "The verb לפסוק in Pa'al is used to indicate the cessation of an action or state, such as stopping an activity or an event coming to an end. It is commonly used in both formal and informal contexts.",
@@ -72754,22 +73714,38 @@
       {
         "hebrew": "הוּא קָשַׁר אֶת הַחֶבֶל.",
         "transliteration": "Hu kashar et ha'chevel.",
-        "translation": "He tied the rope."
+        "translation": "He tied the rope.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/kashar/example-01.mp3",
+          "Doron": "audio-v2/doron/details/kashar/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא קוֹשֶׁרֶת אֶת הַשַּׂרְכֹת.",
         "transliteration": "Hi kosheret et ha'sarkhot.",
-        "translation": "She ties the laces."
+        "translation": "She ties the laces.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/kashar/example-02.mp3",
+          "Doron": "audio-v2/doron/details/kashar/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֶקְשֹׁר אֶת הַכֶּלֶב לַעֵץ.",
         "transliteration": "Ek'shor et ha'kelev la'etz.",
-        "translation": "I will tie the dog to the tree."
+        "translation": "I will tie the dog to the tree.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/kashar/example-03.mp3",
+          "Doron": "audio-v2/doron/details/kashar/example-03.mp3"
+        }
       },
       {
         "hebrew": "קְשֹׁר אֶת הַחֲבִילָה!",
         "transliteration": "K'shor et ha'chavila!",
-        "translation": "Tie the package!"
+        "translation": "Tie the package!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/kashar/example-04.mp3",
+          "Doron": "audio-v2/doron/details/kashar/example-04.mp3"
+        }
       }
     ],
     "notes": "The verb לִקְשֹׁר in Pa'al is used to indicate tying or binding something physically, such as ropes or laces. It can also be used metaphorically, as in tying relationships or connections. The root ק-ש-ר is regular and follows standard Pa'al conjugation patterns.",
@@ -73350,22 +74326,38 @@
       {
         "hebrew": "גָּלִיתִי אֶת הַסּוֹד.",
         "transliteration": "Galiti et ha'sod.",
-        "translation": "I revealed the secret."
+        "translation": "I revealed the secret.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/liglot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/liglot/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוּא גּוֹלֶה אֶת הָאֱמֶת.",
         "transliteration": "Hu gole et ha'emet.",
-        "translation": "He reveals the truth."
+        "translation": "He reveals the truth.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/liglot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/liglot/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֶגְלֶה אֶת הַתְּכָנִים.",
         "transliteration": "Egle et ha'techanim.",
-        "translation": "I will reveal the plans."
+        "translation": "I will reveal the plans.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/liglot/example-03.mp3",
+          "Doron": "audio-v2/doron/details/liglot/example-03.mp3"
+        }
       },
       {
         "hebrew": "גְּלֵה אֶת הַמִּסְמָךְ!",
         "transliteration": "Gle et ha'mismach!",
-        "translation": "Reveal the document!"
+        "translation": "Reveal the document!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/liglot/example-04.mp3",
+          "Doron": "audio-v2/doron/details/liglot/example-04.mp3"
+        }
       }
     ],
     "notes": "גלה primarily means 'to reveal' or 'to uncover' in modern Hebrew. It can also historically mean 'to go into exile,' though this usage is rare today.",
@@ -73943,22 +74935,38 @@
       {
         "hebrew": "הִזְכַּרְתִּי לָהּ אֶת הַמּוֹעֵד.",
         "transliteration": "Hizkarti la et ha'mo'ed.",
-        "translation": "I reminded her of the date."
+        "translation": "I reminded her of the date.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehazkir/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehazkir/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוּא מַזְכִּיר אֶת הַמִּשְׂימָה.",
         "transliteration": "Hu mazkir et ha'misima.",
-        "translation": "He reminds about the task."
+        "translation": "He reminds about the task.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehazkir/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehazkir/example-02.mp3"
+        }
       },
       {
         "hebrew": "אַזְכִּיר לְךָ אֶת הַפְּגִישָׁה.",
         "transliteration": "Azkir lecha et ha'pgisha.",
-        "translation": "I will remind you of the meeting."
+        "translation": "I will remind you of the meeting.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehazkir/example-03.mp3",
+          "Doron": "audio-v2/doron/details/lehazkir/example-03.mp3"
+        }
       },
       {
         "hebrew": "הַזְכֵּר אֶת הַתָּכְנִית!",
         "transliteration": "Hazker et ha'tochnit!",
-        "translation": "Remind about the program!"
+        "translation": "Remind about the program!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehazkir/example-04.mp3",
+          "Doron": "audio-v2/doron/details/lehazkir/example-04.mp3"
+        }
       }
     ],
     "notes": "In Hif'il, זכר means 'to remind,' a common causative form of the Pa'al 'to remember' (לִזְכֹּר). It is widely used in everyday Hebrew.",
@@ -74531,22 +75539,38 @@
       {
         "hebrew": "הוּא הוֹשִׁיב אֶת הַיֶּלֶד עַל הַכִּסֵּא.",
         "transliteration": "Hu hoshev et ha'yeled al ha'kise.",
-        "translation": "He seated the child on the chair."
+        "translation": "He seated the child on the chair.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehoshev-hifil/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehoshev-hifil/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא מֵשִׁיבָה אֶת הַתַּלְמִידִים.",
         "transliteration": "Hi mesheva et ha'talmidim.",
-        "translation": "She is seating the students."
+        "translation": "She is seating the students.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehoshev-hifil/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehoshev-hifil/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי אוֹשִׁיב אֶת הַאוֹרְחִים.",
         "transliteration": "Ani oshev et ha'orchim.",
-        "translation": "I will seat the guests."
+        "translation": "I will seat the guests.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehoshev-hifil/example-03.mp3",
+          "Doron": "audio-v2/doron/details/lehoshev-hifil/example-03.mp3"
+        }
       },
       {
         "hebrew": "הוֹשִׁיבוּ אֶת הַכֹּל!",
         "transliteration": "Hoshevu et ha'kol!",
-        "translation": "Seat everyone!"
+        "translation": "Seat everyone!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehoshev-hifil/example-04.mp3",
+          "Doron": "audio-v2/doron/details/lehoshev-hifil/example-04.mp3"
+        }
       }
     ],
     "notes": "Hif'il is the causative form. For ישב, it shifts from 'to sit' in Pa'al to 'to cause to sit' or 'to seat'. Often used for arranging seating or placing people.",
@@ -75115,22 +76139,38 @@
       {
         "hebrew": "הוּא הֶעֱמִיד אֶת הַסֵּפֶר עַל הַמַּדָּף.",
         "transliteration": "Hu he'emid et ha'sefer al ha'madaf.",
-        "translation": "He positioned the book on the shelf."
+        "translation": "He positioned the book on the shelf.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leha-amid/example-01.mp3",
+          "Doron": "audio-v2/doron/details/leha-amid/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא מַעֲמִידָה אֶת הַכִּסֵּא.",
         "transliteration": "Hi ma'amida et ha'kise.",
-        "translation": "She is positioning the chair."
+        "translation": "She is positioning the chair.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leha-amid/example-02.mp3",
+          "Doron": "audio-v2/doron/details/leha-amid/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי אַעֲמִיד אֶת הַמַּכְשִׁיר.",
         "transliteration": "Ani a'amid et ha'machshir.",
-        "translation": "I will position the device."
+        "translation": "I will position the device.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leha-amid/example-03.mp3",
+          "Doron": "audio-v2/doron/details/leha-amid/example-03.mp3"
+        }
       },
       {
         "hebrew": "הַעֲמִידוּ אֶת הַדַּגְלִים!",
         "transliteration": "Ha'amidu et ha'daglim!",
-        "translation": "Position the flags!"
+        "translation": "Position the flags!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leha-amid/example-04.mp3",
+          "Doron": "audio-v2/doron/details/leha-amid/example-04.mp3"
+        }
       }
     ],
     "notes": "Hif'il is the causative form. For עמד, it shifts from 'to stand' in Pa'al to 'to cause to stand' or 'to position'. Used for placing objects or people in a standing position.",
@@ -75702,22 +76742,38 @@
       {
         "hebrew": "הוּא פִּתֵּחַ אֶת הַתּוֹכְנִית.",
         "transliteration": "Hu piteach et ha'tochnit.",
-        "translation": "He developed the program."
+        "translation": "He developed the program.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lepateach/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lepateach/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא מְפַתַּחַת אֶת הַפְּרוֹיֶקְט.",
         "transliteration": "Hi mefatachat et ha'proyekt.",
-        "translation": "She is developing the project."
+        "translation": "She is developing the project.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lepateach/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lepateach/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי אֲפַתֵּחַ אֶת הַרַעְיוֹן.",
         "transliteration": "Ani afateach et ha'ra'ayon.",
-        "translation": "I will develop the idea."
+        "translation": "I will develop the idea.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lepateach/example-03.mp3",
+          "Doron": "audio-v2/doron/details/lepateach/example-03.mp3"
+        }
       },
       {
         "hebrew": "פַּתְּחוּ אֶת הַדַּף!",
         "transliteration": "Patchu et ha'daf!",
-        "translation": "Develop the page!"
+        "translation": "Develop the page!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lepateach/example-04.mp3",
+          "Doron": "audio-v2/doron/details/lepateach/example-04.mp3"
+        }
       }
     ],
     "notes": "Pi'el often indicates an intensive or causative action. For פתח, it shifts from 'to open' in Pa'al to 'to develop' or 'to open up' in a more intensive sense. Commonly used in contexts like software or project development.",
@@ -76290,22 +77346,38 @@
       {
         "hebrew": "הוּא הֶעֱלָה אֶת הַדֶּגֶל.",
         "transliteration": "Hu he'ela et ha'degel.",
-        "translation": "He raised the flag."
+        "translation": "He raised the flag.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leha-alot/example-01.mp3",
+          "Doron": "audio-v2/doron/details/leha-alot/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַמּוֹרֶה מַעֲלֶה אֶת הַשְּׁאֵלָה.",
         "transliteration": "Ha'more ma'ale et ha'she'ela.",
-        "translation": "The teacher raises the question."
+        "translation": "The teacher raises the question.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leha-alot/example-02.mp3",
+          "Doron": "audio-v2/doron/details/leha-alot/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי אַעֲלֶה אֶת הַמִּזְוָדָה.",
         "transliteration": "Ani a'ale et ha'mizvada.",
-        "translation": "I will raise the suitcase."
+        "translation": "I will raise the suitcase.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leha-alot/example-03.mp3",
+          "Doron": "audio-v2/doron/details/leha-alot/example-03.mp3"
+        }
       },
       {
         "hebrew": "הַעֲלוּ אֶת הַדֶּגֶל!",
         "transliteration": "Ha'alu et ha'degel!",
-        "translation": "Raise the flag!"
+        "translation": "Raise the flag!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/leha-alot/example-04.mp3",
+          "Doron": "audio-v2/doron/details/leha-alot/example-04.mp3"
+        }
       }
     ],
     "notes": "The Hif'il form of עלה means 'to raise' or 'to lift,' used both physically (e.g., lifting an object) and metaphorically (e.g., raising a topic).",
@@ -76883,22 +77955,38 @@
       {
         "hebrew": "הוּא הִפִּיל אֶת הַסֵּפֶר.",
         "transliteration": "Hu hipíl et ha'sefer.",
-        "translation": "He dropped the book."
+        "translation": "He dropped the book.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehafil/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehafil/example-01.mp3"
+        }
       },
       {
         "hebrew": "הַיֶּלֶד מַפִּיל אֶת הַכַּדּוּר.",
         "transliteration": "Ha'yeled mapíl et ha'kadur.",
-        "translation": "The boy drops the ball."
+        "translation": "The boy drops the ball.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehafil/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehafil/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי אַפִּיל אֶת הַצַּלַּחַת.",
         "transliteration": "Ani apíl et ha'tzalachat.",
-        "translation": "I will drop the plate."
+        "translation": "I will drop the plate.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehafil/example-03.mp3",
+          "Doron": "audio-v2/doron/details/lehafil/example-03.mp3"
+        }
       },
       {
         "hebrew": "הַפִּילוּ אֶת הַכַּדּוּר!",
         "transliteration": "Hapílu et ha'kadur!",
-        "translation": "Drop the ball!"
+        "translation": "Drop the ball!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehafil/example-04.mp3",
+          "Doron": "audio-v2/doron/details/lehafil/example-04.mp3"
+        }
       }
     ],
     "notes": "The Hif'il form of נפל means 'to cause to fall' or 'to drop,' used both literally (e.g., dropping an object) and figuratively (e.g., causing failure).",
@@ -77468,22 +78556,38 @@
       {
         "hebrew": "הַמֶּמְשָׁלָה רִכְּזָה אֶת הַשֵׁרוּתִים.",
         "transliteration": "Ha'memshala rikza et ha'sherutim.",
-        "translation": "The government centralized the services."
+        "translation": "The government centralized the services.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lerakez/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lerakez/example-01.mp3"
+        }
       },
       {
         "hebrew": "הוּא מְרַכֵּז אֶת הַמַּאֲמָצִים.",
         "transliteration": "Hu merakéz et ha'ma'amatzim.",
-        "translation": "He is centralizing the efforts."
+        "translation": "He is centralizing the efforts.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lerakez/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lerakez/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי אֲרַכֵּז אֶת הַמִּסְמָכִים.",
         "transliteration": "Ani arakéz et ha'mismachim.",
-        "translation": "I will centralize the documents."
+        "translation": "I will centralize the documents.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lerakez/example-03.mp3",
+          "Doron": "audio-v2/doron/details/lerakez/example-03.mp3"
+        }
       },
       {
         "hebrew": "רַכְּזוּ אֶת הַמַּאֲמָצִים!",
         "transliteration": "Rakzú et ha'ma'amatzim!",
-        "translation": "Centralize the efforts!"
+        "translation": "Centralize the efforts!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lerakez/example-04.mp3",
+          "Doron": "audio-v2/doron/details/lerakez/example-04.mp3"
+        }
       }
     ],
     "notes": "The Pi'el form of the root ר-כ-ז typically means to centralize or concentrate something, often used in administrative or organizational contexts.",
@@ -78037,22 +79141,38 @@
       {
         "hebrew": "הוּא הִתְרִים לָאֹרְגָנִיזַצְיָה.",
         "transliteration": "Hu hitrim la'organizatya.",
-        "translation": "He donated to the organization."
+        "translation": "He donated to the organization.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatrim/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lehatrim/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא מַתְרִימָה לְצְדָקָה.",
         "transliteration": "Hi matrimá le'tzdaka.",
-        "translation": "She donates to charity."
+        "translation": "She donates to charity.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatrim/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lehatrim/example-02.mp3"
+        }
       },
       {
         "hebrew": "אַתְרִים לַפְּרוֹיֶקְט הַחָדָשׁ.",
         "transliteration": "Atrim la'proyekt ha'chadash.",
-        "translation": "I will donate to the new project."
+        "translation": "I will donate to the new project.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatrim/example-03.mp3",
+          "Doron": "audio-v2/doron/details/lehatrim/example-03.mp3"
+        }
       },
       {
         "hebrew": "הַתְרִימוּ לַמַּטָּרָה הַזּוֹ!",
         "transliteration": "Hatrimú la'matara hazo!",
-        "translation": "Donate to this cause!"
+        "translation": "Donate to this cause!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lehatrim/example-04.mp3",
+          "Doron": "audio-v2/doron/details/lehatrim/example-04.mp3"
+        }
       }
     ],
     "notes": "The Hif'il form of the root ת-ר-ם typically means to donate or contribute, often used in contexts of charity or support.",
@@ -78605,22 +79725,38 @@
       {
         "hebrew": "הוּא סָפַר אֶת הַכּוֹכָבִים.",
         "transliteration": "Hu safar et ha'kochavim.",
-        "translation": "He counted the stars."
+        "translation": "He counted the stars.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lispor/example-01.mp3",
+          "Doron": "audio-v2/doron/details/lispor/example-01.mp3"
+        }
       },
       {
         "hebrew": "הִיא סוֹפֶרֶת אֶת הַמִּסְפָּרִים.",
         "transliteration": "Hi soferet et ha'misparim.",
-        "translation": "She is counting the numbers."
+        "translation": "She is counting the numbers.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lispor/example-02.mp3",
+          "Doron": "audio-v2/doron/details/lispor/example-02.mp3"
+        }
       },
       {
         "hebrew": "אֲנִי אֶסְפֹּר אֶת הַכֶּסֶף.",
         "transliteration": "Ani espor et ha'kesef.",
-        "translation": "I will count the money."
+        "translation": "I will count the money.",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lispor/example-03.mp3",
+          "Doron": "audio-v2/doron/details/lispor/example-03.mp3"
+        }
       },
       {
         "hebrew": "סִפְרוּ אֶת הַדַּפִּים!",
         "transliteration": "Sifru et ha'dafim!",
-        "translation": "Count the pages!"
+        "translation": "Count the pages!",
+        "audio": {
+          "Tamar": "audio-v2/tamar/details/lispor/example-04.mp3",
+          "Doron": "audio-v2/doron/details/lispor/example-04.mp3"
+        }
       }
     ],
     "notes": "Pa'al is the simple active form. For ספר, it primarily means 'to count' or 'to number'. It can also mean 'to tell a story' in some contexts, but this entry focuses on counting.",
