@@ -63,7 +63,10 @@
     <section class="conjugation-card" aria-labelledby="conjugation-heading">
       <div class="section-heading">
         <div><p class="eyebrow">Conjugation</p><h2 id="conjugation-heading">Forms</h2></div>
-        <nav class="tab-group tense-tabs" id="tense-tabs" aria-label="Tense"></nav>
+        <div class="conjugation-controls">
+          <label class="voice-control" for="voice-select"><span>Voice</span><select id="voice-select" aria-label="Audio voice"></select></label>
+          <nav class="tab-group tense-tabs" id="tense-tabs" aria-label="Tense"></nav>
+        </div>
       </div>
       <div class="table-wrap">
         <table class="conjugation-table" id="conjugation-table" dir="rtl">

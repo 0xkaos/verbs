@@ -1,4 +1,4 @@
-# Hebrew Verb Atlas
+# Alephbetical Hebrew Verbs
 
 A zero-build GitHub Pages site for browsing the reviewed modern-Hebrew verb dataset in `verbs.canonical.json`.
 
@@ -17,12 +17,18 @@ Then open <http://localhost:8000>.
 The repository is currently on `main` and includes the custom domain in `CNAME`. If GitHub Pages is configured to publish from the root of `main`, committing and pushing these files will publish the update:
 
 ```sh
-git add .nojekyll index.html styles.css app.js favicon.svg README.md verbs.canonical.json
-git commit -m "Update site to canonical verb dataset"
+git add -A
+git commit -m "Rebuild canonical verb site and audio"
 git push origin main
 ```
 
 The legacy `verbs.json` remains in the repository for history, but the site no longer loads it.
+The obsolete numbered audio directories were replaced by `audio-v2`, with separate
+Tamar and Doron paths. A recoverable local copy is stored outside the repository at
+`/home/negentrope/GPT/Site/Verbs-audio-legacy-20260827`.
+
+Fresh Narakeet input lists, mapping tables, reproducible batch files, and rebuild
+instructions are under `audio-generation/`.
 
 ## Dataset and interface policy
 
@@ -31,3 +37,4 @@ The legacy `verbs.json` remains in the repository for history, but the site no l
 - study order: present, past, future, imperative, infinitive
 - common plural future and imperative forms are favored over formal feminine-plural variants
 - no standalone invented Hufal infinitives
+- selectable Tamar and Doron audio for every conjugation and available example sentence

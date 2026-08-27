@@ -21,6 +21,7 @@ const PRONOUN_ORDER = {
 const state = {
   verbs: {}, entries: [], roots: [], selectedRoot: null,
   selectedBinyan: null, selectedKey: null, tense: "present", searchIndex: 0,
+  voice: "Tamar",
 };
 const elements = {};
 const hebrewCollator = new Intl.Collator("he");
@@ -38,6 +39,7 @@ async function init() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.verbs = await response.json();
     prepareIndex();
+    renderVoiceOptions();
     selectInitialRoot();
   } catch (error) {
     console.error("Unable to load canonical verb data", error);
@@ -51,6 +53,7 @@ function cacheElements() {
     "root-position", "verb-binyan-label", "verb-infinitive", "verb-meaning",
     "verb-facts", "root-meaning",
     "translation-chips", "binyan-tabs", "lemma-tabs", "tense-tabs", "conjugation-body",
+    "voice-select",
     "table-note", "examples-section", "examples-list", "notes-section", "notes-text",
     "binyanim-section", "binyanim-body", "related-section", "related-list",
     "similar-section", "similar-list", "idioms-section", "idioms-list", "theme-toggle",
@@ -75,6 +78,7 @@ function restorePreferences() {
 
   const scale = clamp(Number(localStorage.getItem("verb-atlas-scale")) || 1, .85, 1.25);
   document.documentElement.style.setProperty("--font-scale", scale);
+  state.voice = localStorage.getItem("verb-atlas-voice") || "Tamar";
 }
 
 function bindGlobalEvents() {
@@ -113,6 +117,11 @@ function bindGlobalEvents() {
   });
   elements.fontDecrease.addEventListener("click", () => adjustScale(-.05));
   elements.fontIncrease.addEventListener("click", () => adjustScale(.05));
+  elements.voiceSelect.addEventListener("change", () => {
+    state.voice = elements.voiceSelect.value;
+    localStorage.setItem("verb-atlas-voice", state.voice);
+    renderVerb();
+  });
   elements.examplePopover.querySelector(".popover-close").addEventListener("click", closePopover);
 }
 
@@ -140,6 +149,31 @@ function prepareIndex() {
 function compareEntries(a, b) {
   const order = BINYAN_ORDER.indexOf(a.verb.binyan_en) - BINYAN_ORDER.indexOf(b.verb.binyan_en);
   return order || hebrewCollator.compare(stripMarks(a.verb.infinitive), stripMarks(b.verb.infinitive));
+}
+
+function renderVoiceOptions() {
+  const voices = new Set();
+  for (const { verb } of state.entries) {
+    for (const forms of Object.values(verb.conjugations || {})) {
+      for (const form of forms) {
+        for (const field of [form.audio, form.audio_example]) {
+          if (typeof field === "string") voices.add("Tamar");
+          else if (field && typeof field === "object") Object.keys(field).forEach((voice) => voices.add(voice));
+        }
+      }
+    }
+  }
+  const ordered = ["Tamar", "Doron", ...voices].filter((voice, index, all) => voices.has(voice) && all.indexOf(voice) === index);
+  if (!ordered.includes(state.voice)) state.voice = ordered[0] || "Tamar";
+  elements.voiceSelect.replaceChildren();
+  for (const voice of ordered) {
+    const option = document.createElement("option");
+    option.value = voice;
+    option.textContent = voice;
+    option.selected = voice === state.voice;
+    elements.voiceSelect.append(option);
+  }
+  elements.voiceSelect.disabled = ordered.length < 2;
 }
 
 function selectInitialRoot() {
@@ -284,14 +318,15 @@ function makeFormRow(form, verb) {
   const row = document.createElement("tr");
   appendCell(row, form.pronoun || "—", "pronoun", "rtl");
   const hebrewCell = appendCell(row, "", "hebrew-form", "rtl");
-  if (form.audio) {
+  const formAudio = resolveAudio(form.audio);
+  if (formAudio) {
     const button = document.createElement("button");
     button.className = "form-audio";
     button.type = "button";
     button.title = "Play pronunciation";
     button.setAttribute("aria-label", `Play ${form.transliteration || "verb form"}`);
     button.innerHTML = highlightRoots(form.form, verb.root);
-    button.addEventListener("click", () => playAudio(form.audio));
+    button.addEventListener("click", () => playAudio(formAudio));
     hebrewCell.append(button);
   } else {
     hebrewCell.innerHTML = highlightRoots(form.form, verb.root);
@@ -452,8 +487,9 @@ function showExample(form, anchor) {
   popover.querySelector(".popover-hebrew").textContent = form.example_sentence_he || "";
   popover.querySelector(".popover-english").textContent = form.example_sentence_en || "";
   const audioButton = popover.querySelector(".popover-audio");
-  audioButton.hidden = !form.audio_example;
-  audioButton.onclick = form.audio_example ? () => playAudio(form.audio_example) : null;
+  const exampleAudio = resolveAudio(form.audio_example);
+  audioButton.hidden = !exampleAudio;
+  audioButton.onclick = exampleAudio ? () => playAudio(exampleAudio) : null;
   popover.hidden = false;
   anchor.setAttribute("aria-expanded", "true");
 }
@@ -470,6 +506,12 @@ function playAudio(source) {
   activeAudio?.pause();
   activeAudio = new Audio(source);
   activeAudio.play().catch((error) => console.warn("Audio playback failed", error));
+}
+
+function resolveAudio(source) {
+  if (typeof source === "string") return source;
+  if (!source || typeof source !== "object") return null;
+  return source[state.voice] || null;
 }
 
 function adjustScale(amount) {

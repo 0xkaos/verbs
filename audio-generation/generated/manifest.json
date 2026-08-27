@@ -1,0 +1,13 @@
+{
+  "dataset": "verbs.canonical.json",
+  "batch_size": 450,
+  "counts": {
+    "conjugations": 4564,
+    "examples": 4146
+  },
+  "voices": [
+    "Tamar",
+    "Doron"
+  ],
+  "format": "mp3"
+}
