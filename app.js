@@ -39,20 +39,15 @@ async function init() {
     state.verbs = await response.json();
     prepareIndex();
     selectInitialRoot();
-    elements.datasetCount.textContent = String(state.entries.length);
-    elements.dataStatus.classList.add("ready");
-    elements.dataStatus.lastElementChild.textContent = `${state.entries.length} verbs · ${state.roots.length} roots`;
   } catch (error) {
     console.error("Unable to load canonical verb data", error);
-    elements.dataStatus.classList.add("error");
-    elements.dataStatus.lastElementChild.textContent = "Could not load the dataset";
     elements.conjugationBody.innerHTML = `<tr><td colspan="6" class="empty-state">Could not load <code>${DATA_URL}</code>. When viewing locally, serve this folder over HTTP rather than opening the file directly.</td></tr>`;
   }
 }
 
 function cacheElements() {
   const ids = [
-    "data-status", "dataset-count", "root-search", "root-results", "selected-root",
+    "root-search", "root-results", "selected-root",
     "root-position", "verb-binyan-label", "verb-infinitive", "verb-meaning",
     "verb-facts", "root-meaning",
     "translation-chips", "binyan-tabs", "lemma-tabs", "tense-tabs", "conjugation-body",
@@ -99,6 +94,9 @@ function bindGlobalEvents() {
   });
   document.addEventListener("click", (event) => {
     if (!elements.rootResults.contains(event.target) && event.target !== elements.rootSearch) closeSearchResults();
+    if (!elements.examplePopover.hidden &&
+        !elements.examplePopover.contains(event.target) &&
+        !event.target.closest(".example-button")) closePopover();
   });
 
   elements.themeToggle.addEventListener("click", () => {

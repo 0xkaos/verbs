@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Explore modern Hebrew verb roots and conjugations by binyan and tense.">
   <meta name="theme-color" content="#f4efe5">
-  <title>Hebrew Verb Atlas</title>
+  <title>Alephbetical</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
@@ -13,9 +13,9 @@
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="brand" href="./" aria-label="Hebrew Verb Atlas home">
+      <a class="brand" href="./" aria-label="Alephbetical home">
         <span class="brand__mark" aria-hidden="true">א</span>
-        <span><strong>Hebrew Verb Atlas</strong><small>Modern conjugations by root</small></span>
+        <span><strong>Alephbetical</strong><small>Verb conjugations by root</small></span>
       </a>
       <div class="toolbar" aria-label="Display settings">
         <button class="icon-button" id="highlight-toggle" type="button" aria-pressed="true" title="Toggle root highlighting"><span class="root-swatch" aria-hidden="true">ש</span><span class="toolbar-label">Roots</span></button>
@@ -27,15 +27,6 @@
   </header>
 
   <main class="app-shell">
-    <section class="intro" aria-labelledby="page-title">
-      <div>
-        <p class="eyebrow">A practical modern Hebrew reference</p>
-        <h1 id="page-title">Find the pattern inside the word.</h1>
-        <p>Browse <span id="dataset-count">131</span> carefully reviewed verbs by root, binyan, and tense.</p>
-      </div>
-      <div class="data-status" id="data-status" role="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><span>Loading conjugations…</span></div>
-    </section>
-
     <section class="browser" aria-label="Verb browser">
       <div class="search-panel">
         <label for="root-search">Root, infinitive, or meaning</label>
@@ -75,7 +66,7 @@
         <nav class="tab-group tense-tabs" id="tense-tabs" aria-label="Tense"></nav>
       </div>
       <div class="table-wrap">
-        <table class="conjugation-table" id="conjugation-table">
+        <table class="conjugation-table" id="conjugation-table" dir="rtl">
           <thead><tr><th scope="col">Pronoun</th><th scope="col">Hebrew</th><th scope="col">Transliteration</th><th scope="col">Pronunciation</th><th scope="col">English</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead>
           <tbody id="conjugation-body"><tr><td colspan="6" class="empty-state">Loading forms…</td></tr></tbody>
         </table>
