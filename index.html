@@ -7,6 +7,9 @@
   <meta name="theme-color" content="#f4efe5">
   <title>Alephbetical</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100..900&amp;family=Noto+Serif+Hebrew:wght@100..900&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
@@ -20,7 +23,8 @@
       <div class="toolbar" aria-label="Display settings">
         <button class="icon-button" id="highlight-toggle" type="button" aria-pressed="true" title="Toggle root highlighting"><span class="root-swatch" aria-hidden="true">ש</span><span class="toolbar-label">Roots</span></button>
         <label class="toolbar-select" for="hebrew-font-select"><span class="toolbar-label">Font</span><select id="hebrew-font-select" aria-label="Hebrew font">
-          <option value="Hadasim">Hadasim</option>
+          <option value="NotoSerif">Noto Serif Hebrew</option>
+          <option value="NotoSans">Noto Sans Hebrew</option>
           <option value="Dorian">Dorian</option>
           <option value="DanaYad">Dana Yad</option>
           <option value="GveretLevin">Gveret Levin</option>

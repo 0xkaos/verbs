@@ -18,7 +18,8 @@ const PRONOUN_ORDER = {
   infinitive: [""],
 };
 const HEBREW_FONTS = {
-  Hadasim: '"Hadasim", "Noto Serif Hebrew", serif',
+  NotoSerif: '"Noto Serif Hebrew", "Times New Roman", serif',
+  NotoSans: '"Noto Sans Hebrew", Arial, sans-serif',
   FrankRuehl: '"Frank Ruehl", "Noto Serif Hebrew", serif',
   Dorian: '"Dorian", "Noto Serif Hebrew", serif',
   KtavYad: '"Ktav Yad", "Noto Serif Hebrew", cursive',
@@ -92,8 +93,8 @@ function restorePreferences() {
   const hebrewScale = clamp(Number(localStorage.getItem("verb-atlas-hebrew-scale")) || 1, .8, 1.35);
   document.documentElement.style.setProperty("--font-scale", pageScale);
   document.documentElement.style.setProperty("--hebrew-scale", hebrewScale);
-  const font = localStorage.getItem("verb-atlas-hebrew-font") || "Hadasim";
-  elements.hebrewFontSelect.value = HEBREW_FONTS[font] ? font : "Hadasim";
+  const font = localStorage.getItem("verb-atlas-hebrew-font") || "NotoSerif";
+  elements.hebrewFontSelect.value = HEBREW_FONTS[font] ? font : "NotoSerif";
   applyHebrewFont(elements.hebrewFontSelect.value);
   state.sizeTarget = localStorage.getItem("verb-atlas-size-target") === "page" ? "page" : "hebrew";
   elements.sizeTarget.value = state.sizeTarget;
@@ -572,7 +573,7 @@ function adjustScale(amount) {
 }
 
 function applyHebrewFont(name) {
-  document.documentElement.style.setProperty("--hebrew-font", HEBREW_FONTS[name] || HEBREW_FONTS.Hadasim);
+  document.documentElement.style.setProperty("--hebrew-font", HEBREW_FONTS[name] || HEBREW_FONTS.NotoSerif);
 }
 
 function updateSizeControls() {
